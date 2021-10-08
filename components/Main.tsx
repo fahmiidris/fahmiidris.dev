@@ -1,6 +1,4 @@
 import Head from "next/head"
-import AppLayout from "./AppLayout"
-import AuthLayout from "./AuthLayout"
 
 type MainType = {
     title: string,
