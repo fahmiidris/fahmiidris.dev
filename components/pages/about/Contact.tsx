@@ -21,11 +21,12 @@ const Contact: React.FC = () => {
             </ul>
 
             <p>
-                Also, you can{" "}
-                <Link className="underline font-semibold" href="https://drive.google.com/file/d/1Aew0CkvXqsdu5jWRbq8ywxO18hokpr8A/view?usp=sharing" isExternal>
+                {/* Also, you can{" "}
+                <Link className="underline font-semibold" href="/" isExternal>
                     read my resume here
                 </Link>
-                . Anyway, thanks for visiting my profile :)
+                . Anyway, thanks for visiting my profile. */}
+                Link resume coming soon :&apos;)
             </p>
         </section>
     )

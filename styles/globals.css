@@ -48,3 +48,23 @@ pre {
 .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
+
+.card-zoom {
+    @apply relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-60 h-auto rounded-xl;
+}
+
+.card-zoom-image {
+    @apply absolute w-full h-full transition-all duration-500 ease-in-out bg-center bg-cover;
+}
+
+.card-zoom-text {
+    @apply absolute text-5xl font-black transition-all duration-500 ease-in-out scale-150 text-gray-50 opacity-60;
+}
+
+.card-zoom:hover .card-zoom-image {
+    @apply scale-150;
+}
+
+.card-zoom:hover .card-zoom-text {
+    @apply scale-100;
+}
