@@ -35,8 +35,13 @@ pre {
     h4 {
         @apply text-lg font-semibold md:text-xl;
     }
+
     p {
         @apply font-pop
+    }
+
+    b {
+        @apply font-semibold
     }
 }
 

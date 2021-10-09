@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic"
-import Link from "next/link"
 // import { ExternalLinkIcon } from "@heroicons/react/outline"
 
 import Main from "@/components/Main"
@@ -7,6 +6,7 @@ import { getAppLayout } from "@/components/AppLayout"
 
 import { NextPageWithLayout } from "@/types/app.type"
 import Line from "@/components/custom/Line"
+import Link from "@/components/small/Link"
 
 const Me = dynamic(() => import("../components/custom/Me"), { ssr: false })
 
@@ -29,11 +29,10 @@ const Home: NextPageWithLayout = () => {
                         </p>
 
                         <div className="order-2 w-full py-5 text-center grid grid-cols-1 gap-3 sm:flex sm:gap-0 sm:space-x-6">
-                            <Link href="/about">
-                                <a className="text-sm font-semibold bg-gray-700 dark:bg-gray-800 text-white py-3 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-900 hover:ring-2 dark:hover:ring-offset-gray-700 hover:ring-offset-2 hover:ring-blue-500 ease-in-out duration-150">
+                            <Link href="/about" className="text-sm font-semibold bg-gray-700 dark:bg-gray-800 text-white py-3 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-900 hover:ring-2 dark:hover:ring-offset-gray-700 hover:ring-offset-2 hover:ring-blue-500 ease-in-out duration-150">
                                     Learn More <b>About Me</b>
-                                </a>
                             </Link>
+
                             {/* <Link href="/">
                                 <a className="flex justify-center items-center space-x-2 text-sm font-semibold bg-blue-500 dark:bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-700 hover:ring-2 dark:hover:ring-offset-gray-700 hover:ring-offset-2 hover:ring-blue-500 ease-in-out duration-150">
                                     <span>Paperlabs</span>

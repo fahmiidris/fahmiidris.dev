@@ -1,3 +1,4 @@
+import Link from "@/components/small/Link"
 import { ExperiencesType } from "@/types/experiences.type"
 
 const ExperienceItem: React.FC<ExperiencesType> = ({ name, description, time, category, meta }) => {
@@ -17,7 +18,9 @@ const ExperienceItem: React.FC<ExperiencesType> = ({ name, description, time, ca
                     </p>
                 </div>
                 <div>
-                    <a href={meta.link} target="_blank" rel="noreferrer" className="hover:underline text-blue-500 font-pop text-xs md:text-base">{meta.link}</a>
+                    <Link href={`${meta.link}`} className="hover:underline text-blue-500 font-pop text-xs md:text-base" isExternal>
+                        {meta.link}
+                    </Link>
                 </div>
             </div>
         </div>
