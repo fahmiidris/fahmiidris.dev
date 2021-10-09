@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
 
             <p>
                 Also, you can{" "}
-                <Link className="underline font-semibold" href="https://docs.google.com/document/d/1zPY2bGjRx-Y-HbEODuB0ZCV8bbiGLU5CaxqW71EJOoo/edit?usp=sharing" isExternal>
+                <Link className="underline font-semibold" href="https://drive.google.com/file/d/1Aew0CkvXqsdu5jWRbq8ywxO18hokpr8A/view?usp=sharing" isExternal>
                     read my resume here
                 </Link>
                 . Anyway, thanks for visiting my profile :)
