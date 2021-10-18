@@ -9,7 +9,7 @@ import { ExperiencesType } from "@/types/experiences.type"
 const ExperienceItem: React.FC<ExperiencesType> = ({ name, description, time, category, meta }) => {
     return (
         <motion.div
-            className="px-7 pt-4 pb-6 rounded-xl border border-gray-300 dark:border-none bg-white dark:bg-gray-600"
+            className="px-7 py-6 rounded-xl border border-gray-300 dark:border-none bg-white dark:bg-gray-600"
             variants={li}
         >
             <div>
