@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-import { LogoAndMarkType } from "@/types/navbar.type"
+import { LogoAndMarkType } from "@/types/components/navbar.type"
 
 const ApplicationMark: React.FC<LogoAndMarkType> = ({ className, color = "black" }) => {
     return (

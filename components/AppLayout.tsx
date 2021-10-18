@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import Footer from "./big/Footer"
 import Navbar from "./big/Navbar"
 
@@ -5,9 +7,9 @@ const AppLayout: React.FC = ({ children }) => {
     return (
         <div className="flex flex-col relative min-h-screen">
             <Navbar />
-                <main className="flex flex-col h-full flex-grow">
+                <motion.main className="flex flex-col h-full flex-grow">
                     { children }
-                </main>
+                </motion.main>
             <Footer />
         </div>
     )

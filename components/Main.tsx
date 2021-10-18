@@ -1,4 +1,8 @@
-import Head from "next/head"
+import { motion } from "framer-motion"
+
+import Seo from "./custom/Seo"
+
+import { classNames } from "@/utils/helper"
 
 type MainType = {
     title: string,
@@ -8,12 +12,10 @@ type MainType = {
 const Main: React.FC<MainType> = ({ title, className, children }) => {
     return (
         <>
-            <Head>
-                <title>{`${title} - ${process.env.APP_NAME}`}</title>
-            </Head>
-            <div className={className}>
+            <Seo title={`${title} - ${process.env.APP_NAME}`} />
+            <motion.main className={classNames("container", className)}>
                 {children}
-            </div>
+            </motion.main>
         </>
     )
 }

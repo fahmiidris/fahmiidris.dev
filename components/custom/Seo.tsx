@@ -6,12 +6,12 @@ import { SeoType } from "@/types/app.type"
 const Seo: React.FC<SeoType> = ({
     title,
     description = "An online portfolio by Fahmi Idris. Showcase of my projects, and some of my thoughts about website development.",
-    image,
+    image = "https://fahmiidris.vercel.app/fi.png",
     type = "website",
     robots = "follow, index",
     date,
 }) => {
-    const router = useRouter()
+    const { asPath } = useRouter()
 
     return (
         <Head>
@@ -20,11 +20,11 @@ const Seo: React.FC<SeoType> = ({
             <meta content={description} name="description" />
             <meta
                 property="og:url"
-                content={`https://fahmiidris.vercel.app${router.asPath}`}
+                content={`https://fahmiidris.vercel.app${asPath}`}
             />
             <link
                 rel="canonical"
-                href={`https://fahmiidris.vercel.app${router.asPath}`}
+                href={`https://fahmiidris.vercel.app${asPath}`}
             />
             {/* Open Graph */}
             <meta property="og:type" content={type} />

@@ -1,20 +1,12 @@
 import { motion } from "framer-motion"
 
+import { line } from "@/utils/animation"
+
 type LineType = {
     className: string
 }
 
 const Line: React.FC<LineType> = ({ className }) => {
-    
-    const icon = {
-        hidden: {
-            pathLength: 0,
-        },
-        visible: {
-            pathLength: 1,
-        }
-    }
-
     return (
         <motion.svg className={className} width={142} height={43} viewBox="0 0 142 43" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path
@@ -22,7 +14,7 @@ const Line: React.FC<LineType> = ({ className }) => {
                 stroke="#0EA5E9"
                 strokeWidth={3}
                 strokeLinecap="round"
-                variants={icon}
+                variants={line}
                 initial="hidden"
                 animate="visible"
                 transition={{

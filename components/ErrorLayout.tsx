@@ -1,10 +1,11 @@
+import { motion } from "framer-motion"
 
 const ErrorLayout: React.FC = ({ children }) => {
     return (
         <div className="flex flex-col relative h-screen">
-            <main className="flex flex-col h-full flex-grow">
+            <motion.main className="flex flex-col h-full flex-grow">
                 {children}
-            </main>
+            </motion.main>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-import { LogoAndMarkType } from "@/types/navbar.type"
+import { LogoAndMarkType } from "@/types/components/navbar.type"
 
 const ApplicationLogo: React.FC<LogoAndMarkType> = ({ className }) => {
     return (

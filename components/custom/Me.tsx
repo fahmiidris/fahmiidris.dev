@@ -5,9 +5,8 @@ type MeType = {
 }
 
 const Me: React.FC<MeType> = ({ className }) => {
-
     const { theme } = useTheme()
-    const isDark = theme === "dark"
+    const isDark: boolean = theme === "dark"
 
     return (
         <svg className={className} width={187} height={285} viewBox="0 0 187 285" fill="none" xmlns="http://www.w3.org/2000/svg">

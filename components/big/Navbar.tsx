@@ -9,15 +9,17 @@ import { HiX, HiMenu } from "react-icons/hi"
 import ApplicationMark from "../small/ApplicationMark"
 import ApplicationLogo from "../small/ApplicationLogo"
 
-import { NavbarLinkType, LinksType } from "@/types/navbar.type"
-
 const ThemeSwitcherDesktop = dynamic(() => import("../small/ThemeSwitcherDesktop"), { ssr: false })
 const ThemeSwitcherMobile = dynamic(() => import("../small/ThemeSwitcherMobile"), { ssr: false })
 
-const Navbar: React.FC = () => {
+import { NavbarLinkType, LinksType } from "@/types/components/navbar.type"
 
+const Navbar: React.FC = () => {
     const links: LinksType[] = [
         {
+            text: "Home",
+            url: "/",
+        }, {
             text: "Experiences",
             url: "/experiences",
         }, {
@@ -36,6 +38,7 @@ const Navbar: React.FC = () => {
                     <div className="container">
                         <div className="relative flex items-center justify-center sm:justify-between h-16">
 
+                            {/* Theme Switcher Button */}
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 <ThemeSwitcherMobile />
                             </div>
@@ -84,6 +87,7 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
 
+                    {/* Dropdown Menu Mobile Mode */}
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-4 pt-2 pb-5 space-y-1 sm:hidden">
                             {links.map((link, index) => (
