@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes"
 
 import { AppPropsWithLayout } from "@/types/app.type"
 import { PreloadProvider } from "@/contexts/PreloadContext"
+import AppLayout from "@/components/AppLayout"
 
 // Loading Progress using NProgress
 NProgress.configure({ showSpinner: false })
@@ -15,10 +16,12 @@ Router.events.on("routeChangeComplete", () => NProgress.done())
 Router.events.on("routeChangeError", () => NProgress.done())
 
 const MyApp = ({ Component, pageProps, router }: AppPropsWithLayout) => {
+    const getLayout = Component.getLayout || ((page) => page)
+
     return (
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             <PreloadProvider>
-                {Component.getLayout(
+                {getLayout(
                     <Component {...pageProps} />
                 )}
             </PreloadProvider>
