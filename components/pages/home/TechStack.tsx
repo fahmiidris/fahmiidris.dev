@@ -133,7 +133,7 @@ const TechStack: React.FC = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 flex justify-start space-x-2">
-                                    <Link href={techModalInfo.link} isExternal className="btn btn-blue space-x-2 hover:ring-offset-gray-700 dark:ring-offset-white">
+                                    <Link href={techModalInfo.link} isExternal className="inline-flex justify-center items-center px-4 py-2 uppercase tracking-widest rounded-lg font-semibold text-xs border border-transparent btn-blue space-x-2 hover:ring-offset-gray-700 dark:ring-offset-white">
                                         <span>{techModalInfo.title}</span>
                                         <HiExternalLink className="w-4 h-4" />
                                     </Link>
