@@ -1,4 +1,6 @@
-const socials = [
+import { SosialsType } from "@/types/sosials.type"
+
+const socials: SosialsType[] = [
     {
         name: "E-mail",
         url: "mailto:fahmiidris.1607@gmail.com",
