@@ -15,7 +15,7 @@ const socials: SocialsType[] = [
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/fahmiidris-labs",
+        url: "https://linkedin.com/in/fahmiidris-labs",
     },
 ]
 
