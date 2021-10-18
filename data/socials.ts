@@ -1,6 +1,6 @@
-import { SosialsType } from "@/types/sosials.type"
+import { SocialsType } from "@/types/socials.type"
 
-const socials: SosialsType[] = [
+const socials: SocialsType[] = [
     {
         name: "E-mail",
         url: "mailto:fahmiidris.1607@gmail.com",
