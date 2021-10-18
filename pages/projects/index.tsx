@@ -1,11 +1,12 @@
-import { getAppLayout } from "@/components/AppLayout"
+import { motion } from "framer-motion"
+import { HiOutlineDesktopComputer } from "react-icons/hi"
+
 import Main from "@/components/Main"
+import { getAppLayout } from "@/components/AppLayout"
 
 import { NextPageWithLayout } from "@/types/app.type"
-import { DesktopComputerIcon } from "@heroicons/react/outline"
 
 const Projects: NextPageWithLayout = () => {
-
     return (
         <Main title="Projects" className="container">
             <div className="min-h-screen flex flex-col md:flex-row pt-20">
@@ -13,10 +14,16 @@ const Projects: NextPageWithLayout = () => {
                     {/* Head */}
                     <div className="flex items-center space-x-3">
                         <div>
-                            <DesktopComputerIcon className="w-8 h-8 text-gray-600 dark:text-white -rotate-45 animate-wiggle" />
+                            <HiOutlineDesktopComputer className="w-8 h-8 text-gray-600 dark:text-white -rotate-45 animate-wiggle" />
                         </div>
                         <div>
-                            <h1 className="text-lg">My Projects</h1>
+                            <motion.h1
+                                className="text-lg inline-block"
+                                initial={{ x: 100 }}
+                                animate={{ x: 0 }}
+                            >
+                                My Projects
+                            </motion.h1>
                             <p className="text-xs md:text-sm">
                                 Some of the projects that I have been and are currently working on.
                             </p>

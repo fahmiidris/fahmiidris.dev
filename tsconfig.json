@@ -23,7 +23,8 @@
             "@/contexts/*": ["contexts/*"],
             "@/data/*": ["data/*"],
             "@/hooks/*": ["hooks/*"],
-            "@/types/*": ["types/*"]
+            "@/types/*": ["types/*"],
+            "@/utils/*": ["utils/*"]
         }
     },
     "include": [

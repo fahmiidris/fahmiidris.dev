@@ -4,7 +4,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
@@ -17,6 +17,14 @@ pre::-webkit-scrollbar {
 pre {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+}
+
+/* Remove Safari input shadow on mobile */
+input[type="text"],
+input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 @layer base {
@@ -49,6 +57,7 @@ pre {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
+/* Card Zoom */
 .card-zoom {
     @apply relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-60 h-auto rounded-xl;
 }
@@ -68,3 +77,14 @@ pre {
 .card-zoom:hover .card-zoom-text {
     @apply scale-100;
 }
+
+/* Button */
+.btn-blue {
+    @apply text-white bg-blue-500 hover:bg-blue-600 hover:ring-2 hover:ring-offset-2 hover:ring-blue-500
+}
+
+.btn-red {
+    @apply text-white bg-red-500 hover:bg-red-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-500
+}
+
+/* Animation */

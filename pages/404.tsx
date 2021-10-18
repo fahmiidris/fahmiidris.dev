@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import { HiArrowCircleLeft } from "react-icons/hi"
 
 import Main from "@/components/Main"
 import Link from "@/components/small/Link"
@@ -6,10 +7,8 @@ import { getErrorLayout } from "@/components/ErrorLayout"
 import ApplicationLogo from "@/components/small/ApplicationLogo"
 
 import { NextPageWithLayout } from "@/types/app.type"
-import { ArrowCircleLeftIcon } from "@heroicons/react/outline"
 
 const Custom404: NextPageWithLayout = () => {
-
     const { asPath } = useRouter()
 
     return (
@@ -28,7 +27,7 @@ const Custom404: NextPageWithLayout = () => {
                     <div className="relative mt-4">
                         <Link href="/" className="inline-flex justify-center items-center w-full text-sm font-semibold bg-gray-700 dark:bg-gray-800 text-white py-3 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-900 hover:ring-2 dark:hover:ring-offset-gray-700 hover:ring-offset-2 hover:ring-blue-500 ease-in-out duration-150">
                             <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                                <ArrowCircleLeftIcon className="h-5 w-5 text-blue-500 group-hover:text-blue-400" />
+                                <HiArrowCircleLeft className="h-5 w-5 text-blue-500 group-hover:text-blue-400" />
                             </span>
                             Back to Home
                         </Link>

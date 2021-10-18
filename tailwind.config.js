@@ -6,7 +6,7 @@ module.exports = {
 
     purge: [
         './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}'
+        './components/**/*.{js,ts,jsx,tsx}',
     ],
 
     darkMode: 'class', // 'media' or 'class' or false
@@ -14,17 +14,19 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Quicksand', ...defaultTheme.fontFamily.sans],
                 pop: ['Poppins', ...defaultTheme.fontFamily.sans],
+                sans: ['Quicksand', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                gray: colors.coolGray,
                 red: colors.rose,
-                orange: colors.orange,
-                emerald: colors.emerald,
-                teal: colors.teal,
                 blue: colors.sky,
+                gray: colors.coolGray,
+                teal: colors.teal,
+                dark: colors.coolGray[700],
+                light: colors.white,
+                orange: colors.orange,
                 violet: colors.violet,
+                emerald: colors.emerald,
                 fuchsia: colors.fuchsia,
             },
             keyframes: {
@@ -45,7 +47,7 @@ module.exports = {
     variants: {
         extend: {
             opacity: ['disabled'],
-            typography: ["dark"]
+            typography: ["dark"],
         },
     },
 
