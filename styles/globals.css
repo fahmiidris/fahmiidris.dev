@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @tailwind variants; */
 
 html {
     scroll-behavior: smooth;
@@ -79,12 +80,5 @@ input[type="email"] {
 }
 
 /* Button */
-.btn-blue {
-    @apply text-white bg-blue-500 hover:bg-blue-600 hover:ring-2 hover:ring-offset-2 hover:ring-blue-500
-}
-
-.btn-red {
-    @apply text-white bg-red-500 hover:bg-red-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-500
-}
 
 /* Animation */
