@@ -1,7 +1,7 @@
 import Link from "next/link"
 import dynamic from "next/dynamic"
-import { forwardRef } from "react"
 import { useRouter } from "next/router"
+import { forwardRef } from "react"
 
 import { Disclosure } from "@headlessui/react"
 import { HiX, HiMenu } from "react-icons/hi"
@@ -11,6 +11,8 @@ import ApplicationLogo from "../small/ApplicationLogo"
 
 const ThemeSwitcherDesktop = dynamic(() => import("../small/ThemeSwitcherDesktop"), { ssr: false })
 const ThemeSwitcherMobile = dynamic(() => import("../small/ThemeSwitcherMobile"), { ssr: false })
+
+import { classNames } from "@/utils/helper"
 
 import { NavbarLinkType, LinksType } from "@/types/components/navbar.type"
 
@@ -55,8 +57,8 @@ const Navbar: React.FC = () => {
                                 {/* Main Menu Navigration */}
                                 <div className="hidden sm:block sm:ml-6">
                                     <div className="flex space-x-1">
-                                        {links.map((link, index) => (
-                                            <NavbarLink key={index} href={link.url}>
+                                        {links.map((link, i) => (
+                                            <NavbarLink key={i} href={link.url}>
                                                 {link.text}
                                             </NavbarLink>
                                         ))}
@@ -90,8 +92,8 @@ const Navbar: React.FC = () => {
                     {/* Dropdown Menu Mobile Mode */}
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-4 pt-2 pb-5 space-y-1 sm:hidden">
-                            {links.map((link, index) => (
-                                <Disclosure.Button as={ResponsiveNavbarLink} key={index} href={link.url}>
+                            {links.map((link, i) => (
+                                <Disclosure.Button as={ResponsiveNavbarLink} key={i} href={link.url}>
                                     {link.text}
                                 </Disclosure.Button>
                             ))}
@@ -108,7 +110,14 @@ const NavbarLink: React.FC<NavbarLinkType> = ({ href, children, ...props }) => {
 
     return (
         <Link href={href}>
-            <a className={`inline-flex justify-center items-center text-white ${asPath === href && 'bg-gray-600 dark:bg-gray-700'} px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-600 dark:hover:bg-gray-700 duration-100 ease-in-out`} {...props}>
+            <a
+                className={classNames(
+                    "inline-flex justify-center items-center text-white",
+                    asPath === href && "bg-gray-600 dark:bg-gray-700",
+                    "px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-600 dark:hover:bg-gray-700 duration-100 ease-in-out"
+                )}
+                {...props}
+            >
                 {children}
             </a>
         </Link>
@@ -120,7 +129,16 @@ const ResponsiveNavbarLink = forwardRef<HTMLAnchorElement, NavbarLinkType>(({ hr
 
     return (
         <Link href={href} passHref>
-            <a href={href} className={`block text-white ${asPath === href && 'bg-gray-600 dark:bg-gray-700'} px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-600 dark:hover:bg-gray-700 duration-100 ease-in-out`} ref={ref} {...props}>
+            <a
+                href={href}
+                className={classNames(
+                    "block text-white",
+                    asPath === href && "bg-gray-600 dark:bg-gray-700",
+                    "px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-600 dark:hover:bg-gray-700 duration-100 ease-in-out"
+                )}
+                ref={ref}
+                {...props}
+            >
                 {children}
             </a>
         </Link>

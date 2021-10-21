@@ -9,10 +9,10 @@ const Footer: React.FC<FooterType> = ({ className }) => {
 
     return (
         <footer>
-            <div className={classNames("bg-transparent md:fixed md:bottom-0 md:inset-x-0 md:z-20", className)}>
+            <div className={classNames("bg-transparent md:fixed md:bottom-0 right-0 md:z-20", className)}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-center md:justify-end items-center">
-                        <h2 className="font-pop text-sm font-normal text-gray-700 dark:text-white py-5">
+                        <h2 className="font-pop text-sm font-normal text-gray-700 dark:text-white pb-5">
                             &copy; {year} - Fahmi Idris. All Rights Reserved.
                         </h2>
                     </div>
