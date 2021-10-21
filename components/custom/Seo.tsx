@@ -6,7 +6,7 @@ import { SeoType } from "@/types/app.type"
 const Seo: React.FC<SeoType> = ({
     title,
     description = "An online portfolio by Fahmi Idris. Showcase of my projects, and some of my thoughts about website development.",
-    image = "https://fahmiidris.vercel.app/fi.png",
+    image = "https://fahmiidris.vercel.app/logo.png",
     type = "website",
     robots = "follow, index",
     date,
