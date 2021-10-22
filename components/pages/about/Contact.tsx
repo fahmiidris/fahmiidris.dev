@@ -20,10 +20,10 @@ const Contact: React.FC = () => {
                     animate="visible"
                 >
                     {socials.map((social, i) => (
-                        <motion.li key={i} className="pb-2" variants={li}>
+                        <motion.li key={i} className="pb-1" variants={li}>
                             {social.name} -{" "}
                             <Link href={social.url} isExternal>
-                                {social.url.replace("mailto:", "")}
+                                {social.url.replace(/mailto:|https:\/+/gi, "")}
                             </Link>
                         </motion.li>
                     ))}

@@ -10,7 +10,7 @@ import { NextPageWithLayout } from "@/types/app.type"
 const Experiences: NextPageWithLayout = () => {
     return (
         <Main title="Experiences" className="container">
-            <div className="min-h-screen flex flex-col md:flex-row pt-20">
+            <div className="min-h-screen flex flex-col md:flex-row py-20">
                 <div className="flex w-full flex-col space-y-4">
                     {/* Head */}
                     <div className="flex items-center space-x-3">

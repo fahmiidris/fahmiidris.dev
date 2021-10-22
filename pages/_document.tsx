@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document"
+import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document"
 
 import Favicon from "@/components/custom/Favicon"
 
@@ -16,7 +16,7 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
                     <Favicon />
                 </Head>
-                <body className="antialiased font-sans bg-white dark:bg-gray-700 dark:text-white">
+                <body className="antialiased font-sans bg-white dark:bg-gray-700 dark:text-white transition-colors">
                     <Main />
                     <NextScript />
                 </body>

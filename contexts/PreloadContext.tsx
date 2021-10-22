@@ -16,7 +16,7 @@ export const PreloadProvider: React.FC = ({ children }) => {
             <div
                 className={classNames(
                     "fixed flex items-center justify-center inset-0 transition-opacity bg-white dark:bg-gray-700",
-                    isLoaded && "opacity-0 pointer-events-none"
+                    isLoaded && "opacity-100 pointer-events-none"
                 )}
             ></div>
             {children}

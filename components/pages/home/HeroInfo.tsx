@@ -16,9 +16,12 @@ const HeroInfo: React.FC = () => {
             </motion.h1>
             <p className="text-base tracking-wide mb-1">Hello, I&apos;m</p>
             <p className="order-2 leading-relaxed text-base mr-6">
-                A student and a software engineer. I like exploring things related to technology,{" "}
-                especially web technology, and currently focusing on JavaScript and React.js
+            A software developer and a student. I enjoy learning new things about technology,{" "}
+            particularly web technology, and am now concentrating on JavaScript and React. js (Next Js)
             </p>
+            <div className="order-3">
+                <TechStack />
+            </div>
             <div className="order-4 w-full py-5 text-center grid grid-cols-1 gap-3 sm:flex sm:gap-0 sm:space-x-6">
                 <Link href="/about" className="text-sm font-semibold bg-gray-700 dark:bg-gray-800 text-white py-3 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-900 hover:ring-2 dark:hover:ring-offset-gray-700 hover:ring-offset-2 hover:ring-blue-500 ease-in-out duration-150">
                     Learn More <b>About Me</b>
@@ -28,9 +31,6 @@ const HeroInfo: React.FC = () => {
                     <HiExternalLink className="w-4 h-4" />
                 </Link>
             </div>
-            <figure className="order-3">
-                <TechStack />
-            </figure>
         </article>
     )
 }

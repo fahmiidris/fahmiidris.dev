@@ -3,13 +3,14 @@ import { HiOutlineDesktopComputer } from "react-icons/hi"
 
 import Main from "@/components/Main"
 import { getAppLayout } from "@/components/AppLayout"
+import ProjectList from "@/components/pages/projects/ProjectList"
 
 import { NextPageWithLayout } from "@/types/app.type"
 
 const Projects: NextPageWithLayout = () => {
     return (
         <Main title="Projects" className="container">
-            <div className="min-h-screen flex flex-col md:flex-row pt-20">
+            <div className="min-h-screen flex flex-col md:flex-row py-20">
                 <div className="flex w-full flex-col space-y-4">
                     {/* Head */}
                     <div className="flex items-center space-x-3">
@@ -32,7 +33,7 @@ const Projects: NextPageWithLayout = () => {
 
                     {/* Projects */}
                     <div className="pt-1">
-                        {/*  */}
+                        <ProjectList />
                     </div>
                 </div>
             </div>

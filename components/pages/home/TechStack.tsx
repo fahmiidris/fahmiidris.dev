@@ -11,7 +11,7 @@ import {
 import { HiExternalLink, HiX } from "react-icons/hi"
 
 import Link from "@/components/small/Link"
-import { ButtonOnlyIcon } from "@/components/small/Button"
+import Button from "@/components/small/Button"
 
 import { li, ul } from "@/utils/animation"
 import { classNames } from "@/utils/helper"
@@ -25,7 +25,7 @@ const techObject: TechType = {
         color: "bg-gray-200 dark:bg-gray-600 rounded-xl",
         more: {
             title: "React.js",
-            description: "React.js is the second javascript library (people call it framework) that I learned. Previously I used the vue.js framework, but I love react.js more.",
+            description: "React.js is the second javascript library (or framework, as some call it) that I've learned. I used to use the vue.js framework, but I prefer react.js",
             link: "https://reactjs.org"
         },
         icon: () => (
@@ -36,7 +36,7 @@ const techObject: TechType = {
         color: "bg-gray-200 dark:bg-gray-600 rounded-full",
         more: {
             title: "Next.js",
-            description: "After I studied react.js, I met next.js, it is a framework from react.js. This is great, lots of extra features provided in next.js, especially on routers.",
+            description: "I discovered next.js, a react.js framework, after researching react.js. It's great; next.js provides a lot more features, notably for routers, SSG, SSR, and other things.",
             link: "https://nextjs.org"
         },
         icon: () => (
@@ -47,7 +47,7 @@ const techObject: TechType = {
         color: "bg-gray-200 dark:bg-gray-600 rounded-md",
         more: {
             title: "TypeScript",
-            description: "I watch a lot of next.js tutorial videos, people always combine it with TypeScript, I tried it and wow! This typescript is like giving my code rules. I like it very much.",
+            description: "I've been watching a lot of next.js training videos, and I've seen that it's frequently combined with TypeScript. I tried it, and wow! This typescript acts as a rule book for my programming. It appeals to me greatly.",
             link: "https://www.typescriptlang.org"
         },
         icon: () => (
@@ -58,7 +58,7 @@ const techObject: TechType = {
         color: "bg-gray-200 dark:bg-gray-600 rounded-xl",
         more: {
             title: "Tailwind CSS",
-            description: "I really don't like pure css, so many properties, rules and having to write many lines. it makes me dizzy. then i used bootstrap, it was very helpful at first, but i had trouble adjusting it. until finally I know tailwindcss. Yeah, this is what i need!",
+            description: "I despise pure CSS since it requires so many attributes, rules, and lines of code. It causes me to feel a little nauseous. Then I tried bootstrap, which was initially really useful, but I couldn't get it to work properly. till I've mastered tailwindcss. This is exactly what I'm looking for!",
             link: "https://tailwindcss.com"
         },
         icon: () => (
@@ -132,15 +132,15 @@ const TechStack: React.FC = () => {
                                         {techModalInfo.description}
                                     </p>
                                 </div>
-                                <div className="mt-4 flex justify-start space-x-2">
-                                    <Link href={techModalInfo.link} isExternal className="inline-flex justify-center items-center px-4 py-2 uppercase tracking-widest rounded-lg font-semibold text-xs border border-transparent btn-blue space-x-2 hover:ring-offset-gray-700 dark:ring-offset-white">
+                                <div className="mt-4 flex justify-start">
+                                    <Button.Link href={techModalInfo.link} isExternal className="space-x-2 hover:ring-offset-gray-700 dark:hover:ring-offset-white">
                                         <span>{techModalInfo.title}</span>
                                         <HiExternalLink className="w-4 h-4" />
-                                    </Link>
-                                    <ButtonOnlyIcon onClick={closeModal} className="absolute top-[3px] right-[3px] rounded-xl">
-                                        <HiX className="w-4 h-4" />
-                                    </ButtonOnlyIcon>
+                                    </Button.Link>
                                 </div>
+                                <Button.Icon onClick={closeModal} className="absolute top-[3px] right-[3px] rounded-xl">
+                                    <HiX className="w-4 h-4" />
+                                </Button.Icon>
                             </div>
                         </Transition.Child>
                     </div>

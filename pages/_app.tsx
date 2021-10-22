@@ -7,7 +7,6 @@ import { ThemeProvider } from "next-themes"
 
 import { AppPropsWithLayout } from "@/types/app.type"
 import { PreloadProvider } from "@/contexts/PreloadContext"
-import AppLayout from "@/components/AppLayout"
 
 // Loading Progress using NProgress
 NProgress.configure({ showSpinner: false })

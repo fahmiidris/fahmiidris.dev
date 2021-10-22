@@ -1,9 +1,6 @@
-import NextLink, { LinkProps } from "next/link"
+import NextLink from "next/link"
 
-type CustomLinkType = {
-    href?: string
-    isExternal?: boolean
-} & React.ComponentPropsWithoutRef<"a"> & LinkProps
+import { CustomLinkType } from "@/types/components/link.type"
 
 const Link: React.FC<CustomLinkType> = ({ 
     href,

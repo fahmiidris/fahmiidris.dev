@@ -1,7 +1,7 @@
 export type ProjectsType = {
+    category: string,
     name: string,
     description: string,
-    category: string,
     time: string,
     image: string | any,
     tech: {

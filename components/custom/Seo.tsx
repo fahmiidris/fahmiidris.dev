@@ -16,41 +16,32 @@ const Seo: React.FC<SeoType> = ({
     return (
         <Head>
             <title>{title}</title>
+
             <meta name="robots" content={robots} />
             <meta content={description} name="description" />
-            <meta
-                property="og:url"
-                content={`https://fahmiidris.vercel.app${asPath}`}
-            />
-            <link
-                rel="canonical"
-                href={`https://fahmiidris.vercel.app${asPath}`}
-            />
+            <meta property="og:url" content={`https://fahmiidris.vercel.app${asPath}`} />
+
+            <link rel="canonical" href={`https://fahmiidris.vercel.app${asPath}`} />
+
             {/* Open Graph */}
             <meta property="og:type" content={type} />
             <meta property="og:site_name" content="Fahmi Idris" />
             <meta property="og:description" content={description} />
             <meta property="og:title" content={title} />
             <meta name="image" property="og:image" content={image} />
+
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content="@FahmiIdrisA" />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
+
             {date && (
                 <>
                     <meta property="article:published_time" content={date} />
-                    <meta
-                        name="publish_date"
-                        property="og:publish_date"
-                        content={date}
-                    />
-                    <meta
-                        name="author"
-                        property="article:author"
-                        content="Fahmi Idris"
-                    />
+                    <meta name="publish_date" property="og:publish_date" content={date} />
+                    <meta name="author" property="article:author" content="Fahmi Idris" />
                 </>
             )}
         </Head>
