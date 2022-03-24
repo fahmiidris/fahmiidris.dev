@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-    reactStrictMode: true,
-
-    env: {
-        APP_NAME: "Fahmi Idris"
-    }
+const nextConfig = {
+  reactStrictMode: true,
 }
+
+module.exports = nextConfig
