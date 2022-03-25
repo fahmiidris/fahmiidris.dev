@@ -1,0 +1,18 @@
+{
+  // #region  // =========== React ===========
+  "import React": {
+    "prefix": "ir",
+    "body": ["import * as React from 'react';"]
+  },
+  "React.useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState<$3>(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+    ]
+  },
+  "React.useEffect": {
+    "prefix": "uf",
+    "body": ["React.useEffect(() => {", "  $0", "}, []);"]
+  }
+  // #endregion
+}
