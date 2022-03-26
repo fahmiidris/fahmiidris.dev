@@ -10,7 +10,7 @@ import { classNames } from '@/utils/helpers';
 import { navigation } from '@/components/organisms/fi-navbar/navigation-data';
 
 export const DesktopMenu = () => {
-  const { asPath } = useRouter();
+  const { pathname } = useRouter();
 
   return (
     <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
@@ -20,7 +20,7 @@ export const DesktopMenu = () => {
             key={page.name}
             href={page.href}
             className={classNames(
-              asPath === page.href && 'bg-gray-100',
+              pathname === page.href && 'bg-gray-100',
               'inline-flex items-center space-x-1 rounded-lg border border-transparent px-4 py-2 text-xs font-medium text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:text-gray-800'
             )}
           >
