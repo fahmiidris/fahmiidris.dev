@@ -4,8 +4,10 @@ import * as React from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import ProgressBar from '@badrap/bar-of-progress';
+import { ThemeProvider } from 'next-themes';
 
 import { Title } from '@/components/title';
+import { RootLayout } from '@/components/templates/root-layout';
 
 import type { TMeta } from '@/types/meta.type';
 import type { TAppPropsWithLayout, TProps } from '@/types/app.type';
@@ -38,7 +40,7 @@ const defaultMeta: TMeta = {
 };
 
 const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout) => {
-  const { Layout, meta: customMeta }: TProps = Component.Props;
+  const { Layout, meta: customMeta }: TProps = Component.Props || { Layout: RootLayout };
 
   const meta: TMeta & {
     date?: string;
@@ -74,9 +76,11 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout) => {
           </>
         )}
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 };
