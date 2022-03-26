@@ -88,14 +88,14 @@ const ButtonLink = () => {
   return (
     <div className="flex items-center justify-center space-x-6 py-[46px] text-center">
       <Link
-        href="/"
-        className="inline-flex items-center justify-center rounded-lg border border-transparent bg-gray-700 px-8 py-2 font-quicksand text-sm font-semibold text-white duration-200 ease-in-out hover:bg-gray-600 hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
+        href="mailto:fahmiidris.1607@gmail.com"
+        className="inline-flex items-center justify-center rounded-lg border border-transparent bg-gray-700 px-6 py-2 font-quicksand text-sm font-semibold text-white duration-200 ease-in-out hover:bg-gray-600 hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
       >
-        Say Hi to Me{' '}
+        Say Hi to Me!
       </Link>
       <Link
         href="/blog"
-        className="inline-flex items-center justify-center rounded-lg border-[1.5px] border-gray-300 bg-white px-8 py-2 font-quicksand text-sm font-semibold text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
+        className="inline-flex items-center justify-center rounded-lg border-[1.5px] border-gray-300 bg-white px-6 py-2 font-quicksand text-sm font-semibold text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
       >
         Read My Blog
       </Link>
@@ -132,6 +132,7 @@ const HomePage: TNextPageWithLayout = () => {
                 <Link
                   href={item.href}
                   key={idx}
+                  isExternal={true}
                   className="inline-flex items-center justify-center space-x-2 font-quicksand text-xs font-bold"
                 >
                   {<item.icon className={item.className} />}

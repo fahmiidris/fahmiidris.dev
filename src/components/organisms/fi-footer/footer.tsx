@@ -71,6 +71,7 @@ export const Footer = () => {
                 <Link
                   href={item.href}
                   key={index}
+                  isExternal={true}
                   className="inline-flex items-center justify-center space-x-2 font-quicksand text-xs font-bold"
                 >
                   {<item.icon className="h-[20px] w-[20px]" />}
