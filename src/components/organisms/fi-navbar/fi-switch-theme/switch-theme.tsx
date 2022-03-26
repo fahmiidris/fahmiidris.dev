@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { useTheme } from 'next-themes';
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 

@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { IconType } from 'react-icons';
+import { GoMarkGithub } from 'react-icons/go';
 
 import { Link } from '@/components/atoms/fi-link/link';
 
 import { ReactComponent as GMailIcon } from '@/images/icons/gmail-icon.svg';
 import { ReactComponent as InstagramIcon } from '@/images/icons/instagram-icon.svg';
 import { ReactComponent as LinkedInIcon } from '@/images/icons/linkedin-icon.svg';
-import { GoMarkGithub } from 'react-icons/go';
+
+import type { IconType } from 'react-icons';
 
 type TLink = {
   name: string;

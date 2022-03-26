@@ -1,10 +1,11 @@
+import * as React from 'react';
 import { HiArrowCircleLeft } from 'react-icons/hi';
 
 import { Link } from '@/components/atoms/fi-link/link';
 import { LogoType } from '@/components/atoms/fi-logo/logo';
+import { RootLayout } from '@/components/templates/root-layout';
 
 import type { TNextPageWithLayout } from '@/types/app.type';
-import { RootLayout } from '@/components/templates/root-layout';
 
 const Custom404Page: TNextPageWithLayout = () => {
   return (
