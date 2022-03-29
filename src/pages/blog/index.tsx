@@ -6,7 +6,7 @@ import { HeadingSection } from '@/components/molecules/fi-heading-section/headin
 
 import type { TNextPageWithLayout } from '@/types/app.type';
 
-const HomePage: TNextPageWithLayout = () => {
+const BlogPage: TNextPageWithLayout = () => {
   return (
     <section id="blog">
       <div className="container pt-[110px]">
@@ -28,11 +28,11 @@ const HomePage: TNextPageWithLayout = () => {
   );
 };
 
-HomePage.Props = {
+BlogPage.Props = {
   Layout: MainLayout,
   meta: {
     title: 'Blog',
   },
 };
 
-export default HomePage;
+export default BlogPage;
