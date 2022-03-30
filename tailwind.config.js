@@ -29,7 +29,7 @@ const tailwindConfig = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],
 };
 
 const withOpacity = (variableName) => {
