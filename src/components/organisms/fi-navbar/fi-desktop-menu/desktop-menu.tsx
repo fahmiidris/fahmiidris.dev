@@ -20,8 +20,8 @@ export const DesktopMenu = () => {
             key={page.name}
             href={page.href}
             className={classNames(
-              pathname === page.href && 'bg-gray-100',
-              'inline-flex items-center space-x-1 rounded-lg border border-transparent px-4 py-2 text-xs font-medium text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:text-gray-800'
+              pathname === page.href ? 'bg-gray-100 font-semibold' : 'font-medium',
+              'inline-flex items-center space-x-1 rounded-lg border border-transparent px-4 py-2 text-xs text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:text-gray-800'
             )}
           >
             {page.name}
