@@ -34,7 +34,7 @@ const defaultMeta: TMeta = {
   title: 'Home',
   description: 'Fahmi Idris Portfolio, Blog, Personal Project Showcase, and My Experience History.',
   url: 'https://fahmiidris.dev',
-  image: 'https://fahmiidris.dev/large-og.jpg',
+  image: 'https://fahmiidris.dev/social-card-large.jpg',
   type: 'website',
   robots: 'follow, index',
 };
