@@ -1,10 +1,14 @@
 import * as React from 'react';
+import { motion } from 'framer-motion';
 import { FaLinkedin } from 'react-icons/fa';
 import { HiArrowDown } from 'react-icons/hi';
+import { MdOutlineHistory } from 'react-icons/md';
 import { GoMarkGithub, GoFilePdf } from 'react-icons/go';
 
 import { Link } from '@/components/atoms/fi-link/link';
 import { MainLayout } from '@/components/templates/main-layout';
+import { HeadingSection } from '@/components/molecules/fi-heading-section/heading-section';
+import { ExperienceCard } from '@/components/pages/experiences/fi-experience-card/experience-card';
 
 import { ReactComponent as NodeJsLogo } from '@/images/icons/nodejs-icon.svg';
 import { ReactComponent as JavaScriptLogo } from '@/images/icons/javascript-icon.svg';
@@ -12,6 +16,8 @@ import { ReactComponent as TypeScriptLogo } from '@/images/icons/typescript-icon
 import { ReactComponent as ReactJsLogo } from '@/images/icons/reactjs-icon.svg';
 import { ReactComponent as TailwindCSSLogo } from '@/images/icons/tailwindcss-icon.svg';
 import { ReactComponent as NextJsLogo } from '@/images/icons/nextjs-icon.svg';
+
+import { experiences } from '@/data/experiences.data';
 
 import type { IconType } from 'react-icons';
 import type { TNextPageWithLayout } from '@/types/app.type';
@@ -169,6 +175,46 @@ const HomePage: TNextPageWithLayout = () => {
           </div>
         </div>
       </section>
+      <div className="flex flex-col space-y-[120px] p-[120px]">
+        <section className="relative" id="latest-experience">
+          <div className="container">
+            <HeadingSection
+              title="My Experiences"
+              description="My historical experience, non-formal education, etc."
+              icon={MdOutlineHistory}
+              link={{
+                title: 'See More',
+                href: '/experiences',
+              }}
+            />
+            <div className="pt-8">
+              <motion.ul
+                className="grid grid-cols-12 gap-4"
+                variants={{
+                  hidden: { opacity: 1, scale: 0 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                      delayChildren: 0.3,
+                      staggerChildren: 0.2,
+                    },
+                  },
+                }}
+                initial="hidden"
+                animate="visible"
+              >
+                {experiences
+                  .sort((a, b) => b.id - a.id)
+                  .slice(0, 3)
+                  .map((experience, idx) => (
+                    <ExperienceCard key={idx} {...experience} />
+                  ))}
+              </motion.ul>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
