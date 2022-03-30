@@ -4,15 +4,15 @@ import { MdOutlineHistory } from 'react-icons/md';
 
 import { MainLayout } from '@/components/templates/main-layout';
 import { HeadingSection } from '@/components/molecules/fi-heading-section/heading-section';
+import { ExperienceCard } from '@/components/pages/experiences/fi-experience-card/experience-card';
 
 import { experiences } from '@/data/experiences.data';
 
 import type { TNextPageWithLayout } from '@/types/app.type';
-import { ExperienceCard } from '@/components/pages/experiences/fi-experience-card/experience-card';
 
 const ExperiencesPage: TNextPageWithLayout = () => {
   return (
-    <section id="experiences">
+    <section id="experiences" className="relative">
       <div className="container pt-[110px]">
         <HeadingSection
           title="My Experiences"
