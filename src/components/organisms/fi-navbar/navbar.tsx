@@ -1,12 +1,14 @@
 import * as React from 'react';
+import dynamic from 'next/dynamic';
 import { HiMenu } from 'react-icons/hi';
 
 import { Link } from '@/components/atoms/fi-link/link';
 import { LogoType } from '@/components/atoms/fi-logo/logo';
 import { Search } from './fi-search/search';
 import { DesktopMenu } from './fi-desktop-menu/desktop-menu';
-import { SwitchTheme } from './fi-switch-theme/switch-theme';
 import { Internationalization } from '@/components/atoms/fi-internationalization/internationalization';
+
+const SwitchTheme = dynamic(() => import('./fi-switch-theme/switch-theme'), { ssr: false });
 
 export const Navbar = () => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -16,19 +18,19 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-40 bg-white">
+    <div className="sticky top-0 z-40 bg-white dark:bg-gray-700">
       {/* Mobile Menu */}
       {/* <MobileMenu open={open} openMobileMenu={openMobileMenu} /> */}
 
       {/* Desktop Menu */}
-      <header className="relative bg-white">
-        <nav aria-label="Top" className="bg-white transition-colors">
-          <div className="border-y border-gray-200">
+      <header className="relative bg-white dark:bg-gray-700">
+        <nav aria-label="Top" className="bg-white dark:bg-gray-700">
+          <div className="border-y border-gray-200 dark:border-gray-600">
             <div className="container">
               <div className="flex h-[58px] items-center">
                 <button
                   type="button"
-                  className="rounded-lg border border-gray-100 bg-white p-2 text-gray-400 duration-200 ease-in-out hover:bg-gray-100 lg:hidden"
+                  className="rounded-lg border border-gray-100 bg-white p-2 text-gray-400 duration-200 ease-in-out hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 lg:hidden"
                   onClick={() => openMobileMenu(true)}
                 >
                   <span className="sr-only">Open menu</span>

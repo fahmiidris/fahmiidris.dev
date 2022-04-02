@@ -18,7 +18,7 @@ const ProjectsPage: TNextPageWithLayout = () => {
         <div className="flex items-center justify-center pt-8">
           <div className="flex items-center justify-center space-x-2">
             <HiOutlineInformationCircle className="h-8 w-8" />
-            <h2 className="text-2xl font-semibold text-gray-700">
+            <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-200">
               This feature is not yet available!
             </h2>
           </div>

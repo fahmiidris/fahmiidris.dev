@@ -76,7 +76,7 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout) => {
           </>
         )}
       </Head>
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+      <ThemeProvider attribute="class" defaultTheme="dark " enableSystem={false}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

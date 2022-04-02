@@ -4,6 +4,7 @@ import { HiOutlineUserCircle } from 'react-icons/hi';
 import { GoMarkGithub, GoFilePdf } from 'react-icons/go';
 
 import { Link } from '@/components/atoms/fi-link/link';
+import { LogoType } from '@/components/atoms/fi-logo/logo';
 import { MainLayout } from '@/components/templates/main-layout';
 import { AboutLayout } from '@/components/templates/about-layout';
 import { HeadingSection } from '@/components/molecules/fi-heading-section/heading-section';
@@ -16,7 +17,6 @@ import mySelf from '@/images/random-images/my-self.jpg';
 
 import type { IconType } from 'react-icons';
 import type { TNextPageWithLayout } from '@/types/app.type';
-import { LogoType } from '@/components/atoms/fi-logo/logo';
 
 type TContact = {
   title: string;
@@ -73,7 +73,7 @@ const AboutPage: TNextPageWithLayout = () => {
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-4">
               <figure className="flex flex-col items-center justify-center">
-                <div className="relative aspect-square w-[280px] overflow-hidden rounded-full ring-4 ring-primary-400 ring-offset-4">
+                <div className="relative aspect-square w-[280px] overflow-hidden rounded-full ring-4 ring-primary-400 ring-offset-4 dark:ring-offset-gray-700">
                   <Image
                     src={mySelf}
                     layout="fill"

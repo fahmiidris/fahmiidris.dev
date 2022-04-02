@@ -6,12 +6,12 @@ import { Link } from '@/components/atoms/fi-link/link';
 
 export const Topbar = () => {
   return (
-    <div className="relative z-40 bg-white">
+    <div className="relative z-40 bg-white dark:bg-gray-700">
       <div className="container">
         <div className="flex h-[32px] items-center justify-between">
           <div className="flex items-center justify-center space-x-4">
             <div className="flex items-center space-x-2">
-              <HiLink className="h-4 w-4 text-gray-700" />
+              <HiLink className="h-4 w-4 text-gray-700 dark:text-white" />
               <Link
                 href="https://links.fahmiidris.dev"
                 isExternal={true}
@@ -22,7 +22,7 @@ export const Topbar = () => {
               </Link>
             </div>
             <div className="flex items-center space-x-2 ">
-              <RiCalendarTodoLine className="h-4 w-4 text-gray-700" />
+              <RiCalendarTodoLine className="h-4 w-4 text-gray-700 dark:text-white" />
               <Link
                 href="https://todo.fahmiidris.dev"
                 isExternal={true}
@@ -35,7 +35,7 @@ export const Topbar = () => {
           </div>
           <div className="flex items-center justify-center space-x-4">
             <div className="flex items-center space-x-2">
-              <HiOutlineTemplate className="h-4 w-4 text-gray-700" />
+              <HiOutlineTemplate className="h-4 w-4 text-gray-700 dark:text-white" />
               <Link
                 href="https://starter-template.fahmiidris.dev"
                 isExternal={true}
