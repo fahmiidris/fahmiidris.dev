@@ -1,12 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
+/** @type {import('next').NextConfig} */
+const nextConfig = withBundleAnalyzer({
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  reactStrictMode: true,
   images: {
     domains: ['ui-avatars.com'],
   },
-
-  webpack: (config, options) => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
@@ -32,9 +35,8 @@ const nextConfig = {
         },
       ],
     });
-
     return config;
   },
-};
+});
 
 module.exports = nextConfig;

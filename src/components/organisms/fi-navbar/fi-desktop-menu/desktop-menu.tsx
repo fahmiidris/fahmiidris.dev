@@ -12,6 +12,10 @@ import { navigation } from '@/components/organisms/fi-navbar/navigation-data';
 export const DesktopMenu = () => {
   const { pathname } = useRouter();
 
+  const isActive = (path: string, href: string): boolean => {
+    return href === '/' + path.split('/')[1];
+  };
+
   return (
     <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
       <div className="flex h-full items-center justify-center space-x-1">
@@ -20,7 +24,7 @@ export const DesktopMenu = () => {
             key={page.name}
             href={page.href}
             className={classNames(
-              pathname === page.href ? 'bg-gray-100 font-semibold' : 'font-medium',
+              isActive(pathname, page.href) ? 'bg-gray-100 font-semibold' : 'font-medium',
               'inline-flex items-center space-x-1 rounded-lg border border-transparent px-4 py-2 text-xs text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:text-gray-800'
             )}
           >

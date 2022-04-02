@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { HiLink } from 'react-icons/hi';
 import { RiCalendarTodoLine } from 'react-icons/ri';
+import { HiLink, HiOutlineTemplate } from 'react-icons/hi';
 
 import { Link } from '@/components/atoms/fi-link/link';
 
@@ -14,6 +14,7 @@ export const Topbar = () => {
               <HiLink className="h-4 w-4 text-gray-700" />
               <Link
                 href="https://links.fahmiidris.dev"
+                isExternal={true}
                 className="animated-underline text-xs font-semibold"
               >
                 <span className="hidden sm:block">links.fahmiidris.dev</span>
@@ -24,10 +25,24 @@ export const Topbar = () => {
               <RiCalendarTodoLine className="h-4 w-4 text-gray-700" />
               <Link
                 href="https://todo.fahmiidris.dev"
+                isExternal={true}
                 className="animated-underline text-xs font-semibold"
               >
                 <span className="hidden sm:block">todo.fahmiidris.dev</span>
                 <span className="block sm:hidden">Todo Fahmi Idris</span>
+              </Link>
+            </div>
+          </div>
+          <div className="flex items-center justify-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <HiOutlineTemplate className="h-4 w-4 text-gray-700" />
+              <Link
+                href="https://starter-template.fahmiidris.dev"
+                isExternal={true}
+                className="animated-underline text-xs font-semibold"
+              >
+                <span className="hidden sm:block">starter-template.fahmiidris.dev</span>
+                <span className="block sm:hidden">Starter Template</span>
               </Link>
             </div>
           </div>

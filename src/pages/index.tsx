@@ -166,7 +166,7 @@ const HomePage: TNextPageWithLayout = () => {
           {/* Arrow Down */}
           <div className="flex items-center justify-center pt-[40px] text-center">
             <Link
-              href="#"
+              href="#latest-experience"
               className="inline-flex items-center justify-center space-x-2 rounded-lg px-4 py-2 text-xs font-semibold hover:bg-primary-50"
             >
               <span>See More Details</span>
@@ -175,8 +175,8 @@ const HomePage: TNextPageWithLayout = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-col space-y-[120px] p-[120px]">
-        <section className="relative" id="latest-experience">
+      <div className="flex flex-col space-y-[120px] pt-[40px]">
+        <section className="relative p-[80px]" id="latest-experience">
           <div className="container">
             <HeadingSection
               title="My Experiences"
