@@ -1,58 +1,44 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
-const colors = require("tailwindcss/colors")
+const { cyan } = require('tailwindcss/colors');
+const { fontFamily, colors } = require('tailwindcss/defaultTheme');
 
-module.exports = {
-    mode: "jit",
-
-    purge: [
-        "./pages/**/*.{js,ts,jsx,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx}",
-    ],
-
-    darkMode: "class", // "media" or "class" or false
-
-    theme: {
-        extend: {
-            fontFamily: {
-                pop: ["Poppins", ...defaultTheme.fontFamily.sans],
-                sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
-            },
-            colors: {
-                red: colors.rose,
-                blue: colors.sky,
-                gray: colors.coolGray,
-                teal: colors.teal,
-                dark: colors.coolGray[700],
-                light: colors.white,
-                orange: colors.orange,
-                violet: colors.violet,
-                emerald: colors.emerald,
-                fuchsia: colors.fuchsia,
-            },
-            keyframes: {
-                wiggle: {
-                    "0%, 100%": { transform: "rotate(-45deg)" },
-                    "50%": { transform: "rotate(45deg)" },
-                }
-            },
-            animation: {
-                wiggle: "wiggle 1s ease-in infinite",
-            }
+/** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
+const tailwindConfig = {
+  darkMode: 'class',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: cyan,
+      },
+      fontFamily: {
+        sans: ['Poppins', ...fontFamily.sans],
+        quicksand: ['Quicksand', ...fontFamily.sans],
+      },
+      container: {
+        center: true,
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         },
-        container: {
-            center: true,
-        },
+      },
+      animation: {
+        wiggle: 'wiggle 2.5s ease-in infinite',
+        'spin-slow': 'spin 3s linear infinite',
+      },
     },
+  },
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],
+};
 
-    variants: {
-        extend: {
-            opacity: ["disabled"],
-            typography: ["dark"],
-        },
-    },
+const withOpacity = (variableName) => {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+};
 
-    plugins: [
-        require("@tailwindcss/forms"),
-        require("@tailwindcss/typography"),
-    ],
-}
+module.exports = tailwindConfig;
