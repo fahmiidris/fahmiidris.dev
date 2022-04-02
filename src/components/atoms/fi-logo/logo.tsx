@@ -19,8 +19,6 @@ export const LogoType = ({ className, color = '#374151' }: TLogo) => {
     }
   }, [theme]);
 
-  console.log(theme, logoColor);
-
   return (
     <svg
       className={className}

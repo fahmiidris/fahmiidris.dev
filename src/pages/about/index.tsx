@@ -154,7 +154,8 @@ const AboutPage: TNextPageWithLayout = () => {
 AboutPage.Props = {
   Layout: MainLayout,
   meta: {
-    title: 'About',
+    title: 'About Fahmi Idris',
+    description: "Hi, I'm Fahmi Idris, a frontend engineer based in West Java - Indonesia.",
   },
 };
 

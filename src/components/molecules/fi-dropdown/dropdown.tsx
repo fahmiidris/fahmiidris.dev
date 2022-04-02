@@ -24,7 +24,7 @@ type TDropdownButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 export const Dropdown = ({
   align = 'right',
   width = 48,
-  contentClasses = 'py-1 bg-white',
+  contentClasses = 'py-1 bg-white dark:bg-gray-700',
   trigger,
   children,
 }: TDropdown) => {
@@ -66,9 +66,9 @@ export const Dropdown = ({
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <div className={`absolute z-50 mt-2 ${width} rounded-md shadow-lg ${alignmentClasses}`}>
+            <div className={`absolute z-50 mt-2 ${width} rounded-lg shadow-lg ${alignmentClasses}`}>
               <Menu.Items
-                className={`rounded-md ring-1 ring-black/5 focus:outline-none ${contentClasses}`}
+                className={`rounded-lg ring-1 ring-black/5 focus:outline-none dark:ring-gray-600 ${contentClasses}`}
                 static
               >
                 {children}
@@ -86,8 +86,8 @@ const Link = ({ children, ...props }: TDropdownLink) => (
     {({ active }) => (
       <NextLink {...props}>
         <a
-          className={`block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 ${
-            active ? 'bg-gray-100' : ''
+          className={`block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 dark:text-gray-200 ${
+            active && 'bg-gray-100 dark:bg-gray-600'
           } transition duration-150 ease-in-out focus:outline-none`}
         >
           {children}
@@ -101,8 +101,8 @@ const Button = ({ children, ...props }: TDropdownButton) => (
   <Menu.Item>
     {({ active }) => (
       <button
-        className={`block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 ${
-          active ? 'bg-gray-100' : ''
+        className={`block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 dark:text-gray-200 ${
+          active && 'bg-gray-100 dark:bg-gray-600'
         } transition duration-150 ease-in-out focus:outline-none`}
         {...props}
       >
