@@ -27,7 +27,7 @@ export const Internationalization = () => {
       align="right"
       width="48"
       trigger={
-        <button className="flex items-center py-2 text-xs font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none">
+        <button className="flex items-center py-2 text-xs font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none dark:text-gray-200 dark:hover:text-gray-400">
           <span>EN</span>
           <div className="ml-1">
             <HiChevronDown className="h-4 w-4 fill-current" />

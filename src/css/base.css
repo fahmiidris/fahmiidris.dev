@@ -11,6 +11,7 @@
 ::selection {
   background: rgba(var(--fi-color-primary-400), 0.4);
   color: #374151;
+  @apply dark:text-gray-200;
 }
 
 /* html {

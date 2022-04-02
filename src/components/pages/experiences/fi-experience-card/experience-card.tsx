@@ -24,7 +24,7 @@ export const ExperienceCard = ({
           opacity: 1,
         },
       }}
-      className="relative col-span-4 rounded-lg border border-gray-200 p-3"
+      className="relative col-span-4 rounded-lg border border-gray-200 p-3 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-200"
     >
       <div className="absolute -right-2 -top-2 flex space-x-1">
         {/* <button
@@ -33,7 +33,7 @@ export const ExperienceCard = ({
         >
           View Detail
         </button> */}
-        <div className="flex aspect-square h-6 items-center justify-center rounded-md border border-gray-200 bg-white text-xs font-semibold">
+        <div className="flex aspect-square h-6 items-center justify-center rounded-md border border-gray-200 bg-white text-xs font-semibold dark:border-gray-500 dark:bg-gray-600">
           {id}
         </div>
       </div>
@@ -44,7 +44,7 @@ export const ExperienceCard = ({
           <p className="font-quicksand text-xs font-semibold">{date}</p>
         </div>
         <div>
-          <p className="h-[55px] font-quicksand text-[13px] font-bold leading-[18px] text-gray-500 line-clamp-3">
+          <p className="h-[55px] font-quicksand text-[13px] font-bold leading-[18px] text-gray-500 line-clamp-3 dark:text-gray-400">
             {description}
           </p>
         </div>
@@ -52,7 +52,7 @@ export const ExperienceCard = ({
           <Link
             href={url}
             isExternal={true}
-            className="inline-flex items-center font-quicksand text-xs font-semibold text-primary-400"
+            className="animated-underline inline-flex items-center font-quicksand text-xs font-semibold text-primary-400"
           >
             {url}
           </Link>

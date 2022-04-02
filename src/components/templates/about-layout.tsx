@@ -33,9 +33,9 @@ export const AboutLayout = ({ children }: TLayout) => {
               href={link.href}
               className={classNames(
                 pathname === link.href
-                  ? 'border-primary-400 bg-gray-100 font-semibold'
+                  ? 'border-primary-400 font-semibold dark:border-primary-500 dark:bg-gray-700'
                   : 'border-transparent font-medium',
-                'inline-flex items-center rounded-lg border px-4 py-2 text-xs'
+                'inline-flex items-center rounded-lg border px-4 py-2 text-xs hover:bg-gray-100 dark:hover:bg-gray-600'
               )}
             >
               {link.title}

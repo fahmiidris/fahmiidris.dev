@@ -39,7 +39,7 @@ const socialMedia: TLinkWithIcon[] = [
     username: 'fahmiidris-labs',
     href: 'https://github.com/fahmiidris-labs/',
     icon: GoMarkGithub,
-    className: 'w-5 h-5 fill-gray-800',
+    className: 'w-5 h-5 fill-gray-800 dark:fill-gray-200',
   },
   {
     name: 'LinkedIn',
@@ -60,7 +60,7 @@ const socialMedia: TLinkWithIcon[] = [
 const myStacks: TLinkWithIcon[] = [
   {
     name: 'JavaScript',
-    href: '#',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     icon: JavaScriptLogo,
   },
   {
@@ -95,13 +95,13 @@ const ButtonLink = () => {
     <div className="flex items-center justify-center space-x-6 py-[46px] text-center">
       <Link
         href="mailto:fahmiidris.1607@gmail.com"
-        className="inline-flex items-center justify-center rounded-lg border border-transparent bg-gray-700 px-6 py-2 font-quicksand text-sm font-semibold text-white duration-200 ease-in-out hover:bg-gray-600 hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
+        className="inline-flex items-center justify-center rounded-lg border border-transparent bg-gray-700 px-6 py-2 font-quicksand text-sm font-semibold text-white duration-150 ease-in-out hover:bg-gray-600 hover:ring-2 hover:ring-primary-400 hover:ring-offset-2 dark:bg-gray-800 dark:hover:ring-offset-gray-700"
       >
         Say Hi to Me!
       </Link>
       <Link
         href="/blog"
-        className="inline-flex items-center justify-center rounded-lg border-[1.5px] border-gray-300 bg-white px-6 py-2 font-quicksand text-sm font-semibold text-gray-700 duration-200 ease-in-out hover:bg-gray-100 hover:ring-2 hover:ring-cyan-400 hover:ring-offset-2"
+        className="inline-flex items-center justify-center rounded-lg border-[1.5px] border-gray-200 bg-white px-6  py-2 font-quicksand text-sm font-semibold text-gray-700 duration-150 ease-in-out hover:bg-gray-100 hover:ring-2 hover:ring-primary-400 hover:ring-offset-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:hover:ring-offset-gray-700"
       >
         Read My Blog
       </Link>
@@ -117,7 +117,7 @@ const HomePage: TNextPageWithLayout = () => {
           {/* Main Title */}
           <div className="text-center">
             <p className="font-quicksand text-xs font-bold">Hello World!, I'm</p>
-            <h3 className="text-2xl font-semibold uppercase">Fahmi Idris</h3>
+            <h3 className="text-2xl font-semibold uppercase dark:text-primary-400">Fahmi Idris</h3>
           </div>
 
           <div className="max-w-[910px] pt-[33px] text-center">
@@ -153,8 +153,9 @@ const HomePage: TNextPageWithLayout = () => {
             <div className="flex items-center justify-center space-x-5">
               {myStacks.map((item, idx) => (
                 <Link
-                  href={item.href}
                   key={idx}
+                  href={item.href}
+                  isExternal={true}
                   className="inline-flex items-center justify-center font-quicksand text-sm font-bold"
                 >
                   {<item.icon className="h-8 w-full" />}
@@ -167,7 +168,7 @@ const HomePage: TNextPageWithLayout = () => {
           <div className="flex items-center justify-center pt-[40px] text-center">
             <Link
               href="#latest-experience"
-              className="inline-flex items-center justify-center space-x-2 rounded-lg px-4 py-2 text-xs font-semibold hover:bg-primary-50"
+              className="inline-flex items-center justify-center space-x-2 rounded-lg border border-transparent px-4 py-2 text-xs font-semibold hover:bg-primary-50 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-primary-400"
             >
               <span>See More Details</span>
               <HiArrowDown className="h-4 w-4 animate-bounce" />

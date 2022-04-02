@@ -26,7 +26,7 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-white font-sans text-gray-700 antialiased dark:bg-gray-700">
+        <body className="bg-white font-sans text-gray-700 antialiased dark:bg-gray-700 dark:text-gray-200">
           <Main />
           <NextScript />
           <script></script>

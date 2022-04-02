@@ -20,9 +20,9 @@ type TLinkWithIcon = TLink & {
 };
 
 const menu: TLink[] = [
-  { name: 'Source Code', href: '#' },
+  { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
   { name: 'Docs', href: '#' },
-  { name: 'Starter Template', href: '#' },
+  { name: 'Starter Template', href: 'https://starter-template.fahmiidris.dev' },
   { name: 'Subscribe', href: '#' },
 ];
 
@@ -51,8 +51,8 @@ export const Footer = () => {
   const year: number = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 bg-white">
-      <div className="border-t border-gray-200">
+    <footer className="mt-24 bg-white dark:bg-gray-700">
+      <div className="border-t border-gray-200 dark:border-gray-600">
         <div className="container">
           <div className="flex flex-col space-y-4 py-5">
             <div className="flex items-center justify-center space-x-8">
@@ -60,6 +60,7 @@ export const Footer = () => {
                 <Link
                   key={index}
                   href={item.href}
+                  isExternal={true}
                   className="animated-underline inline-flex items-center justify-center font-quicksand text-xs font-bold"
                 >
                   {item.name}
@@ -68,28 +69,29 @@ export const Footer = () => {
             </div>
             <div className="flex items-center justify-center space-x-8">
               {socialMedia.map((item, index) => (
-                <Link
-                  href={item.href}
-                  key={index}
-                  isExternal={true}
-                  className="inline-flex items-center justify-center space-x-2 font-quicksand text-xs font-bold"
-                >
-                  {<item.icon className="h-[20px] w-[20px]" />}
-                  <span>{item.username}</span>
-                </Link>
+                <div key={index} className="flex items-center space-x-2">
+                  <item.icon className="h-[20px] w-[20px]" />
+                  <Link
+                    href={item.href}
+                    isExternal={true}
+                    className="animated-underline inline-flex items-center justify-center space-x-2 font-quicksand text-xs font-bold"
+                  >
+                    {item.username}
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-200">
+      <div className="border-t border-gray-200 dark:border-gray-600">
         <div className="container">
           <div className="flex items-center justify-between py-4">
             <Link
               href="https://github.com/fahmiidris-labs"
               className="inline-flex items-center justify-center space-x-2 font-quicksand text-xs font-bold"
             >
-              <GoMarkGithub className="h-[18px] w-[18px] fill-gray-800" />
+              <GoMarkGithub className="h-[18px] w-[18px] fill-gray-800 dark:fill-gray-200" />
               <span>fahmiidris-labs</span>
             </Link>
             <p className="flex items-center justify-center space-x-4 font-quicksand text-xs font-bold">
