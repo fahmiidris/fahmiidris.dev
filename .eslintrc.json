@@ -1,8 +1,6 @@
 {
   "extends": ["next/core-web-vitals"],
   "rules": {
-    "no-unused-vars": "error",
-    "no-console": "error",
     "semi": "error",
     "indent": ["error", 2]
   }
