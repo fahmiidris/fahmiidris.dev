@@ -5,7 +5,7 @@ type TLogo = {
   className?: string;
 };
 
-export const Logo = ({ className }: TLogo) => {
+export const Logo = ({ className }: TLogo): JSX.Element => {
   return (
     <svg
       className={clsx('text-slate-700', className)}

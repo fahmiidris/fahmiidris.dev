@@ -6,7 +6,7 @@ const v = (href: string): string => {
   return `${href}?v=${FAVICON_VERSION}`;
 };
 
-export const Favicons = () => {
+export const Favicons = (): JSX.Element => {
   return (
     <>
       <link rel="apple-touch-icon" sizes="57x57" href={v('/favicons/apple-icon-57x57.png')} />
