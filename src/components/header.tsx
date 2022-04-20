@@ -87,7 +87,7 @@ export const Header = (): JSX.Element => {
   return (
     <>
       <Topbar />
-      <header className="sticky inset-x-0 top-0 z-40 w-full flex-none border-y border-slate-200/70 bg-white dark:border-slate-500/10 dark:bg-slate-900">
+      <header className="sticky inset-x-0 top-0 z-40 w-full flex-none border-y border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-500/10 dark:bg-slate-900/75">
         <div className="container relative">
           <div className="flex h-[58px] w-full items-center justify-between">
             <div className="flex items-center space-x-1">
