@@ -8,7 +8,7 @@ type TLogo = {
 export const Logo = ({ className }: TLogo): JSX.Element => {
   return (
     <svg
-      className={clsx('text-slate-700', className)}
+      className={clsx('text-slate-700 dark:text-slate-200', className)}
       width={671}
       height={187}
       viewBox="0 0 671 187"

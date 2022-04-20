@@ -4,9 +4,16 @@ import '@/css/main.css';
 import * as React from 'react';
 import Router from 'next/router';
 
+import { Seo } from '@/components/seo';
+import { Title } from '@/components/title';
+import { Header } from '@/components/header';
+import { Announcement } from '@/components/announcement';
+import { SearchProvider } from '@/components/search';
+
 import ProgressBar from '@/utils/bar-of-progress';
 
-import type { AppProps } from 'next/app';
+import type { TProps } from 'next';
+import type { TAppPropsWithLayout } from 'next/app';
 
 const progress: ProgressBar = new ProgressBar({
   size: 2,
@@ -24,8 +31,39 @@ Router.events.on('routeChangeStart', (): void => progress.start());
 Router.events.on('routeChangeComplete', (): void => progress.finish());
 Router.events.on('routeChangeError', (): void => progress.finish());
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
+const defaultMeta: TProps['meta'] = {
+  title: "Hi, I'm Fahmi Idris",
+  description:
+    'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
+  url: 'https://www.fahmiidris.dev',
+  image: 'https://www.fahmiidris.dev/default-social-image.jpg',
+  type: 'website',
+  robots: 'follow, index',
+};
+
+const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Element => {
+  const { Layout, meta: customMeta }: TProps = Component.Props;
+  const meta: TProps['meta'] = { ...defaultMeta, ...customMeta };
+
+  const showHeader: boolean = !(router.pathname === '/404' || router.pathname === '/500');
+
+  return (
+    <>
+      <Title suffix="www.fahmiidris.dev">{meta.title}</Title>
+      <Seo router={router} />
+      <SearchProvider>
+        {showHeader && (
+          <>
+            <Announcement />
+            <Header />
+          </>
+        )}
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SearchProvider>
+    </>
+  );
 };
 
 export default MyApp;

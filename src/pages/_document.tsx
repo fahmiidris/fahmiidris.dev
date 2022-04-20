@@ -25,9 +25,25 @@ export default class Document extends NextDocument {
       >
         <Head>
           <Favicons />
-          <script></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                try {
+                  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark')
+                  } else {
+                    document.documentElement.classList.remove('dark')
+                  }
+                } catch (_) {}
+              `,
+            }}
+          />
         </Head>
-        <body className={clsx('font-sans text-slate-600 antialiased')}>
+        <body
+          className={clsx('text-slate-500 antialiased dark:text-slate-400', {
+            'bg-white dark:bg-slate-900': !this.props.dangerousAsPath.startsWith('/examples/'),
+          })}
+        >
           <Main />
           <NextScript />
           <script></script>
