@@ -1,13 +1,24 @@
 import * as React from 'react';
 
+import { Link } from '@/components/link';
+import { SparklesIcon } from '@heroicons/react/outline';
+
 type TAnnouncement = {
   value?: string;
 };
 
 export const Announcement = ({ value }: TAnnouncement): JSX.Element | null => {
   return value ? (
-    <p className="flex h-10 items-center justify-center bg-cyan-400 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-      {value}
-    </p>
+    <Link
+      href="https://github.com/fahmiidris-labs/fahmiidris.dev"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 p-3 dark:from-cyan-500 dark:via-cyan-600 dark:to-cyan-700"
+    >
+      <p className="flex items-center justify-center text-xs font-medium text-white transition group-hover:text-opacity-75">
+        Look! I have a new look! What do you think?
+        <SparklesIcon className="ml-1.5 h-4 w-4" />
+      </p>
+    </Link>
   ) : null;
 };

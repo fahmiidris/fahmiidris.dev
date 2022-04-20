@@ -54,7 +54,7 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Eleme
       <SearchProvider>
         {showHeader && (
           <>
-            <Announcement />
+            <Announcement value="Hei!👋🏻 I have a new look! What do you think?" />
             <Header />
           </>
         )}
