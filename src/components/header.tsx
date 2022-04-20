@@ -61,7 +61,7 @@ const Navbar = () => {
   const { pathname } = useRouter();
 
   return (
-    <nav className="hidden pl-4 text-xs font-semibold leading-6 dark:font-normal dark:text-slate-200 lg:flex lg:items-center">
+    <nav className="hidden pl-4 text-xs font-semibold leading-6 dark:text-slate-200 lg:flex lg:items-center">
       <ul className="flex items-center space-x-1">
         {navigation.pages.map((page, idx) => (
           <li key={idx}>
