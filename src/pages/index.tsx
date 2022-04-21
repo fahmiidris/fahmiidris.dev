@@ -141,7 +141,7 @@ const HomePage: TNextPageWithLayout = (): JSX.Element => {
 HomePage.Props = {
   Layout: BasicLayout,
   meta: {
-    title: "Hi, I'm Fahmi Idris - www.fahmiidris.dev",
+    title: "Hi, I'm Fahmi Idris",
     description:
       'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
   },
