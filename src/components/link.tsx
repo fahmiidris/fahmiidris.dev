@@ -18,7 +18,7 @@ export const Link = ({ children, href, openNewTab, className, ...props }: TLink)
   if (!isNewTab) {
     return (
       <NextLink href={href}>
-        <a {...props} className={className}>
+        <a {...props} className={className} style={{ outline: 'none' }}>
           {children}
         </a>
       </NextLink>
@@ -31,6 +31,7 @@ export const Link = ({ children, href, openNewTab, className, ...props }: TLink)
       className={clsx(className, 'cursor-pointer')}
       target="_blank"
       rel="noopener noreferrer"
+      style={{ outline: 'none' }}
       {...props}
     >
       {children}
