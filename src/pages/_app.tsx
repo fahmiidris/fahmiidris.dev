@@ -36,7 +36,7 @@ const defaultMeta: TProps['meta'] = {
   description:
     'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
   url: 'https://www.fahmiidris.dev',
-  image: 'https://www.fahmiidris.dev/default-social-image.jpg',
+  image: 'https://www.fahmiidris.dev/images/default-social-image.jpg',
   type: 'website',
   robots: 'follow, index',
 };
