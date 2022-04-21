@@ -84,10 +84,37 @@ const Navbar = () => {
 };
 
 export const Header = (): JSX.Element => {
+  const [isOpaque, setIsOpaque] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    let offset: number = 50;
+    const onScroll = (): void => {
+      if (!isOpaque && window.scrollY > offset) {
+        setIsOpaque(true);
+      } else if (isOpaque && window.scrollY <= offset) {
+        setIsOpaque(false);
+      }
+    };
+
+    onScroll();
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return (): void => {
+      (window as any).removeEventListener('scroll', onScroll, { passive: true });
+    };
+  }, [isOpaque]);
+
   return (
     <>
       <Topbar />
-      <header className="sticky inset-x-0 top-0 z-40 w-full flex-none border-y border-slate-200/70 bg-white/90 backdrop-blur dark:border-slate-500/10 dark:bg-slate-900/75">
+      <header
+        className={clsx(
+          'sticky top-0 z-40 w-full flex-none border-y backdrop-blur dark:border-slate-50/[0.06] lg:border-slate-900/10',
+          isOpaque
+            ? 'bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75'
+            : 'bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent'
+        )}
+      >
         <div className="container relative">
           <div className="flex h-[58px] w-full items-center justify-between">
             <div className="flex items-center space-x-1">
