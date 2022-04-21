@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Footer } from '@/components/footer';
 
 import type { TNextLayout } from 'next';
 
@@ -9,7 +10,8 @@ type TBasicLayout = {
 export const BasicLayout: TNextLayout<TBasicLayout> = ({ children }): JSX.Element => {
   return (
     <>
-      <main className="relative pt-10">{children}</main>
+      <main className="relative pt-8">{children}</main>
+      <Footer />
     </>
   );
 };
