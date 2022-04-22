@@ -6,7 +6,7 @@ import { LatestBlog } from '@/components/home/latest-blog';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { LatestExperience } from '@/components/home/latest-experience';
 import { LatestProject } from '@/components/home/latest-project';
-import { CurrentTechStack } from '@/components/current-tech-stack';
+import { TechStack } from '@/components/tech-stack';
 
 import type { TNextPageWithLayout } from 'next';
 
@@ -54,7 +54,7 @@ const Hero = (): JSX.Element => {
           Trakteer Fahmi Idris 🍦
         </Link>
       </div>
-      <CurrentTechStack className="pt-8" />
+      <TechStack className="pt-8" />
       <div className="flex items-center justify-center py-8 text-center">
         <Link
           href="#latest-blog"
