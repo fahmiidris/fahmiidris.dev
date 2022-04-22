@@ -5,58 +5,10 @@ import { Link } from '@/components/link';
 import { LatestBlog } from '@/components/home/latest-blog';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { LatestExperience } from '@/components/home/latest-experience';
-
-import { ReactComponent as NextJsLogo } from '@/images/icons/nextjs.svg';
-import { ReactComponent as NodeJsLogo } from '@/images/icons/nodejs.svg';
-import { ReactComponent as ReactJsLogo } from '@/images/icons/reactjs.svg';
-import { ReactComponent as JavaScriptLogo } from '@/images/icons/javascript.svg';
-import { ReactComponent as TypeScriptLogo } from '@/images/icons/typescript.svg';
-import { ReactComponent as TailwindCSSLogo } from '@/images/icons/tailwindcss.svg';
+import { LatestProject } from '@/components/home/latest-project';
+import { CurrentTechStack } from '@/components/current-tech-stack';
 
 import type { TNextPageWithLayout } from 'next';
-import { LatestProject } from '@/components/home/latest-project';
-
-type TLink = {
-  name: string;
-  href: string;
-};
-
-type TLinkWithIcon = TLink & {
-  icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
-};
-
-const stacks: TLinkWithIcon[] = [
-  {
-    name: 'JavaScript',
-    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    icon: JavaScriptLogo,
-  },
-  {
-    name: 'TypeScript',
-    href: 'https://www.typescriptlang.org/',
-    icon: TypeScriptLogo,
-  },
-  {
-    name: 'NodeJS',
-    href: 'https://nodejs.org/en/',
-    icon: NodeJsLogo,
-  },
-  {
-    name: 'ReactJS',
-    href: 'https://reactjs.org/',
-    icon: ReactJsLogo,
-  },
-  {
-    name: 'Tailwind CSS',
-    href: 'https://tailwindcss.com/',
-    icon: TailwindCSSLogo,
-  },
-  {
-    name: 'NextJS',
-    href: 'https://nextjs.org/',
-    icon: NextJsLogo,
-  },
-];
 
 const Hero = (): JSX.Element => {
   return (
@@ -102,14 +54,7 @@ const Hero = (): JSX.Element => {
           Trakteer Fahmi Idris 🍦
         </Link>
       </div>
-      <div className="flex items-center justify-center space-x-5 pt-8">
-        {stacks.map((item, idx) => (
-          <Link key={idx} href={item.href} openNewTab={true}>
-            <span className="sr-only">{item.name}</span>
-            {<item.icon className="h-8 w-full" />}
-          </Link>
-        ))}
-      </div>
+      <CurrentTechStack className="pt-8" />
       <div className="flex items-center justify-center py-8 text-center">
         <Link
           href="#latest-blog"
