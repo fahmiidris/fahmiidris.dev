@@ -53,7 +53,7 @@ export const ThemeSwitcher = ({ panelClassName = 'mt-2' }) => {
       </Listbox.Button>
       <Listbox.Options
         className={clsx(
-          'absolute top-full right-4 z-50 w-36 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 text-sm font-semibold dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-0 md:right-0',
+          'absolute top-full right-4 z-50 w-36 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 text-sm font-semibold dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-0 xl:right-0',
           panelClassName
         )}
       >
