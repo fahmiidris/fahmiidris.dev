@@ -2,6 +2,7 @@
   "extends": ["next/core-web-vitals"],
   "rules": {
     "semi": "error",
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "react/display-name": "off"
   }
 }
