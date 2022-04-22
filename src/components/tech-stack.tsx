@@ -53,7 +53,7 @@ const stacks: TLink[] = [
   },
 ];
 
-export const CurrentTechStack = ({ className }: TCurrentTechStack): JSX.Element => {
+export const TechStack = ({ className }: TCurrentTechStack): JSX.Element => {
   return (
     <div className={clsx('flex items-center justify-center space-x-5', className)}>
       {stacks.map((item, idx) => (
