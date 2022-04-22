@@ -6,8 +6,6 @@ import Router from 'next/router';
 
 import { Seo } from '@/components/seo';
 import { Title } from '@/components/title';
-import { Header } from '@/components/header';
-import { Announcement } from '@/components/announcement';
 import { SearchProvider } from '@/components/search';
 
 import ProgressBar from '@/utils/bar-of-progress';
@@ -45,19 +43,11 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Eleme
   const { Layout, meta: customMeta }: TProps = Component.Props;
   const meta: TProps['meta'] = { ...defaultMeta, ...customMeta };
 
-  const showHeader: boolean = !(router.pathname === '/404' || router.pathname === '/500');
-
   return (
     <>
       <Title suffix="www.fahmiidris.dev">{meta.title}</Title>
       <Seo router={router} />
       <SearchProvider>
-        {showHeader && (
-          <>
-            <Announcement message="Hei!👋🏻 I have a new look! What do you think?" />
-            <Header />
-          </>
-        )}
         <Layout>
           <Component {...pageProps} />
         </Layout>
