@@ -11,6 +11,10 @@ type TSetting = {
   icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
 };
 
+type TThemeSwitcher = {
+  className?: string;
+};
+
 const settings: TSetting[] = [
   {
     value: 'light',
@@ -29,7 +33,7 @@ const settings: TSetting[] = [
   },
 ];
 
-export const ThemeSwitcher = ({ panelClassName = 'mt-2' }) => {
+export const ThemeSwitcher = ({ className = 'mt-2' }: TThemeSwitcher): JSX.Element => {
   let { setting, setSetting } = useTheme();
 
   return (
@@ -54,7 +58,7 @@ export const ThemeSwitcher = ({ panelClassName = 'mt-2' }) => {
       <Listbox.Options
         className={clsx(
           'absolute top-full right-4 z-50 w-36 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 text-sm font-semibold dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-0 xl:right-0',
-          panelClassName
+          className
         )}
       >
         {settings.map(({ value, label, icon: Icon }) => (

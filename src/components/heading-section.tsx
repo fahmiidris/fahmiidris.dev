@@ -6,7 +6,7 @@ type THeadingSection = {
   icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
 };
 
-export const HeadingSection = ({ title, description, icon }: THeadingSection) => {
+export const HeadingSection = ({ title, description, icon }: THeadingSection): JSX.Element => {
   return (
     <div className="flex items-center justify-start">
       <div className="col-span-9 flex items-start justify-start">

@@ -5,7 +5,7 @@ import { Link } from '@/components/link';
 import { ReactComponent as GitHubIcon } from '@/images/icons/github.svg';
 import { ReactComponent as LinkedInIcon } from '@/images/icons/linkedin.svg';
 
-export const GitHubLinkedIn = () => {
+export const GitHubLinkedIn = (): JSX.Element => {
   return (
     <div className="hidden items-center space-x-4 sm:flex">
       <Link

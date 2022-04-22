@@ -45,7 +45,7 @@ const socialMedia: TLinkWithIcon[] = [
   },
 ];
 
-export const Footer = () => {
+export const Footer = (): JSX.Element => {
   const year: number = new Date().getFullYear();
 
   return (
