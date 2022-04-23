@@ -46,7 +46,7 @@ const AboutPage: TNextPageWithLayout = (): JSX.Element => {
             icon={UserCircleIcon}
           />
           <div className="flex flex-col-reverse space-y-8 lg:flex-col">
-            <div className="grid grid-cols-3 gap-4 pt-12 lg:pt-0">
+            <div className="grid grid-cols-3 gap-4 pt-12 lg:pt-3">
               {gallery.map((item, index) => (
                 <div
                   key={index}
