@@ -2,14 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repo
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+   ```sh
+   git clone https://github.com/fahmiidris-labs/fahmiidris.dev.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go into the project root directory
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+   ```sh
+   cd fahmiidris.dev
+   ```
+
+3. Install JS dependencies
+
+   ```sh
+   yarn
+   ```
+
+4. Start the dev server
+
+   ```sh
+   yarn dev
+   ```
