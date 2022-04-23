@@ -21,6 +21,8 @@ const tailwindConfig = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
+
     function ({ addVariant }) {
       addVariant(
         'supports-backdrop-blur',
