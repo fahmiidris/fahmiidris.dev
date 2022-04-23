@@ -16,7 +16,7 @@ const checkAndUpdate = (result: Result, property: string, time: number): void =>
   }
 };
 
-const diff = (a: Date, b: Date) => {
+const diff = (a: Date, b: Date): Result => {
   let difference: number = (Number(a) - Number(b)) | 0;
 
   const result: Result = {
