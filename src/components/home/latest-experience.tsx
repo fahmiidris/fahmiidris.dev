@@ -9,7 +9,7 @@ export const LatestExperience = (): JSX.Element => {
       <div className="container">
         <HeadingSection
           title="Featured Experiences"
-          description="My historical experience, non-formal education, etc."
+          description="My historical experience, non-formal education, big event, internship, etc."
           icon={ClockIcon}
         />
       </div>
