@@ -105,7 +105,7 @@ const AboutPage: TNextPageWithLayout = (): JSX.Element => {
                     connect with me, I&apos;m very open. You can visit my social media or you can
                     email me.
                   </p>
-                  <p>You can find my contacts on the left or in the footer.</p>
+                  <p>You can find my contacts in the footer.</p>
                 </section>
                 <CurrentTechStack />
                 <Spotify />
