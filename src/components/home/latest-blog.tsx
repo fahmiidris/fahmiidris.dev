@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ClipboardListIcon } from '@heroicons/react/outline';
 
+import { NoContent } from '@/components/home/no-content';
 import { HeadingSection } from '@/components/heading-section';
 
 export const LatestBlog = (): JSX.Element => {
@@ -13,7 +14,9 @@ export const LatestBlog = (): JSX.Element => {
           icon={ClipboardListIcon}
         />
       </div>
-      <div></div>
+      <div className="container pt-8">
+        <NoContent />
+      </div>
     </section>
   );
 };

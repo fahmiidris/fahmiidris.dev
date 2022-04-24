@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DesktopComputerIcon } from '@heroicons/react/outline';
 
+import { NoContent } from '@/components/home/no-content';
 import { HeadingSection } from '@/components/heading-section';
 
 export const LatestProject = (): JSX.Element => {
@@ -13,7 +14,9 @@ export const LatestProject = (): JSX.Element => {
           icon={DesktopComputerIcon}
         />
       </div>
-      <div></div>
+      <div className="container pt-8">
+        <NoContent />
+      </div>
     </section>
   );
 };
