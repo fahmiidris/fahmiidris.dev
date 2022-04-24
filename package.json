@@ -17,6 +17,8 @@
     "@next/mdx": "^12.1.5",
     "clsx": "^1.1.1",
     "file-loader": "^6.2.0",
+    "front-matter": "^4.0.2",
+    "minimatch": "^5.0.1",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
