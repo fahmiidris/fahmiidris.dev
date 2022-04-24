@@ -1,7 +1,7 @@
 import parser from './parser';
 import compiler from './compiler';
 
-type TinyTime = {
+export type TinyTime = {
   render: (date: Date) => string;
 };
 
