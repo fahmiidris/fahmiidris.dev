@@ -6,7 +6,7 @@ type TTitle = {
   children?: string;
 };
 
-export const Title = ({ suffix, children }: TTitle) => {
+export const Title = ({ suffix, children }: TTitle): JSX.Element => {
   let title: string = children + (suffix ? ` - ${suffix}` : '');
 
   return (

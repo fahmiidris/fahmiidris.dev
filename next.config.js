@@ -4,37 +4,26 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
     domains: ['ui-avatars.com'],
   },
-  webpack: (config) => {
+  webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
         {
           loader: '@svgr/webpack',
-          options: {
-            svgoConfig: {
-              plugins: [
-                {
-                  name: 'removeViewBox',
-                  active: false,
-                },
-              ],
-            },
-          },
+          options: { svgoConfig: { plugins: [{ name: 'removeViewBox', active: false }] } },
         },
         {
           loader: 'file-loader',
-          options: {
-            publicPath: '/_next',
-            name: 'static/media/[name].[hash].[ext]',
-          },
+          options: { publicPath: '/_next', name: 'static/media/[name].[hash].[ext]' },
         },
       ],
     });
+
     return config;
   },
 });

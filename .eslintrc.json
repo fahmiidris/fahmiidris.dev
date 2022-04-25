@@ -1,13 +1,7 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "next",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
-  "globals": {
-    "React": true,
-    "JSX": true
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "semi": "error",
+    "react/display-name": "off"
   }
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import clsx from 'clsx';
 import NextDocument, {
   DocumentContext,
   Html,
@@ -8,7 +9,7 @@ import NextDocument, {
   DocumentInitialProps,
 } from 'next/document';
 
-import { Favicon } from '@/components/favicon';
+import { Favicons } from '@/components/favicons';
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,17 +17,33 @@ export default class Document extends NextDocument {
     return { ...initialProps };
   }
 
-  render() {
+  render(): JSX.Element {
     return (
-      <Html lang="en" className={`scroll-smooth [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]`}>
+      <Html
+        lang="en"
+        className={clsx('scroll-smooth [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]')}
+      >
         <Head>
-          <Favicon />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
+          <Favicons />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                try {
+                  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark')
+                  } else {
+                    document.documentElement.classList.remove('dark')
+                  }
+                } catch (_) {}
+              `,
+            }}
           />
         </Head>
-        <body className="bg-white font-sans text-gray-700 antialiased dark:bg-gray-700 dark:text-gray-200">
+        <body
+          className={clsx('text-slate-500 antialiased dark:text-slate-400', {
+            'bg-white dark:bg-slate-900': !this.props.dangerousAsPath.startsWith('/examples/'),
+          })}
+        >
           <Main />
           <NextScript />
           <script></script>

@@ -1,37 +1,32 @@
 import * as React from 'react';
-import { HiOutlineDesktopComputer, HiOutlineInformationCircle } from 'react-icons/hi';
+import { ClockIcon } from '@heroicons/react/outline';
 
-import { MainLayout } from '@/components/templates/main-layout';
-import { HeadingSection } from '@/components/molecules/fi-heading-section/heading-section';
+import { BasicLayout } from '@/layouts/basic-layout';
+import { HeadingSection } from '@/components/heading-section';
 
-import type { TNextPageWithLayout } from '@/types/app.type';
+import type { TNextPageWithLayout } from 'next';
 
-const ProjectsPage: TNextPageWithLayout = () => {
+const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
   return (
-    <section id="experiences">
-      <div className="container pt-[110px]">
-        <HeadingSection
-          title="My Projects"
-          description="My project history, starting from personal projects, during internships or work, etc."
-          icon={HiOutlineDesktopComputer}
-        />
-        <div className="flex items-center justify-center pt-8">
-          <div className="flex items-center justify-center space-x-2">
-            <HiOutlineInformationCircle className="h-8 w-8" />
-            <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-200">
-              This feature is not yet available!
-            </h2>
-          </div>
+    <>
+      <div className="relative mb-20">
+        <div className="container flex flex-col space-y-6">
+          <HeadingSection
+            title="My Projects"
+            description="My project history, starting from personal projects, during internships or work, etc."
+            icon={ClockIcon}
+          />
         </div>
+        <div className="min-h-screen space-y-16">{/* list proyek nya disini */}</div>
       </div>
-    </section>
+    </>
   );
 };
 
 ProjectsPage.Props = {
-  Layout: MainLayout,
+  Layout: BasicLayout,
   meta: {
-    title: 'My Projects',
+    title: 'Projects',
     description:
       'My project history, starting from personal projects, during internships or work, etc.',
   },

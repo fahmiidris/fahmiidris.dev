@@ -1,45 +1,19 @@
 @tailwind base;
 
-:root {
-  --fi-color-primary-400: 34, 211, 238;
-  --fi-color-primary-500: 6, 182, 212;
-
-  --color-primary-400: rgb(var(--fi-color-primary-400)); /* #22d3ee */
-  --color-primary-500: rgb(var(--fi-color-primary-500)); /* #06b6d4 */
-}
-
 ::selection {
-  background: rgba(var(--fi-color-primary-400), 0.4);
-  color: #374151;
-  @apply dark:text-gray-200;
+  background-color: theme(colors.cyan.400);
+  color: #ffffff;
 }
 
-/* html {
+html {
+  height: 100%;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-} */
+}
+
+body {
+  min-height: 100%;
+}
 
 abbr[title] {
   text-decoration: none;
-}
-
-@layer base {
-  h1 {
-    @apply font-sans text-2xl font-semibold md:text-4xl;
-  }
-
-  h2 {
-    @apply font-sans text-xl font-semibold md:text-3xl;
-  }
-
-  h3 {
-    @apply font-sans text-lg font-semibold md:text-2xl;
-  }
-
-  h4 {
-    @apply font-sans text-base font-semibold md:text-lg;
-  }
-
-  body {
-    @apply font-sans text-sm md:text-base;
-  }
 }

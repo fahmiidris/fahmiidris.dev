@@ -1,231 +1,94 @@
 import * as React from 'react';
-import { motion } from 'framer-motion';
-import { FaLinkedin } from 'react-icons/fa';
-import { HiArrowDown } from 'react-icons/hi';
-import { MdOutlineHistory } from 'react-icons/md';
-import { GoMarkGithub, GoFilePdf } from 'react-icons/go';
+import { ArrowSmDownIcon } from '@heroicons/react/solid';
 
-import { Link } from '@/components/atoms/fi-link/link';
-import { MainLayout } from '@/components/templates/main-layout';
-import { HeadingSection } from '@/components/molecules/fi-heading-section/heading-section';
-import { ExperienceCard } from '@/components/pages/experiences/fi-experience-card/experience-card';
+import { Link } from '@/components/link';
+import { LatestBlog } from '@/components/home/latest-blog';
+import { BasicLayout } from '@/layouts/basic-layout';
+import { LatestExperience } from '@/components/home/latest-experience';
+import { LatestProject } from '@/components/home/latest-project';
+import { TechStack } from '@/components/tech-stack';
 
-import { ReactComponent as NodeJsLogo } from '@/images/icons/nodejs-icon.svg';
-import { ReactComponent as JavaScriptLogo } from '@/images/icons/javascript-icon.svg';
-import { ReactComponent as TypeScriptLogo } from '@/images/icons/typescript-icon.svg';
-import { ReactComponent as ReactJsLogo } from '@/images/icons/reactjs-icon.svg';
-import { ReactComponent as TailwindCSSLogo } from '@/images/icons/tailwindcss-icon.svg';
-import { ReactComponent as NextJsLogo } from '@/images/icons/nextjs-icon.svg';
+import type { TNextPageWithLayout } from 'next';
 
-import { experiences } from '@/data/experiences.data';
-
-import type { IconType } from 'react-icons';
-import type { TNextPageWithLayout } from '@/types/app.type';
-
-type TLink = {
-  name: string;
-  href: string;
-};
-
-type TLinkWithIcon = TLink & {
-  username?: string;
-  className?: string;
-  icon: IconType;
-};
-
-const socialMedia: TLinkWithIcon[] = [
-  {
-    name: 'Github',
-    username: 'fahmiidris-labs',
-    href: 'https://github.com/fahmiidris-labs/',
-    icon: GoMarkGithub,
-    className: 'w-5 h-5 fill-gray-800 dark:fill-gray-200',
-  },
-  {
-    name: 'LinkedIn',
-    username: 'linkedin.com/in/fahmiidris-labs',
-    href: 'https://www.linkedin.com/in/fahmiidris-labs/',
-    icon: FaLinkedin,
-    className: 'w-5 h-5 fill-primary-600',
-  },
-  {
-    name: 'My Resume',
-    username: 'My Resume',
-    href: '#',
-    icon: GoFilePdf,
-    className: 'w-5 h-5 fill-rose-600',
-  },
-];
-
-const myStacks: TLinkWithIcon[] = [
-  {
-    name: 'JavaScript',
-    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    icon: JavaScriptLogo,
-  },
-  {
-    name: 'TypeScript',
-    href: 'https://www.typescriptlang.org/',
-    icon: TypeScriptLogo,
-  },
-  {
-    name: 'NodeJS',
-    href: 'https://nodejs.org/en/',
-    icon: NodeJsLogo,
-  },
-  {
-    name: 'ReactJS',
-    href: 'https://reactjs.org/',
-    icon: ReactJsLogo,
-  },
-  {
-    name: 'Tailwind CSS',
-    href: 'https://tailwindcss.com/',
-    icon: TailwindCSSLogo,
-  },
-  {
-    name: 'NextJS',
-    href: 'https://nextjs.org/',
-    icon: NextJsLogo,
-  },
-];
-
-const ButtonLink = () => {
+const Hero = (): JSX.Element => {
   return (
-    <div className="flex items-center justify-center space-x-6 py-[46px] text-center">
-      <Link
-        href="mailto:fahmiidris.1607@gmail.com"
-        className="inline-flex items-center justify-center rounded-lg border border-transparent bg-gray-700 px-6 py-2 font-quicksand text-sm font-semibold text-white duration-150 ease-in-out hover:bg-gray-600 hover:ring-2 hover:ring-primary-400 hover:ring-offset-2 dark:bg-gray-800 dark:hover:ring-offset-gray-700"
-      >
-        Say Hi to Me!
-      </Link>
-      <Link
-        href="/blog"
-        className="inline-flex items-center justify-center rounded-lg border-[1.5px] border-gray-200 bg-white px-6  py-2 font-quicksand text-sm font-semibold text-gray-700 duration-150 ease-in-out hover:bg-gray-100 hover:ring-2 hover:ring-primary-400 hover:ring-offset-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:hover:ring-offset-gray-700"
-      >
-        Read My Blog
-      </Link>
+    <div className="container flex flex-col items-center justify-center">
+      <div className="text-center">
+        <p className="text-xs font-bold text-slate-700 dark:text-slate-200">
+          Hello World!, I&apos;m
+        </p>
+        <h3 className="text-2xl font-semibold uppercase text-slate-700 dark:text-cyan-400">
+          Fahmi Idris
+        </h3>
+      </div>
+      <div className="max-w-[910px] pt-4 text-center">
+        <h1 className="text-[34px] font-bold leading-tight text-slate-700 dark:text-slate-200 md:text-5xl md:leading-[125%]">
+          A software engineer from <span className="text-cyan-400">West Java</span> -{' '}
+          <span className="text-cyan-400">Indonesia</span> who focuses on{' '}
+          <span className="text-cyan-400">Website Technology</span>.
+        </h1>
+        <p className="pt-4 text-sm md:text-lg">
+          This website was established not just as a learning tool, but also as a place for me to
+          write and show off my projects, as well as a repository of my past experiences.
+        </p>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-4 pt-8 text-center sm:flex sm:items-center sm:justify-center sm:gap-0 sm:space-x-6">
+        <Link
+          href="mailto:fahmiidris.1607@gmail.com"
+          openNewTab={true}
+          className="rounded-lg border border-transparent bg-slate-800 py-3 px-6 text-sm font-semibold text-slate-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:bg-slate-200 dark:text-slate-700 dark:ring-offset-slate-900 dark:hover:bg-slate-300"
+        >
+          Say &quot;Hi!&quot; to Me! 👋🏻
+        </Link>
+        <Link
+          href="/blogs"
+          className="rounded-lg border border-slate-300 bg-slate-100 py-3 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+        >
+          Read My Blog 📖
+        </Link>
+        <Link
+          href="https://trakteer.id/fahmiidris"
+          openNewTab={true}
+          className="rounded-lg border border-slate-300 bg-slate-100 py-3 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+        >
+          Trakteer Fahmi Idris 🍦
+        </Link>
+      </div>
+      <TechStack className="pt-8" />
+      <div className="flex items-center justify-center py-8 text-center">
+        <Link
+          href="#latest-blog"
+          className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-slate-100 py-2 pl-4 pr-3 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+        >
+          <span>See More Details</span>
+          <ArrowSmDownIcon className="h-4 w-4" />
+        </Link>
+      </div>
     </div>
   );
 };
 
-const HomePage: TNextPageWithLayout = () => {
+const HomePage: TNextPageWithLayout = (): JSX.Element => {
   return (
     <>
-      <section id="hero-section">
-        <div className="container flex flex-col items-center justify-center pt-[130px]">
-          {/* Main Title */}
-          <div className="text-center">
-            <p className="font-quicksand text-xs font-bold">Hello World!, I'm</p>
-            <h3 className="text-2xl font-semibold uppercase dark:text-primary-400">Fahmi Idris</h3>
-          </div>
-
-          <div className="max-w-[910px] pt-[33px] text-center">
-            <h1 className="text-5xl font-bold leading-[125%]">
-              Stay a Student in the field of{' '}
-              <span className="text-primary-400">Information Technology</span> and focus on{' '}
-              <span className="text-primary-400">Website Technology</span>.
-            </h1>
-          </div>
-
-          {/* Button Link */}
-          <ButtonLink />
-
-          {/* Social Media */}
-          <div className="flex items-center justify-center text-center">
-            <div className="flex items-center justify-start space-x-[45px]">
-              {socialMedia.map((item, idx) => (
-                <Link
-                  href={item.href}
-                  key={idx}
-                  isExternal={true}
-                  className="inline-flex items-center justify-center space-x-2 font-quicksand text-xs font-bold"
-                >
-                  {<item.icon className={item.className} />}
-                  <span>{item.username}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* My Stacks */}
-          <div className="flex items-center justify-center pt-[30px] text-center">
-            <div className="flex items-center justify-center space-x-5">
-              {myStacks.map((item, idx) => (
-                <Link
-                  key={idx}
-                  href={item.href}
-                  isExternal={true}
-                  className="inline-flex items-center justify-center font-quicksand text-sm font-bold"
-                >
-                  {<item.icon className="h-8 w-full" />}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Arrow Down */}
-          <div className="flex items-center justify-center pt-[40px] text-center">
-            <Link
-              href="#latest-experience"
-              className="inline-flex items-center justify-center space-x-2 rounded-lg border border-transparent px-4 py-2 text-xs font-semibold hover:bg-primary-50 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-primary-400"
-            >
-              <span>See More Details</span>
-              <HiArrowDown className="h-4 w-4 animate-bounce" />
-            </Link>
-          </div>
-        </div>
-      </section>
-      <div className="flex flex-col space-y-[120px] pt-[40px]">
-        <section className="relative p-[80px]" id="latest-experience">
-          <div className="container">
-            <HeadingSection
-              title="My Experiences"
-              description="My historical experience, non-formal education, etc."
-              icon={MdOutlineHistory}
-              link={{
-                title: 'See More',
-                href: '/experiences',
-              }}
-            />
-            <div className="pt-8">
-              <motion.ul
-                className="grid grid-cols-12 gap-4"
-                variants={{
-                  hidden: { opacity: 1, scale: 0 },
-                  visible: {
-                    opacity: 1,
-                    scale: 1,
-                    transition: {
-                      delayChildren: 0.3,
-                      staggerChildren: 0.2,
-                    },
-                  },
-                }}
-                initial="hidden"
-                animate="visible"
-              >
-                {experiences
-                  .sort((a, b) => b.id - a.id)
-                  .slice(0, 3)
-                  .map((experience, idx) => (
-                    <ExperienceCard key={idx} {...experience} />
-                  ))}
-              </motion.ul>
-            </div>
-          </div>
-        </section>
+      <div className="space-y-20 overflow-hidden">
+        <Hero />
+      </div>
+      <div className="mb-20 space-y-20 overflow-hidden">
+        <LatestBlog />
+        <LatestExperience />
+        <LatestProject />
       </div>
     </>
   );
 };
 
 HomePage.Props = {
-  Layout: MainLayout,
+  Layout: BasicLayout,
   meta: {
-    title: "Hi! I'm Fahmi Idris",
+    title: "Hi, I'm Fahmi Idris",
     description:
-      'Fahmi Idris Portfolio, Blog, Personal Project Showcase, and My Experience History.',
+      'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
   },
 };
 
