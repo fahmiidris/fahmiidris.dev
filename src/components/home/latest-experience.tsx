@@ -6,7 +6,7 @@ import { Steps } from '@/components/experiences/steps';
 import { NoContent } from '@/components/home/no-content';
 import { HeadingSection } from '@/components/heading-section';
 
-import { steps } from '@/pages/experiences';
+import { data as myExperiences } from '@/components/experiences/data';
 
 export const LatestExperience = (): JSX.Element => {
   return (
@@ -19,11 +19,11 @@ export const LatestExperience = (): JSX.Element => {
         />
       </div>
       <div className="container pt-8">
-        {steps.length < 1 ? (
+        {myExperiences.length < 1 ? (
           <NoContent />
         ) : (
           <div className="flex flex-col space-y-8">
-            <Steps steps={steps.sort((a, b) => b.id - a.id).slice(0, 2)} />
+            <Steps steps={myExperiences.sort((a, b) => b.id - a.id).slice(0, 2)} />
             <div className="ml-10">
               <Link
                 href="/experiences"
