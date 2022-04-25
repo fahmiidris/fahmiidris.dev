@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { ClockIcon } from '@heroicons/react/outline';
 
+import { Link } from '@/components/link';
 import { Steps, TSteps } from '@/components/experiences/steps';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { HeadingSection } from '@/components/heading-section';
 
 import type { TNextPageWithLayout } from 'next';
-import { Link } from '@/components/link';
 
 export let steps: TSteps['steps'] = [
   {
