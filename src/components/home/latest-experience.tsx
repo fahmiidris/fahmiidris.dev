@@ -23,7 +23,7 @@ export const LatestExperience = (): JSX.Element => {
           <NoContent />
         ) : (
           <div className="flex flex-col space-y-8">
-            <Steps steps={steps.slice(0, 2)} />
+            <Steps steps={steps.sort((a, b) => b.id - a.id).slice(0, 2)} />
             <div className="ml-10">
               <Link
                 href="/experiences"
