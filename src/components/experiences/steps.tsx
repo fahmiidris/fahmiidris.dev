@@ -1,6 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export type TSteps = {
   steps: {
@@ -8,7 +8,7 @@ export type TSteps = {
     title: string;
     time: string;
     images?: {
-      src: string;
+      src: StaticImageData;
       alt: string;
     }[];
     body: () => JSX.Element;
@@ -24,7 +24,7 @@ export const Steps = ({ steps }: TSteps): JSX.Element => {
             key={index}
             id={step.id.toString()}
             className={clsx(
-              `before:content-['Hi] relative grid-cols-1 gap-8 pl-10 before:absolute before:left-0 before:flex before:h-[calc(1.375rem+1px)] before:w-[calc(1.375rem+1px)] before:items-center before:justify-center before:rounded-md before:text-[0.625rem] before:font-bold before:text-slate-700 before:shadow-sm before:ring-1 before:ring-slate-900/5 before:content-[attr(id)] dark:before:bg-slate-700 dark:before:text-slate-200 dark:before:shadow-none dark:before:ring-0 xl:grid`,
+              `relative grid-cols-1 gap-8 pl-10 before:absolute before:left-0 before:flex before:h-[calc(1.375rem+1px)] before:w-[calc(1.375rem+1px)] before:items-center before:justify-center before:rounded-md before:text-[0.625rem] before:font-bold before:text-slate-700 before:shadow-sm before:ring-1 before:ring-slate-900/5 before:content-[attr(id)] dark:before:bg-slate-700 dark:before:text-slate-200 dark:before:shadow-none dark:before:ring-0 xl:grid`,
               index !== steps.length - 1 &&
                 'pb-8 after:absolute after:top-[calc(1.875rem+1px)] after:bottom-0 after:left-[0.6875rem] after:w-px after:bg-slate-200 dark:after:bg-slate-200/5'
             )}
@@ -51,7 +51,7 @@ export const Steps = ({ steps }: TSteps): JSX.Element => {
                       <Image
                         src={item.src}
                         alt={item.alt}
-                        priority={false}
+                        placeholder="blur"
                         layout="fill"
                         className="object-cover object-center"
                       />

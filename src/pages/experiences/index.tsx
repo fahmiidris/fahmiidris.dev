@@ -8,6 +8,14 @@ import { HeadingSection } from '@/components/heading-section';
 
 import type { TNextPageWithLayout } from 'next';
 
+import sidangPkl from '@/public/images/sidang-pkl.jpg';
+import jccOnline1 from '@/public/images/jcc-online-1.png';
+import jcc1 from '@/public/images/jcc-1.png';
+import jcc2 from '@/public/images/jcc-2.png';
+import jcc3 from '@/public/images/jcc-3.png';
+import aquaTroops from '@/public/images/meet-aquatroops.png';
+import sprintReview from '@/public/images/sprint-review.png';
+
 export let steps: TSteps['steps'] = [
   {
     id: 1,
@@ -15,7 +23,7 @@ export let steps: TSteps['steps'] = [
     time: 'October 23th, 2019 - February 7th, 2020',
     images: [
       {
-        src: '/images/sidang-pkl.jpg',
+        src: sidangPkl,
         alt: 'Sidang PKL',
       },
     ],
@@ -41,7 +49,7 @@ export let steps: TSteps['steps'] = [
     time: 'August 25th, 2021 - September 25th, 2021',
     images: [
       {
-        src: '/images/jcc-online-1.png',
+        src: jccOnline1,
         alt: 'JCC Online 2021 Bootcamp',
       },
     ],
@@ -67,15 +75,15 @@ export let steps: TSteps['steps'] = [
     time: 'October 6th, 2021 - March 31th, 2022',
     images: [
       {
-        src: '/images/jcc-1.png',
+        src: jcc1,
         alt: 'JCC 2021 Bootcamp',
       },
       {
-        src: '/images/jcc-2.png',
+        src: jcc2,
         alt: 'JCC 2021 Bootcamp',
       },
       {
-        src: '/images/jcc-3.png',
+        src: jcc3,
         alt: 'JCC 2021 Bootcamp',
       },
     ],
@@ -94,11 +102,11 @@ export let steps: TSteps['steps'] = [
     time: 'March 1st, 2022 - June 1st, 2022',
     images: [
       {
-        src: '/images/meet-aquatroops.png',
+        src: aquaTroops,
         alt: 'Meet Aquatroops',
       },
       {
-        src: '/images/sprint-review.png',
+        src: sprintReview,
         alt: 'Sprint Review',
       },
     ],
