@@ -21,6 +21,7 @@ const tailwindConfig = {
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
 
     function ({ addVariant }) {
