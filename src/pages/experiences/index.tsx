@@ -16,11 +16,9 @@ const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
 
   React.useEffect(() => {
     if (search) {
-      const filteredData: TSteps['steps'] = myExperiences
-        .sort((a, b) => b.id - a.id)
-        .filter((step) => {
-          return step.title.toLowerCase().includes(search.toLowerCase());
-        });
+      const filteredData: TSteps['steps'] = myExperiences.filter((step) => {
+        return step.title.toLowerCase().includes(search.toLowerCase());
+      });
 
       setData(filteredData);
     } else {
@@ -60,7 +58,7 @@ const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
               <div className="h-8 bg-gradient-to-b from-white dark:from-slate-900" />
             </div>
             <div className="col-span-12 md:col-span-9">
-              <Steps steps={data} />
+              <Steps steps={data.sort((a, b) => b.id - a.id)} />
             </div>
           </div>
         </div>
