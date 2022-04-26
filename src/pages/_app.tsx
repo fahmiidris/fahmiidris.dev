@@ -72,7 +72,7 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Eleme
 
         {meta.date && (
           <>
-            <meta name="author" property="article:author" content="Theodorus Clarence" />
+            <meta name="author" property="article:author" content="Fahmi Idris" />
             <meta name="published_time" property="article:published_time" content={meta.date} />
             <meta name="publish_date" property="og:publish_date" content={meta.date} />
           </>
