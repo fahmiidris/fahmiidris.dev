@@ -41,7 +41,7 @@ const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
         <div className="container pt-8">
           <div className="grid grid-cols-12 gap-4">
             <div className="sticky top-20 z-30 col-span-12 self-start md:col-span-3">
-              <div className="-mx-4 -mt-6 bg-white/80 px-4 pt-6 backdrop-blur dark:bg-slate-900/75">
+              <div className="-mx-4 -mt-6 bg-white/95 px-4 pt-6 backdrop-blur dark:bg-slate-900/75">
                 <Label htmlFor="search" value="Search" />
                 <div className="relative mt-1">
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3">
