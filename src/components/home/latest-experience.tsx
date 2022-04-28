@@ -3,7 +3,7 @@ import { ClockIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
 import { Steps } from '@/components/experiences/steps';
-import { NoContent } from '@/components/home/no-content';
+import { NoContent } from '@/components/no-content';
 import { HeadingSection } from '@/components/heading-section';
 
 import { data as myExperiences } from '@/components/experiences/data';
@@ -20,7 +20,7 @@ export const LatestExperience = (): JSX.Element => {
       </div>
       <div className="container pt-8">
         {myExperiences.length < 1 ? (
-          <NoContent />
+          <NoContent text="No Content Here!" />
         ) : (
           <div className="flex flex-col space-y-8">
             <Steps steps={myExperiences.sort((a, b) => b.id - a.id).slice(0, 2)} />

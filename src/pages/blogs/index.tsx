@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Widont } from '@/components/widont';
+import { NoContent } from '@/components/no-content';
 import { BasicLayout } from '@/layouts/basic-layout';
 
 import type { TNextPageWithLayout } from 'next';
@@ -21,7 +22,9 @@ const BlogsPage: TNextPageWithLayout = (): JSX.Element => {
               <h2 className="sr-only">Sign up for our newsletter</h2>
             </section>
           </header>
-          <div className="min-h-screen space-y-16">{/* list blog nya disini */}</div>
+          <div className="min-h-screen space-y-16">
+            <NoContent text="Currently under development!" />
+          </div>
         </div>
       </div>
     </>

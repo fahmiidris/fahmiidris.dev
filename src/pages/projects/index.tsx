@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { DesktopComputerIcon } from '@heroicons/react/outline';
 
+import { NoContent } from '@/components/no-content';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { HeadingSection } from '@/components/heading-section';
 
@@ -17,7 +18,11 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
             icon={DesktopComputerIcon}
           />
         </div>
-        <div className="min-h-screen space-y-16">{/* list proyek nya disini */}</div>
+        <div className="container pt-8">
+          <div className="min-h-screen space-y-16">
+            <NoContent text="Currently under development!" />
+          </div>
+        </div>
       </div>
     </>
   );
