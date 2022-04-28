@@ -8,7 +8,6 @@ import { HeadingSection } from '@/components/heading-section';
 import { data as myExperiences } from '@/components/experiences/data';
 
 import type { TNextPageWithLayout } from 'next';
-import { Label } from '@/components/label';
 
 const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
   const [search, setSearch] = React.useState<string | null>(null);
