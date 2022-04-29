@@ -1,15 +1,11 @@
-import { StaticImageData } from 'next/image';
-
-import fahmiidrisAvatar from '@/images/me.png';
-
 export type TAuthor = {
   name: string;
   github: string;
-  avatar: StaticImageData;
+  avatar: any;
 };
 
 export const fahmiidris: TAuthor = {
   name: 'Fahmi Idris',
   github: 'fahmiidris-labs',
-  avatar: fahmiidrisAvatar,
+  avatar: require('@/images/me.jpg').default,
 };

@@ -1,39 +1,14 @@
 import * as React from 'react';
-import Image, { StaticImageData } from 'next/image';
 import { UserCircleIcon } from '@heroicons/react/outline';
 
 import { Logo } from '@/components/logo';
+import { Image } from '@/components/image';
 import { Spotify } from '@/components/about/spotify';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { HeadingSection } from '@/components/heading-section';
 import { CurrentTechStack } from '@/components/about/current-tech-stack';
 
-import me from '@/images/me.png';
-import jcc1 from '@/public/images/jcc-1.png';
-import jcc2 from '@/public/images/jcc-2.png';
-import jcc3 from '@/public/images/jcc-3.png';
-
 import type { TNextPageWithLayout } from 'next';
-
-type TGallery = {
-  name: string;
-  image: StaticImageData;
-};
-
-const gallery: TGallery[] = [
-  {
-    name: 'JCC 1',
-    image: jcc1,
-  },
-  {
-    name: 'JCC 2',
-    image: jcc2,
-  },
-  {
-    name: 'JCC 3',
-    image: jcc3,
-  },
-];
 
 const AboutPage: TNextPageWithLayout = (): JSX.Element => {
   return (
@@ -47,8 +22,21 @@ const AboutPage: TNextPageWithLayout = (): JSX.Element => {
           />
           <div className="flex flex-col-reverse space-y-8 lg:flex-col">
             <div className="grid grid-cols-3 gap-4 pt-12 lg:pt-3">
-              {gallery.map((item, index) => (
-                <div
+              {[
+                {
+                  name: 'JCC 1',
+                  image: require('@/images/jcc-offline-1.jpg').default,
+                },
+                {
+                  name: 'JCC 2',
+                  image: require('@/images/jcc-offline-2.jpg').default,
+                },
+                {
+                  name: 'JCC 3',
+                  image: require('@/images/jcc-offline-3.jpg').default,
+                },
+              ].map((item, index) => (
+                <Image.Wrapper
                   key={index}
                   className="relative col-span-3 aspect-video w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800 sm:col-span-1"
                 >
@@ -59,21 +47,21 @@ const AboutPage: TNextPageWithLayout = (): JSX.Element => {
                     placeholder="blur"
                     className="object-cover object-center"
                   />
-                </div>
+                </Image.Wrapper>
               ))}
             </div>
             <div className="grid grid-cols-6 gap-4">
               <div className="col-span-6 lg:col-span-2">
                 <div className="flex items-center justify-center pt-0 lg:pt-24">
-                  <div className="relative aspect-square w-72 overflow-hidden rounded-full bg-slate-200 ring-4 ring-cyan-400 ring-offset-4 dark:bg-slate-800 dark:ring-offset-slate-900">
+                  <Image.Wrapper className="relative aspect-square w-72 overflow-hidden rounded-full bg-slate-200 ring-4 ring-cyan-400 ring-offset-4 dark:bg-slate-800 dark:ring-offset-slate-900">
                     <Image
-                      src={me}
+                      src={require('@/images/me.jpg').default}
                       alt="Me"
                       layout="fill"
                       placeholder="blur"
                       className="object-cover object-center"
                     />
-                  </div>
+                  </Image.Wrapper>
                 </div>
               </div>
               <div className="col-span-6 space-y-6 lg:col-span-4">

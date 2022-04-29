@@ -4,14 +4,6 @@ import { Link } from '@/components/link';
 
 import type { TSteps } from '@/components/experiences/steps';
 
-import sidangPkl from '@/public/images/sidang-pkl.jpg';
-import jccOnline1 from '@/public/images/jcc-online-1.png';
-import jcc1 from '@/public/images/jcc-1.png';
-import jcc2 from '@/public/images/jcc-2.png';
-import jcc3 from '@/public/images/jcc-3.png';
-import aquaTroops from '@/public/images/meet-aquatroops.png';
-import sprintReview from '@/public/images/sprint-review.png';
-
 export let data: TSteps['steps'] = [
   {
     id: 1,
@@ -19,7 +11,7 @@ export let data: TSteps['steps'] = [
     time: 'October 23th, 2019 - February 7th, 2020',
     images: [
       {
-        src: sidangPkl,
+        src: require('@/images/sidang-pkl.jpg').default,
         alt: 'Sidang PKL',
       },
     ],
@@ -45,7 +37,7 @@ export let data: TSteps['steps'] = [
     time: 'August 25th, 2021 - September 25th, 2021',
     images: [
       {
-        src: jccOnline1,
+        src: require('@/images/jcc-online-1.jpg').default,
         alt: 'JCC Online 2021 Bootcamp',
       },
     ],
@@ -71,15 +63,15 @@ export let data: TSteps['steps'] = [
     time: 'October 6th, 2021 - March 31th, 2022',
     images: [
       {
-        src: jcc1,
+        src: require('@/images/jcc-offline-1.jpg').default,
         alt: 'JCC 2021 Bootcamp',
       },
       {
-        src: jcc2,
+        src: require('@/images/jcc-offline-3.jpg').default,
         alt: 'JCC 2021 Bootcamp',
       },
       {
-        src: jcc3,
+        src: require('@/images/jcc-offline-3.jpg').default,
         alt: 'JCC 2021 Bootcamp',
       },
     ],
@@ -95,15 +87,15 @@ export let data: TSteps['steps'] = [
   {
     id: 4,
     title: 'Internship as a Frontend Web Developer at eFishery',
-    // time: 'March 1st, 2022 - June 1st, 2022',
-    time: 'March 1st, 2022 - Present',
+    // time: 'February 14th, 2022 - June 1st, 2022',
+    time: 'February 14th, 2022 - Present',
     images: [
       {
-        src: aquaTroops,
+        src: require('@/images/meet-aquatroops.jpg').default,
         alt: 'Meet Aquatroops',
       },
       {
-        src: sprintReview,
+        src: require('@/images/sprint-review.jpg').default,
         alt: 'Sprint Review',
       },
     ],

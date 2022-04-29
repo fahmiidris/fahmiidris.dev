@@ -1,6 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
+
+import { Image } from '@/components/image';
 
 export type TSteps = {
   steps: {
@@ -8,7 +9,7 @@ export type TSteps = {
     title: string;
     time: string;
     images?: {
-      src: StaticImageData;
+      src: any;
       alt: string;
     }[];
     body: () => JSX.Element;
@@ -19,7 +20,7 @@ export const Steps = ({ steps }: TSteps): JSX.Element => {
   return (
     <>
       <ol className="relative space-y-2">
-        {steps.map((step, index) => (
+        {steps.map(({ body: Component, ...step }, index) => (
           <li
             key={index}
             id={step.id.toString()}
@@ -37,14 +38,14 @@ export const Steps = ({ steps }: TSteps): JSX.Element => {
                 {step.time}
               </time>
               <div className="porse-slate prose prose-sm font-semibold prose-p:text-slate-500">
-                <step.body />
+                <Component />
               </div>
             </div>
             <div>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {step.images &&
                   step.images.map((item, index) => (
-                    <div
+                    <Image.Wrapper
                       key={index}
                       className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800"
                     >
@@ -55,7 +56,7 @@ export const Steps = ({ steps }: TSteps): JSX.Element => {
                         layout="fill"
                         className="object-cover object-center"
                       />
-                    </div>
+                    </Image.Wrapper>
                   ))}
               </div>
             </div>
