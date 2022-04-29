@@ -5,7 +5,7 @@ type TLable = React.LabelHTMLAttributes<HTMLLabelElement> & {
   value: string;
 };
 
-export const Label = ({ htmlFor, value, className, children }: TLable) => {
+export const Label = ({ htmlFor, value, className, children }: TLable): JSX.Element => {
   return (
     <label
       htmlFor={htmlFor}
