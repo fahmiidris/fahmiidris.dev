@@ -47,7 +47,7 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
                 Fahmi Idris
               </p>
               <Link
-                href="https://kloningan.com"
+                href="https://www.kloningan.com"
                 openNewTab={true}
                 className="flex-none rounded-lg bg-white py-3 px-5 text-xs font-bold text-slate-900 transition-colors duration-200 hover:bg-slate-100 sm:text-sm sm:font-semibold"
               >
