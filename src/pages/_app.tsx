@@ -53,12 +53,12 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Eleme
         <meta name="description" content={meta.description} />
 
         {/* Open Graph */}
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={`${meta.url}${router.asPath}`} />
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
+        <meta name="title" property="og:title" content={meta.title} />
+        <meta name="description" property="og:description" content={meta.description} />
+        <meta name="url" property="og:url" content={`${meta.url}${router.asPath}`} />
+        <meta name="type" property="og:type" content={meta.type} />
+        <meta name="site_name" property="og:site_name" content={meta.title} />
+        <meta name="image" property="og:image" content={meta.image} />
 
         {/* Twitter */}
         <meta name="twitter:title" content={meta.title} />
