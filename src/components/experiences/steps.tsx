@@ -3,17 +3,10 @@ import clsx from 'clsx';
 
 import { Image } from '@/components/image';
 
-export type TSteps = {
-  steps: {
-    id: number;
-    title: string;
-    time: string;
-    images?: {
-      src: any;
-      alt: string;
-    }[];
-    body: () => JSX.Element;
-  }[];
+import type { TExperience } from '@/components/experiences/data';
+
+type TSteps = {
+  steps: TExperience[];
 };
 
 export const Steps = ({ steps }: TSteps): JSX.Element => {

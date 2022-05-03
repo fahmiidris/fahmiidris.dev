@@ -2,9 +2,18 @@ import * as React from 'react';
 
 import { Link } from '@/components/link';
 
-import type { TSteps } from '@/components/experiences/steps';
+export type TExperience = {
+  id: number;
+  title: string;
+  time: string;
+  images?: {
+    src: any;
+    alt: string;
+  }[];
+  body: () => JSX.Element;
+};
 
-export let data: TSteps['steps'] = [
+export let data: TExperience[] = [
   {
     id: 1,
     title: 'Field Work Practice at Defense University - LPPPM - Kapus Eva',
