@@ -36,7 +36,7 @@ const Hero = (): JSX.Element => {
         <Link
           href="mailto:fahmiidris.1607@gmail.com"
           openNewTab={true}
-          className="rounded-lg border border-transparent bg-slate-800 py-3 px-6 text-sm font-semibold text-slate-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:bg-slate-200 dark:text-slate-700 dark:ring-offset-slate-900 dark:hover:bg-slate-300"
+          className="rounded-lg border border-transparent bg-slate-800 py-3 px-6 text-sm font-semibold text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:bg-cyan-400 dark:text-slate-800 dark:ring-offset-slate-900 dark:hover:bg-cyan-500"
         >
           Say &quot;Hi!&quot; to Me! 👋🏻
         </Link>
