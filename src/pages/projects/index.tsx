@@ -4,7 +4,10 @@ import { DesktopComputerIcon } from '@heroicons/react/outline';
 import { Link } from '@/components/link';
 import { NoContent } from '@/components/no-content';
 import { BasicLayout } from '@/layouts/basic-layout';
+import { ProjectCard } from '@/components/projects/project-card';
 import { HeadingSection } from '@/components/heading-section';
+
+import { kloningan, random } from '@/components/projects/data';
 
 import { ReactComponent as KloninganIcon } from '@/images/icons/kloningan.svg';
 
@@ -58,14 +61,17 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
             <div className="col-span-6 pt-12">
               <div className="flex flex-col items-center justify-center">
                 <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">
-                  Random Project
+                  Random Project{' '}
+                  <span className="text-xs font-normal">(Currently under development!)</span>
                 </h3>
                 <p className="text-xs font-semibold">
                   Crazy things sometimes start with randomness.
                 </p>
               </div>
             </div>
-            <NoContent text="Currently under development!" className="col-span-6" />
+            {random.map((item) => (
+              <ProjectCard key={item.id} {...item} className="col-span-2" />
+            ))}
           </div>
         </div>
       </div>
