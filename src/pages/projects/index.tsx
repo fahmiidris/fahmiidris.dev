@@ -70,7 +70,11 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
               </div>
             </div>
             {random.map((item) => (
-              <ProjectCard key={item.id} {...item} className="col-span-2" />
+              <ProjectCard
+                key={item.id}
+                {...item}
+                className="col-span-6 sm:col-span-3 lg:col-span-2"
+              />
             ))}
           </div>
         </div>

@@ -34,7 +34,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/clover.jpg').default,
   },
   {
-    id: 4,
+    id: 5,
     title: 'Buku Angkatan JCC Offline 2021',
     description: 'Tinggal di Desa, Rezeki Kota, Skill Mendunia!',
     image: require('@/images/projects/class-book.jpg').default,
