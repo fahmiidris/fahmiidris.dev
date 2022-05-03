@@ -1,21 +1,21 @@
 import * as React from 'react';
 import { ClockIcon, SearchIcon } from '@heroicons/react/outline';
 
-import { Steps, TSteps } from '@/components/experiences/steps';
+import { Steps } from '@/components/experiences/steps';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { HeadingSection } from '@/components/heading-section';
 
-import { data as myExperiences } from '@/components/experiences/data';
+import { data as myExperiences, TExperience } from '@/components/experiences/data';
 
 import type { TNextPageWithLayout } from 'next';
 
 const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
   const [search, setSearch] = React.useState<string | null>(null);
-  const [data, setData] = React.useState<TSteps['steps']>(myExperiences);
+  const [data, setData] = React.useState<TExperience[]>(myExperiences);
 
   React.useEffect(() => {
     if (search) {
-      const filteredData: TSteps['steps'] = myExperiences.filter((step) => {
+      const filteredData: TExperience[] = myExperiences.filter((step) => {
         return step.title.toLowerCase().includes(search.toLowerCase());
       });
 
