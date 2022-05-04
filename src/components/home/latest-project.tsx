@@ -41,7 +41,7 @@ export const LatestProject = (): JSX.Element => {
                   key={project}
                   className={({ selected }) =>
                     clsx(
-                      'block rounded-md border px-3 py-2',
+                      'block rounded-lg border px-3 py-2',
                       selected
                         ? 'border-transparent bg-slate-800 text-white'
                         : 'border-slate-200 bg-slate-50 dark:border-transparent dark:bg-transparent'
