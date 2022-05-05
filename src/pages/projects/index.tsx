@@ -47,7 +47,7 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
               </h2>
               <p className="flex-auto text-sm font-medium text-white sm:text-lg">
                 Cloning the User Interface of Several Famous Websites on the Internet created by
-                Fahmi Idris
+                Kloningan Members and Contributors
               </p>
               <Link
                 href="https://www.kloningan.com"
