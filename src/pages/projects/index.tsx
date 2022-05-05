@@ -40,7 +40,7 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
                 </p>
               </div>
             </div>
-            <div className="col-span-6 flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-slate-800 to-cyan-600 p-3 py-6 px-6 dark:from-slate-800 dark:to-cyan-500 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-5">
+            <div className="col-span-6 flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-slate-800 to-cyan-600 py-6 px-6 dark:from-slate-800 dark:to-cyan-500 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-5">
               <h2 className="flex-none">
                 <span className="sr-only">kloningan.com</span>
                 <KloninganIcon className="h-auto w-24 text-white" />

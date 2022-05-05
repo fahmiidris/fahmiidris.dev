@@ -5,10 +5,10 @@ type TLogo = {
   className?: string;
 };
 
-export const Logo = ({ className }: TLogo): JSX.Element => {
+export const Logo = ({ className = 'text-slate-700 dark:text-slate-200' }: TLogo): JSX.Element => {
   return (
     <svg
-      className={clsx('text-slate-700 dark:text-slate-200', className)}
+      className={clsx(className)}
       width={671}
       height={187}
       viewBox="0 0 671 187"
