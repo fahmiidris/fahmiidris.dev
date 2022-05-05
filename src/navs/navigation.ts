@@ -13,6 +13,7 @@ export const navigation: TNavigation = {
     { name: 'Blogs', href: '/blogs' },
     { name: 'Experiences', href: '/experiences' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Snippets', href: '/snippets' },
     { name: 'About', href: '/about' },
   ],
 };
