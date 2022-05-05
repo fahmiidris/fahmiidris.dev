@@ -34,6 +34,7 @@ export const ProjectCard = ({
           {github && (
             <Link
               href={github}
+              openNewTab={true}
               className="inline-flex items-center justify-center rounded-[4px] bg-slate-800 px-1.5 py-0.5 text-[10px] font-bold uppercase text-white"
             >
               GitHub
@@ -41,6 +42,7 @@ export const ProjectCard = ({
           )}
           <Link
             href={href}
+            openNewTab={true}
             className="inline-flex items-center justify-center rounded-[4px] bg-slate-200 px-1 py-0.5 text-[10px] font-bold uppercase text-slate-700"
           >
             View Website
