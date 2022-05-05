@@ -14,6 +14,7 @@ export const ProjectCard = ({
   id,
   title,
   description,
+  href,
   image,
   className,
   github,
@@ -39,7 +40,7 @@ export const ProjectCard = ({
             </Link>
           )}
           <Link
-            href=""
+            href={href}
             className="inline-flex items-center justify-center rounded-[4px] bg-slate-200 px-1 py-0.5 text-[10px] font-bold uppercase text-slate-700"
           >
             View Website
