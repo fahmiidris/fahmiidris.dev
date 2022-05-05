@@ -57,7 +57,15 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
                 View Website
               </Link>
             </div>
-            <NoContent text="Currently under development!" className="col-span-6" />
+            {kloningan
+              .sort((a, b) => b.id - a.id)
+              .map((item) => (
+                <ProjectCard
+                  key={item.id}
+                  {...item}
+                  className="col-span-6 sm:col-span-3 lg:col-span-2"
+                />
+              ))}
             <div className="col-span-6 pt-12">
               <div className="flex flex-col items-center justify-center">
                 <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">
@@ -68,13 +76,15 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
                 </p>
               </div>
             </div>
-            {random.map((item) => (
-              <ProjectCard
-                key={item.id}
-                {...item}
-                className="col-span-6 sm:col-span-3 lg:col-span-2"
-              />
-            ))}
+            {random
+              .sort((a, b) => b.id - a.id)
+              .map((item) => (
+                <ProjectCard
+                  key={item.id}
+                  {...item}
+                  className="col-span-6 sm:col-span-3 lg:col-span-2"
+                />
+              ))}
           </div>
         </div>
       </div>

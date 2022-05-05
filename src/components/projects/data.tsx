@@ -80,20 +80,30 @@ const depelopment: TStatus = {
   className: 'text-slate-700 bg-cyan-400',
 };
 
-export const kloningan: TProject[] = [];
-
-export const random: TProject[] = [
+export const kloningan: TProject[] = [
   {
     id: 1,
-    title: 'Todo List Management',
-    description: 'Todo List Management for Manage Your Task!',
-    href: 'https://todo.fahmiidris.dev',
-    github: 'https://www.github.com/fahmiidris-labs/todo.fahmiidris.dev',
-    tech: [typescript, vuejs, tailwindcss],
+    title: 'Main Website Kloningan',
+    description: 'Start by Imitating the Existing One, Then Create a Better One!',
+    href: 'https://www.kloningan.com',
+    github: 'https://www.github.com/kloningan/kloningan.com',
+    tech: [typescript, nextjs, tailwindcss],
     status: depelopment,
   },
   {
     id: 2,
+    title: 'Pikobar UI Clone',
+    description: 'Pusat Informasi & Koordinasi Covid-19 Jawa Barat!',
+    href: '#',
+    github: '#',
+    tech: [typescript, nextjs, tailwindcss],
+    status: depelopment,
+  },
+];
+
+export const random: TProject[] = [
+  {
+    id: 1,
     title: 'Movies and Games Rating',
     description: 'Website That Show Ratings Popular Movies and Games!',
     href: 'https://fahmi-final-project.netlify.app',
@@ -103,7 +113,7 @@ export const random: TProject[] = [
     status: deprecated,
   },
   {
-    id: 3,
+    id: 2,
     title: 'Bansos Ku',
     description: 'Only Form Validation Level Frontend Using Formik!',
     href: 'https://bansosku.netlify.app',
@@ -113,7 +123,7 @@ export const random: TProject[] = [
     status: deprecated,
   },
   {
-    id: 4,
+    id: 3,
     title: 'Clover Web App',
     description: 'Embrance New Ways to Farm!',
     href: 'https://clover-app.vercel.app',
@@ -122,7 +132,7 @@ export const random: TProject[] = [
     status: deprecated,
   },
   {
-    id: 5,
+    id: 4,
     title: 'Buku Angkatan JCC Offline 2021',
     description: 'Tinggal di Desa, Rezeki Kota, Skill Mendunia!',
     href: 'https://jcc-offline-member.netlify.app',
@@ -130,5 +140,23 @@ export const random: TProject[] = [
     github: 'https://github.com/fahmiidris-labs/buku-angkatan-jcc-2021',
     tech: [typescript, nextjs, tailwindcss],
     status: deprecated,
+  },
+  {
+    id: 5,
+    title: 'Todo List Management',
+    description: 'Todo List Management for Manage Your Task!',
+    href: 'https://todo.fahmiidris.dev',
+    github: 'https://www.github.com/fahmiidris-labs/todo.fahmiidris.dev',
+    tech: [typescript, vuejs, tailwindcss],
+    status: depelopment,
+  },
+  {
+    id: 6,
+    title: 'NTT Starter Template',
+    description: 'Next.js + Tailwind CSS + TypeScript Starter Template',
+    href: 'https://starter-template.fahmiidris.dev',
+    github: 'https://github.com/fahmiidris-labs/starter-template.fahmiidris.dev',
+    tech: [typescript, nextjs, tailwindcss],
+    status: depelopment,
   },
 ];

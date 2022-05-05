@@ -59,13 +59,15 @@ export const LatestProject = (): JSX.Element => {
                     {project.length < 1 ? (
                       <NoContent className="col-span-6" text="No Content Here!" />
                     ) : (
-                      project.map((item) => (
-                        <ProjectCard
-                          key={item.id}
-                          {...item}
-                          className="col-span-6 sm:col-span-3 lg:col-span-2"
-                        />
-                      ))
+                      project
+                        .sort((a, b) => b.id - a.id)
+                        .map((item) => (
+                          <ProjectCard
+                            key={item.id}
+                            {...item}
+                            className="col-span-6 sm:col-span-3 lg:col-span-2"
+                          />
+                        ))
                     )}
                   </ul>
                 </Tab.Panel>
