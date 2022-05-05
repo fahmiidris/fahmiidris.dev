@@ -6,6 +6,11 @@ type TTech = {
   className?: string;
 };
 
+type TStatus = {
+  title: string;
+  className?: string;
+};
+
 export type TProject = {
   id: number;
   title: string;
@@ -14,6 +19,7 @@ export type TProject = {
   image?: any;
   github?: string;
   tech?: TTech[];
+  status: TStatus;
 };
 
 const javascript: TTech = {
@@ -64,6 +70,16 @@ const chakraui: TTech = {
   className: 'text-white bg-emerald-400',
 };
 
+const deprecated: TStatus = {
+  title: 'Deprecated',
+  className: 'text-white bg-rose-500',
+};
+
+const depelopment: TStatus = {
+  title: 'In Development',
+  className: 'text-slate-700 bg-cyan-400',
+};
+
 export const kloningan: TProject[] = [];
 
 export const random: TProject[] = [
@@ -74,6 +90,7 @@ export const random: TProject[] = [
     href: 'https://todo.fahmiidris.dev',
     github: 'https://www.github.com/fahmiidris-labs/todo.fahmiidris.dev',
     tech: [typescript, vuejs, tailwindcss],
+    status: depelopment,
   },
   {
     id: 2,
@@ -83,6 +100,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/movies-and-games-rating.jpg').default,
     github: 'https://github.com/fahmiidris-labs/React-JS-JCC-2021/tree/main/Final-Project',
     tech: [javascript, reactjs, chakraui],
+    status: deprecated,
   },
   {
     id: 3,
@@ -92,6 +110,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/bansosku.jpg').default,
     github: 'https://www.github.com/fahmiidris-labs/bansosku',
     tech: [typescript, nextjs, tailwindcss],
+    status: deprecated,
   },
   {
     id: 4,
@@ -100,6 +119,7 @@ export const random: TProject[] = [
     href: 'https://clover-app.vercel.app',
     image: require('@/images/projects/clover.jpg').default,
     tech: [javascript, nextjs, tailwindcss],
+    status: deprecated,
   },
   {
     id: 5,
@@ -109,5 +129,6 @@ export const random: TProject[] = [
     image: require('@/images/projects/class-book.jpg').default,
     github: 'https://github.com/fahmiidris-labs/buku-angkatan-jcc-2021',
     tech: [typescript, nextjs, tailwindcss],
+    status: deprecated,
   },
 ];

@@ -19,9 +19,20 @@ export const ProjectCard = ({
   className,
   github,
   tech,
+  status,
 }: TProjectCard): JSX.Element => {
   return (
     <div className={clsx('flex flex-col space-y-2', className)}>
+      <div>
+        <p
+          className={clsx(
+            'inline-flex items-center justify-center rounded-[4px]  px-1.5 py-0.5 text-[10px] font-bold uppercase',
+            status.className ? status.className : 'bg-cyan-400 text-slate-700'
+          )}
+        >
+          {status.title}
+        </p>
+      </div>
       <Image.Wrapper className="group relative col-span-3 aspect-video w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-200 hover:shadow dark:border-slate-800 dark:bg-slate-800 sm:col-span-1">
         <Image
           src={image ? image : require('@/images/projects/default-cover.jpg').default}
