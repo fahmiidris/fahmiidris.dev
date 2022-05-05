@@ -61,8 +61,7 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
             <div className="col-span-6 pt-12">
               <div className="flex flex-col items-center justify-center">
                 <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">
-                  Random Project{' '}
-                  <span className="text-xs font-normal">(Currently under development!)</span>
+                  Random Project
                 </h3>
                 <p className="text-xs font-semibold">
                   Crazy things sometimes start with randomness.
