@@ -58,6 +58,12 @@ const tailwindcss: TTech = {
   className: 'text-slate-700 bg-cyan-400',
 };
 
+const chakraui: TTech = {
+  title: 'Chakra UI',
+  href: 'https://chakra-ui.com/',
+  className: 'text-white bg-emerald-400',
+};
+
 export const kloningan: TProject[] = [];
 
 export const random: TProject[] = [
@@ -73,16 +79,16 @@ export const random: TProject[] = [
     id: 2,
     title: 'Movies and Games Rating',
     description: 'Website That Show Ratings Popular Movies and Games!',
-    href: '#',
+    href: 'https://fahmi-final-project.netlify.app',
     image: require('@/images/projects/movies-and-games-rating.jpg').default,
     github: 'https://github.com/fahmiidris-labs/React-JS-JCC-2021/tree/main/Final-Project',
-    tech: [javascript, reactjs, tailwindcss],
+    tech: [javascript, reactjs, chakraui],
   },
   {
     id: 3,
     title: 'Bansos Ku',
     description: 'Only Form Validation Level Frontend Using Formik!',
-    href: '#',
+    href: 'https://bansosku.netlify.app',
     image: require('@/images/projects/bansosku.jpg').default,
     github: 'https://www.github.com/fahmiidris-labs/bansosku',
     tech: [typescript, nextjs, tailwindcss],
@@ -99,7 +105,7 @@ export const random: TProject[] = [
     id: 5,
     title: 'Buku Angkatan JCC Offline 2021',
     description: 'Tinggal di Desa, Rezeki Kota, Skill Mendunia!',
-    href: '#',
+    href: 'https://jcc-offline-member.netlify.app',
     image: require('@/images/projects/class-book.jpg').default,
     github: 'https://github.com/fahmiidris-labs/buku-angkatan-jcc-2021',
     tech: [typescript, nextjs, tailwindcss],
