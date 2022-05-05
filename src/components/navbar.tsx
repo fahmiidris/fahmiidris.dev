@@ -68,7 +68,7 @@ export const Navbar = (): JSX.Element => {
                           href={page.href}
                           className={clsx(
                             'rounded-lg px-4 py-2 duration-150 ease-in-out hover:bg-slate-400/10 focus:outline-none dark:hover:bg-slate-400/20',
-                            pathname === page.href && 'bg-slate-400/10'
+                            page.href === '/' + pathname.split('/')[1] && 'bg-slate-400/10'
                           )}
                         >
                           {page.name}
