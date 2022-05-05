@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { ClockIcon, SearchIcon } from '@heroicons/react/outline';
 
+import { Logo } from '@/components/logo';
+import { Link } from '@/components/link';
 import { Steps } from '@/components/experiences/steps';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { HeadingSection } from '@/components/heading-section';
@@ -34,6 +36,25 @@ const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
             description="My historical experience, non-formal education, big event, internship, etc."
             icon={ClockIcon}
           />
+        </div>
+        <div className="container pt-8">
+          <div className="flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-400 py-6 px-6 dark:from-amber-500 dark:to-yellow-600 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-4 md:pl-5">
+            <h2 className="text-whihte flex-none">
+              <h2 className="flex-none">
+                <span className="sr-only">My Certificates</span>
+                <Logo className="h-auto w-24 text-white" />
+              </h2>
+            </h2>
+            <p className="flex-auto text-sm font-medium text-white sm:text-lg">
+              All certificates in the field of programming owned by Fahmi Idris
+            </p>
+            <Link
+              href="/experiences/certificates"
+              className="flex-none rounded-lg bg-white py-3 px-5 text-xs font-bold text-slate-900 transition-colors duration-200 hover:bg-slate-100 sm:text-sm sm:font-semibold"
+            >
+              View My Certificates
+            </Link>
+          </div>
         </div>
         <div className="container pt-8">
           <div className="grid grid-cols-12 gap-4">
