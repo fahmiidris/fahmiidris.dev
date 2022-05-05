@@ -11,13 +11,13 @@ import { HeadingSection } from '@/components/heading-section';
 import { kloningan, random, TProject } from '@/components/projects/data';
 
 type Tprojects = {
-  'kloningan.com Projects': TProject[];
+  'Kloningan Projects': TProject[];
   'Random Projects': TProject[];
 };
 
 export const LatestProject = (): JSX.Element => {
   const [projects] = React.useState<Tprojects>({
-    'kloningan.com Projects': kloningan,
+    'Kloningan Projects': kloningan,
     'Random Projects': random.slice(0, 3),
   });
 
