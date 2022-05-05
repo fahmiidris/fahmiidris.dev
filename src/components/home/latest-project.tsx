@@ -17,8 +17,8 @@ type Tprojects = {
 
 export const LatestProject = (): JSX.Element => {
   const [projects] = React.useState<Tprojects>({
-    'Kloningan Projects': kloningan,
-    'Random Projects': random.slice(0, 3),
+    'Kloningan Projects': kloningan.sort((a, b) => b.id - a.id).slice(0, 3),
+    'Random Projects': random.sort((a, b) => b.id - a.id).slice(0, 3),
   });
 
   return (
@@ -59,15 +59,13 @@ export const LatestProject = (): JSX.Element => {
                     {project.length < 1 ? (
                       <NoContent className="col-span-6" text="No Content Here!" />
                     ) : (
-                      project
-                        .sort((a, b) => b.id - a.id)
-                        .map((item) => (
-                          <ProjectCard
-                            key={item.id}
-                            {...item}
-                            className="col-span-6 sm:col-span-3 lg:col-span-2"
-                          />
-                        ))
+                      project.map((item) => (
+                        <ProjectCard
+                          key={item.id}
+                          {...item}
+                          className="col-span-6 sm:col-span-3 lg:col-span-2"
+                        />
+                      ))
                     )}
                   </ul>
                 </Tab.Panel>
