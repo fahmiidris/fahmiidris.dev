@@ -2,11 +2,12 @@ import * as React from 'react';
 import { ArrowSmDownIcon } from '@heroicons/react/solid';
 
 import { Link } from '@/components/link';
+import { TechStack } from '@/components/tech-stack';
 import { LatestBlog } from '@/components/home/latest-blog';
 import { BasicLayout } from '@/layouts/basic-layout';
-import { LatestExperience } from '@/components/home/latest-experience';
+import { LatestSnippet } from '@/components/home/latest-snippet';
 import { LatestProject } from '@/components/home/latest-project';
-import { TechStack } from '@/components/tech-stack';
+import { LatestExperience } from '@/components/home/latest-experience';
 
 import type { TNextPageWithLayout } from 'next';
 
@@ -78,6 +79,7 @@ const HomePage: TNextPageWithLayout = (): JSX.Element => {
         <LatestBlog />
         <LatestExperience />
         <LatestProject />
+        <LatestSnippet />
       </div>
     </>
   );
