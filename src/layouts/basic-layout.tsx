@@ -14,7 +14,10 @@ type TBasicLayout = {
 export const BasicLayout: TNextLayout<TBasicLayout> = ({ children }): JSX.Element => {
   return (
     <>
-      <Announcement message="Hei!👋🏻 I have a new look! What do you think?" />
+      <Announcement
+        href="https://github.com/fahmiidris-labs/fahmiidris.dev"
+        message="Hei!👋🏻 I have a new look! What do you think?"
+      />
       <Topbar />
       <Navbar />
       <main className="relative pt-8">{children}</main>

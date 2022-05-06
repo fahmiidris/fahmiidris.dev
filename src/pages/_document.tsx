@@ -40,7 +40,7 @@ export default class Document extends NextDocument {
           />
         </Head>
         <body
-          className={clsx('text-slate-500 antialiased dark:text-slate-400', {
+          className={clsx('font-sans text-slate-500 antialiased dark:text-slate-400', {
             'bg-white dark:bg-slate-900': !this.props.dangerousAsPath.startsWith('/examples/'),
           })}
         >

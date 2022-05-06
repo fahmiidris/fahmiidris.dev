@@ -4,13 +4,14 @@ import { Link } from '@/components/link';
 import { SparklesIcon } from '@heroicons/react/outline';
 
 type TAnnouncement = {
-  message?: string;
+  href: string;
+  message: string;
 };
 
-export const Announcement = ({ message }: TAnnouncement): JSX.Element | null => {
+export const Announcement = ({ href, message }: TAnnouncement): JSX.Element | null => {
   return message ? (
     <Link
-      href="https://github.com/fahmiidris-labs/fahmiidris.dev"
+      href={href}
       openNewTab={true}
       className="group block bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 p-3 dark:from-cyan-500 dark:via-cyan-600 dark:to-cyan-700"
     >
