@@ -48,7 +48,7 @@ export const Navbar = (): JSX.Element => {
         <>
           <div className="container relative">
             <div className="flex h-[58px] w-full items-center justify-between">
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center">
                 <Disclosure.Button
                   type="button"
                   className="mr-2 inline-flex items-center rounded-md bg-slate-400/10 p-2 focus:bg-slate-400/20 lg:hidden"

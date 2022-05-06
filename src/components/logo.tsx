@@ -1,5 +1,4 @@
 import * as React from 'react';
-import clsx from 'clsx';
 
 type TLogo = {
   className?: string;
@@ -8,7 +7,7 @@ type TLogo = {
 export const Logo = ({ className = 'text-slate-700 dark:text-slate-200' }: TLogo): JSX.Element => {
   return (
     <svg
-      className={clsx(className)}
+      className={className}
       width={671}
       height={187}
       viewBox="0 0 671 187"

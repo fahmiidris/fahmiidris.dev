@@ -46,8 +46,6 @@ const socialMedia: TLinkWithIcon[] = [
 ];
 
 export const Footer = (): JSX.Element => {
-  const year: number = new Date().getFullYear();
-
   return (
     <footer className="bg-white dark:bg-slate-900">
       <div className="border-t dark:border-slate-50/[0.06] lg:border-slate-900/10">
@@ -96,7 +94,7 @@ export const Footer = (): JSX.Element => {
               <span className="block md:hidden">My GitHub</span>
             </Link>
             <p className="flex items-center justify-center space-x-4 text-xs font-semibold">
-              © {year} - Fahmi Idris. All Rights Reserved.
+              © {new Date().getFullYear()} - Fahmi Idris. All Rights Reserved.
             </p>
           </div>
         </div>
