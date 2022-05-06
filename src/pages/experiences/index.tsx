@@ -38,11 +38,11 @@ const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
           />
         </div>
         <div className="container pt-8">
-          <div className="flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-amber-500 to-yellow-400 py-6 px-6 dark:from-amber-500 dark:to-yellow-600 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-4 md:pl-5">
+          <div className="flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-slate-800 to-cyan-600 py-6 px-6 dark:from-slate-800 dark:to-cyan-500 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-4 md:pl-5">
             <h2 className="text-whihte flex-none">
               <h2 className="flex-none">
                 <span className="sr-only">My Certificates</span>
-                <Logo className="h-auto w-24 text-white" />
+                <Logo className="h-auto w-24 !text-white" />
               </h2>
             </h2>
             <p className="flex-auto text-sm font-medium text-white sm:text-lg">

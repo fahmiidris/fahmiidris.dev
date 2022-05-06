@@ -1,13 +1,14 @@
 import * as React from 'react';
+import clsx from 'clsx';
 
 type TLogo = {
   className?: string;
 };
 
-export const Logo = ({ className = 'text-slate-700 dark:text-slate-200' }: TLogo): JSX.Element => {
+export const Logo = ({ className }: TLogo): JSX.Element => {
   return (
     <svg
-      className={className}
+      className={clsx('text-slate-700 dark:text-slate-200', className)}
       width={671}
       height={187}
       viewBox="0 0 671 187"
