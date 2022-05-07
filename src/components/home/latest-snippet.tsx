@@ -11,7 +11,7 @@ export const LatestSnippet = (): JSX.Element => {
       <div className="container">
         <HeadingSection
           title="Featured Snippets"
-          description="Some personal opinions on technology and my random thoughts."
+          description="These are a collection of code snippets I've used in the past and saved."
           icon={ScissorsIcon}
         />
       </div>
