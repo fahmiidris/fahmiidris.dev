@@ -20,7 +20,7 @@ export const LatestSnippet = (): JSX.Element => {
         <div className="py-8">
           <Link
             href="/snippets"
-            className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-slate-100 py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+            className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-white py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
           >
             View More
           </Link>

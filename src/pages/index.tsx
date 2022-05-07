@@ -43,14 +43,14 @@ const Hero = (): JSX.Element => {
         </Link>
         <Link
           href="/blogs"
-          className="rounded-lg border border-slate-300 bg-slate-100 py-3 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+          className="rounded-lg border border-slate-300 bg-white py-3 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
         >
           Read My Blog 📖
         </Link>
         <Link
           href="https://trakteer.id/fahmiidris"
           openNewTab={true}
-          className="rounded-lg border border-slate-300 bg-slate-100 py-3 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+          className="rounded-lg border border-slate-300 bg-white py-3 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
         >
           Trakteer Fahmi Idris 🍦
         </Link>
@@ -59,7 +59,7 @@ const Hero = (): JSX.Element => {
       <div className="flex items-center justify-center py-8 text-center">
         <Link
           href="#latest-blog"
-          className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-slate-100 py-2 pl-4 pr-3 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+          className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-white py-2 pl-4 pr-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
         >
           <span>See More Details</span>
           <ArrowSmDownIcon className="h-4 w-4" />

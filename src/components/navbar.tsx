@@ -98,17 +98,17 @@ export const Navbar = (): JSX.Element => {
           >
             <div className="container">
               <div className="flex flex-col space-y-1 py-4">
-                {navigation.pages.map((item) => (
+                {navigation.pages.map((page) => (
                   <Disclosure.Button
-                    key={item.name}
+                    key={page.name}
                     as={Link}
-                    href={item.href}
+                    href={page.href}
                     className={clsx(
                       'rounded-lg px-4 py-2 text-sm font-semibold duration-150 ease-in-out hover:bg-slate-400/10 focus:outline-none dark:hover:bg-slate-400/20',
-                      pathname === item.href && 'bg-slate-400/10'
+                      page.href === '/' + pathname.split('/')[1] && 'bg-slate-400/10'
                     )}
                   >
-                    {item.name}
+                    {page.name}
                   </Disclosure.Button>
                 ))}
               </div>

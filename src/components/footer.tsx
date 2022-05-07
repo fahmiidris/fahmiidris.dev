@@ -86,7 +86,7 @@ export const Footer = (): JSX.Element => {
           <div className="flex items-center justify-between py-4">
             <Link
               href="https://github.com/fahmiidris-labs"
-              className="inline-flex items-center justify-center space-x-2 text-xs font-semibold"
+              className="inline-flex items-center justify-center space-x-2 text-xs font-semibold hover:text-slate-700"
               openNewTab={true}
             >
               <GitHubIcon className="h-[18px] w-[18px] fill-slate-800 dark:fill-slate-200" />

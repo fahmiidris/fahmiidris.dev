@@ -21,7 +21,7 @@ export default class Document extends NextDocument {
     return (
       <Html
         lang="en"
-        className={clsx('scroll-smooth [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]')}
+        className={clsx('dark scroll-smooth [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]')}
       >
         <Head>
           <Favicons />

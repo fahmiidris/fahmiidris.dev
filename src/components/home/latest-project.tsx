@@ -55,7 +55,7 @@ export const LatestProject = (): JSX.Element => {
             <Tab.Panels className="pt-4">
               {Object.values(projects).map((project, idx) => (
                 <Tab.Panel key={idx}>
-                  <ul className="grid grid-cols-6 gap-8">
+                  <div className="grid grid-cols-6 gap-8">
                     {project.length < 1 ? (
                       <NoContent className="col-span-6" text="No Content Here!" />
                     ) : (
@@ -67,7 +67,7 @@ export const LatestProject = (): JSX.Element => {
                         />
                       ))
                     )}
-                  </ul>
+                  </div>
                 </Tab.Panel>
               ))}
             </Tab.Panels>
@@ -76,7 +76,7 @@ export const LatestProject = (): JSX.Element => {
         <div className="pt-8">
           <Link
             href="/projects"
-            className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-slate-100 py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
+            className="inline-flex items-center space-x-2 rounded-lg border border-slate-300 bg-white py-2 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700"
           >
             View More
           </Link>
