@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.fahmiidris.dev/images/preview.jpg" alt='preview'>
+  <img src="/public/images/preview.jpg" alt='preview'>
 </p>
 <p align="center">
   Source code of my <a href='https://www.fahmiidris.dev'>personal website™</a>. Made using Next.js and Tailwind CSS.
