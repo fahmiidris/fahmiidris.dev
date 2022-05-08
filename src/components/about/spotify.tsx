@@ -9,7 +9,7 @@ export const Spotify = (): JSX.Element => {
       <h2 className="text-xl font-semibold text-slate-700 dark:text-slate-200">
         <Link href="#now-playing">Now Playing on Spotify</Link>
       </h2>
-      <p className="pt-2"> See what I&apos;m currently listening on spotify</p>
+      <p className="pt-2">See what I&apos;m currently listening on spotify</p>
       <NowPlaying isPlaying={false} />
     </section>
   );
