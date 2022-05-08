@@ -2,14 +2,15 @@ import * as React from 'react';
 import { UserCircleIcon } from '@heroicons/react/outline';
 
 import { Logo } from '@/components/logo';
+import { Link } from '@/components/link';
 import { Image } from '@/components/image';
+import { Skills } from '@/components/about/skills';
 import { Spotify } from '@/components/about/spotify';
 import { BasicLayout } from '@/layouts/basic-layout';
 import { HeadingSection } from '@/components/heading-section';
 import { CurrentTechStack } from '@/components/about/current-tech-stack';
 
 import type { TNextPageWithLayout } from 'next';
-import { Link } from '@/components/link';
 
 const AboutPage: TNextPageWithLayout = (): JSX.Element => {
   return (
@@ -69,6 +70,7 @@ const AboutPage: TNextPageWithLayout = (): JSX.Element => {
                 </section>
                 <CurrentTechStack />
                 <Spotify />
+                <Skills />
               </div>
             </div>
           </div>
