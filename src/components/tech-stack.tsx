@@ -3,12 +3,12 @@ import clsx from 'clsx';
 
 import { Link } from '@/components/link';
 
-import { ReactComponent as NextJsLogo } from '@/images/icons/nextjs.svg';
-import { ReactComponent as NodeJsLogo } from '@/images/icons/nodejs.svg';
-import { ReactComponent as ReactJsLogo } from '@/images/icons/reactjs.svg';
-import { ReactComponent as JavaScriptLogo } from '@/images/icons/javascript.svg';
-import { ReactComponent as TypeScriptLogo } from '@/images/icons/typescript.svg';
-import { ReactComponent as TailwindCSSLogo } from '@/images/icons/tailwindcss.svg';
+import { ReactComponent as NextJsIcon } from '@/images/icons/nextjs.svg';
+import { ReactComponent as VueJsIcon } from '@/images/icons/vuejs.svg';
+import { ReactComponent as ReactJsIcon } from '@/images/icons/reactjs.svg';
+import { ReactComponent as JavaScriptIcon } from '@/images/icons/javascript.svg';
+import { ReactComponent as TypeScriptIcon } from '@/images/icons/typescript.svg';
+import { ReactComponent as TailwindCSSIcon } from '@/images/icons/tailwindcss.svg';
 
 type TCurrentTechStack = {
   className?: string;
@@ -24,32 +24,32 @@ const stacks: TLink[] = [
   {
     name: 'JavaScript',
     href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    icon: JavaScriptLogo,
+    icon: JavaScriptIcon,
   },
   {
     name: 'TypeScript',
     href: 'https://www.typescriptlang.org/',
-    icon: TypeScriptLogo,
-  },
-  {
-    name: 'NodeJS',
-    href: 'https://nodejs.org/en/',
-    icon: NodeJsLogo,
+    icon: TypeScriptIcon,
   },
   {
     name: 'ReactJS',
     href: 'https://reactjs.org/',
-    icon: ReactJsLogo,
+    icon: ReactJsIcon,
   },
   {
-    name: 'Tailwind CSS',
-    href: 'https://tailwindcss.com/',
-    icon: TailwindCSSLogo,
+    name: 'VueJS',
+    href: 'https://vuejs.org/',
+    icon: VueJsIcon,
   },
   {
     name: 'NextJS',
     href: 'https://nextjs.org/',
-    icon: NextJsLogo,
+    icon: NextJsIcon,
+  },
+  {
+    name: 'Tailwind CSS',
+    href: 'https://tailwindcss.com/',
+    icon: TailwindCSSIcon,
   },
 ];
 
