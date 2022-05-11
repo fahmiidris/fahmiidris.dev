@@ -153,8 +153,8 @@ export const random: TProject[] = [
   },
   {
     id: 6,
-    title: 'NTT Starter Template',
-    description: 'Next.js + Tailwind CSS + TypeScript Starter Template',
+    title: 'Starter Template Documentation',
+    description: 'Documentation for Starter Template.',
     href: 'https://starter-template.fahmiidris.dev',
     github: 'https://github.com/fahmiidris-labs/starter-template.fahmiidris.dev',
     tech: [typescript, nextjs, tailwindcss],
