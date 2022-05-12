@@ -1,90 +1,16 @@
-import * as React from 'react';
-
-type TTech = {
-  title: string;
-  href: string;
-  className?: string;
-};
-
-type TStatus = {
-  title: string;
-  className?: string;
-};
-
-export type TProject = {
-  id: number;
-  title: string;
-  description: string;
-  href: string;
-  image?: any;
-  github?: string;
-  tech?: TTech[];
-  status: TStatus;
-};
-
-const javascript: TTech = {
-  title: 'JavaScript',
-  href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-  className: 'text-slate-700 bg-yellow-400',
-};
-
-const typescript: TTech = {
-  title: 'TypeScript',
-  href: 'https://www.typescriptlang.org/',
-  className: 'text-white bg-sky-500',
-};
-
-const reactjs: TTech = {
-  title: 'React.js',
-  href: 'https://reactjs.org/',
-  className: 'text-white bg-cyan-500',
-};
-
-const nextjs: TTech = {
-  title: 'Next.js',
-  href: 'https://nextjs.org/',
-  className: 'text-slate-700 bg-slate-200',
-};
-
-const vitejs: TTech = {
-  title: 'Vite.js',
-  href: 'https://vitejs.org/',
-  className: 'text-white bg-violet-400',
-};
-
-const vuejs: TTech = {
-  title: 'Vue.js',
-  href: 'https://vuejs.org/',
-  className: 'text-white bg-emerald-500',
-};
-
-const nuxtjs: TTech = {
-  title: 'Nuxt.js',
-  href: 'https://nuxtjs.org/',
-  className: 'text-white bg-emerald-500',
-};
-
-const tailwindcss: TTech = {
-  title: 'Tailwind CSS',
-  href: 'https://tailwindcss.com/',
-  className: 'text-slate-700 bg-cyan-400',
-};
-
-const chakraui: TTech = {
-  title: 'Chakra UI',
-  href: 'https://chakra-ui.com/',
-  className: 'text-white bg-emerald-400',
-};
-
-const deprecated: TStatus = {
-  title: 'Deprecated',
-  className: 'text-white bg-rose-500',
-};
-
-const depelopment: TStatus = {
-  title: 'In Development',
-  className: 'text-slate-700 bg-cyan-400',
-};
+import {
+  chakraui,
+  depelopment,
+  deprecated,
+  javascript,
+  nextjs,
+  reactjs,
+  tailwindcss,
+  TProject,
+  typescript,
+  vitejs,
+  vuejs,
+} from './tech';
 
 export const kloningan: TProject[] = [
   {
@@ -163,6 +89,7 @@ export const random: TProject[] = [
     description: 'Documentation for Starter Template.',
     href: 'https://starter-template.fahmiidris.dev',
     github: 'https://github.com/fahmiidris-labs/starter-template.fahmiidris.dev',
+    image: require('@/images/projects/starter-template.jpg').default,
     tech: [typescript, nextjs, tailwindcss],
     status: depelopment,
   },
