@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Link } from '@/components/link';
 import { Image } from '@/components/image';
 
-import type { TProject } from '@/components/projects/data';
+import type { TProject } from '@/components/projects/tech';
 
 type TProjectCard = TProject & {
   className?: string;
