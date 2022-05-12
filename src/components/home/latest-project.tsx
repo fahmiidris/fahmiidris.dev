@@ -8,7 +8,9 @@ import { NoContent } from '@/components/no-content';
 import { ProjectCard } from '@/components/projects/project-card';
 import { HeadingSection } from '@/components/heading-section';
 
-import { kloningan, random, TProject } from '@/components/projects/data';
+import { kloningan, random } from '@/components/projects/data';
+
+import type { TProject } from '@/components/projects/tech';
 
 type Tprojects = {
   'Kloningan Projects': TProject[];
