@@ -46,6 +46,12 @@ const nextjs: TTech = {
   className: 'text-slate-700 bg-slate-200',
 };
 
+const vitejs: TTech = {
+  title: 'Vite.js',
+  href: 'https://vitejs.org/',
+  className: 'text-white bg-violet-400',
+};
+
 const vuejs: TTech = {
   title: 'Vue.js',
   href: 'https://vuejs.org/',
@@ -148,7 +154,7 @@ export const random: TProject[] = [
     description: 'Todo List Management for Manage Your Task!',
     href: 'https://todo.fahmiidris.dev',
     github: 'https://www.github.com/fahmiidris-labs/todo.fahmiidris.dev',
-    tech: [typescript, vuejs, tailwindcss],
+    tech: [typescript, vitejs, vuejs, tailwindcss],
     status: depelopment,
   },
   {
@@ -169,6 +175,16 @@ export const random: TProject[] = [
     image: require('@/images/projects/fahmiidris-dev.jpg').default,
     github: 'https://github.com/fahmiidris-labs/fahmiidris.dev',
     tech: [typescript, nextjs, tailwindcss],
+    status: depelopment,
+  },
+  {
+    id: 8,
+    title: 'My Graduation Presentation',
+    description: 'Graduation Presentation for My Graduation in eFishery.',
+    href: 'https://graduation-efishery.fahmiidris.dev',
+    image: require('@/images/projects/graduation-efishery.jpg').default,
+    github: 'https://github.com/fahmiidris-labs/graduation-efishery.fahmiidris.dev',
+    tech: [javascript, nextjs, tailwindcss],
     status: depelopment,
   },
 ];
