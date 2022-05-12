@@ -1,5 +1,9 @@
 @tailwind base;
 
+.dark {
+  color-scheme: dark;
+}
+
 ::selection {
   background-color: theme(colors.cyan.400);
   color: #ffffff;
