@@ -96,8 +96,7 @@ export let data: TExperience[] = [
   {
     id: 4,
     title: 'Internship as a Frontend Web Developer at eFishery',
-    // time: 'February 14th, 2022 - June 1st, 2022',
-    time: 'February 14th, 2022 - Present',
+    time: 'February 14th, 2022 - May 14th, 2022',
     images: [
       {
         src: require('@/images/meet-aquatroops.jpg').default,
@@ -106,6 +105,10 @@ export let data: TExperience[] = [
       {
         src: require('@/images/sprint-review.jpg').default,
         alt: 'Sprint Review',
+      },
+      {
+        src: require('@/images/graduation.jpg').default,
+        alt: 'Graduation',
       },
     ],
     body: () => (

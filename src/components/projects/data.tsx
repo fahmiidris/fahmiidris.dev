@@ -114,4 +114,14 @@ export const random: TProject[] = [
     tech: [javascript, nextjs, tailwindcss],
     status: depelopment,
   },
+  {
+    id: 9,
+    title: 'Hujan Gak? - Weather Forecast',
+    description: 'Weather Forecast for Indonesia!',
+    href: '#',
+    image: require('@/images/projects/hujan-gak.jpg').default,
+    github: 'https://github.com/fahmiidris-labs/hujan-gak',
+    tech: [javascript, vitejs, reactjs, tailwindcss],
+    status: depelopment,
+  },
 ];

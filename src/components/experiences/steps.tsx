@@ -38,18 +38,20 @@ export const Steps = ({ steps }: TSteps): JSX.Element => {
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {step.images &&
                   step.images.map((item, index) => (
-                    <Image.Wrapper
-                      key={index}
-                      className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800"
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        placeholder="blur"
-                        layout="fill"
-                        className="object-cover object-center"
-                      />
-                    </Image.Wrapper>
+                    <div key={index} className="flex flex-col">
+                      <Image.Wrapper className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          placeholder="blur"
+                          layout="fill"
+                          className="object-cover object-center"
+                        />
+                      </Image.Wrapper>
+                      <p className="pt-2 text-xs font-semibold text-slate-700 dark:text-slate-400">
+                        {item.alt}
+                      </p>
+                    </div>
                   ))}
               </div>
             </div>
