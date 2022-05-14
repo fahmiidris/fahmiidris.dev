@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CalendarIcon, LinkIcon, TemplateIcon } from '@heroicons/react/outline';
+import { CalendarIcon, LinkIcon, TemplateIcon, DownloadIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
 
@@ -32,6 +32,17 @@ export const Topbar = (): JSX.Element => {
           </div>
         </div>
         <div className="flex items-center justify-center space-x-4">
+          <div className="flex items-center space-x-1">
+            <DownloadIcon className="h-4 w-4 text-slate-700 dark:text-slate-200" />
+            <Link
+              href="https://drive.google.com/file/d/1NM71_k6blUSAec-tFuG0ch4wjiEB52-m/view?usp=sharing"
+              className="animated-underline text-xs font-semibold"
+              openNewTab={true}
+            >
+              <span className="block md:hidden">CV</span>
+              <span className="hidden md:block">CV Fahmi Idris</span>
+            </Link>
+          </div>
           <div className="flex items-center space-x-1">
             <TemplateIcon className="h-4 w-4 text-slate-700 dark:text-slate-200" />
             <Link

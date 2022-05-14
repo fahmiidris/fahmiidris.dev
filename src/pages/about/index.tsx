@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { UserCircleIcon } from '@heroicons/react/outline';
 
+import { CV } from '@/components/about/cv';
 import { Logo } from '@/components/logo';
 import { Link } from '@/components/link';
 import { Image } from '@/components/image';
@@ -71,6 +72,7 @@ const AboutPage: TNextPageWithLayout = (): JSX.Element => {
                 <CurrentTechStack />
                 <Spotify />
                 <Skills />
+                <CV />
               </div>
             </div>
           </div>
