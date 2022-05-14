@@ -88,7 +88,7 @@ export const ProjectCard = ({
         <span className="pr-[2px] text-xs font-semibold">or</span>
         <div className="flex items-center space-x-1">
           <Link
-            href="https://todo.fahmiidris.dev"
+            href={href}
             className="animated-underline text-xs font-semibold text-slate-800 dark:text-slate-200"
             openNewTab={true}
           >
