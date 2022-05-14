@@ -118,7 +118,7 @@ export const random: TProject[] = [
     id: 9,
     title: 'Hujan Gak? - Weather Forecast',
     description: 'Weather Forecast for Indonesia!',
-    href: '#',
+    href: 'https://hujan-gak.netlify.app',
     image: require('@/images/projects/hujan-gak.jpg').default,
     github: 'https://github.com/fahmiidris-labs/hujan-gak',
     tech: [javascript, vitejs, reactjs, tailwindcss],
