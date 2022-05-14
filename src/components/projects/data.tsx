@@ -2,13 +2,13 @@ import {
   chakraui,
   depelopment,
   deprecated,
+  finished,
   javascript,
   nextjs,
   reactjs,
   tailwindcss,
   TProject,
   typescript,
-  vitejs,
   vuejs,
 } from './tech';
 
@@ -21,7 +21,7 @@ export const kloningan: TProject[] = [
     image: require('@/images/projects/kloningan-com.jpg').default,
     github: 'https://www.github.com/kloningan/kloningan.com',
     tech: [typescript, nextjs, tailwindcss],
-    status: depelopment,
+    status: [depelopment],
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const kloningan: TProject[] = [
     href: '#',
     github: '#',
     tech: [typescript, nextjs, tailwindcss],
-    status: depelopment,
+    status: [depelopment],
   },
 ];
 
@@ -43,7 +43,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/movies-and-games-rating.jpg').default,
     github: 'https://github.com/fahmiidris-labs/React-JS-JCC-2021/tree/main/Final-Project',
     tech: [javascript, reactjs, chakraui],
-    status: deprecated,
+    status: [finished, deprecated],
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/bansosku.jpg').default,
     github: 'https://www.github.com/fahmiidris-labs/bansosku',
     tech: [typescript, nextjs, tailwindcss],
-    status: deprecated,
+    status: [finished, deprecated],
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ export const random: TProject[] = [
     href: 'https://clover-app.vercel.app',
     image: require('@/images/projects/clover.jpg').default,
     tech: [javascript, nextjs, tailwindcss],
-    status: deprecated,
+    status: [finished, deprecated],
   },
   {
     id: 4,
@@ -72,7 +72,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/class-book.jpg').default,
     github: 'https://github.com/fahmiidris-labs/buku-angkatan-jcc-2021',
     tech: [typescript, nextjs, tailwindcss],
-    status: deprecated,
+    status: [finished, deprecated],
   },
   {
     id: 5,
@@ -80,8 +80,8 @@ export const random: TProject[] = [
     description: 'Todo List Management for Manage Your Task!',
     href: 'https://todo.fahmiidris.dev',
     github: 'https://www.github.com/fahmiidris-labs/todo.fahmiidris.dev',
-    tech: [typescript, vitejs, vuejs, tailwindcss],
-    status: depelopment,
+    tech: [typescript, vuejs, tailwindcss],
+    status: [depelopment],
   },
   {
     id: 6,
@@ -91,7 +91,7 @@ export const random: TProject[] = [
     github: 'https://github.com/fahmiidris-labs/starter-template.fahmiidris.dev',
     image: require('@/images/projects/starter-template.jpg').default,
     tech: [typescript, nextjs, tailwindcss],
-    status: depelopment,
+    status: [depelopment],
   },
   {
     id: 7,
@@ -102,7 +102,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/fahmiidris-dev.jpg').default,
     github: 'https://github.com/fahmiidris-labs/fahmiidris.dev',
     tech: [typescript, nextjs, tailwindcss],
-    status: depelopment,
+    status: [finished, depelopment],
   },
   {
     id: 8,
@@ -112,7 +112,7 @@ export const random: TProject[] = [
     image: require('@/images/projects/graduation-efishery.jpg').default,
     github: 'https://github.com/fahmiidris-labs/graduation-efishery.fahmiidris.dev',
     tech: [javascript, nextjs, tailwindcss],
-    status: depelopment,
+    status: [depelopment],
   },
   {
     id: 9,
@@ -121,7 +121,7 @@ export const random: TProject[] = [
     href: 'https://hujan-gak.netlify.app',
     image: require('@/images/projects/hujan-gak.jpg').default,
     github: 'https://github.com/fahmiidris-labs/hujan-gak',
-    tech: [javascript, vitejs, reactjs, tailwindcss],
-    status: depelopment,
+    tech: [javascript, reactjs, tailwindcss],
+    status: [finished, depelopment],
   },
 ];

@@ -17,7 +17,7 @@ export type TProject = {
   image?: any;
   github?: string;
   tech?: TTech[];
-  status: TStatus;
+  status: TStatus[];
   body?: () => JSX.Element;
 };
 
@@ -43,12 +43,6 @@ export const nextjs: TTech = {
   title: 'Next.js',
   href: 'https://nextjs.org/',
   className: 'text-slate-700 bg-slate-200',
-};
-
-export const vitejs: TTech = {
-  title: 'Vite.js',
-  href: 'https://vitejs.org/',
-  className: 'text-white bg-violet-400',
 };
 
 export const vuejs: TTech = {
@@ -83,4 +77,9 @@ export const deprecated: TStatus = {
 export const depelopment: TStatus = {
   title: 'In Development',
   className: 'text-slate-700 bg-cyan-400',
+};
+
+export const finished: TStatus = {
+  title: 'Finished',
+  className: 'text-white bg-emerald-500',
 };
