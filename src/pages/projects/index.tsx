@@ -25,7 +25,7 @@ const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
           />
         </div>
         <div className="container pt-8">
-          <div className="grid grid-cols-6 gap-8">
+          <div className="grid grid-cols-6 gap-x-8 gap-y-12">
             <div className="col-span-6">
               <div className="flex flex-col items-center justify-center">
                 <Link

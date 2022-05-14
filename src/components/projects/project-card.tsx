@@ -79,17 +79,13 @@ export const ProjectCard = ({
         <p className="h-[34px] text-xs font-semibold">{description}</p>
       </div>
       <div className="flex items-center justify-start space-x-2">
-        {/* <div className="flex items-center">
-          <Link
-            href="https://todo.fahmiidris.dev"
-            className="animated-underline text-xs font-semibold text-cyan-500"
-            openNewTab={true}
-          >
+        <div className="flex items-center">
+          <Link href="#" className="animated-underline text-xs font-semibold text-cyan-500">
             Read More
           </Link>
           <ChevronRightIcon className="h-[18px] w-[18px] text-cyan-500" />
         </div>
-        <span className="pr-[2px] text-xs font-semibold">or</span> */}
+        <span className="pr-[2px] text-xs font-semibold">or</span>
         <div className="flex items-center space-x-1">
           <Link
             href="https://todo.fahmiidris.dev"
