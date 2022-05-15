@@ -12,6 +12,7 @@ import ProgressBar from '@/utils/bar-of-progress';
 
 import type { TProps } from 'next';
 import type { TAppPropsWithLayout } from 'next/app';
+import { ScrollButton } from '@/components/scroll-button';
 
 const progress: ProgressBar = new ProgressBar({
   size: 2,
@@ -41,9 +42,8 @@ const defaultMeta: TProps['meta'] = {
 
 const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Element => {
   const { Layout, meta: customMeta }: TProps = Component.Props;
-  const meta: TProps['meta'] & {
-    date?: string;
-  } = { ...defaultMeta, ...customMeta };
+
+  const meta: TProps['meta'] = { ...defaultMeta, ...customMeta };
 
   return (
     <>
@@ -69,19 +69,12 @@ const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Eleme
         <meta name="twitter:creator" content="@FahmiIdrisA" />
 
         <link rel="canonical" href={`${meta.url}${router.asPath}`} />
-
-        {meta.date && (
-          <>
-            <meta name="author" property="article:author" content="Fahmi Idris" />
-            <meta name="published_time" property="article:published_time" content={meta.date} />
-            <meta name="publish_date" property="og:publish_date" content={meta.date} />
-          </>
-        )}
       </Head>
       <SearchProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
+        <ScrollButton />
       </SearchProvider>
     </>
   );

@@ -18,6 +18,7 @@ export const Navbar = (): JSX.Element => {
 
   React.useEffect(() => {
     let offset: number = 50;
+
     const onScroll = (): void => {
       if (!isOpaque && window.scrollY > offset) {
         setIsOpaque(true);
