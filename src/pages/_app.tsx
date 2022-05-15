@@ -6,13 +6,13 @@ import Head from 'next/head';
 import Router from 'next/router';
 
 import { Title } from '@/components/title';
+import { ScrollButton } from '@/components/scroll-button';
 import { SearchProvider } from '@/components/search';
 
 import ProgressBar from '@/utils/bar-of-progress';
 
 import type { TProps } from 'next';
 import type { TAppPropsWithLayout } from 'next/app';
-import { ScrollButton } from '@/components/scroll-button';
 
 const progress: ProgressBar = new ProgressBar({
   size: 2,
@@ -43,11 +43,14 @@ const defaultMeta: TProps['meta'] = {
 const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Element => {
   const { Layout, meta: customMeta }: TProps = Component.Props;
 
-  const meta: TProps['meta'] = { ...defaultMeta, ...customMeta };
+  const meta: TProps['meta'] = {
+    ...defaultMeta,
+    ...customMeta,
+  };
 
   return (
     <>
-      <Title suffix="www.fahmiidris.dev">{meta.title}</Title>
+      <Title suffix="Fahmi Idris Portfolio">{meta.title}</Title>
       <Head>
         <meta name="robots" content={meta.robots} />
         <meta name="description" content={meta.description} />

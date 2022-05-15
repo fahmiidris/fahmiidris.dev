@@ -6,9 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-  images: {
-    domains: ['ui-avatars.com'],
-  },
+
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
