@@ -124,4 +124,13 @@ export const random: TProject[] = [
     tech: [javascript, reactjs, tailwindcss],
     status: [finished, depelopment],
   },
+  {
+    id: 10,
+    title: 'Open Graph Generator',
+    description: 'Open Graph Generator for Personal Use!',
+    href: 'https://og.fahmiidris.dev',
+    github: 'https://github.com/fahmiidris-labs/og.fahmiidris.dev',
+    tech: [typescript],
+    status: [depelopment],
+  },
 ];
