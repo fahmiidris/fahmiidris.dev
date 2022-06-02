@@ -6,6 +6,8 @@ import axios from 'axios';
 import { SWRConfig } from 'swr';
 
 import { SEO } from '@/components/seo';
+import { BackToTopSection } from '@/components/back-to-top-section';
+import { HiddenSpecialMenu } from '@/components/hidden-special-menu';
 
 import type { AppPropsWithLayoutType } from 'next/app';
 
@@ -31,6 +33,9 @@ const MyApp = ({ Component, pageProps, router }: AppPropsWithLayoutType) => {
           <Component {...pageProps} />
         </Layout>
       </SWRConfig>
+
+      <HiddenSpecialMenu />
+      <BackToTopSection />
     </>
   );
 };
