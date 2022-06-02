@@ -66,6 +66,7 @@ export const Spotify = (): JSX.Element => {
                 <p className="text-lg text-slate-900 dark:text-slate-50">{data.artist}</p>
               </div>
             </div>
+
             <div className="space-y-2">
               <div className="relative">
                 <div className="overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">

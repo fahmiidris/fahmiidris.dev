@@ -67,6 +67,7 @@ export const Skills = () => {
             { title: 'PHP', href: 'https://php.net', icon: PHPIcon },
           ]}
         />
+
         <SkillSection
           title="Framework"
           skills={[
@@ -78,6 +79,7 @@ export const Skills = () => {
             { title: 'Bootstrap', href: 'https://getbootstrap.com', icon: BootstrapIcon },
           ]}
         />
+
         <SkillSection
           title="Tools"
           skills={[

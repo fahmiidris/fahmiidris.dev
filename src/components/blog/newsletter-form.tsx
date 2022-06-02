@@ -18,6 +18,7 @@ export const NewsletterForm = (props: { action: string }) => {
           />
         </div>
       </div>
+
       <div className="mt-3 flex grow px-1">
         <button
           type="submit"

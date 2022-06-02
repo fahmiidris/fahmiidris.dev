@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { QrcodeIcon } from '@heroicons/react/outline';
 import { ArrowSmDownIcon } from '@heroicons/react/solid';
 
 import { Link } from '@/components/link';
@@ -11,7 +12,6 @@ import { FeaturedExperiences } from '@/components/home/featured-experiences';
 import MainLayout from '@/layouts/main-layout';
 
 import type { NextPageWithLayoutType } from 'next';
-import { QrcodeIcon, SpeakerphoneIcon } from '@heroicons/react/outline';
 
 const HomePage: NextPageWithLayoutType = () => {
   return (
