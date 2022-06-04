@@ -14,21 +14,21 @@ export const NumberMonth: string = 'n';
 export const Hour24: string = 'm';
 
 const SubToTypeIdentifierMap: {
-  [abbreviation: string]: string;
+    [abbreviation: string]: string;
 } = {
-  MMMM: FullMonth,
-  MM: PartialMonth,
-  Mo: NumberMonth,
-  YYYY: FullYear,
-  YY: PartialYear,
-  dddd: DayOfTheWeek,
-  DD: DayOfTheMonth,
-  Do: Day,
-  h: Hour,
-  H: Hour24,
-  mm: Minutes,
-  ss: Seconds,
-  a: PostOrAnteMeridiem,
+    MMMM: FullMonth,
+    MM: PartialMonth,
+    Mo: NumberMonth,
+    YYYY: FullYear,
+    YY: PartialYear,
+    dddd: DayOfTheWeek,
+    DD: DayOfTheMonth,
+    Do: Day,
+    h: Hour,
+    H: Hour24,
+    mm: Minutes,
+    ss: Seconds,
+    a: PostOrAnteMeridiem,
 };
 
 export default SubToTypeIdentifierMap;
