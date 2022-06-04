@@ -77,7 +77,7 @@ export let data: TExperience[] = [
         alt: 'JCC 2021 Bootcamp',
       },
       {
-        src: require('@/images/jcc-offline-3.jpg').default,
+        src: require('@/images/jcc-offline-2.jpg').default,
         alt: 'JCC 2021 Bootcamp',
       },
       {
