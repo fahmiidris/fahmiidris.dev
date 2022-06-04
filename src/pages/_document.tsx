@@ -12,10 +12,7 @@ export default class Document extends NextDocument {
 
     render() {
         return (
-            <Html
-                lang="en"
-                className="dark scroll-smooth [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]"
-            >
+            <Html lang="en" className="dark scroll-smooth [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]">
                 <Head>
                     <Favicons />
                     <script
@@ -33,11 +30,9 @@ export default class Document extends NextDocument {
                     />
                 </Head>
 
-                <body
-                    className={clsx('font-sans text-slate-500 antialiased dark:text-slate-400', {
-                        'bg-white dark:bg-slate-900': true,
-                    })}
-                >
+                <body className={clsx('font-sans text-slate-500 antialiased dark:text-slate-400', {
+                    'bg-white dark:bg-slate-900': true,
+                })}>
                     <Main />
                     <NextScript />
                     <script></script>

@@ -25,7 +25,7 @@ type TSpotifyData = {
 };
 
 const getAccessToken = async () => {
-    const credentials: URLSearchParams = new URLSearchParams({
+    const credentials = new URLSearchParams({
         grant_type: 'refresh_token',
         refresh_token,
     });

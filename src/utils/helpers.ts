@@ -1,6 +1,6 @@
 import tinytime from '@/utils/tinytime';
 
-export const formatDate = (date: number, format: string): string => {
+export const formatDate = (date: number, format: string) => {
     const template = tinytime(format);
 
     return template.render(new Date(date));

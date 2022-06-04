@@ -204,10 +204,7 @@ const tailwindConfig = {
         require('@tailwindcss/line-clamp'),
 
         function ({ addVariant }) {
-            addVariant(
-                'supports-backdrop-blur',
-                '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))'
-            );
+            addVariant('supports-backdrop-blur', '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))');
         },
     ],
 };

@@ -62,10 +62,7 @@ const HomePage: NextPageWithLayoutType = () => {
                 </div>
 
                 <div className="relative flex flex-col justify-center rounded-lg border-2 border-dashed border-cyan-400">
-                    <button
-                        type="button"
-                        className="absolute right-3 -top-5 inline-flex items-center space-x-2 rounded-md border border-slate-400/20 bg-slate-800 py-2 pr-3 pl-4 text-sm font-medium text-white dark:border-transparent"
-                    >
+                    <button type="button" className="absolute right-3 -top-5 inline-flex items-center space-x-2 rounded-md border border-slate-400/20 bg-slate-800 py-2 pr-3 pl-4 text-sm font-medium text-white dark:border-transparent">
                         <span>Open on your handphone</span>
                         <QrcodeIcon className="h-5 w-5" />
                     </button>

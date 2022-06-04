@@ -22,6 +22,8 @@ const BlogPage: NextPageWithLayoutType = () => {
                         <NewsletterForm action="#" />
                     </section>
                 </header>
+
+                <div></div>
             </div>
         </div>
     );
