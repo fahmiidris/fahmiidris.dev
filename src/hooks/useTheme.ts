@@ -55,6 +55,7 @@ export const useTheme = () => {
 
         const onStorage = () => {
             update();
+
             localStorage.theme === 'light' || localStorage.theme === 'dark'
                 ? setSetting(localStorage.theme)
                 : setSetting('system');

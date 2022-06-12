@@ -23,9 +23,7 @@ export const Section = ({
             <div className="flex items-start justify-start">
                 {icon && (
                     <div className="mr-2 hidden sm:block">
-                        {React.createElement(icon, {
-                            className: 'w-8 h-8 stroke-slate-800 dark:stroke-slate-200',
-                        })}
+                        {React.createElement(icon, { className: 'w-8 h-8 stroke-slate-800 dark:stroke-slate-200' })}
                     </div>
                 )}
 

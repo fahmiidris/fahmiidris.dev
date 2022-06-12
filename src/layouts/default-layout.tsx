@@ -6,7 +6,7 @@ import { Announcement } from '@/components/navbar/announcement';
 
 import type { NextLayoutType } from 'next';
 
-const MainLayout: NextLayoutType = ({ children }) => {
+const DefaultLayout: NextLayoutType = ({ children }) => {
     return (
         <>
             <Announcement href="https://github.com/fahmiidris-labs/fahmiidris.dev" message="Hei!👋🏻 I have a new look! What do you think?" />
@@ -17,4 +17,4 @@ const MainLayout: NextLayoutType = ({ children }) => {
     );
 };
 
-export default MainLayout;
+export default DefaultLayout;

@@ -5,3 +5,10 @@ export const formatDate = (date: number, format: string) => {
 
     return template.render(new Date(date));
 };
+
+export const sortDateDesc = (a: number, b:  number) => {
+    if (a > b) return -1;
+    if (a < b) return 1;
+
+    return 0;
+};

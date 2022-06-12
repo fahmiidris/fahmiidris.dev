@@ -50,8 +50,8 @@ const stacks = [
 export const CurrentTechStack = ({ className }: CurrentTechStackType) => {
     return (
         <div className={clsx('flex items-center justify-center space-x-5', className)}>
-            {stacks.map(({ icon: Icon, ...item }, idx) => (
-                <Link key={idx} href={item.href} openNewTab={true}>
+            {stacks.map(({ icon: Icon, ...item }, index) => (
+                <Link key={index} href={item.href} openNewTab={true}>
                     <span className="sr-only">{item.name}</span>
                     <Icon className="h-8 w-full" />
                 </Link>

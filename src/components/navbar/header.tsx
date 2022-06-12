@@ -131,19 +131,13 @@ export const Header = () => {
                                 <div className="flex items-center space-x-4">
                                     <VersionSwitcher />
                                     <ThemeSwitcher />
-                                    <span
-                                        className="hidden h-6 w-px bg-slate-200 dark:bg-slate-800 sm:block"
-                                        aria-hidden="true"
-                                    />
+                                    <span className="hidden h-6 w-px bg-slate-200 dark:bg-slate-800 sm:block" aria-hidden="true" />
                                     <GitHubLinkedInDribbble />
                                 </div>
                             </div>
                         </div>
 
-                        <Disclosure.Panel className={clsx(
-                            'lg:hidden',
-                            open && 'border-t dark:border-slate-50/[0.06] lg:border-slate-900/10'
-                        )}>
+                        <Disclosure.Panel className={clsx('lg:hidden', open && 'border-t dark:border-slate-50/[0.06] lg:border-slate-900/10')}>
                             <div className="container">
                                 <div className="flex flex-col space-y-1 py-4">
                                     {navigation.pages.map((page) => (

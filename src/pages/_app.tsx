@@ -13,8 +13,7 @@ import type { AppPropsWithLayoutType } from 'next/app';
 
 const defaultMeta = {
     title: "Hi, I'm Fahmi Idris",
-    description:
-        'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
+    description: 'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
     url: 'https://www.fahmiidris.dev',
     image: 'https://www.fahmiidris.dev/images/default-social-image.jpg',
     type: 'website',

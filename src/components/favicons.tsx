@@ -20,12 +20,7 @@ export const Favicons = () => {
             <link rel="icon" type="image/png" sizes="16x16" href={v('/favicons/favicon-16x16.png')} />
             <link rel="icon" type="image/png" sizes="32x32" href={v('/favicons/favicon-32x32.png')} />
             <link rel="icon" type="image/png" sizes="96x96" href={v('/favicons/favicon-96x96.png')} />
-            <link
-                rel="icon"
-                type="image/png"
-                sizes="192x192"
-                href={v('/favicons/android-icon-192x192.png')}
-            />
+            <link rel="icon" type="image/png" sizes="192x192" href={v('/favicons/android-icon-192x192.png')} />
 
             <link rel="manifest" href={v('/favicons/manifest.json')} />
             <link rel="shortcut icon" href={v('/favicons/favicon.ico')} />

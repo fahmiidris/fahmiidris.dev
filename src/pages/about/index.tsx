@@ -9,7 +9,7 @@ import { Skills } from '@/components/about/skills';
 import { Section } from '@/components/section';
 import { Spotify } from '@/components/about/spotify';
 
-import MainLayout from '@/layouts/main-layout';
+import DefaultLayout from '@/layouts/default-layout';
 
 import type { NextPageWithLayoutType } from 'next';
 
@@ -41,7 +41,7 @@ const AboutPage: NextPageWithLayoutType = () => {
                                     <span className="font-semibold text-cyan-500 dark:text-white">Mi</span> or{' '}
                                     <span className="font-semibold text-cyan-500 dark:text-white">Fahmi</span>. I just
                                     graduated from{' '}
-                                    <Link href="https://www.facebook.com/smk1triplejciteureup/" openNewTab={true} className="font-semibold text-cyan-500 underline decoration-cyan-400 decoration-2 dark:text-white">
+                                    <Link href="https://www.facebook.com/smk1triplejciteureup/" openNewTab={true} className="font-semibold text-cyan-500 dark:text-white">
                                         Vocational High School
                                     </Link>{' '}
                                     majoring in Software Engineering in 2021. I enjoy learning something new and
@@ -82,7 +82,7 @@ const AboutPage: NextPageWithLayoutType = () => {
 };
 
 AboutPage.Props = {
-    Layout: MainLayout,
+    Layout: DefaultLayout,
     meta: {
         title: 'About Me!',
         description: "Hi, I'm Fahmi Idris, a frontend engineer based in West Java - Indonesia.",

@@ -29,10 +29,10 @@ const SkillSection = ({ title, skills }: SkillSectionType) => {
             <h3 className="text-sm font-semibold text-slate-700 dark:text-white">{title}</h3>
 
             <ul className="flex flex-wrap items-center gap-1 py-2">
-                {skills.map((item) => (
+                {skills.map(({ icon: Icon, ...item }) => (
                     <li key={item.title}>
                         <Link href={item.href} className="inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
-                            <item.icon className="h-5 w-5" />
+                            <Icon className="h-5 w-5" />
                             <span>{item.title}</span>
                         </Link>
                     </li>

@@ -3,14 +3,7 @@ import clsx from 'clsx';
 
 export const Logo = (props: { className?: string }) => {
     return (
-        <svg
-            className={clsx('text-slate-800 dark:text-slate-200', props.className)}
-            width={671}
-            height={187}
-            viewBox="0 0 671 187"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className={clsx('text-slate-800 dark:text-slate-200', props.className)} width={671} height={187} viewBox="0 0 671 187" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M63.0612 156C63.0612 173.121 48.9445 187 31.5306 187C14.1167 187 0 173.121 0 156C0 138.879 14.1167 125 31.5306 125C48.9445 125 63.0612 138.879 63.0612 156Z" fill="#22D3EE" />
             <path d="M134.531 156C134.531 173.121 120.414 187 103 187C85.5861 187 71.4694 173.121 71.4694 156C71.4694 138.879 85.5861 125 103 125C120.414 125 134.531 138.879 134.531 156Z" fill="#06B6D4" />
             <path d="M206 156C206 173.121 191.883 187 174.469 187C157.056 187 142.939 173.121 142.939 156C142.939 138.879 157.056 125 174.469 125C191.883 125 206 138.879 206 156Z" fill="#0891B2" />

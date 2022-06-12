@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { NewsletterForm } from '@/components/blog/newsletter-form';
 
-import MainLayout from '@/layouts/main-layout';
+import DefaultLayout from '@/layouts/default-layout';
 
 import type { NextPageWithLayoutType } from 'next';
 
@@ -23,17 +23,19 @@ const BlogPage: NextPageWithLayoutType = () => {
                     </section>
                 </header>
 
-                <div></div>
+                <div>
+                    <p className="text-sm font-semibold text-center">Currently Under Development!</p>
+                </div>
             </div>
         </div>
     );
 };
 
 BlogPage.Props = {
-    Layout: MainLayout,
+    Layout: DefaultLayout,
     meta: {
-        title: 'Blog',
-        description: 'Some personal opinions on technology and my random thoughts.',
+        title: "Blog",
+        description: "Some personal opinions on technology and my random thoughts.",
     },
 };
 

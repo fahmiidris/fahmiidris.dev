@@ -29,9 +29,7 @@ export const BackToTopSection = () => {
     };
 
     return (
-        <div className="fixed right-4 bottom-4 z-50" style={{
-            visibility: visible ? 'visible' : 'hidden',
-        }}>
+        <div className="fixed right-4 bottom-4 z-50" style={{ visibility: visible ? 'visible' : 'hidden' }}>
             <button type="button" onClick={() => scrollToTop()} className="inline-flex items-center justify-center rounded-md border border-transparent bg-cyan-500 p-2 text-white hover:bg-cyan-400 focus:outline-none dark:bg-slate-800 dark:hover:bg-slate-800/90">
                 <ArrowSmUpIcon className="h-5 w-5" />
             </button>
