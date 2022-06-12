@@ -104,7 +104,7 @@ export const Header = () => {
                         <div className="container relative">
                             <div className="flex h-[58px] w-full items-center justify-between">
                                 <div className="flex items-center">
-                                    <Disclosure.Button type="button" className="mr-2 inline-flex items-center rounded-md bg-slate-400/10 p-2 focus:bg-slate-400/20 lg:hidden">
+                                    <Disclosure.Button type="button" className="mr-4 inline-flex items-center rounded-md bg-slate-400/10 p-2 focus:bg-slate-400/20 lg:hidden">
                                         <span className="sr-only">Toggle Menu</span>
                                         {open ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
                                     </Disclosure.Button>

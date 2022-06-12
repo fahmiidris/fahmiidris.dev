@@ -27,7 +27,7 @@ const AboutPage: NextPageWithLayoutType = () => {
                             </div>
                         </div>
 
-                        <div className="col-span-6 space-y-6 lg:col-span-4">
+                        <div className="col-span-6 space-y-8 lg:col-span-4">
                             <article className="flex flex-col items-start space-y-6">
                                 <Link href="/" className="pt-6">
                                     <span className="sr-only">Logo Fahmi Idris</span>

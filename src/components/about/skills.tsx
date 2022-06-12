@@ -31,9 +31,9 @@ const SkillSection = ({ title, skills }: SkillSectionType) => {
             <ul className="flex flex-wrap items-center gap-1 py-2">
                 {skills.map(({ icon: Icon, ...item }) => (
                     <li key={item.title}>
-                        <Link href={item.href} className="inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                        <Link href={item.href} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
                             <Icon className="h-5 w-5" />
-                            <span>{item.title}</span>
+                            <span className="group-hover:text-slate-700 dark:group-hover:text-white">{item.title}</span>
                         </Link>
                     </li>
                 ))}
