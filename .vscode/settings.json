@@ -2,4 +2,7 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 4,
     "editor.rulers": [120],
+    "editor.fontFamily": "Cascadia Code, JetBrains Mono",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": "'calt', 'ss01'",
 }
