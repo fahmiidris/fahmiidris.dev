@@ -13,6 +13,7 @@ import {
 
 import { Link } from '@/components/link';
 import { Logo } from '@/components/logo';
+import { Search } from '@/components/navbar/search';
 import { ThemeSwitcher } from '@/components/navbar/theme-switcher';
 import { VersionSwitcher } from '@/components/navbar/version-switcher';
 import { GitHubLinkedInDribbble } from '@/components/navbar/github-linkedin-dribbble';
@@ -129,6 +130,7 @@ export const Header = () => {
                                 </div>
 
                                 <div className="flex items-center space-x-4">
+                                    <Search />
                                     <VersionSwitcher />
                                     <ThemeSwitcher />
                                     <span className="hidden h-6 w-px bg-slate-200 dark:bg-slate-800 sm:block" aria-hidden="true" />

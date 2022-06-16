@@ -39,7 +39,7 @@ export const Spotify = () => {
                 {data && data.isPlaying ? (
                     <div className="space-y-6 rounded-xl border border-slate-200 bg-white p-4 pb-6 dark:border-transparent dark:bg-slate-800 sm:space-y-8 sm:p-10 sm:pb-8 lg:space-y-6 lg:p-6 xl:space-y-8 xl:p-10 xl:pb-8">
                         <div className="flex items-center space-x-4">
-                            <div className="relative aspect-square w-[88px] flex-none overflow-hidden rounded-lg bg-slate-100">
+                            <div className="relative aspect-square w-[88px] flex-none overflow-hidden rounded-lg">
                                 <Image src={data.albumImageUrl} alt={data.album} layout="fill" className="object-cover object-center" />
                             </div>
 

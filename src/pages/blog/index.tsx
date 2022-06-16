@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { SearchIcon } from '@heroicons/react/outline';
 
+import { Input } from '@/components/input';
 import { NewsletterForm } from '@/components/blog/newsletter-form';
 
 import DefaultLayout from '@/layouts/default-layout';
@@ -23,9 +25,25 @@ const BlogPage: NextPageWithLayoutType = () => {
                     </section>
                 </header>
 
-                <div>
-                    <p className="text-sm font-semibold text-center">Currently Under Development!</p>
-                </div>
+                <section id="previews" className="relative">
+                    <div className="flex items-center justify-between">
+                        <form className="flex" onSubmit={() => console.log('ashiap')}>
+                            <div>
+                                <Input
+                                    type="text"
+                                    name="search-blog"
+                                    placeholder="Search for a blog"
+                                    onChange={() => console.log('ashiap')}
+                                    icon={SearchIcon}
+                                />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div className="pt-8">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque numquam quis animi facilis, inventore voluptatum provident ab tempore id natus distinctio, adipisci amet minima alias! Dolorum optio porro eum eius!
+                    </div>
+                </section>
             </div>
         </div>
     );

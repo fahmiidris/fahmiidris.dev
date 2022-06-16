@@ -5,22 +5,16 @@ import { Link } from '@/components/link';
 
 import { formatDate } from '@/utils/helpers';
 
-export type EducationType = {
-    title: string;
-    major: string;
-    date: {
-        start: number;
-        end?: number;
-    },
-    href: string;
-}
+import type { EducationType } from '@/types/education.type';
 
-type EducationCardType = EducationType;
+type EducationCardType = EducationType & {
+    isNew?: boolean;
+};
 
-export const EducationCard = ({ title, major, date, href }: EducationCardType) => {
+export const EducationCard = ({ title, major, date, href, isNew = false }: EducationCardType) => {
     return (
         <li className="text-sm leading-6">
-            <figure className="relative flex flex-col-reverse bg-slate-50 rounded-lg p-6 dark:bg-slate-800">
+            <figure className="relative flex flex-col-reverse border border-slate-400/20 rounded-lg p-6 dark:bg-slate-800 dark:border-transparent">
                 <blockquote className="mt-6 text-slate-700 dark:text-slate-300">
                     <p>
                         Successfully joined and majored in{' '}
@@ -31,13 +25,14 @@ export const EducationCard = ({ title, major, date, href }: EducationCardType) =
                         .
                     </p>
                 </blockquote>
+
                 <figcaption className="flex items-start space-x-4">
                     <Image
                         src={`https://ui-avatars.com/api/?name=${title}&size=128&rounded=true&bold=true`}
                         alt={title}
-                        className="flex-none w-14 h-14 rounded-full object-cover"
                         width={50}
                         height={50}
+                        className="flex-none w-14 h-14 rounded-full object-cover"
                     />
                     <div className="flex-auto">
                         <h2 className="text-base text-slate-700 font-semibold dark:text-white">
@@ -48,6 +43,12 @@ export const EducationCard = ({ title, major, date, href }: EducationCardType) =
                         </p>
                     </div>
                 </figcaption>
+
+                {isNew && (
+                    <span className="absolute -top-2 -right-2 z-10 text-xs rounded-[4px] px-2 py-1 bg-cyan-400 dark:bg-cyan-500 text-slate-800 font-bold">
+                        New!
+                    </span>
+                )}
             </figure>
         </li>
     );

@@ -1,4 +1,4 @@
-import { getNowPlaying } from '@/utils/spotify';
+import { getNowPlaying } from '@/services/spotify';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 

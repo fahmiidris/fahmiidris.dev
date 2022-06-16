@@ -2,61 +2,15 @@ import * as React from 'react';
 import { AcademicCapIcon, BadgeCheckIcon, ClockIcon } from '@heroicons/react/outline';
 
 import { Section } from '@/components/section';
-import { EducationCard, EducationType } from '@/components/experiences/education-card';
+import { EducationCard } from '@/components/experiences/education-card';
+import { CertificateCard } from '@/components/experiences/certificate-card';
+import { certificates, formalEducation, nonFormalEducation } from '@/components/experiences/educations-certificates';
 
 import DefaultLayout from '@/layouts/default-layout';
 
-import type { NextPageWithLayoutType } from 'next';
 import { sortDateDesc } from '@/utils/helpers';
 
-const formalEducation: EducationType[] = [
-    {
-        title: "MTs. Al-Hidayah Tajur",
-        major: "Haven't Take Course",
-        date: {
-            start: 1435683600000,
-            end: 1525453200000,
-        },
-        href: "https://goo.gl/maps/E4WA97kJ5bPptrRB6",
-    },
-    {
-        title: "SMK 1 Triple J Citeureup",
-        major: "Software Engineering",
-        date: {
-            start: 1530378000000,
-            end: 1619802000000,
-        },
-        href: "https://www.facebook.com/smk1triplejciteureup/",
-    }
-];
-
-const nonFormalEducation: EducationType[] = [
-    {
-        title: "Jabar Coding Camp 2021",
-        major: "Frontend Developer - React.js",
-        date: {
-            start: 1629824400000,
-            end: 1648659600000,
-        },
-        href: "https://www.jabarcodingcamp.id",
-    },
-    {
-        title: "PROA Digital Talent Scholarship 2022",
-        major: "Android Developer - Kotlin",
-        date: {
-            start: 1652720400000,
-        },
-        href: "https://digitalent.kominfo.go.id",
-    },
-    {
-        title: "IDCamp 2022",
-        major: "Frontend Developer Learning Path",
-        date: {
-            start: 1653584400000,
-        },
-        href: "https://idcamp.ioh.co.id",
-    },
-];
+import type { NextPageWithLayoutType } from 'next';
 
 const ExperiencesPage: NextPageWithLayoutType = () => {
     return (
@@ -73,7 +27,7 @@ const ExperiencesPage: NextPageWithLayoutType = () => {
                         <h2 className="text-sm font-semibold text-slate-700 dark:text-white mb-4">Formal Education</h2>
                         <ul className="flex flex-col space-y-4">
                             {formalEducation.sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
-                                <EducationCard key={index} {...item} />
+                                <EducationCard key={index} {...item} isNew={index < 1} />
                             ))}
                         </ul>
                     </section>
@@ -82,7 +36,7 @@ const ExperiencesPage: NextPageWithLayoutType = () => {
                         <h2 className="text-sm font-semibold text-slate-700 dark:text-white mb-4">Non-Formal Education</h2>
                         <ul className="flex flex-col space-y-4">
                             {nonFormalEducation.sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
-                                <EducationCard key={index} {...item} />
+                                <EducationCard key={index} {...item} isNew={index < 1} />
                             ))}
                         </ul>
                     </section>
@@ -91,7 +45,11 @@ const ExperiencesPage: NextPageWithLayoutType = () => {
 
             <Section id="certificates" title="My Certificates" description="Some of the certificates I got during my career in programming." icon={BadgeCheckIcon} className="container relative">
                 <div className="py-8">
-                    <p className="text-sm font-semibold">Currently Under Development!</p>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {certificates.sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
+                            <CertificateCard key={index} {...item} isNew={index <= 1} />
+                        ))}
+                    </ul>
                 </div>
             </Section>
         </article>

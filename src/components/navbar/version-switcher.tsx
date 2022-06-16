@@ -2,7 +2,10 @@ import * as React from 'react';
 import { Menu } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/solid';
 
+import { Link } from "@/components/link";
+
 import pkg from '../../../package.json';
+import clsx from 'clsx';
 
 export const VersionSwitcher = () => {
     return (
@@ -18,6 +21,13 @@ export const VersionSwitcher = () => {
                         v{pkg.version}
                         <CheckIcon className="h-4 w-4" />
                     </span>
+                </Menu.Item>
+                <Menu.Item>
+                    {({ active }) => (
+                        <Link href="https://v0.fahmiidris.dev" className={clsx('block px-3 py-1 dark:text-white', active && 'bg-slate-50 text-slate-900 dark:bg-slate-600/30')}>
+                            v0.1.0
+                        </Link>
+                    )}
                 </Menu.Item>
             </Menu.Items>
         </Menu>
