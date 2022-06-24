@@ -56,7 +56,7 @@ export const Spotify = () => {
 
                         <div className="space-y-2">
                             <div className="relative">
-                                <div className="overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+                                <div className="overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
                                     <div className="h-2 bg-cyan-500 dark:bg-cyan-400" style={{ width: getPersentase(data.progress, data.duration) }} role="progressbar" aria-label="music progress" />
                                 </div>
                                 <div className="absolute top-1/2 -mt-2 -ml-2 flex h-4 w-4 items-center justify-center rounded-full bg-white shadow ring-2 ring-cyan-500 dark:ring-cyan-400" style={{ left: getPersentase(data.progress, data.duration) }}>
