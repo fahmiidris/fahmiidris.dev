@@ -26,14 +26,14 @@ type SkillSectionType = {
 const SkillSection = ({ title, skills }: SkillSectionType) => {
     return (
         <div>
-            <h3 className="text-sm font-semibold text-slate-700 dark:text-white">{title}</h3>
+            <h3 className="text-sm font-semibold text-slate-800 dark:text-white">{title}</h3>
 
             <ul className="flex flex-wrap items-center gap-1 py-2">
                 {skills.map(({ icon: Icon, ...item }) => (
                     <li key={item.title}>
-                        <Link href={item.href} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                        <Link href={item.href} openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
                             <Icon className="h-5 w-5" />
-                            <span className="group-hover:text-slate-700 dark:group-hover:text-white">{item.title}</span>
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">{item.title}</span>
                         </Link>
                     </li>
                 ))}

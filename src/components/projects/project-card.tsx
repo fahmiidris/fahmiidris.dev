@@ -17,7 +17,7 @@ export const ProjectCard = ({ title, description, href, className, status, thumb
         <div className={clsx('flex flex-col space-y-2', className)}>
             <div className="flex items-center space-x-2">
                 {status.map((item) => (
-                    <p key={item.title} className={clsx('inline-flex items-center justify-center rounded-[4px]  px-1.5 py-0.5 text-[10px] font-bold uppercase', item.className ? item.className : 'bg-cyan-400 text-slate-700')}>
+                    <p key={item.title} className={clsx('inline-flex items-center justify-center rounded-[4px]  px-1.5 py-0.5 text-[10px] font-bold uppercase', item.className ? item.className : 'bg-cyan-400 text-slate-800')}>
                         {item.title}
                     </p>
                 ))}

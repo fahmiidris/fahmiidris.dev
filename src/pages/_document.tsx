@@ -31,7 +31,7 @@ export default class Document extends NextDocument {
                     />
                 </Head>
 
-                <body className={clsx('font-sans text-slate-500 antialiased dark:text-slate-400', {
+                <body className={clsx('font-sans text-slate-600 antialiased dark:text-slate-400', {
                     'bg-white dark:bg-slate-900': true,
                 })}>
                     <Main />

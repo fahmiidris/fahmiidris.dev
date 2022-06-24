@@ -61,7 +61,7 @@ export const Header = () => {
                         ].map(({ icon: Icon, ...item }) => (
                             <div key={item.title.desktop} className="flex items-center space-x-1">
                                 <Icon className="h-4 w-4 text-slate-800 dark:text-slate-200" />
-                                <Link href={item.href} openNewTab={true} className="animated-underline text-xs font-semibold">
+                                <Link href={item.href} openNewTab={true} className="animated-underline hover:text-slate-700 dark:hover:text-white text-xs font-semibold">
                                     <span className="block md:hidden">{item.title.mobile}</span>
                                     <span className="hidden md:block">{item.title.desktop}</span>
                                 </Link>
@@ -84,7 +84,7 @@ export const Header = () => {
                         ].map(({ icon: Icon, ...item }) => (
                             <div key={item.title.desktop} className="flex items-center space-x-1">
                                 <Icon className="h-4 w-4 text-slate-800 dark:text-slate-200" />
-                                <Link href={item.href} openNewTab={true} className="animated-underline text-xs font-semibold">
+                                <Link href={item.href} openNewTab={true} className="animated-underline hover:text-slate-700 dark:hover:text-white text-xs font-semibold">
                                     <span className="block md:hidden">{item.title.mobile}</span>
                                     <span className="hidden md:block">{item.title.desktop}</span>
                                 </Link>

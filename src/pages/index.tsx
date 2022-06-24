@@ -33,14 +33,14 @@ const HomePage: NextPageWithLayoutType = () => {
                             <span className="text-cyan-400">Indonesia</span> who focuses on{' '}
                             <span className="text-cyan-400">Website Technology</span>.
                         </h1>
-                        <p className="pt-4 text-sm md:text-lg">
+                        <p className="pt-4 text-sm md:text-lg font-semibold">
                             This website was established not just as a learning tool, but also as a place for me
                             to write and show off my projects, as well as a repository of my past experiences.
                         </p>
                     </div>
 
                     <div className="grid w-full grid-cols-1 gap-4 pt-8 text-center sm:flex sm:items-center sm:justify-center sm:gap-0 sm:space-x-6">
-                        <Link href="mailto:fahmiidris.1607@gmail.com" openNewTab={true} className="rounded-md border border-transparent bg-slate-800 py-3 px-6 text-sm font-semibold text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:bg-white dark:text-slate-800 dark:focus:ring-offset-slate-900 dark:hover:bg-slate-100">
+                        <Link href="mailto:fahmiidris.1607@gmail.com" openNewTab={true} className="rounded-md border border-transparent bg-slate-800 py-3 px-6 text-sm font-semibold text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:bg-white dark:text-slate-800 dark:focus:ring-offset-slate-900 dark:hover:bg-slate-100">
                             Say &quot;Hi!&quot; to Me! 👋🏻
                         </Link>
                         <Link href="/blog" className="rounded-md border border-slate-300 bg-white py-3 px-6 text-sm font-semibold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:focus:ring-offset-slate-900 dark:hover:bg-slate-700">

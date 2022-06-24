@@ -22,13 +22,13 @@ export const VersionSwitcher = () => {
                         <CheckIcon className="h-4 w-4" />
                     </span>
                 </Menu.Item>
-                <Menu.Item>
+                {/* <Menu.Item>
                     {({ active }) => (
                         <Link href="https://v0.fahmiidris.dev" className={clsx('block px-3 py-1 dark:text-white', active && 'bg-slate-50 text-slate-900 dark:bg-slate-600/30')}>
                             v0.1.0
                         </Link>
                     )}
-                </Menu.Item>
+                </Menu.Item> */}
             </Menu.Items>
         </Menu>
     );

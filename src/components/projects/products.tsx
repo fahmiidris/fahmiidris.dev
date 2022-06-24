@@ -9,7 +9,7 @@ export const Products = () => {
         <>
             <section id="products" className="relative">
                 <div className="relative flex flex-col justify-center rounded-lg border-2 border-dashed border-cyan-400">
-                    <button type="button" onClick={() => setShowQRCode(true)} className="absolute right-3 -top-5 inline-flex items-center space-x-2 rounded-md border border-slate-400/20 bg-slate-800 py-2 pr-3 pl-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 dark:border-transparent dark:hover:bg-slate-700">
+                    <button type="button" onClick={() => setShowQRCode(true)} className="hidden absolute right-3 -top-5 sm:inline-flex items-center space-x-2 rounded-md border border-slate-400/20 bg-slate-800 hover:bg-slate-700 py-2 pr-3 pl-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 dark:border-transparent dark:hover:bg-slate-700">
                         <span>Open on your handphone</span>
                         <QrcodeIcon className="h-5 w-5" />
                     </button>
@@ -33,7 +33,7 @@ export const Products = () => {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-black/25 backdrop-blur-sm" />
+                        <div className="fixed inset-0 bg-slate-900/25 backdrop-blur-sm" />
                     </Transition.Child>
 
                     <div className="fixed inset-0 overflow-y-auto">

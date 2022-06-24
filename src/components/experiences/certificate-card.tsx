@@ -14,7 +14,7 @@ export const CertificateCard = ({ title, description, platform, date, href, cred
     return (
         <li className="text-sm leading-6">
             <figure className="relative flex flex-col-reverse border border-slate-400/20 rounded-lg p-6 dark:bg-slate-800 dark:border-transparent">
-                <blockquote className="mt-6 text-[10px] leading-4 text-slate-700 dark:text-slate-300">
+                <blockquote className="mt-6 text-[10px] leading-4 text-slate-800 dark:text-slate-300">
                     <div className="flex flex-col">
                         <h3>Credential ID :</h3>
                         <p className="font-semibold">{credential.id}</p>
@@ -41,7 +41,7 @@ export const CertificateCard = ({ title, description, platform, date, href, cred
 
                 <figcaption className="flex items-start space-x-4">
                     <div className="flex-auto">
-                        <h2 className="text-sm text-slate-700 font-semibold dark:text-white">
+                        <h2 className="text-sm text-slate-800 font-semibold dark:text-white">
                             {title}
                         </h2>
                         <p className="mt-0.5 text-[10px] leading-4">

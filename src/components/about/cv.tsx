@@ -11,7 +11,7 @@ export const CV = () => {
                 <li>
                     <Link href="https://drive.google.com/file/d/1pZJB7DrO3RzuXmAXHqyKUQ3B4ug4tHDq/view?usp=sharing" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
                         <DownloadIcon className="h-5 w-5" />
-                        <span className="group-hover:text-slate-700 dark:group-hover:text-white">CV Fahmi Idris</span>
+                        <span className="group-hover:text-slate-800 dark:group-hover:text-white">CV Fahmi Idris</span>
                     </Link>
                 </li>
 

@@ -6,8 +6,8 @@ import axios from 'axios';
 import { SWRConfig } from 'swr';
 
 import { SEO } from '@/components/seo';
+import { MDXComponents } from '@/components/mdx-components';
 import { BackToTopSection } from '@/components/back-to-top-section';
-import { HiddenSpecialMenu } from '@/components/hidden-special-menu';
 
 import type { AppPropsWithLayoutType } from 'next/app';
 
@@ -23,17 +23,20 @@ const defaultMeta = {
 const MyApp = ({ Component, pageProps, router }: AppPropsWithLayoutType) => {
     const Layout = Component.Props?.Layout ?? React.Fragment;
 
+    const layoutProps = {
+        fm: Component.Props?.fm ?? {},
+    };
+
     return (
         <>
             <SEO meta={Object.assign({}, defaultMeta, Component.Props?.meta ?? {})} router={router} />
 
             <SWRConfig value={{ fetcher: (url: string) => axios.get(url).then((res) => res.data) }}>
-                <Layout>
-                    <Component {...pageProps} />
+                <Layout {...layoutProps}>
+                    <Component {...pageProps} components={MDXComponents} />
                 </Layout>
             </SWRConfig>
 
-            <HiddenSpecialMenu />
             <BackToTopSection />
         </>
     );

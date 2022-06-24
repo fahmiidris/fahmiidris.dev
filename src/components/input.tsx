@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-type TInput = React.InputHTMLAttributes<HTMLInputElement> & {
+type InputType = React.InputHTMLAttributes<HTMLInputElement> & {
     isFocused?: boolean;
     icon?: (props: React.ComponentProps<'svg'>) => JSX.Element;
 };
@@ -18,7 +18,7 @@ export const Input = ({
     isFocused = false,
     icon,
     onChange
-}: TInput) => {
+}: InputType) => {
     const input = React.useRef<HTMLInputElement>(null);
 
     React.useEffect(() => {
@@ -35,7 +35,7 @@ export const Input = ({
                 inputMode={inputMode}
                 name={name}
                 value={value}
-                className={clsx("block w-full appearance-none rounded-md border !border-transparent bg-white py-2 pr-3 text-sm leading-5 text-slate-900 ring-1 ring-slate-900/20 placeholder:text-slate-400 focus:ring-2 focus:ring-cyan-500 dark:bg-slate-700/20 dark:text-white dark:ring-slate-200/20 dark:focus:ring-cyan-500", { "pl-11": !!icon } ,className)}
+                className={clsx("block w-full appearance-none rounded-md border !border-transparent bg-white py-2 pr-3 text-sm leading-5 text-slate-900 ring-1 ring-slate-900/20 placeholder:text-slate-400 focus:ring-2 focus:ring-cyan-500 dark:bg-slate-800/20 dark:text-white dark:ring-slate-200/20 dark:focus:ring-cyan-500", { "pl-11": !!icon } ,className)}
                 placeholder={placeholder}
                 ref={input}
                 autoComplete={autoComplete}

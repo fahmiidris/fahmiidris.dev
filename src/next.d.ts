@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import type { MDXComponents as MDXComponentsType } from 'mdx/types';
 
 declare module 'next' {
     type NextLayoutType<T = {}> = React.ComponentType<T & { children: React.ReactNode }>;
@@ -12,10 +13,11 @@ declare module 'next' {
         robots?: string;
     };
 
-    type NextPageWithLayoutType<T = {}, TP = T> = NextPage<T, TP> & {
+    type NextPageWithLayoutType<T = {}, TP = T> = NextPage<T & { components: MDXComponentsType }, TP> & {
         Props?: {
             Layout: any;
             meta: MetaType;
+            fm?: any;
         };
     };
 }

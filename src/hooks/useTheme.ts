@@ -1,5 +1,5 @@
 import * as React from 'react';
-import create from 'zustand';
+import zustand from 'zustand';
 
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
@@ -8,7 +8,7 @@ type SettingType = {
     setSetting: (setting: string) => void;
 };
 
-const useSetting = create<SettingType>((set) => ({
+const useSetting = zustand<SettingType>((set) => ({
     setting: 'system',
     setSetting: (setting) => set({ setting }),
 }));

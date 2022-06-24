@@ -24,7 +24,7 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkType>(
         }
 
         return (
-            <a href={href} ref={ref} className={className} target="_blank" rel="noopener noreferrer" style={{ outline: 'none' }} {...props}>
+            <a {...props} href={href} ref={ref} className={className} style={{ outline: 'none' }} target="_blank" rel="noopener noreferrer">
                 {children}
             </a>
         );
