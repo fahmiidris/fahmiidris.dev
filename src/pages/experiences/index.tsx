@@ -1,95 +1,105 @@
 import * as React from 'react';
-import { ClockIcon, SearchIcon } from '@heroicons/react/outline';
+import { ArrowSmRightIcon } from '@heroicons/react/solid';
+import { AcademicCapIcon, BadgeCheckIcon, ClockIcon } from '@heroicons/react/outline';
 
-import { Logo } from '@/components/logo';
 import { Link } from '@/components/link';
-import { Steps } from '@/components/experiences/steps';
-import { BasicLayout } from '@/layouts/basic-layout';
-import { HeadingSection } from '@/components/heading-section';
+import { Section } from '@/components/section';
+import { EducationCard } from '@/components/experiences/education-card';
+import { CertificateCard } from '@/components/experiences/certificate-card';
+import { ExperienceSteps } from '@/components/experiences/experience-steps';
+import { certificates, formalEducation, nonFormalEducation } from '@/components/experiences/educations-certificates';
 
-import { data as myExperiences, TExperience } from '@/components/experiences/data';
+import DefaultLayout from '@/layouts/default-layout';
 
-import type { TNextPageWithLayout } from 'next';
+import { sortDateDesc } from '@/utils/helpers';
+import { getExperiencePreviews } from '@/services/experiences';
 
-const ExperiencesPage: TNextPageWithLayout = (): JSX.Element => {
-  const [search, setSearch] = React.useState<string | null>(null);
-  const [data, setData] = React.useState<TExperience[]>(myExperiences);
+import type { NextPageWithLayoutType } from 'next';
 
-  React.useEffect(() => {
-    if (search) {
-      const filteredData: TExperience[] = myExperiences.filter((step) => {
-        return step.title.toLowerCase().includes(search.toLowerCase());
-      });
+const experiences = getExperiencePreviews();
 
-      setData(filteredData);
-    } else {
-      setData(myExperiences);
-    }
-  }, [search]);
-
-  return (
-    <>
-      <div className="relative mb-20">
-        <div className="container flex flex-col space-y-6">
-          <HeadingSection
-            title="My Experiences"
-            description="My historical experience, non-formal education, big event, internship, etc."
-            icon={ClockIcon}
-          />
-        </div>
-        <div className="container pt-8">
-          <div className="flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-slate-800 to-cyan-600 py-6 px-6 dark:from-slate-800 dark:to-cyan-500 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-4 md:pl-5">
-            <h2 className="flex-none">
-              <span className="sr-only">My Certificates</span>
-              <Logo className="h-auto w-24 !text-white" />
-            </h2>
-            <p className="flex-auto text-sm font-medium text-white sm:text-lg">
-              All certificates in the field of programming owned by Fahmi Idris
-            </p>
-            <Link
-              href="/experiences/certificates"
-              className="flex-none rounded-lg bg-white py-3 px-5 text-xs font-bold text-slate-900 transition-colors duration-200 hover:bg-slate-100 sm:text-sm sm:font-semibold"
-            >
-              View My Certificates
-            </Link>
-          </div>
-        </div>
-        <div className="container pt-8">
-          <div className="grid grid-cols-12 gap-4">
-            <div className="sticky top-20 z-30 col-span-12 self-start md:col-span-3">
-              <div className="-mx-3 -mt-6 bg-white/95 px-3 pt-6 backdrop-blur dark:bg-slate-900/75">
-                <div className="relative mt-1">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <SearchIcon className="h-[18px] w-[18px]" />
-                  </span>
-                  <input
-                    type="text"
-                    name="search"
-                    placeholder='Search "My Experiences"'
-                    className="block w-full rounded-lg border border-slate-300/50 pl-9 text-xs placeholder:text-xs placeholder:font-semibold focus:border-slate-300/75 focus:ring-2 focus:ring-cyan-400 dark:border-transparent dark:bg-slate-800 dark:ring-offset-slate-900"
-                    style={{ outline: 'none' }}
-                    onChange={(e) => setSearch(e.target.value)}
-                  />
+const ExperiencesPage: NextPageWithLayoutType = () => {
+    return (
+        <article className="flex flex-col space-y-32 mb-20">
+            <Section id="experiences" title="My Experiences - Work and Internship" description="My historical work experience, internship, etc." icon={ClockIcon} className="container relative">
+                <div className="py-8">
+                    <ExperienceSteps steps={experiences} />
                 </div>
-              </div>
-              <div className="h-8 bg-gradient-to-b from-white dark:from-slate-900" />
-            </div>
-            <div className="col-span-12 md:col-span-9">
-              <Steps steps={data.sort((a, b) => b.id - a.id)} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+            </Section>
+
+            <Section id="educations" title="My Educations" description="My educational history from junior high school to last education. - formal and non-formal education." icon={AcademicCapIcon} className="container relative">
+                <div className="py-8">
+                    <article className="flex flex-col space-y-8">
+                        <section id="formal-educations">
+                            <div>
+                                <h2 className="text-sm font-semibold text-slate-800 dark:text-white">
+                                    Formal Educations
+                                </h2>
+                                <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6">
+                                    Overall, education at school or campus.
+                                </p>
+                            </div>
+
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {formalEducation.slice(0, 2).sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
+                                    <EducationCard key={index} {...item} isNew={index < 1} />
+                                ))}
+                            </ul>
+                        </section>
+
+                        <section id="non-formal-educations">
+                            <div>
+                                <h2 className="text-sm font-semibold text-slate-800 dark:text-white">
+                                    Non-Formal Educations
+                                </h2>
+                                <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6">
+                                    Education outside school or campus, such as bootcamp, online learning scholarships, etc.
+                                </p>
+                            </div>
+
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {nonFormalEducation.slice(0, 2).sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
+                                    <EducationCard key={index} {...item} isNew={index < 1} />
+                                ))}
+                            </ul>
+                        </section>
+                    </article>
+
+                    <div className="pt-10">
+                        <Link href="/experiences/educations" className="inline-flex items-center space-x-2 rounded-md border border-slate-300 bg-white py-2 pl-4 pr-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700">
+                            <span>View More</span>
+                            <ArrowSmRightIcon className='w-5 h-5' />
+                        </Link>
+                    </div>
+                </div>
+            </Section>
+
+            <Section id="certificates" title="My Certificates" description="Some of the certificates I got during my career in programming." icon={BadgeCheckIcon} className="container relative">
+                <div className="py-8">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {certificates.slice(0, 3).sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
+                            <CertificateCard key={index} {...item} isNew={index <= 1} />
+                        ))}
+                    </ul>
+
+                    <div className="pt-10">
+                        <Link href="/experiences/certificates" className="inline-flex items-center space-x-2 rounded-md border border-slate-300 bg-white py-2 pl-4 pr-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:ring-offset-slate-900 dark:hover:bg-slate-700">
+                            <span>View More</span>
+                            <ArrowSmRightIcon className='w-5 h-5' />
+                        </Link>
+                    </div>
+                </div>
+            </Section>
+        </article>
+    );
 };
 
 ExperiencesPage.Props = {
-  Layout: BasicLayout,
-  meta: {
-    title: 'Experiences',
-    description: 'My historical experience, non-formal education, big event, internship, etc.',
-  },
+    Layout: DefaultLayout,
+    meta: {
+        title: "My Experiences",
+        description: "My historical experience, formal and non-formal education, big event, internship, etc.",
+    },
 };
 
 export default ExperiencesPage;

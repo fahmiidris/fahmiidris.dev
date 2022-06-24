@@ -2,103 +2,107 @@ import * as React from 'react';
 import { DesktopComputerIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
-import { NoContent } from '@/components/no-content';
-import { BasicLayout } from '@/layouts/basic-layout';
-import { ProjectCard } from '@/components/projects/project-card';
-import { HeadingSection } from '@/components/heading-section';
+import { Section } from '@/components/section';
+import { Products } from '@/components/projects/products';
 
-import { kloningan, random } from '@/components/projects/data';
+import DefaultLayout from '@/layouts/default-layout';
 
-import { ReactComponent as KloninganIcon } from '@/images/icons/kloningan.svg';
+import GitHubIcon from '@/images/icons/github.svg';
 
-import type { TNextPageWithLayout } from 'next';
+import type { NextPageWithLayoutType } from 'next';
 
-const ProjectsPage: TNextPageWithLayout = (): JSX.Element => {
-  return (
-    <>
-      <div className="relative mb-20">
-        <div className="container flex flex-col space-y-6">
-          <HeadingSection
-            title="My Projects"
-            description="My project history, starting from personal projects, during internships or work, etc."
-            icon={DesktopComputerIcon}
-          />
-        </div>
-        <div className="container pt-8">
-          <div className="grid grid-cols-6 gap-x-8 gap-y-12">
-            <div className="col-span-6">
-              <div className="flex flex-col items-center justify-center">
-                <Link
-                  href="https://www.kloningan.com"
-                  openNewTab={true}
-                  className="animated-underline text-xl font-bold text-slate-800 dark:text-slate-200"
-                >
-                  kloningan.com
-                </Link>
-                <p className="text-center text-xs font-semibold">
-                  Start by imitating the existing one, then create a better one.
-                </p>
-              </div>
-            </div>
-            <div className="col-span-6 flex flex-wrap items-center space-y-4 rounded-2xl bg-gradient-to-r from-slate-800 to-cyan-600 py-6 px-6 dark:from-slate-800 dark:to-cyan-500 md:flex-nowrap md:space-y-0 md:space-x-8 md:py-4 md:pr-5">
-              <h2 className="flex-none">
-                <span className="sr-only">kloningan.com</span>
-                <KloninganIcon className="h-auto w-28 text-white" />
-              </h2>
-              <p className="flex-auto text-sm font-medium text-white sm:text-lg">
-                Cloning the User Interface of Several Famous Websites on the Internet created by
-                Kloningan Members and Contributors
-              </p>
-              <Link
-                href="https://www.kloningan.com"
-                openNewTab={true}
-                className="flex-none rounded-lg bg-white py-3 px-5 text-xs font-bold text-slate-900 transition-colors duration-200 hover:bg-slate-100 sm:text-sm sm:font-semibold"
-              >
-                View Website
-              </Link>
-            </div>
-            {kloningan
-              .sort((a, b) => b.id - a.id)
-              .map((item) => (
-                <ProjectCard
-                  key={item.id}
-                  {...item}
-                  className="col-span-6 sm:col-span-3 lg:col-span-2"
-                />
-              ))}
-            <div className="col-span-6 pt-12">
-              <div className="flex flex-col items-center justify-center">
-                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">
-                  Random Project
-                </h3>
-                <p className="text-xs font-semibold">
-                  Crazy things sometimes start with randomness.
-                </p>
-              </div>
-            </div>
-            {random
-              .sort((a, b) => b.id - a.id)
-              .map((item) => (
-                <ProjectCard
-                  key={item.id}
-                  {...item}
-                  className="col-span-6 sm:col-span-3 lg:col-span-2"
-                />
-              ))}
-          </div>
-        </div>
-      </div>
-    </>
-  );
+const ProjectsPage: NextPageWithLayoutType = () => {
+    return (
+        <Section id="projects" title="My Projects" description="My project history, starting from personal projects, during internships or work, etc." icon={DesktopComputerIcon} className="container relative mb-20">
+            <article className="py-8">
+                <Products />
+            </article>
+
+            <article className="flex flex-col space-y-32">
+                <Section id="naqimart" title="www.naqimart.com" description="Smart shop for you, easier shopping with naqimart.">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8">
+                        <Link href="https://github.com/naqimart" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GitHubIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                    </div>
+                </Section>
+
+                <Section id="kloningan" title="www.kloningan.com" description="Start by imitating the existing one, then create a better one.">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8">
+                        <Link href="https://github.com/kloningan" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GitHubIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                    </div>
+                </Section>
+
+                <Section id="random-projects" title="Personal / Random Projects" description="Crazy things sometimes start with randomness.">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8">
+                        <Link href="https://github.com/fahmiidris-labs" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GitHubIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                    </div>
+                </Section>
+
+                <Section id="ui-ux" title="Fahmi Idris with UI/UX Design" description="I think a Frontend Engineer would be very good if he has skills in UI/UX Design.">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8">
+                        <ul className="flex flex-wrap items-center gap-2">
+                            {[
+                                {
+                                    title: "Dribbble",
+                                    href: "https://dribbble.com/_fahmiidris",
+                                    icon: require("@/images/icons/dribbble.svg").default
+                                },
+                                {
+                                    title: "Behance",
+                                    href: "https://www.behance.net/_fahmiidris",
+                                    icon: require("@/images/icons/behance.svg").default
+                                },
+                                {
+                                    title: "Figma",
+                                    href: "https://figma.com/@fahmiidris",
+                                    icon: require("@/images/icons/figma.svg").default
+                                },
+                            ].map(({ icon: Icon, ...item }) => (
+                                <li key={item.title}>
+                                    <Link href={item.href} openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                                        <Icon className="h-5 w-5" />
+                                        <span className="group-hover:text-slate-800 dark:group-hover:text-white">{item.title}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </Section>
+            </article>
+        </Section>
+    );
 };
 
 ProjectsPage.Props = {
-  Layout: BasicLayout,
-  meta: {
-    title: 'Projects',
-    description:
-      'My project history, starting from personal projects, during internships or work, etc.',
-  },
+    Layout: DefaultLayout,
+    meta: {
+        title: "Projects",
+        description: "My project history, starting from personal projects, during internships or work, etc.",
+    },
 };
 
 export default ProjectsPage;

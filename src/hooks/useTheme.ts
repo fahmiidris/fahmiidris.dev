@@ -1,73 +1,73 @@
 import * as React from 'react';
-import create from 'zustand';
+import zustand from 'zustand';
 
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
-type TSettingState = {
-  setting: string;
-  setSetting: (setting: string) => void;
+type SettingType = {
+    setting: string;
+    setSetting: (setting: string) => void;
 };
 
-const useSetting = create<TSettingState>((set) => ({
-  setting: 'system',
-  setSetting: (setting) => set({ setting }),
+const useSetting = zustand<SettingType>((set) => ({
+    setting: 'system',
+    setSetting: (setting) => set({ setting }),
 }));
 
-const update = (): void => {
-  const checkExistingTheme: boolean =
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+const update = () => {
+    const checkExistingTheme = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
-  if (checkExistingTheme) {
-    document.documentElement.classList.add('dark', 'changing-theme');
-  } else {
-    document.documentElement.classList.remove('dark', 'changing-theme');
-  }
+    if (checkExistingTheme) {
+        document.documentElement.classList.add('dark', 'changing-theme');
+    } else {
+        document.documentElement.classList.remove('dark', 'changing-theme');
+    }
 
-  window.setTimeout((): void => {
-    document.documentElement.classList.remove('changing-theme');
-  });
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('changing-theme');
+    });
 };
 
-export const useTheme = (): TSettingState => {
-  const { setting, setSetting } = useSetting();
-  const initial: React.MutableRefObject<boolean> = React.useRef<boolean>(true);
+export const useTheme = () => {
+    const { setting, setSetting } = useSetting();
 
-  useIsomorphicLayoutEffect(() => {
-    if (localStorage.theme === 'light' || localStorage.theme === 'dark') {
-      setSetting(localStorage.theme);
-    }
-  }, []);
+    const initial = React.useRef(true);
 
-  useIsomorphicLayoutEffect(() => {
-    if (setting === 'system') {
-      localStorage.removeItem('theme');
-    } else if (setting === 'light' || setting === 'dark') {
-      localStorage.setItem('theme', setting);
-    }
+    useIsomorphicLayoutEffect(() => {
+        if (localStorage.theme === 'light' || localStorage.theme === 'dark') {
+            setSetting(localStorage.theme);
+        }
+    }, []);
 
-    initial.current ? (initial.current = false) : update();
-  }, [setting]);
+    useIsomorphicLayoutEffect(() => {
+        if (setting === 'system') {
+            localStorage.removeItem('theme');
+        } else if (setting === 'light' || setting === 'dark') {
+            localStorage.setItem('theme', setting);
+        }
 
-  React.useEffect(() => {
-    let mediaQuery: MediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+        initial.current ? (initial.current = false) : update();
+    }, [setting]);
 
-    mediaQuery.addEventListener('change', update);
+    React.useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    const onStorage = (): void => {
-      update();
-      localStorage.theme === 'light' || localStorage.theme === 'dark'
-        ? setSetting(localStorage.theme)
-        : setSetting('system');
-    };
+        mediaQuery.addEventListener('change', update);
 
-    window.addEventListener('storage', onStorage);
+        const onStorage = () => {
+            update();
 
-    return (): void => {
-      mediaQuery.removeEventListener('change', update);
-      window.removeEventListener('storage', onStorage);
-    };
-  }, [setSetting]);
+            localStorage.theme === 'light' || localStorage.theme === 'dark'
+                ? setSetting(localStorage.theme)
+                : setSetting('system');
+        };
 
-  return { setting, setSetting };
+        window.addEventListener('storage', onStorage);
+
+        return () => {
+            mediaQuery.removeEventListener('change', update);
+            window.removeEventListener('storage', onStorage);
+        };
+    }, [setSetting]);
+
+    return { setting, setSetting };
 };

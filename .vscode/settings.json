@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "editor.rulers": [120]
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4,
+    "editor.rulers": [120],
 }

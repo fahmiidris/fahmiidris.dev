@@ -2,85 +2,44 @@ import '@/css/fonts.css';
 import '@/css/main.css';
 
 import * as React from 'react';
-import Head from 'next/head';
-import Router from 'next/router';
+import axios from 'axios';
+import { SWRConfig } from 'swr';
 
-import { Title } from '@/components/title';
-import { ScrollButton } from '@/components/scroll-button';
-import { SearchProvider } from '@/components/search';
+import { SEO } from '@/components/seo';
+import { MDXComponents } from '@/components/mdx-components';
+import { BackToTopSection } from '@/components/back-to-top-section';
 
-import ProgressBar from '@/utils/bar-of-progress';
+import type { AppPropsWithLayoutType } from 'next/app';
 
-import type { TProps } from 'next';
-import type { TAppPropsWithLayout } from 'next/app';
-
-const progress: ProgressBar = new ProgressBar({
-  size: 2,
-  color: '#22d3ee',
-  className: 'bar-of-progress',
-  delay: 100,
-});
-
-if (typeof window !== 'undefined') {
-  progress.start();
-  progress.finish();
-}
-
-Router.events.on('routeChangeStart', (): void => progress.start());
-Router.events.on('routeChangeComplete', (): void => progress.finish());
-Router.events.on('routeChangeError', (): void => progress.finish());
-
-const defaultMeta: TProps['meta'] = {
-  title: "Hi, I'm Fahmi Idris",
-  description:
-    'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
-  url: 'https://www.fahmiidris.dev',
-  image: 'https://www.fahmiidris.dev/images/default-social-image.jpg',
-  type: 'website',
-  robots: 'follow, index',
+const defaultMeta = {
+    title: "Hi, I'm Fahmi Idris",
+    description: 'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
+    url: 'https://www.fahmiidris.dev',
+    image: 'https://www.fahmiidris.dev/images/default-social-image.jpg',
+    type: 'website',
+    robots: 'follow, index',
 };
 
-const MyApp = ({ Component, pageProps, router }: TAppPropsWithLayout): JSX.Element => {
-  const { Layout, meta: customMeta }: TProps = Component.Props;
+const MyApp = ({ Component, pageProps, router }: AppPropsWithLayoutType) => {
+    const Layout = Component.Props?.Layout ?? React.Fragment;
 
-  const meta: TProps['meta'] = {
-    ...defaultMeta,
-    ...customMeta,
-  };
+    const layoutProps = {
+        fm: Component.Props?.fm ?? {},
+    };
 
-  return (
-    <>
-      <Title suffix="Fahmi Idris Portfolio">{meta.title}</Title>
-      <Head>
-        <meta name="robots" content={meta.robots} />
-        <meta name="description" content={meta.description} />
+    return (
+        <>
+            <SEO meta={Object.assign({}, defaultMeta, Component.Props?.meta ?? {})} router={router} />
 
-        {/* Open Graph */}
-        <meta name="title" property="og:title" content={meta.title} />
-        <meta name="description" property="og:description" content={meta.description} />
-        <meta name="url" property="og:url" content={`${meta.url}${router.asPath}`} />
-        <meta name="type" property="og:type" content={meta.type} />
-        <meta name="site_name" property="og:site_name" content={meta.title} />
-        <meta name="image" property="og:image" content={meta.image} />
+            <SWRConfig value={{ fetcher: (url: string) => axios.get(url).then((res) => res.data) }}>
+                <Layout {...layoutProps}>
+                    <Component {...pageProps} components={MDXComponents} />
+                </Layout>
+            </SWRConfig>
 
-        {/* Twitter */}
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@FahmiIdrisA" />
-        <meta name="twitter:creator" content="@FahmiIdrisA" />
-
-        <link rel="canonical" href={`${meta.url}${router.asPath}`} />
-      </Head>
-      <SearchProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-        <ScrollButton />
-      </SearchProvider>
-    </>
-  );
+            <BackToTopSection />
+        </>
+    );
 };
 
 export default MyApp;

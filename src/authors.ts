@@ -1,11 +1,9 @@
-export type TAuthor = {
-  name: string;
-  github: string;
-  avatar: any;
-};
+export type AuthorType = {
+    name: string;
+    github: string;
+}
 
-export const fahmiidris: TAuthor = {
-  name: 'Fahmi Idris',
-  github: 'fahmiidris-labs',
-  avatar: require('@/images/me.jpg').default,
+export const fahmiidris: AuthorType = {
+    name: "Fahmi Idris",
+    github: "fahmiidris-labs"
 };
