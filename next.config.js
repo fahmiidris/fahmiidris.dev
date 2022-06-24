@@ -98,7 +98,7 @@ const nextConfig = withBundleAnalyzer({
             use: [
                 options.defaultLoaders.babel,
                 createLoader(function (source) {
-                    return source + `\nMDXContent.Props = { Layout: Layout, meta: { title: meta.title, description: meta.description, image: banner }, fm: meta }\n`;
+                    return source + `\nMDXContent.Props = { Layout: Layout, meta: { title: meta.title, description: meta.description, image: banner ?? unde }, fm: meta }\n`;
                 }),
                 ...mdx(),
                 createLoader(function (source) {
