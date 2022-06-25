@@ -1,5 +1,3 @@
-import { ReadTimeResults } from "reading-time";
-
 export type SnippetModuleType = {
     meta: {
         title: string;
