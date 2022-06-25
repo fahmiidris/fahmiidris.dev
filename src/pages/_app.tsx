@@ -3,6 +3,8 @@ import '@/css/main.css';
 
 import * as React from 'react';
 import axios from 'axios';
+import NextRouter from "next/router";
+import ProgressBar from '@badrap/bar-of-progress';
 import { SWRConfig } from 'swr';
 
 import { SEO } from '@/components/seo';
@@ -10,6 +12,22 @@ import { MDXComponents } from '@/components/mdx-components';
 import { BackToTopSection } from '@/components/back-to-top-section';
 
 import type { AppPropsWithLayoutType } from 'next/app';
+
+const progress = new ProgressBar({
+    size: 2,
+    color: '#475569',
+    className: 'bar-of-progress',
+    delay: 100,
+});
+
+if (typeof window !== 'undefined') {
+    progress.start();
+    progress.finish();
+}
+
+NextRouter.events.on('routeChangeStart', () => progress.start());
+NextRouter.events.on('routeChangeComplete', () => progress.finish());
+NextRouter.events.on('routeChangeError', () => progress.finish());
 
 const defaultMeta = {
     title: "Hi, I'm Fahmi Idris",

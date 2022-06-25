@@ -1,5 +1,3 @@
-import type { ReadTimeResults } from "reading-time";
-
 export type BlogModuleType = {
     meta: {
         title: string;

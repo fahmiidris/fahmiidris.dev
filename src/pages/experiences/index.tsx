@@ -77,7 +77,7 @@ const ExperiencesPage: NextPageWithLayoutType = () => {
             <Section id="certificates" title="My Certificates" description="Some of the certificates I got during my career in programming." icon={BadgeCheckIcon} className="container relative">
                 <div className="py-8">
                     <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {certificates.slice(0, 3).sort((a, b) => sortDateDesc(a.date.start, b.date.start)).map((item, index) => (
+                        {certificates.sort((a, b) => sortDateDesc(a.date.start, b.date.start)).slice(0, 3).map((item, index) => (
                             <CertificateCard key={index} {...item} isNew={index <= 1} />
                         ))}
                     </ul>
