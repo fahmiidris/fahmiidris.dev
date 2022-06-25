@@ -32,7 +32,7 @@ const BlogPage: NextPageWithLayoutType = ({ components }) => {
                         My Blog and Opinions
                     </h1>
                     <p className="text-base text-slate-800 dark:text-slate-400">
-                        Some personal opinions on technology and my random thoughts.
+                        Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings (ngebucin).
                     </p>
                     <section className="mt-3 max-w-sm sm:mx-auto sm:px-4">
                         <h2 className="sr-only">Sign up for our newsletter</h2>

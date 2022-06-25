@@ -11,6 +11,11 @@ declare module 'next' {
         image?: string;
         type?: string;
         robots?: string;
+        published?: number;
+        date?: {
+            start: number;
+            end?: number;
+        }
     };
 
     type NextPageWithLayoutType<T = {}, TP = T> = NextPage<T & { components: MDXComponentsType }, TP> & {
