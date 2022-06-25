@@ -27,7 +27,7 @@ const SnippetsPage: NextPageWithLayoutType = () => {
             <div className="py-8">
                 <section id="previews" className="relative">
                     <div className="flex items-center justify-between">
-                        <form className="flex" onSubmit={() => console.log('On Submit')}>
+                        <form className="flex w-full max-w-none sm:max-w-xs" onSubmit={() => console.log('On Submit')}>
                             <Input type="text" id="search-snippets" name="keyword" placeholder="Search for a snippets" onChange={(e) => setKeyword(e.target.value)} icon={SearchIcon} />
                         </form>
                     </div>
