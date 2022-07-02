@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DesktopComputerIcon } from '@heroicons/react/outline';
+import { DesktopComputerIcon, ExternalLinkIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
 import { Section } from '@/components/section';
@@ -24,10 +24,14 @@ const ProjectsPage: NextPageWithLayoutType = () => {
                         <p className="text-sm font-semibold">Currently Under Development!</p>
                     </div>
 
-                    <div className="pt-8">
+                    <div className="pt-8 flex flex-wrap items-center gap-2">
                         <Link href="https://github.com/naqimart" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
                             <GitHubIcon className="h-5 w-5" />
                             <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                        <Link href="https://www.naqimart.com" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pr-2 pl-2.5 text-xs font-semibold">
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">View website</span>
+                            <ExternalLinkIcon className="h-5 w-5" />
                         </Link>
                     </div>
                 </Section>
@@ -37,15 +41,32 @@ const ProjectsPage: NextPageWithLayoutType = () => {
                         <p className="text-sm font-semibold">Currently Under Development!</p>
                     </div>
 
-                    <div className="pt-8">
+                    <div className="pt-8 flex flex-wrap items-center gap-2">
                         <Link href="https://github.com/kloningan" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GitHubIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                        <Link href="https://www.kloningan.com" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pr-2 pl-2.5 text-xs font-semibold">
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">View website</span>
+                            <ExternalLinkIcon className="h-5 w-5" />
+                        </Link>
+                    </div>
+                </Section>
+
+                <Section id="random-projects" title="Personal / Random Projects" description="Crazy things sometimes start with randomness.">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8">
+                        <Link href="https://github.com/fahmiidris-labs" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
                             <GitHubIcon className="h-5 w-5" />
                             <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
                         </Link>
                     </div>
                 </Section>
 
-                <Section id="random-projects" title="Personal / Random Projects" description="Crazy things sometimes start with randomness.">
+                <Section id="backend" title="Fahmi Idris as Back-End Engineer" description="I must have a clean and nice kitchen!">
                     <div className="pt-8">
                         <p className="text-sm font-semibold">Currently Under Development!</p>
                     </div>
@@ -90,6 +111,19 @@ const ProjectsPage: NextPageWithLayoutType = () => {
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                </Section>
+
+                <Section id="data-science" title="Fahmi Idris with Data Science" description="What do you think about data scientists?">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8">
+                        <Link href="https://github.com/fahmiidris-labs" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GitHubIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
                     </div>
                 </Section>
             </article>
