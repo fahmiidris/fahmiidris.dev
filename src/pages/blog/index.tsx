@@ -42,7 +42,7 @@ const BlogPage: NextPageWithLayoutType = ({ components }) => {
 
                 <section id="previews" className="relative">
                     <div className="flex items-center justify-between">
-                        <form className="flex w-full max-w-none sm:max-w-xs" onSubmit={() => console.log('On Submit')}>
+                        <form className="flex w-full max-w-none sm:max-w-[300px]" onSubmit={() => console.log('On Submit')}>
                             <Input type="text" id="search-blog" name="keyword" placeholder="Search for a blog" onChange={(e) => setKeyword(e.target.value)} icon={SearchIcon} />
                         </form>
                     </div>

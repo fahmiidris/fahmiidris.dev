@@ -1,3 +1,5 @@
+import { sortDateDesc } from "@/utils/helpers";
+
 import type { ExperienceModuleType, ExperiencePreviewType } from "@/types/experience.type";
 
 export const getExperiencePreviews = (): ExperiencePreviewType[] => {
@@ -10,5 +12,5 @@ export const getExperiencePreviews = (): ExperiencePreviewType[] => {
             slug: file.substring(2).replace(/\/index\.mdx$/, ''),
             module: context<ExperienceModuleType>(file),
         }))
-        .sort((a, b) => b.module.meta.date.start - a.module.meta.date.start);
+        .sort((a, b) => sortDateDesc(a.module.meta.date.start, b.module.meta.date.start));
 };

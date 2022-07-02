@@ -1,3 +1,5 @@
+import { sortDateDesc } from "@/utils/helpers";
+
 import type { BlogModuleType, BlogPreviewType } from "@/types/blog.type";
 
 export const getBlogPreviews = (): BlogPreviewType[] => {
@@ -10,5 +12,5 @@ export const getBlogPreviews = (): BlogPreviewType[] => {
             slug: file.substring(2).replace(/\/index\.mdx$/, ''),
             module: context<BlogModuleType>(file),
         }))
-        .sort((a, b) => b.module.meta.published - a.module.meta.published);
+        .sort((a, b) => sortDateDesc(a.module.meta.published, b.module.meta.published));
 };

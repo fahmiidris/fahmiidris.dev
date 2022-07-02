@@ -1,3 +1,5 @@
+import { sortDateDesc } from "@/utils/helpers";
+
 import type { SnippetModuleType, SnippetPreviewType } from "@/types/snippet.type";
 
 export const getSnippetPreviews = (): SnippetPreviewType[] => {
@@ -10,5 +12,5 @@ export const getSnippetPreviews = (): SnippetPreviewType[] => {
             slug: file.substring(2).replace(/\/index\.mdx$/, ''),
             module: context<SnippetModuleType>(file),
         }))
-        .sort((a, b) => b.module.meta.published - a.module.meta.published);
+        .sort((a, b) => sortDateDesc(a.module.meta.published, b.module.meta.published));
 };
