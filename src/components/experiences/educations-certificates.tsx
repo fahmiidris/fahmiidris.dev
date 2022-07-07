@@ -224,4 +224,21 @@ export const certificates: CertificateType[] = [
             end: 1750611600000,
         }
     },
+    {
+        title: "Belajar Membuat Front-End Web Untuk Pemula Dicoding Indonesia",
+        description: "Certificate in HTML, CSS, and JavaScript from IDCamp 2022 by Indosat Ooredoo Hutchison X Dicoding.",
+        href: "https://drive.google.com/file/d/1HHct_yphW1u1gxgwNQkN1gFIHX4jt28S/view?usp=sharing",
+        credential: {
+            id: "GRX5L43V2P0M",
+            href: "https://www.dicoding.com/certificates/GRX5L43V2P0M"
+        },
+        platform: {
+            name: "Dicoding",
+            href: "https://www.dicoding.com/",
+        },
+        date: {
+            start: 1657040400000,
+            end: 1751734800000,
+        }
+    },
 ];
