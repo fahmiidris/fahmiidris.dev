@@ -18,6 +18,8 @@ import { ThemeSwitcher } from '@/components/navbar/theme-switcher';
 import { VersionSwitcher } from '@/components/navbar/version-switcher';
 import { GitHubLinkedInDribbble } from '@/components/navbar/github-linkedin-dribbble';
 
+import { CV_URL } from '@/constants/url';
+
 import { navigation } from '@/navs/navigation';
 
 export const Header = () => {
@@ -73,7 +75,7 @@ export const Header = () => {
                         {[
                             {
                                 title: { mobile: 'CV', desktop: 'CV Fahmi Idris' },
-                                href: 'https://drive.google.com/file/d/1pZJB7DrO3RzuXmAXHqyKUQ3B4ug4tHDq/view?usp=sharing',
+                                href: CV_URL,
                                 icon: DownloadIcon,
                             },
                             {
