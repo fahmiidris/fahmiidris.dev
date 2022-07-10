@@ -8,6 +8,7 @@ import { Products } from '@/components/projects/products';
 import DefaultLayout from '@/layouts/default-layout';
 
 import GitHubIcon from '@/images/icons/github.svg';
+import GoogleDevelopersIcon from '@/images/icons/gd.svg';
 
 import type { NextPageWithLayoutType } from 'next';
 
@@ -62,6 +63,23 @@ const ProjectsPage: NextPageWithLayoutType = () => {
                         <Link href="https://github.com/fahmiidris-labs" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
                             <GitHubIcon className="h-5 w-5" />
                             <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                    </div>
+                </Section>
+
+                <Section id="mobile-engineer" title="Fahmi Idris as Mobile Engineer" description="How long do you always hold your smartphone?">
+                    <div className="pt-8">
+                        <p className="text-sm font-semibold">Currently Under Development!</p>
+                    </div>
+
+                    <div className="pt-8 flex flex-wrap items-center gap-2">
+                        <Link href="https://github.com/fahmiidris-labs" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GitHubIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">GitHub</span>
+                        </Link>
+                        <Link href="https://g.dev/fahmiidris-labs" openNewTab={true} className="group inline-flex items-center space-x-2 border border-slate-400/20 py-1.5 pl-2 pr-2.5 text-xs font-semibold">
+                            <GoogleDevelopersIcon className="h-5 w-5" />
+                            <span className="group-hover:text-slate-800 dark:group-hover:text-white">Google Developers</span>
                         </Link>
                     </div>
                 </Section>
