@@ -15,7 +15,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
-    swcMinify: true,
+    // swcMinify: true,
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 
