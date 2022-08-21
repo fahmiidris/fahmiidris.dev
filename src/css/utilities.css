@@ -1,0 +1,6 @@
+@tailwind utilities;
+
+.changing-theme,
+.changing-theme * {
+  transition: none !important;
+}

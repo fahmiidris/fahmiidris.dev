@@ -1,7 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = withBundleAnalyzer({
+  swcMinify: true,
+  reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+
+  images: {
+    domains: ['i.scdn.co'],
+  },
+});
+
+module.exports = nextConfig;
