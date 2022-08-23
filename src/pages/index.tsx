@@ -1,12 +1,16 @@
 import * as React from 'react';
 
+import { Header } from '@/components/home/header';
+
 import type { NextPage } from 'next';
 
 const HomePage: NextPage = () => {
   return (
-    <div className="flex h-screen items-center justify-center">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ex.
-    </div>
+    <>
+      <Header />
+
+      <div className="overflow-hidden py-12"></div>
+    </>
   );
 };
 

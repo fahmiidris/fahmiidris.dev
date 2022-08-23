@@ -8,6 +8,12 @@ const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
+
   images: {
     domains: ['i.scdn.co'],
   },
