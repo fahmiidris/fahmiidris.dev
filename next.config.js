@@ -15,7 +15,7 @@ const nextConfig = withBundleAnalyzer({
   },
 
   images: {
-    domains: ['i.scdn.co'],
+    domains: ['i.scdn.co', 'ui-avatars.com'],
   },
 });
 
