@@ -12,3 +12,17 @@ export const sortDateDesc = (a: number, b: number) => {
 
   return 0;
 };
+
+export const splitArray = <T>(array: T[], numParts: number) => {
+  return array.reduce((prev: T[][], curr, idx) => {
+    const index = idx % numParts;
+
+    if (!prev[index]) {
+      prev[index] = [];
+    }
+
+    prev[index].push(curr);
+
+    return prev;
+  }, []);
+};
