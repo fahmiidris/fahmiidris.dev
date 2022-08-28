@@ -14,7 +14,7 @@ import type { AppProps } from 'next/app';
 const progress = new ProgressBar({
   size: 2,
   color: '#475569',
-  className: 'bar-of-progress',
+  className: 'progress-bar',
   delay: 100,
 });
 
