@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className="relative overflow-hidden bg-slate-50">
       <Image
-        src={require('@/img/beams.jpg').default}
+        src={require('@/img/beams-home.jpg').default}
         alt=""
         className="absolute bottom-0 left-1/2 ml-[-639px] w-[1278px] max-w-none"
         priority={true}
@@ -24,13 +24,17 @@ export const Header = () => {
             </h1>
 
             <div className="order-first flex items-center justify-center gap-4 text-[0.8125rem] leading-6 text-slate-500 lg:justify-start">
-              <p>{'<Hello.World />'}</p>
+              <p>
+                <code>{'<Hello.World />'}</code>
+              </p>
 
               <svg viewBox="0 0 2 2" aria-hidden="true" className="w-0.5 fill-current">
                 <circle cx="1" cy="1" r="1" />
               </svg>
 
-              <p>{'<Good.Morning />'}</p>
+              <p>
+                <code>{'<Good.Morning />'}</code>
+              </p>
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
@@ -41,21 +45,21 @@ export const Header = () => {
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
               <Link
                 href="#"
-                className="inline-flex items-center justify-center rounded-lg bg-slate-800 py-3 px-4 text-sm font-semibold text-white hover:bg-slate-700"
+                className="inline-flex items-center justify-center rounded-md bg-slate-800 py-3 px-4 text-sm font-semibold text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
               >
                 Send Message
               </Link>
 
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-transparent py-3 px-4 text-sm font-semibold text-slate-800 hover:border-slate-300"
+                className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-transparent py-3 px-4 text-sm font-semibold text-slate-800 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
               >
                 Read My Blog
               </Link>
 
               <Link
                 href="#"
-                className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-transparent py-3 px-4 text-sm font-semibold text-slate-800 hover:border-slate-300"
+                className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-transparent py-3 px-4 text-sm font-semibold text-slate-800 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
               >
                 Trakteer Fahmi Idris
               </Link>
