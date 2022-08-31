@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import type { EducationType } from '@/types/education.type';
-import type { CertificateType } from '@/types/certificate.type';
+import type { EducationType } from '@/types/education';
+import type { CertificateType } from '@/types/certificate';
 
 export const formalEducation: EducationType[] = [
   {
@@ -22,15 +22,15 @@ export const formalEducation: EducationType[] = [
     href: 'https://goo.gl/maps/E4WA97kJ5bPptrRB6',
     images: [
       {
-        src: require('@/images/educations/mts-alhidayah-tajur-1.jpg').default,
+        src: require('@/img/educations/mts-alhidayah-tajur-1.jpg').default,
         alt: 'Before Graduation',
       },
       {
-        src: require('@/images/educations/mts-alhidayah-tajur-2.jpg').default,
+        src: require('@/img/educations/mts-alhidayah-tajur-2.jpg').default,
         alt: "Homeroom Teacher's Birthday 92 B",
       },
       {
-        src: require('@/images/educations/mts-alhidayah-tajur-3.jpg').default,
+        src: require('@/img/educations/mts-alhidayah-tajur-3.jpg').default,
         alt: 'After Graduation Event',
       },
     ],
@@ -54,15 +54,15 @@ export const formalEducation: EducationType[] = [
     href: 'https://www.facebook.com/smk1triplejciteureup/',
     images: [
       {
-        src: require('@/images/educations/smk-1-triple-j-1.jpg').default,
+        src: require('@/img/educations/smk-1-triple-j-1.jpg').default,
         alt: 'After the PKL Session',
       },
       {
-        src: require('@/images/educations/smk-1-triple-j-2.jpg').default,
+        src: require('@/img/educations/smk-1-triple-j-2.jpg').default,
         alt: 'After Exam',
       },
       {
-        src: require('@/images/educations/smk-1-triple-j-3.jpg').default,
+        src: require('@/img/educations/smk-1-triple-j-3.jpg').default,
         alt: 'Taking Certificate of Graduation',
       },
     ],
@@ -89,15 +89,15 @@ export const nonFormalEducation: EducationType[] = [
     href: 'https://www.jabarcodingcamp.id',
     images: [
       {
-        src: require('@/images/educations/jcc-1.jpg').default,
+        src: require('@/img/educations/jcc-1.jpg').default,
         alt: 'Working Visit to JDS Command Center',
       },
       {
-        src: require('@/images/educations/jcc-2.jpg').default,
+        src: require('@/img/educations/jcc-2.jpg').default,
         alt: 'Working Visit to JDS Command Center',
       },
       {
-        src: require('@/images/educations/jcc-3.jpg').default,
+        src: require('@/img/educations/jcc-3.jpg').default,
         alt: 'Healing Ya Gaes Ya!!!',
       },
     ],
@@ -121,11 +121,11 @@ export const nonFormalEducation: EducationType[] = [
     href: 'https://digitalent.kominfo.go.id',
     images: [
       {
-        src: require('@/images/educations/proa-2022-1.jpg').default,
+        src: require('@/img/educations/proa-2022-1.jpg').default,
         alt: 'Dashboard Digitalent Kominfo',
       },
       {
-        src: require('@/images/educations/proa-idcamp-2022.jpg').default,
+        src: require('@/img/educations/proa-idcamp-2022.jpg').default,
         alt: 'Dashboard Dicoding',
       },
     ],
@@ -149,11 +149,11 @@ export const nonFormalEducation: EducationType[] = [
     href: 'https://idcamp.ioh.co.id',
     images: [
       {
-        src: require('@/images/educations/idcamp-2022-1.jpg').default,
+        src: require('@/img/educations/idcamp-2022-1.jpg').default,
         alt: 'Dashboard IDCamp 2022',
       },
       {
-        src: require('@/images/educations/proa-idcamp-2022.jpg').default,
+        src: require('@/img/educations/proa-idcamp-2022.jpg').default,
         alt: 'Dashboard Dicoding',
       },
     ],
@@ -328,6 +328,21 @@ export const certificates: CertificateType[] = [
     date: {
       start: 1661187600000,
       end: 1755882000000,
+    },
+  },
+  {
+    title: 'Professional Academy Digital Talent Scholarship 2022 - Android Developer',
+    description: 'Certificate in PROA 2022 Android Developer from Digitalent.',
+    href: 'https://drive.google.com/file/d/1nCxiNHSDSdDhrqL8M4nxVR0uxA88FkVb/view?usp=sharing',
+    credential: {
+      id: 'PROA/2022/2335/152233535101-88',
+    },
+    platform: {
+      name: 'Digitalent by Kominfo',
+      href: 'https://digitalent.kominfo.go.id/',
+    },
+    date: {
+      start: 1661792400000,
     },
   },
 ];
