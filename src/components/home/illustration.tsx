@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-export const Illustration = (props: React.ComponentProps<'svg'>) => {
+type IllustrationProps = React.ComponentProps<'svg'>;
+
+export const Illustration = (props: IllustrationProps) => {
   return (
     <svg width={427} height={351} viewBox="0 0 427 351" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path

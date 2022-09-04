@@ -8,11 +8,11 @@ import { formatDate, sortDateDesc } from '@/utils/helpers';
 
 import type { EducationType } from '@/types/education';
 
-type EducationStepsType = {
+type EducationStepsProps = {
   steps: EducationType[];
 };
 
-export const EducationSteps = ({ steps }: EducationStepsType) => {
+export const EducationSteps = ({ steps }: EducationStepsProps) => {
   return (
     <ol className="relative space-y-2">
       {steps

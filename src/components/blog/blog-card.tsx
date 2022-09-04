@@ -7,9 +7,9 @@ import { formatDate } from '@/utils/helpers';
 
 import type { Blog } from '@/types/blog';
 
-type BlogCardType = Blog.Preview;
+type BlogCardProps = Blog.Preview;
 
-export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCardType) => {
+export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCardProps) => {
   return (
     <li className="group text-sm leading-6">
       <article className="relative flex flex-col rounded-t-md border border-slate-200 p-4 group-hover:border-slate-300">

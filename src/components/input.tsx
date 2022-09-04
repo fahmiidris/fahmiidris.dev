@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-type InputType = React.InputHTMLAttributes<HTMLInputElement> & {
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
   isFocused?: boolean;
   icon?: (props: React.ComponentProps<'svg'>) => JSX.Element;
@@ -16,7 +16,7 @@ export const Input = ({
   id,
   icon,
   ...props
-}: InputType) => {
+}: InputProps) => {
   const input = React.useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {

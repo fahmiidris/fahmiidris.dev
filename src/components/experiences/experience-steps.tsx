@@ -9,11 +9,11 @@ import { formatDate } from '@/utils/helpers';
 
 import type { Experience } from '@/types/experience';
 
-type ExperienceStepsType = {
+type ExperienceStepsProps = {
   steps: Experience.Preview[];
 };
 
-export const ExperienceSteps = ({ steps }: ExperienceStepsType) => {
+export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
   return (
     <ol className="relative space-y-2">
       {steps.map(({ slug, module: { default: Component, meta } }, index) => (
