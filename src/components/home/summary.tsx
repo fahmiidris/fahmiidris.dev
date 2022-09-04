@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Image from 'next/future/image';
 
-import { profile } from '@/profile';
+import { profile } from '@/me';
 
 export const Summary = () => {
   return (
