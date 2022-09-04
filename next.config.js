@@ -15,7 +15,40 @@ const nextConfig = withBundleAnalyzer({
   },
 
   images: {
-    domains: ['i.scdn.co', 'ui-avatars.com'],
+    domains: ['i.scdn.co'],
+  },
+
+  webpack: (config, options) => {
+    const mdx = (plugins = []) => [
+      {
+        loader: '@mdx-js/loader',
+        options: {
+          remarkPlugins: [...plugins],
+          rehypePlugins: [],
+        },
+      },
+    ];
+
+    config.module.rules.push({
+      test: /\.mdx$/,
+      resourceQuery: /preview/,
+      use: [
+        options.defaultLoaders.babel,
+        ...mdx([
+          () => (tree) => {
+            const firstParagraphIndex = tree.children.findIndex((child) => child.type === 'paragraph');
+
+            if (firstParagraphIndex > -1) {
+              tree.children = tree.children.filter((_, index) => {
+                return index <= firstParagraphIndex;
+              });
+            }
+          },
+        ]),
+      ],
+    });
+
+    return config;
   },
 });
 
