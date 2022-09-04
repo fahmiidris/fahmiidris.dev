@@ -1,3 +1,5 @@
+import type { ImageProps } from 'next/future/image';
+
 export type EducationType = {
   id: number;
   title: string;
@@ -9,7 +11,7 @@ export type EducationType = {
   };
   href: string;
   images?: {
-    src: string;
+    image: ImageProps;
     alt: string;
   }[];
 };
