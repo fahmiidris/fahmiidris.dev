@@ -22,15 +22,15 @@ export const formalEducation: EducationType[] = [
     href: 'https://goo.gl/maps/E4WA97kJ5bPptrRB6',
     images: [
       {
-        src: require('@/img/educations/mts-alhidayah-tajur-1.jpg').default,
+        image: require('@/img/educations/mts-alhidayah-tajur-1.jpg').default,
         alt: 'Before Graduation',
       },
       {
-        src: require('@/img/educations/mts-alhidayah-tajur-2.jpg').default,
+        image: require('@/img/educations/mts-alhidayah-tajur-2.jpg').default,
         alt: "Homeroom Teacher's Birthday 92 B",
       },
       {
-        src: require('@/img/educations/mts-alhidayah-tajur-3.jpg').default,
+        image: require('@/img/educations/mts-alhidayah-tajur-3.jpg').default,
         alt: 'After Graduation Event',
       },
     ],
@@ -54,15 +54,15 @@ export const formalEducation: EducationType[] = [
     href: 'https://www.facebook.com/smk1triplejciteureup/',
     images: [
       {
-        src: require('@/img/educations/smk-1-triple-j-1.jpg').default,
+        image: require('@/img/educations/smk-1-triple-j-1.jpg').default,
         alt: 'After the PKL Session',
       },
       {
-        src: require('@/img/educations/smk-1-triple-j-2.jpg').default,
+        image: require('@/img/educations/smk-1-triple-j-2.jpg').default,
         alt: 'After Exam',
       },
       {
-        src: require('@/img/educations/smk-1-triple-j-3.jpg').default,
+        image: require('@/img/educations/smk-1-triple-j-3.jpg').default,
         alt: 'Taking Certificate of Graduation',
       },
     ],
@@ -72,38 +72,6 @@ export const formalEducation: EducationType[] = [
 export const nonFormalEducation: EducationType[] = [
   {
     id: 1,
-    title: 'Jabar Coding Camp 2021',
-    description: () => (
-      <>
-        <p>
-          Join the Jabar Coding Camp 2021 bootcamp online phase (React.js class) for one month from August 2021 to
-          September 2021. and qualify for the Jabar Coding Camp 2021 offline phase for 6 months.
-        </p>
-      </>
-    ),
-    major: 'Frontend Developer - React.js',
-    date: {
-      start: 1629824400000,
-      end: 1648659600000,
-    },
-    href: 'https://www.jabarcodingcamp.id',
-    images: [
-      {
-        src: require('@/img/educations/jcc-1.jpg').default,
-        alt: 'Working Visit to JDS Command Center',
-      },
-      {
-        src: require('@/img/educations/jcc-2.jpg').default,
-        alt: 'Working Visit to JDS Command Center',
-      },
-      {
-        src: require('@/img/educations/jcc-3.jpg').default,
-        alt: 'Healing Ya Gaes Ya!!!',
-      },
-    ],
-  },
-  {
-    id: 2,
     title: 'PROA Digital Talent Scholarship 2022',
     description: () => (
       <>
@@ -121,17 +89,17 @@ export const nonFormalEducation: EducationType[] = [
     href: 'https://digitalent.kominfo.go.id',
     images: [
       {
-        src: require('@/img/educations/proa-2022-1.jpg').default,
+        image: require('@/img/educations/proa-2022-1.jpg').default,
         alt: 'Dashboard Digitalent Kominfo',
       },
       {
-        src: require('@/img/educations/proa-idcamp-2022.jpg').default,
+        image: require('@/img/educations/proa-idcamp-2022.jpg').default,
         alt: 'Dashboard Dicoding',
       },
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: 'IDCamp 2022',
     description: () => (
       <>
@@ -149,11 +117,11 @@ export const nonFormalEducation: EducationType[] = [
     href: 'https://idcamp.ioh.co.id',
     images: [
       {
-        src: require('@/img/educations/idcamp-2022-1.jpg').default,
+        image: require('@/img/educations/idcamp-2022-1.jpg').default,
         alt: 'Dashboard IDCamp 2022',
       },
       {
-        src: require('@/img/educations/proa-idcamp-2022.jpg').default,
+        image: require('@/img/educations/proa-idcamp-2022.jpg').default,
         alt: 'Dashboard Dicoding',
       },
     ],
