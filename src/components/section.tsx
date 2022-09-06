@@ -7,7 +7,7 @@ import { Link } from '@/components/link';
 type SectionProps = React.ComponentProps<'section'> & {
   title: string;
   subtitle: string;
-  description: string;
+  description: string | (() => JSX.Element);
   more?: {
     href: string;
     text: string;
@@ -37,7 +37,11 @@ export const Section = ({
         </div>
 
         <div className={clsx('', maxWidthDescription)}>
-          <p className="mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">{description}</p>
+          {typeof description === 'string' ? (
+            <p className="mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">{description}</p>
+          ) : (
+            <div className="prose prose-sm prose-slate mt-4">{React.createElement(description)}</div>
+          )}
         </div>
 
         <div className="py-8">{children}</div>
