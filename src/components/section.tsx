@@ -7,7 +7,7 @@ import { Link } from '@/components/link';
 type SectionProps = React.ComponentProps<'section'> & {
   title: string;
   subtitle: string;
-  description: string | (() => JSX.Element);
+  description?: string | (() => JSX.Element);
   more?: {
     href: string;
     text: string;
@@ -19,7 +19,6 @@ export const Section = ({
   title,
   subtitle,
   description,
-  className,
   more,
   maxWidthDescription = 'max-w-xl',
   children,
@@ -36,13 +35,15 @@ export const Section = ({
           <p className="mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl">{subtitle}</p>
         </div>
 
-        <div className={clsx('', maxWidthDescription)}>
-          {typeof description === 'string' ? (
-            <p className="mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">{description}</p>
-          ) : (
-            <div className="prose prose-sm prose-slate mt-4">{React.createElement(description)}</div>
-          )}
-        </div>
+        {description && (
+          <div className={clsx('', maxWidthDescription)}>
+            {typeof description === 'string' ? (
+              <p className="mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">{description}</p>
+            ) : (
+              <div className="prose prose-sm prose-slate mt-4">{React.createElement(description)}</div>
+            )}
+          </div>
+        )}
 
         <div className="py-8">{children}</div>
 
