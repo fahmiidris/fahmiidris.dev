@@ -40,7 +40,7 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
                 className="mb-2 block text-sm font-normal leading-none text-slate-500"
               >
                 {formatDate(date.start, '{MMMM}, {YYYY}')} -{' '}
-                {date.end ? formatDate(date.end, '{MMMM}, {YYYY}') : 'Present'}
+                {date.end ? formatDate(date.end, '{MMMM}, {YYYY}') : <span className="text-cyan-400">Present</span>}
               </time>
 
               <div className="prose prose-sm prose-slate max-w-3xl">

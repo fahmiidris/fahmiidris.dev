@@ -27,7 +27,7 @@ export const Summary = () => {
 
               <div>
                 <div className="font-semibold text-slate-800">{profile.name}</div>
-                <div className="mt-0.5 text-sm leading-6">{profile.role}</div>
+                <div className="mt-0.5 text-sm leading-6">{profile.workAs}</div>
               </div>
             </figcaption>
           </figure>
