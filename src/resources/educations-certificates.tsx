@@ -126,6 +126,30 @@ export const nonFormalEducation: EducationType[] = [
       },
     ],
   },
+  {
+    id: 3,
+    title: 'PROA Digital Talent Scholarship 2022',
+    description: () => (
+      <>
+        <p>
+          Following the Indosat Ooredoo Hutchison 2022 IDCamp Activity with the Frontend Web Developer Learning Path.
+          This activity was held through the Dicoding platform.
+        </p>
+      </>
+    ),
+    major: 'Android Developer Intermediate - Kotlin',
+    date: {
+      start: 1662310800000,
+      // end: 1668272400000,
+    },
+    href: 'https://digitalent.kominfo.go.id',
+    images: [
+      {
+        image: require('@/img/educations/proa-2022-intermediate.jpg').default,
+        alt: 'Dashboard Digitalent Kominfo',
+      },
+    ],
+  },
 ];
 
 export const certificates: CertificateType[] = [
