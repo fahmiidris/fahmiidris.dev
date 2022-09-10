@@ -202,7 +202,18 @@ const tailwindConfig = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'), require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
+
+    function ({ addVariant }) {
+      addVariant(
+        'supports-backdrop-blur',
+        '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))'
+      );
+    },
+  ],
 };
 
 module.exports = tailwindConfig;

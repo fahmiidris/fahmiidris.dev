@@ -1,4 +1,7 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+import remarkGfm from 'remark-gfm';
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
@@ -6,14 +9,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = withBundleAnalyzer({
   swcMinify: true,
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-
+  pageExtensions: ['tsx', 'mdx'],
   experimental: {
     images: {
       allowFutureImage: true,
     },
   },
-
   images: {
     domains: ['i.scdn.co'],
   },
@@ -23,7 +24,7 @@ const nextConfig = withBundleAnalyzer({
       {
         loader: '@mdx-js/loader',
         options: {
-          remarkPlugins: [...plugins],
+          remarkPlugins: [...plugins, remarkGfm],
           rehypePlugins: [],
         },
       },
@@ -48,8 +49,14 @@ const nextConfig = withBundleAnalyzer({
       ],
     });
 
+    config.module.rules.push({
+      test: { and: [/\.mdx$/] },
+      resourceQuery: { not: [/preview/] },
+      use: [options.defaultLoaders.babel, ...mdx()],
+    });
+
     return config;
   },
 });
 
-module.exports = nextConfig;
+export default nextConfig;
