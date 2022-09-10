@@ -4,6 +4,7 @@ import Image from 'next/future/image';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 
 import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 
 import { formatDate } from '@/utils/helpers';
 
@@ -44,9 +45,9 @@ export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
               )}
             </time>
 
-            <div className="prose prose-sm prose-slate max-w-3xl line-clamp-2">
+            <Prose className="prose-sm max-w-3xl line-clamp-2">
               <Component />
-            </div>
+            </Prose>
           </div>
 
           {meta.images && meta.images.length > 0 && (

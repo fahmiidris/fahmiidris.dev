@@ -6,10 +6,13 @@ import Head from 'next/head';
 import Router from 'next/router';
 
 import { Title } from '@/components/title';
+import { Footer } from '@/components/footer';
+import { Navbar } from '@/components/navbar';
+import { Announcement } from '@/components/navbar/announcement';
 
 import ProgressBar from '@/utils/progress-bar';
 
-import type { AppProps } from 'next/app';
+import type { AppPropsWithLayout } from 'next/app';
 
 const progress = new ProgressBar({
   size: 2,
@@ -36,8 +39,9 @@ const defaultMeta = {
   robots: 'follow, index',
 };
 
-const MyApp = ({ Component, pageProps, router }: AppProps) => {
-  const meta = Object.assign({}, defaultMeta);
+const MyApp = ({ Component, pageProps, router }: AppPropsWithLayout) => {
+  const customMeta = Component.Props?.meta ?? {};
+  const meta = Object.assign({}, defaultMeta, customMeta);
 
   return (
     <>
@@ -65,7 +69,15 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
         <link rel="canonical" href={`${meta.url}${router.pathname}`} />
       </Head>
 
-      <Component {...pageProps} />
+      <Announcement
+        href="https://github.com/fahmiidris-labs/fahmiidris.dev"
+        message="Hei!👋🏻 I have a new look! What do you think?"
+      />
+      <Navbar />
+      <main className="relative">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </>
   );
 };

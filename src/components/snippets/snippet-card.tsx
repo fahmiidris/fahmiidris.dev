@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { ChatAlt2Icon, ShareIcon, ThumbUpIcon } from '@heroicons/react/outline';
+import { ShareIcon, ThumbUpIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
 import { Prose } from '@/components/prose';
 
 import { formatDate } from '@/utils/helpers';
 
-import type { Blog } from '@/types/blog';
+import type { Snippet } from '@/types/snippet';
 
-type BlogCardProps = Blog.Preview;
+type SnippetCardProps = Snippet.Preview & {};
 
-export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCardProps) => {
+export const SnippetCard = ({ slug, module: { default: Component, meta } }: SnippetCardProps) => {
   return (
     <li className="group text-sm leading-6">
       <article className="relative flex flex-col rounded-t-md border border-slate-200 p-4 group-hover:border-slate-300">
@@ -31,16 +31,12 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
           </Prose>
         </div>
 
-        <div className="flex items-center justify-between pt-4 font-medium">
+        <div className="flex items-center justify-start space-x-4 pt-4 font-medium">
+          <div>0 likes</div>
           <div>0 min read</div>
-
-          <div className="flex items-center justify-end space-x-4">
-            <div>0 likes</div>
-            <div>0 comments</div>
-          </div>
         </div>
 
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/snippets/${slug}`}>
           <span className="absolute inset-0 z-10" aria-hidden="true" />
         </Link>
       </article>
@@ -52,14 +48,6 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
         >
           <ThumbUpIcon className="h-5 w-5" />
           <span>Like</span>
-        </button>
-
-        <button
-          type="button"
-          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 font-semibold hover:bg-emerald-400/10 hover:text-emerald-400"
-        >
-          <ChatAlt2Icon className="h-5 w-5" />
-          <span>Comment</span>
         </button>
 
         <button

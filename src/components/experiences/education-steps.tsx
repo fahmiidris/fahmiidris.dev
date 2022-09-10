@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/future/image';
 
 import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 
 import { formatDate, sortDateDesc } from '@/utils/helpers';
 
@@ -43,9 +44,9 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
                 {date.end ? formatDate(date.end, '{MMMM}, {YYYY}') : <span className="text-cyan-400">Present</span>}
               </time>
 
-              <div className="prose prose-sm prose-slate max-w-3xl">
+              <Prose className="prose-sm max-w-3xl">
                 <Description />
-              </div>
+              </Prose>
             </div>
 
             {images && images.length > 0 && (

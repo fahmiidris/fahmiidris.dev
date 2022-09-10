@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { ArrowSmRightIcon } from '@heroicons/react/solid';
 
 import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 
 type SectionProps = React.ComponentProps<'section'> & {
   title: string;
@@ -21,11 +22,12 @@ export const Section = ({
   description,
   more,
   maxWidthDescription = 'max-w-xl',
+  className,
   children,
   ...props
 }: SectionProps) => {
   return (
-    <section aria-labelledby={`title-${title}`} className="w-full overflow-hidden py-4" {...props}>
+    <section aria-labelledby={`title-${title}`} className={clsx('w-full overflow-hidden py-4', className)} {...props}>
       <div className="container">
         <div className="max-w-2xl">
           <h2 id={`title-${title}`} className="text-base font-semibold leading-7 text-cyan-400">
@@ -40,7 +42,7 @@ export const Section = ({
             {typeof description === 'string' ? (
               <p className="mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">{description}</p>
             ) : (
-              <div className="prose prose-sm prose-slate mt-4">{React.createElement(description)}</div>
+              <Prose className="prose-sm mt-4">{React.createElement(description)}</Prose>
             )}
           </div>
         )}
