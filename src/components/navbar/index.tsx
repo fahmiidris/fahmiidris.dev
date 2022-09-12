@@ -187,7 +187,7 @@ export const Navbar = () => {
         )}
       >
         <div className="container">
-          <div className="flex h-16 items-center">
+          <div className="flex h-[60px] items-center">
             <button
               type="button"
               className="rounded-md bg-white text-slate-400 lg:hidden"

@@ -71,7 +71,7 @@ const MyApp = ({ Component, pageProps, router }: AppPropsWithLayout) => {
 
       <Announcement
         href="https://github.com/fahmiidris-labs/fahmiidris.dev"
-        message="Hei!👋🏻 I have a new look! What do you think?"
+        message="Hey! I have a new User Interface and it already supports MDX 2!"
       />
       <Navbar />
       <main className="relative">

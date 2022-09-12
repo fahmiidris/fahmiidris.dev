@@ -1,8 +1,8 @@
 @tailwind base;
 
-.dark {
+/* .dark {
   color-scheme: dark;
-}
+} */
 
 html {
   height: 100%;

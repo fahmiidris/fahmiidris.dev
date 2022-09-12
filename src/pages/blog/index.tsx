@@ -38,7 +38,7 @@ const BlogPage: NextPageWithLayout = () => {
       <section className="relative pb-24">
         <h2 className="sr-only">Blog Post</h2>
 
-        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {blogPreviews.map((preview, index) => (
             <BlogCard key={index} {...preview} />
           ))}

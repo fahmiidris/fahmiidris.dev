@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ArrowSmLeftIcon } from '@heroicons/react/solid';
+import { ChevronLeftIcon } from '@heroicons/react/solid';
 
 import { Link } from '@/components/link';
 import { Section } from '@/components/section';
@@ -17,10 +17,10 @@ const CertificatesPage: NextPageWithLayout = () => {
       <div className="container flex items-center space-x-2 pb-1">
         <Link
           href="/experiences"
-          className="inline-flex items-center space-x-2 rounded-md border border-slate-200 bg-white py-2 pr-4 pl-3 text-sm font-semibold text-slate-800 hover:bg-slate-400/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+          className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
         >
-          <ArrowSmLeftIcon className="h-5 w-5" />
-          <span>Go Back</span>
+          <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
+          Go back
         </Link>
       </div>
 

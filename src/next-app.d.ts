@@ -3,6 +3,6 @@ import type { NextPageWithLayout } from 'next';
 
 declare module 'next/app' {
   type AppPropsWithLayout<T = {}> = AppProps<T> & {
-    Component: NextPageWithLayout;
+    Component: NextPageWithLayout<T>;
   };
 }

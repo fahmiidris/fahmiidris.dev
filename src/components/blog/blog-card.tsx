@@ -48,7 +48,7 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
       <div className="flex items-center justify-evenly space-x-2 rounded-b-md border border-t-0 border-slate-200 p-2 lg:justify-center">
         <button
           type="button"
-          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 font-semibold hover:bg-cyan-400/10 hover:text-cyan-400"
+          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 px-2 font-semibold hover:bg-cyan-400/10 hover:text-cyan-400 xl:px-4"
         >
           <ThumbUpIcon className="h-5 w-5" />
           <span>Like</span>
@@ -56,7 +56,7 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
 
         <button
           type="button"
-          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 font-semibold hover:bg-emerald-400/10 hover:text-emerald-400"
+          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 px-2 font-semibold hover:bg-emerald-400/10 hover:text-emerald-400 xl:px-4"
         >
           <ChatAlt2Icon className="h-5 w-5" />
           <span>Comment</span>
@@ -64,7 +64,7 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
 
         <button
           type="button"
-          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 font-semibold hover:bg-rose-400/10 hover:text-rose-400"
+          className="flex w-full items-center justify-center space-x-2 rounded-md py-1.5 px-2 font-semibold hover:bg-rose-400/10 hover:text-rose-400 xl:px-4"
         >
           <ShareIcon className="h-5 w-5" />
           <span>Share</span>
