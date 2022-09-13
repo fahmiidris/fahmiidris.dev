@@ -5,6 +5,22 @@ import { Link } from '@/components/link';
 import { Illustration } from '@/components/home/illustration';
 
 export const Header = () => {
+  const greeting = () => {
+    const hours = new Date().getHours();
+
+    let greetingText = '';
+
+    if (hours < 12) {
+      greetingText = 'Morning';
+    } else if (hours < 18) {
+      greetingText = 'Afternoon';
+    } else {
+      greetingText = 'Evening';
+    }
+
+    return greetingText;
+  };
+
   return (
     <header className="relative overflow-hidden bg-slate-50">
       <Image
@@ -33,7 +49,7 @@ export const Header = () => {
               </svg>
 
               <p>
-                <code>{'<Good.Morning />'}</code>
+                <code>{`<Good.${greeting()} />`}</code>
               </p>
             </div>
 
