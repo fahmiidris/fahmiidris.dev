@@ -25,7 +25,7 @@ export const VersionSwitcher = () => {
         <Menu.Item>
           {({ active }) => (
             <Link href="#" className={clsx('block px-3 py-1', active && 'bg-slate-50 text-slate-800')}>
-              v1.1.0
+              v1.0.0
             </Link>
           )}
         </Menu.Item>
