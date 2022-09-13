@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Header } from '@/components/home/header';
 import { Summary } from '@/components/home/summary';
-import { LatestBlog } from '@/components/home/latest-blog';
+import { LatestBlogs } from '@/components/home/latest-blogs';
 import { LatestProjects } from '@/components/home/latest-projects';
 import { LatestSnippets } from '@/components/home/latest-snippets';
 import { LatestExperiences } from '@/components/home/latest-experiences';
@@ -55,7 +55,7 @@ const HomePage: NextPageWithLayout = () => {
 
       <div className="space-y-36 overflow-hidden py-24">
         <Summary />
-        <LatestBlog previews={blogPreviews.slice(0, 3)} />
+        <LatestBlogs previews={blogPreviews.slice(0, 3)} />
         <LatestExperiences previews={experiencePreviews.slice(0, 2)} />
         <LatestProjects projects={projects} />
         <LatestSnippets previews={snippetPreviews.slice(0, 3)} />

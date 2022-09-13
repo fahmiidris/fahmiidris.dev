@@ -123,7 +123,7 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
 
             <div className="col-start-2 mt-12 mb-6 flex items-center justify-between">
               <Link
-                href="/blog"
+                href="/experiences"
                 className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
               >
                 <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />

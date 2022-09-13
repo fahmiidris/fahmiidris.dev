@@ -21,7 +21,7 @@ import { Search } from './search';
 const navigation = {
   pages: [
     { name: 'Home', href: '/' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Experiences', href: '/experiences' },
     { name: 'Projects', href: '/projects' },
     { name: 'Snippets', href: '/snippets' },

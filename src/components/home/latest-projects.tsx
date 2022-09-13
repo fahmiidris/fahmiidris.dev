@@ -2,6 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { Tab } from '@headlessui/react';
 
+import { Alert } from '@/components/alert';
 import { Section } from '@/components/section';
 import { ProjectCard, ProjectCardGroup } from '@/components/projects/project-card';
 
@@ -47,11 +48,15 @@ export const LatestProjects = ({ projects }: LatestProjectsProps) => {
           {Object.values(projects).map((values, idx) => (
             <Tab.Panel key={idx} className="focus:outline-none">
               <div className="py-4">
-                <ProjectCardGroup>
-                  {values.projects.map((preview, index) => (
-                    <ProjectCard key={index} projectType={values.projectType} {...preview} />
-                  ))}
-                </ProjectCardGroup>
+                {values.projects.length > 0 ? (
+                  <ProjectCardGroup>
+                    {values.projects.map((preview, index) => (
+                      <ProjectCard key={index} projectType={values.projectType} {...preview} />
+                    ))}
+                  </ProjectCardGroup>
+                ) : (
+                  <Alert message={`${values.projectType} projects hasn't been uploaded yet.`} />
+                )}
               </div>
             </Tab.Panel>
           ))}

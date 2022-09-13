@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Link } from '@/components/link';
+import { Alert } from '@/components/alert';
 import { Section } from '@/components/section';
 import { SnippetCard } from '@/components/snippets/snippet-card';
 
@@ -27,11 +28,15 @@ const SnippetsPage: NextPageWithLayout = () => {
         maxWidthDescription="max-w-3xl"
         className="space-y-36 overflow-hidden"
       >
-        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {snippetPreviews.map((snippet, index) => (
-            <SnippetCard key={index} {...snippet} />
-          ))}
-        </ul>
+        {snippetPreviews.length > 0 ? (
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {snippetPreviews.map((preview, index) => (
+              <SnippetCard key={index} {...preview} />
+            ))}
+          </ul>
+        ) : (
+          <Alert message="Library snippets hasn't been uploaded yet." />
+        )}
       </Section>
     </div>
   );
