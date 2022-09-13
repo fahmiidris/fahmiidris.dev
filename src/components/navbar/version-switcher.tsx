@@ -24,14 +24,20 @@ export const VersionSwitcher = () => {
         </Menu.Item>
         <Menu.Item>
           {({ active }) => (
-            <Link href="#" className={clsx('block px-3 py-1', active && 'bg-slate-50 text-slate-800')}>
+            <Link
+              href="https://v1.fahmiidris.dev"
+              className={clsx('block px-3 py-1', active && 'bg-slate-50 text-slate-800')}
+            >
               v1.0.0
             </Link>
           )}
         </Menu.Item>
         <Menu.Item>
           {({ active }) => (
-            <Link href="#" className={clsx('block px-3 py-1', active && 'bg-slate-50 text-slate-800')}>
+            <Link
+              href="https://v0.fahmiidris.dev"
+              className={clsx('block px-3 py-1', active && 'bg-slate-50 text-slate-800')}
+            >
               v0.1.0
             </Link>
           )}
