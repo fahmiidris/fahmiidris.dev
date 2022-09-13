@@ -14,6 +14,7 @@ import { getExperiencePreviews } from '@/services/experience';
 import { sortDateDesc } from '@/utils/helpers';
 
 import type { NextPageWithLayout } from 'next';
+import { Alert } from '@/components/alert';
 
 const experiencePreviews = getExperiencePreviews();
 
@@ -32,7 +33,11 @@ const ExperiencesPage: NextPageWithLayout = () => {
         description="My career journey in the programming world started from 2022 to be precise in February 2022, by participating in the Internship program at one of the startups in Bandung, West Java."
         maxWidthDescription="max-w-3xl"
       >
-        <ExperienceSteps steps={experiencePreviews} />
+        {experiencePreviews.length > 0 ? (
+          <ExperienceSteps steps={experiencePreviews} />
+        ) : (
+          <Alert message="Experiences hasn't been uploaded yet." />
+        )}
       </Section>
 
       <Section

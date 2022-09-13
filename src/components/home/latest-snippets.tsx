@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Alert } from '@/components/alert';
 import { Section } from '@/components/section';
 import { SnippetCard } from '@/components/snippets/snippet-card';
 
@@ -21,11 +22,15 @@ export const LatestSnippets = ({ previews }: LatestSnippetsProps) => {
         text: 'Explore all snippets',
       }}
     >
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {previews.map((preview, index) => (
-          <SnippetCard key={index} {...preview} />
-        ))}
-      </ul>
+      {previews.length > 0 ? (
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {previews.map((preview, index) => (
+            <SnippetCard key={index} {...preview} />
+          ))}
+        </ul>
+      ) : (
+        <Alert message="Library snippets hasn't been uploaded yet." />
+      )}
     </Section>
   );
 };

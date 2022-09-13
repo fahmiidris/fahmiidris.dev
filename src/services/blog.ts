@@ -3,7 +3,7 @@ import { sortDateDesc } from '@/utils/helpers';
 import type { Blog } from '@/types/blog';
 
 export const getBlogPreviews = () => {
-  const context = require.context(`../pages/blog/?preview`, true, /\.mdx$/);
+  const context = require.context(`../pages/blogs/?preview`, true, /\.mdx$/);
 
   return context
     .keys()

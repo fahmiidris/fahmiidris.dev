@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { BlogCard } from '@/components/blog/blog-card';
-import { NewsletterForm } from '@/components/blog/newsletter-form';
+import { Alert } from '@/components/alert';
+import { BlogCard } from '@/components/blogs/blog-card';
+import { NewsletterForm } from '@/components/blogs/newsletter-form';
 
 import { getBlogPreviews } from '@/services/blog';
 
@@ -38,11 +39,15 @@ const BlogPage: NextPageWithLayout = () => {
       <section className="relative pb-24">
         <h2 className="sr-only">Blog Post</h2>
 
-        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {blogPreviews.map((preview, index) => (
-            <BlogCard key={index} {...preview} />
-          ))}
-        </ul>
+        {blogPreviews.length > 0 ? (
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {blogPreviews.map((preview, index) => (
+              <BlogCard key={index} {...preview} />
+            ))}
+          </ul>
+        ) : (
+          <Alert message="Blog or Life Story hasn't been uploaded yet." />
+        )}
       </section>
     </div>
   );

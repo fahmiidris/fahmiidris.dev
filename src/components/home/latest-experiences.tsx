@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Alert } from '@/components/alert';
 import { Section } from '@/components/section';
 import { ExperienceSteps } from '@/components/experiences/experience-steps';
 
@@ -21,7 +22,11 @@ export const LatestExperiences = ({ previews }: LatestExperiencesProps) => {
         text: 'Explore all experiences',
       }}
     >
-      <ExperienceSteps steps={previews} />
+      {previews.length > 0 ? (
+        <ExperienceSteps steps={previews} />
+      ) : (
+        <Alert message="Experiences hasn't been uploaded yet." />
+      )}
     </Section>
   );
 };

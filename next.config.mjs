@@ -11,7 +11,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const fallbackDefaultExports = {
-  'src/pages/{blog,snippets}/**/*': ['@/layouts/blog-and-snippet-post-layout', 'BlogAndSnippetPostLayout'],
+  'src/pages/{blogs,snippets}/**/*': ['@/layouts/blog-and-snippet-post-layout', 'BlogAndSnippetPostLayout'],
   'src/pages/experiences/**/*': ['@/layouts/experience-post-layout', 'ExperiencePostLayout'],
   'src/pages/projects/**/*': ['@/layouts/project-post-layout', 'ProjectPostLayout'],
 };
@@ -41,9 +41,7 @@ const nextConfig = withBundleAnalyzer({
       },
       createLoader(function (source) {
         const pathSegments = this.resourcePath.split(path.sep);
-
         const projectType = pathSegments[pathSegments.length - 3];
-
         const slug =
           pathSegments[pathSegments.length - 1] === 'index.mdx'
             ? pathSegments[pathSegments.length - 2]
