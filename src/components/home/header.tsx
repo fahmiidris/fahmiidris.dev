@@ -161,13 +161,14 @@ export const Header = () => {
                             },
                           ].map((support) => (
                             <li key={support.href} className="py-5">
-                              <div className="relative focus-within:ring-2 focus-within:ring-cyan-400">
+                              <div className="relative">
                                 <h3 className="text-sm font-semibold text-slate-800">
                                   <Link href={support.href} className="hover:underline focus:outline-none">
                                     <span className="absolute inset-0" aria-hidden="true" />
                                     {support.title}
                                   </Link>
                                 </h3>
+
                                 <p className="mt-1 text-sm text-slate-600 line-clamp-2">{support.subtitle}</p>
                               </div>
                             </li>
