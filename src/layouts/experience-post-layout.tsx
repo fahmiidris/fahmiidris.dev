@@ -34,7 +34,7 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
   };
 
   return (
-    <div className="container py-8">
+    <div className="container pt-8">
       <div className="mb-8 flex items-center justify-between">
         <Link
           href="/experiences"
@@ -139,8 +139,8 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
             </div>
           </section>
 
-          <div>
-            <div className="mt-0 hidden xl:sticky xl:top-24 xl:mt-[50px] xl:block">
+          <div className="hidden xl:block">
+            <div className="mt-0  xl:sticky xl:top-24 xl:mt-[50px]">
               <TableOfContents />
             </div>
           </div>
