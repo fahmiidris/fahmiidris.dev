@@ -40,7 +40,7 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
           </div>
         </div>
 
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blogs/${slug}`}>
           <span className="absolute inset-0 z-10" aria-hidden="true" />
         </Link>
       </article>
