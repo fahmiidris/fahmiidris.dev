@@ -10,14 +10,13 @@ type AlertProps = {
 
 export const Alert = ({ message, className, children }: AlertProps) => {
   return (
-    <div className={clsx('rounded-md bg-cyan-50 p-4', className)}>
+    <div className={clsx('border-l-4 border-yellow-400 bg-yellow-50 p-4 text-sm', className)}>
       <div className="flex">
         <div className="flex-shrink-0">
-          <InformationCircleIcon className="h-5 w-5 text-cyan-400" aria-hidden="true" />
+          <InformationCircleIcon className="h-5 w-5 text-yellow-400" aria-hidden="true" />
         </div>
-        <div className="ml-3 flex-1 md:flex md:justify-between">
-          <p className="text-sm text-cyan-700">{message ? message : children}</p>
-        </div>
+
+        <div className="ml-3 text-yellow-700">{message ? message : children}</div>
       </div>
     </div>
   );
