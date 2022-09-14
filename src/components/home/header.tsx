@@ -45,7 +45,9 @@ export const Header = () => {
               </h1>
 
               <div className="order-first flex items-center justify-center gap-4 text-[0.8125rem] leading-6 text-slate-500 lg:justify-start">
-                <div>{/* <code>{'<Hello.World />'}</code> */}</div>
+                <div>
+                  <code>{'<Hello.World />'}</code>
+                </div>
                 <svg viewBox="0 0 2 2" aria-hidden="true" className="w-0.5 fill-current">
                   <circle cx="1" cy="1" r="1" />
                 </svg>
