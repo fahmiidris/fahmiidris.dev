@@ -114,7 +114,7 @@ export const Header = () => {
                   <div className="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
                     <button
                       type="button"
-                      className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+                      className="rounded-md bg-white text-slate-400 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
                       onClick={() => setOpenSupportModal(false)}
                     >
                       <span className="sr-only">Close</span>
@@ -125,34 +125,42 @@ export const Header = () => {
                     <div className="mt-3 text-left sm:mt-0">
                       <Dialog.Title
                         as="h3"
-                        className="text-center text-lg font-medium leading-6 text-gray-800 sm:text-left"
+                        className="text-center text-lg font-medium leading-6 text-slate-800 sm:text-left"
                       >
                         Suport Fahmi Idris
                       </Dialog.Title>
 
-                      <div className="mt-4 mb-0 sm:mb-2">
-                        <ul className="list-inside list-disc space-y-2">
+                      <div className="mt-6 flow-root w-full">
+                        <ul role="list" className="-my-5 divide-y divide-slate-200">
                           {[
                             {
                               title: 'Saweria Fahmi Idris',
-                              subtitle: '',
+                              subtitle:
+                                'Thank you! for your support via saweria, so excited to code again! Pluss Ultraaaa!',
                               href: 'https://www.saweria.co/fahmiidris',
                             },
                             {
                               title: 'Trakteer Fahmi Idris',
-                              subtitle: '',
+                              subtitle:
+                                'Thanks for the ice cream. Very tasty! so excited to code again! Full Powerrrr!',
                               href: 'https://www.trakteer.id/fahmiidris/tip',
                             },
                             {
                               title: 'GitHub Sponsor Fahmi Idris',
-                              subtitle: '',
+                              subtitle: 'Your support means a lot to keep me motivated to create more website clones!',
                               href: 'https://www.github.com/sponsors/fahmiidris-labs',
                             },
-                          ].map((item, index) => (
-                            <li key={index}>
-                              <Link href={item.href} className="animated-underline text-slate-500 hover:text-slate-800">
-                                {item.title}
-                              </Link>
+                          ].map((support) => (
+                            <li key={support.href} className="py-5">
+                              <div className="relative focus-within:ring-2 focus-within:ring-cyan-400">
+                                <h3 className="text-sm font-semibold text-slate-800">
+                                  <Link href={support.href} className="hover:underline focus:outline-none">
+                                    <span className="absolute inset-0" aria-hidden="true" />
+                                    {support.title}
+                                  </Link>
+                                </h3>
+                                <p className="mt-1 text-sm text-slate-600 line-clamp-2">{support.subtitle}</p>
+                              </div>
                             </li>
                           ))}
                         </ul>
@@ -162,7 +170,7 @@ export const Header = () => {
                   <div className="mt-6 flex sm:mt-4 sm:hidden sm:flex-row-reverse">
                     <button
                       type="button"
-                      className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm"
+                      className="mt-3 inline-flex w-full justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-base font-medium text-slate-700 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm"
                       onClick={() => setOpenSupportModal(false)}
                     >
                       Cancel
