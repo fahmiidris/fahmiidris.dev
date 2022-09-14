@@ -51,7 +51,7 @@ const HomePage: NextPageWithLayout = () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
 
       <div className="space-y-36 overflow-hidden py-24">
         {/* <Summary /> */}
