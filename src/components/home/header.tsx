@@ -84,9 +84,7 @@ export const Header = () => {
               </div>
             </div>
 
-            <div className="hidden lg:flex lg:flex-auto lg:justify-center">
-              <Illustration />
-            </div>
+            <div className="hidden lg:flex lg:flex-auto lg:justify-center">{/* <Illustration /> */}</div>
           </div>
         </div>
       </header>
