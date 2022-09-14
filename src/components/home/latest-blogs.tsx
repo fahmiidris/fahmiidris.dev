@@ -18,8 +18,8 @@ export const LatestBlogs = ({ previews }: LatestBlogsProps) => {
       subtitle="Hi gaes! I have a new story for you! Happy reading!"
       description="Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings."
       more={{
-        href: '/blog',
-        text: 'Explore all blog',
+        href: '/blogs',
+        text: 'Explore all blogs',
       }}
     >
       {previews.length > 0 ? (
