@@ -54,11 +54,11 @@ const HomePage: NextPageWithLayout = () => {
       <Header />
 
       <div className="space-y-36 overflow-hidden py-24">
-        {/* <Summary /> */}
-        {/* <LatestBlogs previews={blogPreviews.slice(0, 3)} /> */}
-        {/* <LatestExperiences previews={experiencePreviews.slice(0, 2)} /> */}
-        {/* <LatestProjects projects={projects} /> */}
-        {/* <LatestSnippets previews={snippetPreviews.slice(0, 3)} /> */}
+        <Summary />
+        <LatestBlogs previews={blogPreviews.slice(0, 3)} />
+        <LatestExperiences previews={experiencePreviews.slice(0, 2)} />
+        <LatestProjects projects={projects} />
+        <LatestSnippets previews={snippetPreviews.slice(0, 3)} />
       </div>
     </>
   );
