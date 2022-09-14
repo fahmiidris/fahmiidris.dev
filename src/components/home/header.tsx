@@ -8,22 +8,25 @@ import { XIcon } from '@heroicons/react/outline';
 
 export const Header = () => {
   const [openSupportModal, setOpenSupportModal] = React.useState(false);
+  const [greetingText, setGreetingText] = React.useState('Morning');
 
-  const greeting = () => {
-    const hours = new Date().getHours();
+  React.useEffect(() => {
+    (() => {
+      const hours = new Date().getHours();
 
-    let greetingText = '';
+      let greetingText = '';
 
-    if (hours < 12) {
-      greetingText = 'Morning';
-    } else if (hours < 18) {
-      greetingText = 'Afternoon';
-    } else {
-      greetingText = 'Evening';
-    }
+      if (hours < 12) {
+        greetingText = 'Morning';
+      } else if (hours < 18) {
+        greetingText = 'Afternoon';
+      } else {
+        greetingText = 'Evening';
+      }
 
-    return greetingText;
-  };
+      setGreetingText(greetingText);
+    })();
+  }, []);
 
   return (
     <>
@@ -34,28 +37,33 @@ export const Header = () => {
           className="absolute bottom-0 left-1/2 ml-[-639px] w-[1278px] max-w-none"
           priority={true}
         />
+
         <div className="absolute inset-0 shadow-[inset_0_-1px_0_rgba(22,27,59,0.04)]" />
+
         <div className="container relative">
           <div className="flex justify-center text-center lg:pt-5 lg:pb-7 lg:text-left">
             <div className="flex max-w-[37rem] flex-col py-16 lg:py-12">
               <h1 className="mt-6 text-[1.75rem] font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl">
                 A Software Engineer from West Java - Indonesia.
               </h1>
+
               <div className="order-first flex items-center justify-center gap-4 text-[0.8125rem] leading-6 text-slate-500 lg:justify-start">
-                <p>
+                <div>
                   <code>{'<Hello.World />'}</code>
-                </p>
+                </div>
                 <svg viewBox="0 0 2 2" aria-hidden="true" className="w-0.5 fill-current">
                   <circle cx="1" cy="1" r="1" />
                 </svg>
-                <p>
-                  <code>{`<Good.${greeting()} />`}</code>
-                </p>
+                <div>
+                  <code>{`<Good.${greetingText} />`}</code>
+                </div>
               </div>
+
               <p className="mt-4 text-sm text-slate-500">
                 This website was established not just as a learning tool, but also as a place for me to write and show
                 off my projects, as well as a repository of my past experiences.
               </p>
+
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
                 <Link
                   href="#"
@@ -78,6 +86,7 @@ export const Header = () => {
                 </button>
               </div>
             </div>
+
             <div className="hidden lg:flex lg:flex-auto lg:justify-center">
               <Illustration />
             </div>
@@ -127,7 +136,7 @@ export const Header = () => {
                         as="h3"
                         className="text-center text-lg font-medium leading-6 text-slate-800 sm:text-left"
                       >
-                        Suport Fahmi Idris
+                        Support Fahmi Idris
                       </Dialog.Title>
 
                       <div className="mt-6 flow-root w-full">
