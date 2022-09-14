@@ -28,12 +28,12 @@ export const Header = () => {
   return (
     <>
       <header className="relative overflow-hidden bg-slate-50">
-        <Image
+        {/* <Image
           src={require('@/img/beams-home.jpg').default}
           alt=""
           className="absolute bottom-0 left-1/2 ml-[-639px] w-[1278px] max-w-none"
           priority={true}
-        />
+        /> */}
 
         <div className="absolute inset-0 shadow-[inset_0_-1px_0_rgba(22,27,59,0.04)]" />
 
