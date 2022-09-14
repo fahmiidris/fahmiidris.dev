@@ -8,22 +8,25 @@ import { XIcon } from '@heroicons/react/outline';
 
 export const Header = () => {
   const [openSupportModal, setOpenSupportModal] = React.useState(false);
+  const [greetingText, setGreetingText] = React.useState('Morning');
 
-  const greeting = () => {
-    const hours = new Date().getHours();
+  React.useEffect(() => {
+    (() => {
+      const hours = new Date().getHours();
 
-    let greetingText = '';
+      let greetingText = '';
 
-    if (hours < 12) {
-      greetingText = 'Morning';
-    } else if (hours < 18) {
-      greetingText = 'Afternoon';
-    } else {
-      greetingText = 'Evening';
-    }
+      if (hours < 12) {
+        greetingText = 'Morning';
+      } else if (hours < 18) {
+        greetingText = 'Afternoon';
+      } else {
+        greetingText = 'Evening';
+      }
 
-    return greetingText;
-  };
+      setGreetingText(greetingText);
+    })();
+  }, []);
 
   return (
     <>
@@ -51,7 +54,9 @@ export const Header = () => {
                 <svg viewBox="0 0 2 2" aria-hidden="true" className="w-0.5 fill-current">
                   <circle cx="1" cy="1" r="1" />
                 </svg>
-                <div>{/* <code>{`<Good.${greeting()} />`}</code> */}</div>
+                <div>
+                  <code>{`<Good.${greetingText} />`}</code>
+                </div>
               </div>
 
               <p className="mt-4 text-sm text-slate-500">
