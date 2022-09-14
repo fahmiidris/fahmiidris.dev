@@ -6,22 +6,25 @@ export type LinkType = {
 } & React.ComponentPropsWithoutRef<'a'> &
   LinkProps;
 
-export const Link = ({ href, openNewTab = false, scroll = true, children, ...props }: LinkType) => {
-  const isNewTab = openNewTab ? openNewTab : !href.startsWith('/') && !href.startsWith('#');
+// eslint-disable-next-line react/display-name
+export const Link = React.forwardRef<HTMLAnchorElement, LinkType>(
+  ({ href, openNewTab = false, scroll = true, children, ...props }, ref) => {
+    const isNewTab = openNewTab ? openNewTab : !href.startsWith('/') && !href.startsWith('#');
 
-  if (!isNewTab) {
+    if (!isNewTab) {
+      return (
+        <NextLink href={href} scroll={scroll} ref={ref}>
+          <a {...props} style={{ outline: 'none' }}>
+            {children}
+          </a>
+        </NextLink>
+      );
+    }
+
     return (
-      <NextLink href={href} scroll={scroll}>
-        <a {...props} style={{ outline: 'none' }}>
-          {children}
-        </a>
-      </NextLink>
+      <a href={href} ref={ref} {...props} style={{ outline: 'none' }} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
     );
   }
-
-  return (
-    <a href={href} {...props} style={{ outline: 'none' }} target="_blank" rel="noopener noreferrer">
-      {children}
-    </a>
-  );
-};
+);
