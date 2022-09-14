@@ -136,7 +136,7 @@ export const Header = () => {
                         as="h3"
                         className="text-center text-lg font-medium leading-6 text-slate-800 sm:text-left"
                       >
-                        Suport Fahmi Idris
+                        Support Fahmi Idris
                       </Dialog.Title>
 
                       <div className="mt-6 flow-root w-full">
