@@ -35,8 +35,8 @@ type BlogAndSnippetPostLayoutProps = {
 export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: BlogAndSnippetPostLayoutProps) => {
   const [openComment, setOpenComment] = React.useState(false);
 
-  const GITHUB_EDIT_LINK = `https://github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/${projectType}/${slug}/index.mdx`;
-  const COMMIT_HISTORY_LINK = `https://github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/${projectType}/${slug}/index.mdx`;
+  const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/${projectType}/${slug}/index.mdx`;
+  const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/${projectType}/${slug}/index.mdx`;
 
   const dateTime = (createdAt: number) => {
     return formatDate(createdAt, '{dddd}, {MMMM} {DD}, {YYYY}');

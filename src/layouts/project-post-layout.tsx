@@ -26,8 +26,8 @@ type ProjectPostLayoutProps = {
 };
 
 export const ProjectPostLayout = ({ slug, projectType, meta, children }: ProjectPostLayoutProps) => {
-  const GITHUB_EDIT_LINK = `https://github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
-  const COMMIT_HISTORY_LINK = `https://github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
+  const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
+  const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
 
   const dateTime = (time: number) => {
     return formatDate(time, '{MMMM} {DD}, {YYYY}');
