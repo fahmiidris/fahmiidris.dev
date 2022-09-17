@@ -14,6 +14,7 @@ export declare namespace Project {
     meta: MDXMetaType & {
       domain: string;
       banner?: ImageProps;
+      repository?: string;
     };
     default: (props: any) => JSX.Element;
   }
