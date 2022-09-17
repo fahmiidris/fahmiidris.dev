@@ -6,7 +6,7 @@ import { GitHubIcon, InstagramIcon, LinkedInIcon } from '@/components/social-ico
 import { profile } from '@/me';
 
 const menu = [
-  { name: 'Source Code', href: 'https://github.com/fahmiidris-labs/fahmiidris.dev' },
+  { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
   { name: 'Docs', href: '#' },
   { name: 'Starter Template', href: 'https://starter-template.fahmiidris.dev' },
   { name: 'Subscribe', href: '#' },

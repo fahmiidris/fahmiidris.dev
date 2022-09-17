@@ -26,8 +26,8 @@ type ExperiencePostLayoutProps = {
 };
 
 export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLayoutProps) => {
-  const GITHUB_EDIT_LINK = `https://github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/experiences/${slug}/index.mdx`;
-  const COMMIT_HISTORY_LINK = `https://github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/experiences/${slug}/index.mdx`;
+  const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/experiences/${slug}/index.mdx`;
+  const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/experiences/${slug}/index.mdx`;
 
   const dateTime = (time: number) => {
     return formatDate(time, '{MMMM} {DD}, {YYYY}');
