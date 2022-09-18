@@ -37,7 +37,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
   };
 
   return (
-    <div className="container py-8">
+    <div className="container pt-8">
       <div className="mb-8 flex items-center justify-between">
         <Link
           href="/projects"
@@ -153,8 +153,8 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
           </div>
         </div>
 
-        <div>
-          <div className="mt-0 hidden xl:sticky xl:top-24 xl:block">
+        <div className="hidden xl:block">
+          <div className="mt-0  xl:sticky xl:top-24">
             <TableOfContents />
           </div>
         </div>
