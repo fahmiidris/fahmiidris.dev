@@ -4,14 +4,17 @@ import {
   CalendarIcon,
   ChatAlt2Icon,
   ClockIcon,
+  ExternalLinkIcon,
   EyeIcon,
   PencilAltIcon,
   ShareIcon,
   ThumbUpIcon,
 } from '@heroicons/react/outline';
+import Image from 'next/future/image';
 
 import { Link } from '@/components/link';
 import { Prose } from '@/components/prose';
+import { GitHubIcon } from '@/components/social-icons';
 import { TableOfContents } from '@/components/table-of-contents';
 
 import { formatDate } from '@/utils/helpers';
@@ -34,7 +37,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
   };
 
   return (
-    <div className="container py-8">
+    <div className="container pt-8">
       <div className="mb-8 flex items-center justify-between">
         <Link
           href="/projects"
@@ -75,7 +78,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
         <div className="xl:col-span-3">
           <h1 className="max-w-3xl text-2xl font-extrabold tracking-tight text-slate-800 md:text-3xl">{meta.title}</h1>
 
-          <div className="mt-4 flex items-center space-x-4">
+          <div className="mt-4 flex flex-wrap items-center gap-4">
             <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
               <ClockIcon className="h-5 w-5 text-slate-500" />
               <span>0</span>
@@ -86,6 +89,22 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
               <EyeIcon className="h-5 w-5 text-slate-500" />
               <span>0</span>
               <span>views</span>
+            </div>
+
+            {meta.repository && (
+              <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
+                <GitHubIcon className="h-5 w-5 text-slate-500" />
+                <Link href="#" className="animated-underline">
+                  Repository
+                </Link>
+              </div>
+            )}
+
+            <div className="flex items-center space-x-2 px-2 text-sm font-semibold text-slate-800 md:text-sm">
+              <ExternalLinkIcon className="h-5 w-5 text-slate-500" />
+              <Link href={`https://${meta.domain}`} className="animated-underline">
+                Open Live Site
+              </Link>
             </div>
           </div>
 
@@ -99,8 +118,21 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
             </dl>
           </div>
 
-          <section id="content" className="relative">
-            <Prose className="mt-12">{children}</Prose>
+          <div className="relative mt-12 overflow-hidden rounded-md border border-slate-200">
+            <Image
+              src={meta.banner?.src ?? require('@/img/projects/default-banner.jpg').default}
+              alt={meta.banner?.alt ?? 'Banner'}
+              className="rounded-md object-cover object-center"
+              placeholder="blur"
+              {...meta.banner}
+            />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-white" /> */}
+          </div>
+
+          <section id="content" className="relative pt-12">
+            <h2 className="sr-only">Content projects</h2>
+
+            <Prose>{children}</Prose>
           </section>
 
           <div className="col-start-2 mt-12 mb-6 flex items-center justify-between">
@@ -121,8 +153,8 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
           </div>
         </div>
 
-        <div>
-          <div className="mt-0 hidden xl:sticky xl:top-24 xl:block">
+        <div className="hidden xl:block">
+          <div className="mt-0  xl:sticky xl:top-24">
             <TableOfContents />
           </div>
         </div>
