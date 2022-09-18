@@ -78,7 +78,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
         <div className="xl:col-span-3">
           <h1 className="max-w-3xl text-2xl font-extrabold tracking-tight text-slate-800 md:text-3xl">{meta.title}</h1>
 
-          <div className="mt-4 flex items-center space-x-4">
+          <div className="mt-4 flex flex-wrap items-center gap-4">
             <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
               <ClockIcon className="h-5 w-5 text-slate-500" />
               <span>0</span>
