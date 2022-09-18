@@ -132,7 +132,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
           <section id="content" className="relative pt-12">
             <h2 className="sr-only">Content projects</h2>
 
-            <Prose>{children}</Prose>
+            <Prose className="prose-figure:my-2">{children}</Prose>
           </section>
 
           <div className="col-start-2 mt-12 mb-6 flex items-center justify-between">
