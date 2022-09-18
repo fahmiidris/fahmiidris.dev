@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Image from 'next/future/image';
+
+import { Image } from '@/components/image';
 
 import { profile } from '@/me';
 
@@ -23,7 +24,7 @@ export const Summary = () => {
             </blockquote>
 
             <figcaption className="mt-8 flex items-center justify-center space-x-4 text-left">
-              <Image src={profile.image} alt="" className="h-14 w-14 rounded-full ring-2 ring-cyan-400" />
+              <Image src={profile.image} alt="" className="h-14 w-14" />
 
               <div>
                 <div className="font-semibold text-slate-800">{profile.name}</div>

@@ -1,19 +1,31 @@
 import * as React from 'react';
-import Image, { ImageProps } from 'next/future/image';
+import NextImage, { ImageProps } from 'next/future/image';
+import clsx from 'clsx';
 
 type ImageType = ImageProps & {};
 
-export const ImageWithCaption = ({ src, alt, ...props }: ImageType) => {
+const Image = ({ src, alt, className, ...props }: ImageType) => {
   return (
-    <figure className="flex flex-col items-start">
-      <div
-        onClick={() => console.log('click')}
-        className="relative aspect-video w-full cursor-pointer overflow-hidden rounded-lg border border-slate-200"
-      >
-        <Image src={src} alt={alt} placeholder="blur" className="my-0 object-cover object-center" {...props} />
-      </div>
+    <div className="relative h-auto w-auto overflow-hidden rounded-md ring-1 ring-slate-200">
+      <NextImage
+        src={src}
+        alt={alt}
+        className={clsx('aspect-video object-cover object-center', className)}
+        {...props}
+      />
+    </div>
+  );
+};
 
-      <figcaption className="text-xs font-semibold italic text-slate-800">{alt}</figcaption>
+const ImageWithCaption = ({ src, alt, ...props }: ImageType) => {
+  return (
+    <figure className="flex flex-col items-start space-y-2">
+      <Image src={src} alt={alt} {...props} />
+      <figcaption className="text-xs font-semibold italic">{alt}</figcaption>
     </figure>
   );
 };
+
+Image.WithCaption = ImageWithCaption;
+
+export { Image };

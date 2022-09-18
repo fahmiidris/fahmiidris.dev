@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Image from 'next/future/image';
 import { ArrowSmRightIcon } from '@heroicons/react/solid';
 import { MailIcon, PaperClipIcon } from '@heroicons/react/outline';
 
 import { Logo } from '@/components/logo';
 import { Link } from '@/components/link';
+import { Image } from '@/components/image';
 import { Section } from '@/components/section';
 import { Description } from '@/components/about/description';
 import { AboutSection } from '@/components/about/about-section';
@@ -115,11 +115,7 @@ const AboutPage: NextPageWithLayout = () => {
         <div className="grid grid-cols-1 gap-8 pt-3 lg:grid-cols-4 lg:pt-6 xl:grid-cols-6">
           <div className="col-span-1 flex justify-center xl:col-span-2">
             <figure className="flex flex-col items-center text-center sm:pt-2 lg:pt-16">
-              <Image
-                src={profile.image}
-                alt="My Profile"
-                className="h-auto w-32 rounded-[16px] bg-gradient-to-t from-cyan-200 to-cyan-400 ring-2 ring-cyan-400 ring-offset-4 xl:w-48"
-              />
+              <Image src={profile.image} alt="My Profile" className="aspect-square h-auto w-32 xl:w-48" />
 
               <figcaption className="flex flex-col pt-4">
                 <div className="text-xl font-semibold text-slate-700">{profile.name}</div>
