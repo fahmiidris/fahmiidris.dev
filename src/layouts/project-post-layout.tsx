@@ -10,9 +10,9 @@ import {
   ShareIcon,
   ThumbUpIcon,
 } from '@heroicons/react/outline';
-import Image from 'next/future/image';
 
 import { Link } from '@/components/link';
+import { Image } from '@/components/image';
 import { Prose } from '@/components/prose';
 import { GitHubIcon } from '@/components/social-icons';
 import { TableOfContents } from '@/components/table-of-contents';
@@ -31,10 +31,6 @@ type ProjectPostLayoutProps = {
 export const ProjectPostLayout = ({ slug, projectType, meta, children }: ProjectPostLayoutProps) => {
   const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
   const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
-
-  const dateTime = (time: number) => {
-    return formatDate(time, '{MMMM} {DD}, {YYYY}');
-  };
 
   return (
     <div className="container pt-8">
@@ -113,7 +109,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
               <dt className="sr-only">Date</dt>
               <dd className="absolute inset-x-0 top-0 flex items-center justify-start space-x-2 text-slate-800">
                 <CalendarIcon className="h-5 w-5" />
-                <time dateTime={dateTime(meta.createdAt)}>{dateTime(meta.createdAt)}</time>
+                <time dateTime={formatDate(meta.createdAt)}>{formatDate(meta.createdAt)}</time>
               </dd>
             </dl>
           </div>
@@ -122,8 +118,6 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
             <Image
               src={meta.banner?.src ?? require('@/img/projects/default-banner.jpg').default}
               alt={meta.banner?.alt ?? 'Banner'}
-              className="rounded-md object-cover object-center"
-              placeholder="blur"
               {...meta.banner}
             />
             {/* <div className="absolute inset-0 bg-gradient-to-t from-white" /> */}

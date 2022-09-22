@@ -1,14 +1,13 @@
 import v1Banner from './img/v1-banner.jpg';
-import v1ExperiencesPage from './img/v1-experiences-page.jpg';
 import v1ProjectsPage from './img/v1-projects-page.jpg';
 
 import v0Banner from './img/v0-banner.jpg';
-import v0AboutPage from './img/v0-about-page.jpg';
 import v0ProjectsPage from './img/v0-projects-page.jpg';
 
 import banner from './img/banner.jpg';
 
-import { ImageWithCaption } from '@/components/image';
+import { Image } from '@/components/image';
+import { Alert } from '@/components/alert';
 
 export const meta = {
   title: 'My Personal Portfolio Website',
@@ -33,6 +32,8 @@ I developed this website using [TypeScript](https://www.typescriptlang.org), [Ne
 
 ## Project Goals
 
+This website was built not only for portfolios, but as a place for me to learn. I will continue to develop the features on this website from time to time.
+
 Actually I want to create a personal development environment, as made by [Theodorus Clarence](https://theodorusclarence.com). Starting from starter templates, sort links services, design documentation, etc. I plan to build it all.
 
 ## Technology Stack Used
@@ -55,24 +56,14 @@ This is version v1.0.0 of my personal website, indeed there are many unfinished 
 
 You can visit it directly at [https://v1.fahmiidris.dev](https://v1.fahmiidris.dev).
 
-<ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+<div className="grid grid-cols-2 gap-4">
   {[
-    {
-      title: 'Home Page',
-      image: { ...v1Banner, alt: 'Home Page' },
-    },
-    {
-      title: 'Experiences Page',
-      image: { ...v1ExperiencesPage, alt: 'Experiences Page' },
-    },
-    {
-      title: 'Projects Page',
-      image: { ...v1ProjectsPage, alt: 'Projects Page' },
-    },
-  ].map(({ title, image }, index) => (
-    <ImageWithCaption src={image.src} alt={image.alt} {...image} />
+    { ...v1Banner, alt: 'Home Page' },
+    { ...v1ProjectsPage, alt: 'Projects Page' },
+  ].map(({ src, alt, ...image }, index) => (
+    <Image.WithCaption key={index} src={src} alt={alt} className="my-0" {...image} />
   ))}
-</ul>
+</div>
 
 ## Version v0.1.0
 
@@ -80,24 +71,22 @@ This is the initial version of my personal website released. at that time I made
 
 You can visit it directly at [https://v0.fahmiidris.dev](https://v0.fahmiidris.dev).
 
-<ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+<div className="grid grid-cols-2 gap-4">
   {[
-    {
-      title: 'Home Page',
-      image: { ...v0Banner, alt: 'Home Page' },
-    },
-    {
-      title: 'About Page',
-      image: { ...v0AboutPage, alt: 'About Page' },
-    },
-    {
-      title: 'Projects Page',
-      image: { ...v0ProjectsPage, alt: 'Projects Page' },
-    },
-  ].map(({ title, image }, index) => (
-    <ImageWithCaption src={image.src} alt={image.alt} {...image} />
+    { ...v0Banner, alt: 'Home Page' },
+    { ...v0ProjectsPage, alt: 'Projects Page' },
+  ].map(({ src, alt, ...image }, index) => (
+    <Image.WithCaption key={index} src={src} alt={alt} className="my-0" {...image} />
   ))}
-</ul>
+</div>
+
+---
+
+## Lessons Learned
+
+The lessons I've learned while working on this website are mostly React.js, Next.js, and Tailwind CSS fundamentals, then project structures, clean code, and much more.
+
+I'm also getting used to Markdown, especially MDX. Before working on this website I didn't know what Markdown was and what it was created for.
 
 ---
 
