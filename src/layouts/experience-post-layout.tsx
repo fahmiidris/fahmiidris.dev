@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/future/image';
 import { ChevronLeftIcon } from '@heroicons/react/solid';
 import {
   CalendarIcon,
@@ -12,6 +11,7 @@ import {
 } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
+import { Image } from '@/components/image';
 import { Prose } from '@/components/prose';
 import { TableOfContents } from '@/components/table-of-contents';
 
@@ -28,10 +28,6 @@ type ExperiencePostLayoutProps = {
 export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLayoutProps) => {
   const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/experiences/${slug}/index.mdx`;
   const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/experiences/${slug}/index.mdx`;
-
-  const dateTime = (time: number) => {
-    return formatDate(time, '{MMMM} {DD}, {YYYY}');
-  };
 
   return (
     <div className="container pt-8">
@@ -90,16 +86,8 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
 
         {meta.images && meta.images.length > 0 && (
           <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {meta.images.map(({ src, alt, ...item }, index) => (
-              <div key={index} className="flex flex-col">
-                <div
-                  onClick={() => console.log('click')}
-                  className="relative aspect-video w-full cursor-pointer overflow-hidden rounded-lg bg-slate-200"
-                >
-                  <Image src={src} alt={alt} placeholder="blur" className="object-cover object-center" {...item} />
-                </div>
-                <p className="pt-2 text-xs font-semibold text-slate-800">{alt}</p>
-              </div>
+            {meta.images.map(({ src, alt, ...image }, index) => (
+              <Image.WithCaption key={index} src={src} alt={alt} {...image} />
             ))}
           </div>
         )}
@@ -109,9 +97,9 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
             <dt className="sr-only">Date</dt>
             <dd className="absolute inset-x-0 top-0 flex items-center justify-start space-x-2 text-slate-800">
               <CalendarIcon className="h-5 w-5" />
-              <time dateTime={dateTime(meta.date.start)}>
-                {dateTime(meta.date.start)} -{' '}
-                {meta.date.end ? dateTime(meta.date.end) : <span className="text-cyan-400">Present</span>}
+              <time dateTime={formatDate(meta.date.start)}>
+                {formatDate(meta.date.start)} -{' '}
+                {meta.date.end ? formatDate(meta.date.end) : <span className="text-cyan-400">Present</span>}
               </time>
             </dd>
           </dl>

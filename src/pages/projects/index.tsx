@@ -28,13 +28,7 @@ const ExperiencesPage: NextPageWithLayout = () => {
         id="fahmiidris"
         title="www.fahmiidris.dev"
         subtitle="Portfolio and some resources I can create, I hope you like it!"
-        description={() => (
-          <p className="text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">
-            I was inspired by <Link href="https://www.theodorusclarence.com">Theodorus Clarence</Link> to create a
-            personal development environment. like its really cool and useful if i have it too, i will keep trying to
-            make it with my own ninja way.
-          </p>
-        )}
+        description="I was inspired to create a personal development environment. It would be very cool and useful if I had it. You can also use some of the resources I have. It's open source!"
         maxWidthDescription="max-w-3xl"
       >
         {fahmiidrisDevProjectPreviews.length > 0 ? (

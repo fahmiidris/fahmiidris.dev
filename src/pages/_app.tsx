@@ -9,6 +9,7 @@ import { Title } from '@/components/title';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { Announcement } from '@/components/navbar/announcement';
+import { ScrollToTopButton } from '@/components/scroll-to-top-button';
 
 import ProgressBar from '@/utils/progress-bar';
 
@@ -78,6 +79,7 @@ const MyApp = ({ Component, pageProps, router }: AppPropsWithLayout) => {
         <Component {...pageProps} />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };

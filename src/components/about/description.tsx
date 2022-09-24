@@ -6,13 +6,13 @@ export const Description = () => {
   return (
     <div className="flex flex-col space-y-4 py-4">
       <p>
-        Hello, my name is <span className="font-semibold text-cyan-400">Fahmi Idris</span>, but my friends call me{' '}
-        <span className="font-semibold text-cyan-400">Mi</span> or{' '}
-        <span className="font-semibold text-cyan-400">Fahmi</span>. I just graduated from{' '}
+        Hello, my name is <span className="font-medium text-cyan-400">Fahmi Idris</span>, but my friends call me{' '}
+        <span className="font-medium text-cyan-400">Mi</span> or{' '}
+        <span className="font-medium text-cyan-400">Fahmi</span>. I just graduated from{' '}
         <Link
           href="https://www.facebook.com/smk1triplejciteureup/"
           openNewTab={true}
-          className="font-semibold text-cyan-400"
+          className="font-medium text-cyan-400"
         >
           Vocational High School
         </Link>{' '}
@@ -22,7 +22,7 @@ export const Description = () => {
 
       <p>
         I live in Bogor Regency, West Java Province, in a village. Now I concentrate on web programming especially on
-        the <span className="font-semibold text-cyan-400">Frontend Development</span>.
+        the <span className="font-medium text-cyan-400">Frontend Development</span>.
       </p>
 
       <p>

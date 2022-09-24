@@ -1,8 +1,8 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import Image from 'next/future/image';
 
 import { Link } from '@/components/link';
+import { Image } from '@/components/image';
 import { Prose } from '@/components/prose';
 
 import { formatDate, sortDateDesc } from '@/utils/helpers';
@@ -52,21 +52,7 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
             {images && images.length > 0 && (
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {images.map((item, index) => (
-                  <figure key={index} className="flex flex-col items-start justify-start">
-                    <div className="relative h-auto w-auto overflow-hidden rounded-md border border-slate-200">
-                      <Image
-                        alt={item.alt}
-                        placeholder="blur"
-                        className="aspect-video object-cover object-center"
-                        onClick={() => {
-                          console.log('Show Modal');
-                        }}
-                        {...item.image}
-                      />
-                    </div>
-
-                    <figcaption className="pt-2 text-xs font-semibold text-slate-800">{item.alt}</figcaption>
-                  </figure>
+                  <Image.WithCaption key={index} alt={item.alt} {...item.image} />
                 ))}
               </div>
             )}

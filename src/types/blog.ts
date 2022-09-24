@@ -7,7 +7,9 @@ export declare namespace Blog {
   }
 
   interface Module {
-    meta: MDXMetaType;
+    meta: MDXMetaType & {
+      language: 'id' | 'en';
+    };
     default: (props: any) => JSX.Element;
   }
 }

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import Image from 'next/future/image';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 
 import { Link } from '@/components/link';
+import { Image } from '@/components/image';
 import { Prose } from '@/components/prose';
 
 import { formatDate } from '@/utils/helpers';
@@ -37,12 +37,8 @@ export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
               dateTime={meta.date.start.toString()}
               className="mb-2 block text-sm font-normal leading-none text-slate-500"
             >
-              {formatDate(meta.date.start, '{MMMM} {DD}, {YYYY}')} -{' '}
-              {meta.date.end ? (
-                formatDate(meta.date.end, '{MMMM} {DD}, {YYYY}')
-              ) : (
-                <span className="text-cyan-400">Present</span>
-              )}
+              {formatDate(meta.date.start)} -{' '}
+              {meta.date.end ? formatDate(meta.date.end) : <span className="text-cyan-400">Present</span>}
             </time>
 
             <Prose className="prose-sm max-w-3xl line-clamp-2">
@@ -53,22 +49,7 @@ export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
           {meta.images && meta.images.length > 0 && (
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
               {meta.images.map(({ src, alt, ...image }, index) => (
-                <figure key={index} className="flex flex-col items-start justify-start">
-                  <div className="relative h-auto w-auto overflow-hidden rounded-md">
-                    <Image
-                      src={src}
-                      alt={alt}
-                      placeholder="blur"
-                      className="aspect-video cursor-pointer object-cover object-center"
-                      onClick={() => {
-                        console.log('Show Modal');
-                      }}
-                      {...image}
-                    />
-                  </div>
-
-                  <figcaption className="pt-2 text-xs font-semibold text-slate-800">{alt}</figcaption>
-                </figure>
+                <Image.WithCaption key={index} src={src} alt={alt} {...image} />
               ))}
             </div>
           )}

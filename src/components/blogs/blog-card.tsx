@@ -18,9 +18,7 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
           <dl>
             <dt className="sr-only">Date</dt>
             <dd className="whitespace-nowrap text-sm leading-6">
-              <time dateTime={formatDate(meta.createdAt, '{MMMM} {DD}, {YYYY}')}>
-                {formatDate(meta.createdAt, '{MMMM} {DD}, {YYYY}')}
-              </time>
+              <time dateTime={formatDate(meta.createdAt)}>{formatDate(meta.createdAt)}</time>
             </dd>
           </dl>
 
