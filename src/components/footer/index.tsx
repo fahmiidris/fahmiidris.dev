@@ -21,7 +21,7 @@ const socialMedia = [
   },
   {
     name: 'Instagram',
-    username: 'fahmiidris.dev',
+    username: '@fahmiidris.dev',
     href: 'https://www.instagram.com/fahmiidris.dev',
     icon: InstagramIcon,
   },

@@ -25,6 +25,8 @@ export const Input = ({
     }
   }, [isFocused]);
 
+  const isHaveIcon = icon ? true : false;
+
   return (
     <div>
       <label htmlFor={id} className={clsx(label ? 'text-slate-800" block text-sm font-medium' : 'sr-only')}>
@@ -47,7 +49,8 @@ export const Input = ({
           id={id}
           className={clsx(
             'block w-full rounded-md border-slate-200 text-sm placeholder:text-slate-400 focus:border-cyan-400 focus:ring-cyan-400 sm:text-sm',
-            { 'pl-10': !!icon }
+            { 'pl-10': !!isHaveIcon },
+            className
           )}
           {...props}
         />
