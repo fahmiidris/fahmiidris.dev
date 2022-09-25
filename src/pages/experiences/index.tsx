@@ -2,6 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { Tab } from '@headlessui/react';
 
+import { Alert } from '@/components/alert';
 import { Section } from '@/components/section';
 import { EducationSteps } from '@/components/experiences/education-steps';
 import { ExperienceSteps } from '@/components/experiences/experience-steps';
@@ -14,7 +15,6 @@ import { getExperiencePreviews } from '@/services/experience';
 import { sortDateDesc } from '@/utils/helpers';
 
 import type { NextPageWithLayout } from 'next';
-import { Alert } from '@/components/alert';
 
 const experiencePreviews = getExperiencePreviews();
 
