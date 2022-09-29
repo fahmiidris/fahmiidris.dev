@@ -154,7 +154,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-center space-x-4">
             {[
               {
-                title: { mobile: 'CV', desktop: 'CV Fahmi Idris' },
+                title: { mobile: 'CV', desktop: 'cv_fahmiidris_ats.pdf' },
                 href: '#',
                 icon: DownloadIcon,
               },
