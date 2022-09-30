@@ -10,6 +10,7 @@ const Image = ({ src, alt, className, ...props }: ImageType) => {
       <NextImage
         src={src}
         alt={alt}
+        placeholder="blur"
         className={clsx('aspect-video object-cover object-center', className)}
         {...props}
       />
