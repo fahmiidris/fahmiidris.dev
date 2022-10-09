@@ -337,4 +337,21 @@ export const certificates: CertificateType[] = [
       start: 1661792400000,
     },
   },
+  {
+    title: 'Belajar Dasar Pemrograman JavaScript Dicoding Indonesia',
+    description: 'Certificate in Basic JavaScript from Lintasarta Cloudeka Digischool 2022 X Dicoding.',
+    href: 'https://drive.google.com/file/d/1JeAZ0ayvhry3xQdaXmBeyLkmYS_o1Ljf/view?usp=sharing',
+    credential: {
+      id: '1RXYMKJ7MXVM',
+      href: 'https://www.dicoding.com/certificates/1RXYMKJ7MXVM',
+    },
+    platform: {
+      name: 'Dicoding',
+      href: 'https://www.dicoding.com/',
+    },
+    date: {
+      start: 1665248400000,
+      end: 1759942800000,
+    },
+  },
 ];
