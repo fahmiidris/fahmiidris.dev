@@ -19,6 +19,7 @@ const others = [
   'https://sc-b3k3n.netlify.app',
   'https://weekend-from-home.netlify.app',
   'https://bansosku.netlify.app',
+  'https://geo-map-management.netlify.app',
 ];
 
 const ExperiencesPage: NextPageWithLayout = () => {
