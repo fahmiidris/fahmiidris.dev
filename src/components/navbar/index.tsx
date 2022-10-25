@@ -2,21 +2,13 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import { Dialog, Popover, Transition } from '@headlessui/react';
-import {
-  ArrowSmRightIcon,
-  CalendarIcon,
-  DownloadIcon,
-  LinkIcon,
-  MenuIcon,
-  TemplateIcon,
-  XIcon,
-} from '@heroicons/react/outline';
+import { ArrowSmRightIcon, CalendarIcon, DownloadIcon, LinkIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 
-import { Logo } from '../logo';
-import { Link } from '../link';
-import { DribbbleIcon, GitHubIcon, LinkedInIcon } from '../social-icons';
-import { VersionSwitcher } from './version-switcher';
-import { Search } from './search';
+import { Logo } from '@/components/logo';
+import { Link } from '@/components/link';
+import { Search } from '@/components/navbar/search';
+import { VersionSwitcher } from '@/components/navbar/version-switcher';
+import { DribbbleIcon, GitHubIcon, LinkedInIcon } from '@/components/social-icons';
 
 const navigation = {
   pages: [
@@ -159,9 +151,9 @@ export const Navbar = () => {
                 icon: DownloadIcon,
               },
               {
-                title: { mobile: 'Starter Template', desktop: 'starter-template.fahmiidris.dev' },
-                href: 'https://starter-template.fahmiidris.dev',
-                icon: TemplateIcon,
+                title: { mobile: 'Portfolio', desktop: 'portfolio_fahmiidris.pdf' },
+                href: '#',
+                icon: DownloadIcon,
               },
             ].map(({ icon: Icon, ...item }) => (
               <div key={item.title.desktop} className="flex items-center space-x-1">
