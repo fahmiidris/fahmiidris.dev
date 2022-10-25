@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Image from 'next/future/image';
+import { XIcon } from '@heroicons/react/outline';
+import { Dialog, Transition } from '@headlessui/react';
 
 import { Link } from '@/components/link';
 import { Illustration } from '@/components/home/illustration';
-import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+
+import { profile } from '@/me';
 
 export const Header = () => {
   const [openSupportModal, setOpenSupportModal] = React.useState(false);
@@ -66,7 +68,7 @@ export const Header = () => {
 
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
                 <Link
-                  href="#"
+                  href={`mailto:${profile.contact.email}`}
                   className="inline-flex items-center justify-center rounded-md bg-slate-800 py-3 px-4 text-sm font-semibold text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
                 >
                   Send Message
