@@ -8,7 +8,7 @@ import { profile } from '@/me';
 const menu = [
   { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
   { name: 'Docs', href: '#' },
-  { name: 'Starter Template', href: '/templates' },
+  { name: 'Starter Templates', href: 'https://templates.fahmiidris.dev' },
   { name: 'Subscribe', href: '#' },
 ];
 

@@ -57,7 +57,7 @@ const navigation = {
         {
           name: 'Starter Templates',
           description: 'Initializing your project is now easier with the use of starter templates.',
-          href: '/templates',
+          href: 'https://templates.fahmiidris.dev',
           icon: TemplateIcon,
         },
         {
