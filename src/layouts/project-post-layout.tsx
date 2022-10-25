@@ -90,7 +90,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
             {meta.repository && (
               <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
                 <GitHubIcon className="h-5 w-5 text-slate-500" />
-                <Link href="#" className="animated-underline">
+                <Link href={meta.repository} className="animated-underline">
                   Repository
                 </Link>
               </div>
