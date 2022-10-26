@@ -1,4 +1,8 @@
 import banner from './img/banner.jpg';
+import dailyImg from './img/daily.jpg';
+import searchImg from './img/search-by-name.jpg';
+
+import { Image } from '@/components/image';
 
 export const meta = {
   title: 'Weather Indonesia from Open Weather Map API',
@@ -9,4 +13,44 @@ export const meta = {
   createdAt: 1652461200000,
 };
 
-Weather Indonesia, The data source you are looking for comes from [Open Weather Map API](https://openweathermap.org/api)!
+Weather Indonesia, The data source you are looking for comes from [Open Weather Map](https://openweathermap.org/api) API.
+
+---
+
+## What's This Website?
+
+This is a website that is the result of learning to create a Weather Forecast website using the public API of the **Open Weather Map** API.
+
+---
+
+## Permissions
+
+To get weather forecast data, the browser must allow the website to access the location. If not allowed, then the weather forecast data will not appear.
+
+---
+
+## Daily Weather Forecast and Search Your City
+
+There are 2 main features, namely weather forecasts for the next 8 days and weather forecasts based on the name of the city we are looking for in the search field.
+
+<div className="grid grid-cols-2 gap-4">
+  {[
+    { ...dailyImg, alt: '8 Days Weather Forecast' },
+    { ...searchImg, alt: 'Search By City Name' },
+  ].map(({ src, alt, ...image }, index) => (
+    <Image.WithCaption key={index} src={src} alt={alt} className="my-0 aspect-auto" {...image} />
+  ))}
+</div>
+
+---
+
+## What Technologies are Used?
+
+- JavaScript
+- React.js
+- Vite.js
+- Tailwind CSS
+
+---
+
+Thank You!
