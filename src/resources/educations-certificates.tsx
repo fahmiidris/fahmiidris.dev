@@ -99,34 +99,6 @@ export const nonFormalEducation: EducationType[] = [
     ],
   },
   {
-    id: 2,
-    title: 'IDCamp 2022',
-    description: () => (
-      <>
-        <p>
-          Following the Indosat Ooredoo Hutchison 2022 IDCamp Activity with the Frontend Web Developer Learning Path.
-          This activity was held through the Dicoding platform.
-        </p>
-      </>
-    ),
-    major: 'Frontend Developer Learning Path',
-    date: {
-      start: 1653584400000,
-      end: 1662224400000,
-    },
-    href: 'https://idcamp.ioh.co.id',
-    images: [
-      {
-        image: require('@/img/educations/idcamp-2022-1.jpg').default,
-        alt: 'Dashboard IDCamp 2022',
-      },
-      {
-        image: require('@/img/educations/proa-idcamp-2022.jpg').default,
-        alt: 'Dashboard Dicoding',
-      },
-    ],
-  },
-  {
     id: 3,
     title: 'PROA Digital Talent Scholarship 2022',
     description: () => (
