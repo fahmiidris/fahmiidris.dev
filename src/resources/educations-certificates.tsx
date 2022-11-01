@@ -54,7 +54,7 @@ export const formalEducation: EducationType[] = [
     images: [
       {
         image: require('@/img/educations/smk-1-triple-j-1.jpg').default,
-        alt: 'Go to Malang!',
+        alt: 'Go to East Java!',
       },
       {
         image: require('@/img/educations/smk-1-triple-j-2.jpg').default,
