@@ -14,7 +14,6 @@ export const formalEducation: EducationType[] = [
         </p>
       </>
     ),
-    major: "Haven't Take Course",
     date: {
       start: 1435683600000,
       end: 1525539600000,
@@ -69,61 +68,6 @@ export const formalEducation: EducationType[] = [
   },
 ];
 
-export const nonFormalEducation: EducationType[] = [
-  {
-    id: 1,
-    title: 'PROA Digital Talent Scholarship 2022',
-    description: () => (
-      <>
-        <p>
-          Successfully passed and got the Professional Academy Digital Talent Scholarship 2022 - Android Developer
-          Kotlin. This activity is organized through the Dicoding platform.
-        </p>
-      </>
-    ),
-    major: 'Android Developer - Kotlin',
-    date: {
-      start: 1652720400000,
-      end: 1660150800000,
-    },
-    href: 'https://digitalent.kominfo.go.id',
-    images: [
-      {
-        image: require('@/img/educations/proa-2022-1.jpg').default,
-        alt: 'Dashboard Digitalent Kominfo',
-      },
-      {
-        image: require('@/img/educations/proa-idcamp-2022.jpg').default,
-        alt: 'Dashboard Dicoding',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'PROA Digital Talent Scholarship 2022',
-    description: () => (
-      <>
-        <p>
-          Following the Indosat Ooredoo Hutchison 2022 IDCamp Activity with the Frontend Web Developer Learning Path.
-          This activity was held through the Dicoding platform.
-        </p>
-      </>
-    ),
-    major: 'Android Developer Intermediate - Kotlin',
-    date: {
-      start: 1662310800000,
-      // end: 1668272400000,
-    },
-    href: 'https://digitalent.kominfo.go.id',
-    images: [
-      {
-        image: require('@/img/educations/proa-2022-intermediate.jpg').default,
-        alt: 'Dashboard Digitalent Kominfo',
-      },
-    ],
-  },
-];
-
 export const certificates: CertificateType[] = [
   {
     title: 'Pemrograman JavaScript: Pemula sampai Mahir',
@@ -155,24 +99,6 @@ export const certificates: CertificateType[] = [
     },
     date: {
       start: 1641747600000,
-    },
-  },
-  {
-    title: 'Memulai Pemrograman Dengan Kotlin Dicoding Indonesia',
-    description:
-      'Certificate in Kotlin Programming Language from PROA Digital Talent Scholarship 2022 by Kominfo X Dicoding.',
-    href: 'https://drive.google.com/file/d/1MIgK9EEsJaDRD1whR4Q2-2S98kq6SZra/view?usp=sharing',
-    credential: {
-      id: '1OP860EKVXQK',
-      href: 'https://www.dicoding.com/certificates/1OP860EKVXQK',
-    },
-    platform: {
-      name: 'Dicoding',
-      href: 'https://www.dicoding.com/',
-    },
-    date: {
-      start: 1654880400000,
-      end: 1654880400000,
     },
   },
   {
@@ -209,7 +135,7 @@ export const certificates: CertificateType[] = [
     },
   },
   {
-    title: 'Belajar Membuat Front-End Web Untuk Pemula Dicoding Indonesia',
+    title: 'Belajar Membuat Frontend Web Untuk Pemula Dicoding Indonesia',
     description: 'Certificate in HTML, CSS, and JavaScript from IDCamp 2022 by Indosat Ooredoo Hutchison X Dicoding.',
     href: 'https://drive.google.com/file/d/1HHct_yphW1u1gxgwNQkN1gFIHX4jt28S/view?usp=sharing',
     credential: {
@@ -223,58 +149,6 @@ export const certificates: CertificateType[] = [
     date: {
       start: 1657040400000,
       end: 1751734800000,
-    },
-  },
-  {
-    title: 'Belajar Fundamental Aplikasi Android Dicoding Indonesia',
-    description:
-      'Certificate in Android Application using Kotlin from PROA Digital Talent Scholarship 2022 by Kominfo X Dicoding.',
-    href: 'https://drive.google.com/file/d/1AkzJOrBg50G8eoBO2aFTO5XJoe1ZFNJw/view?usp=sharing',
-    credential: {
-      id: '6RPNDOYL8Z2M',
-      href: 'https://www.dicoding.com/certificates/6RPNDOYL8Z2M',
-    },
-    platform: {
-      name: 'Dicoding',
-      href: 'https://www.dicoding.com/',
-    },
-    date: {
-      start: 1659286800000,
-      end: 1753981200000,
-    },
-  },
-  {
-    title: 'Belajar Dasar Visualisasi Data Dicoding Indonesia',
-    description: 'Certificate in Basic Data Visualization from Dicoding.',
-    href: 'https://drive.google.com/file/d/1HdLk8wm9y6n9oPMm1sedi35p7KqRF44s/view?usp=sharing',
-    credential: {
-      id: '81P2GM5DNPOY',
-      href: 'https://www.dicoding.com/certificates/81P2GM5DNPOY',
-    },
-    platform: {
-      name: 'Dicoding',
-      href: 'https://www.dicoding.com/',
-    },
-    date: {
-      start: 1660323600000,
-      end: 1755018000000,
-    },
-  },
-  {
-    title: 'Memulai Pemrograman Python Dicoding Indonesia',
-    description: 'Certificate in Basic Python from Dicoding.',
-    href: 'https://drive.google.com/file/d/1l9UZZPQZlIkcO7hvouWKmj94dCyR8Swb/view?usp=sharing',
-    credential: {
-      id: '6RPNDJ76RZ2M',
-      href: 'https://www.dicoding.com/certificates/6RPNDJ76RZ2M',
-    },
-    platform: {
-      name: 'Dicoding',
-      href: 'https://www.dicoding.com/',
-    },
-    date: {
-      start: 1660755600000,
-      end: 1755450000000,
     },
   },
   {
@@ -292,21 +166,6 @@ export const certificates: CertificateType[] = [
     date: {
       start: 1661187600000,
       end: 1755882000000,
-    },
-  },
-  {
-    title: 'Professional Academy Digital Talent Scholarship 2022 - Android Developer',
-    description: 'Certificate in PROA 2022 Android Developer from Digitalent.',
-    href: 'https://drive.google.com/file/d/1nCxiNHSDSdDhrqL8M4nxVR0uxA88FkVb/view?usp=sharing',
-    credential: {
-      id: 'PROA/2022/2335/152233535101-88',
-    },
-    platform: {
-      name: 'Digitalent by Kominfo',
-      href: 'https://digitalent.kominfo.go.id/',
-    },
-    date: {
-      start: 1661792400000,
     },
   },
   {

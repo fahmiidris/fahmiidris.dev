@@ -4,7 +4,7 @@ export type EducationType = {
   id: number;
   title: string;
   description: () => JSX.Element;
-  major: string;
+  major?: string;
   date: {
     start: number;
     end?: number;

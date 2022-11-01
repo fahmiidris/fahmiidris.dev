@@ -32,8 +32,8 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
               <h2 className="mb-2 text-sm font-semibold leading-6 text-slate-800">
                 <Link href={href} openNewTab={true} className="inline duration-200 ease-in-out hover:text-cyan-400">
                   {title}
-                </Link>{' '}
-                - {major}
+                </Link>
+                {major && ` - ${major}`}
               </h2>
 
               <time
