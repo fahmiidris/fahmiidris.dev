@@ -33,7 +33,7 @@ export const ScrollToTopButton = () => {
       <button
         type="button"
         onClick={() => scrollToTop()}
-        className="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-800 p-2 text-white hover:bg-slate-700 focus:outline-none"
+        className="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-800 p-2 text-white ring-2 ring-white hover:bg-slate-700 focus:outline-none"
       >
         <ArrowSmUpIcon className="h-5 w-5" />
       </button>
