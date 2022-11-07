@@ -47,10 +47,6 @@ const HomePage: NextPageWithLayout = () => {
       projects: randomProjectPreviews.slice(0, 4),
       projectType: 'random',
     },
-    'UI/UX Design': {
-      projects: [],
-      projectType: 'ui-ux-design',
-    },
   });
 
   return (

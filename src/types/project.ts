@@ -2,13 +2,7 @@ import type { ImageProps } from 'next/future/image';
 
 import type { MDXMetaType } from '@/types/seo';
 
-export type ProjectType =
-  | 'fahmiidris-dev'
-  | 'patungan-dev'
-  | 'naqimart-com'
-  | 'kloningan-com'
-  | 'random'
-  | 'ui-ux-design';
+export type ProjectType = 'fahmiidris-dev' | 'patungan-dev' | 'naqimart-com' | 'kloningan-com' | 'random';
 
 export declare namespace Project {
   interface Preview {
