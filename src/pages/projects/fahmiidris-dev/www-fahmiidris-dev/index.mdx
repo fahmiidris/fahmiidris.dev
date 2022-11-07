@@ -61,7 +61,7 @@ You can visit it directly at [https://v1.fahmiidris.dev](https://v1.fahmiidris.d
     { ...v1Banner, alt: 'Home Page' },
     { ...v1ProjectsPage, alt: 'Projects Page' },
   ].map(({ src, alt, ...image }, index) => (
-    <Image.WithCaption key={index} src={src} alt={alt} className="my-0 aspect-auto" {...image} />
+    <Image.WithCaption key={index} src={src} alt={alt} className="my-0" {...image} />
   ))}
 </div>
 
@@ -76,7 +76,7 @@ You can visit it directly at [https://v0.fahmiidris.dev](https://v0.fahmiidris.d
     { ...v0Banner, alt: 'Home Page' },
     { ...v0ProjectsPage, alt: 'Projects Page' },
   ].map(({ src, alt, ...image }, index) => (
-    <Image.WithCaption key={index} src={src} alt={alt} className="my-0 aspect-auto" {...image} />
+    <Image.WithCaption key={index} src={src} alt={alt} className="my-0" {...image} />
   ))}
 </div>
 

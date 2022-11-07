@@ -116,7 +116,6 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
 
           <div className="relative mt-12 overflow-hidden rounded-md border border-slate-200">
             <Image
-              className="aspect-auto"
               src={meta.banner?.src ?? require('@/img/projects/default-banner.jpg').default}
               alt={meta.banner?.alt ?? 'Banner'}
               {...meta.banner}

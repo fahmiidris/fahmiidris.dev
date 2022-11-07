@@ -11,7 +11,8 @@ const Image = ({ src, alt, className, ...props }: ImageType) => {
         src={src}
         alt={alt}
         placeholder="blur"
-        className={clsx('aspect-video object-cover object-center', className)}
+        className={clsx('object-cover object-center', className)}
+        // style={{ aspectRatio: `${props.width} / ${props.height}` }}
         {...props}
       />
     </div>

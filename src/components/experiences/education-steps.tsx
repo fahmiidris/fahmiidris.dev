@@ -52,7 +52,7 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
             {images && images.length > 0 && (
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {images.map((item, index) => (
-                  <Image.WithCaption key={index} alt={item.alt} {...item.image} />
+                  <Image.WithCaption key={index} alt={item.alt} {...item.image} className="aspect-video" />
                 ))}
               </div>
             )}

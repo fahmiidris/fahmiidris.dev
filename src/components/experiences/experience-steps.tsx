@@ -49,7 +49,7 @@ export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
           {meta.images && meta.images.length > 0 && (
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
               {meta.images.map(({ src, alt, ...image }, index) => (
-                <Image.WithCaption key={index} src={src} alt={alt} {...image} />
+                <Image.WithCaption key={index} src={src} alt={alt} {...image} className="aspect-video" />
               ))}
             </div>
           )}

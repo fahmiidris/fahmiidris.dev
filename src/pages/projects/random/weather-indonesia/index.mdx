@@ -38,7 +38,7 @@ There are 2 main features, namely weather forecasts for the next 8 days and weat
     { ...dailyImg, alt: '8 Days Weather Forecast' },
     { ...searchImg, alt: 'Search By City Name' },
   ].map(({ src, alt, ...image }, index) => (
-    <Image.WithCaption key={index} src={src} alt={alt} className="my-0 aspect-auto" {...image} />
+    <Image.WithCaption key={index} src={src} alt={alt} className="my-0" {...image} />
   ))}
 </div>
 

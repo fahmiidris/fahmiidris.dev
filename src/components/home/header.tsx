@@ -46,7 +46,7 @@ export const Header = () => {
           <div className="flex justify-center text-center lg:pt-5 lg:pb-7 lg:text-left">
             <div className="flex max-w-[37rem] flex-col py-16 lg:py-12">
               <h1 className="mt-6 text-[1.75rem] font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl">
-                A Software Engineer from West Java - Indonesia.
+                UI/UX Designer and Frontend Web Developer from West Java - Indonesia.
               </h1>
 
               <div className="order-first flex items-center justify-center gap-4 text-[0.8125rem] leading-6 text-slate-500 lg:justify-start">

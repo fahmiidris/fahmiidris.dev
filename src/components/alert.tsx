@@ -4,19 +4,23 @@ import { InformationCircleIcon } from '@heroicons/react/outline';
 
 type AlertProps = {
   message?: string;
-  className?: string;
+  classNames?: {
+    wrapper?: string;
+    icon?: string;
+    text?: string;
+  };
   children?: React.ReactNode;
 };
 
-export const Alert = ({ message, className, children }: AlertProps) => {
+export const Alert = ({ message, classNames, children }: AlertProps) => {
   return (
-    <div className={clsx('border-l-4 border-yellow-400 bg-yellow-50 p-4 text-sm', className)}>
+    <div className={clsx('border-l-4 border-yellow-400 bg-yellow-50 p-4 text-sm', classNames?.wrapper)}>
       <div className="flex">
         <div className="flex-shrink-0">
-          <InformationCircleIcon className="h-5 w-5 text-yellow-400" aria-hidden="true" />
+          <InformationCircleIcon className={clsx('h-5 w-5 text-yellow-400', classNames?.icon)} aria-hidden="true" />
         </div>
 
-        <div className="ml-3 text-yellow-700">{message ? message : children}</div>
+        <div className={clsx('ml-3 text-yellow-700', classNames?.text)}>{message ? message : children}</div>
       </div>
     </div>
   );
