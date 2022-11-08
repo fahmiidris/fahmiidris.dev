@@ -23,6 +23,7 @@ const patunganDevProjectPreviews = getProjectPreviews.patunganDev();
 const naqimartComProjectPreviews = getProjectPreviews.naqimartCom();
 const kloninganComProjectPreviews = getProjectPreviews.kloninganCom();
 const randomProjectPreviews = getProjectPreviews.randomProjects();
+const UIUXDesignProjectPreviews = getProjectPreviews.UIUXDesignProjects();
 const snippetPreviews = getSnippetPreviews();
 
 const HomePage: NextPageWithLayout = () => {
@@ -46,6 +47,10 @@ const HomePage: NextPageWithLayout = () => {
     'Random Projects': {
       projects: randomProjectPreviews.slice(0, 4),
       projectType: 'random',
+    },
+    'UI/UX Design': {
+      projects: UIUXDesignProjectPreviews.slice(0, 4),
+      projectType: 'ui-ux-design',
     },
   });
 

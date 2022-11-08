@@ -45,7 +45,7 @@ const ExperiencesPage: NextPageWithLayout = () => {
 
       <Section
         id="design"
-        title="design.fahmiidris.dev"
+        title="UI/UX and DX Design Projects"
         subtitle="Trying to find the best UX and DX to solve problems with UI Design."
         description={() => (
           <p className="text-slate-400">
@@ -59,11 +59,11 @@ const ExperiencesPage: NextPageWithLayout = () => {
         colorText={{
           subtitle: 'text-white',
         }}
-        more={{
-          href: 'https://design.fahmiidris.dev',
-          text: 'Explore all design',
-          className: 'bg-slate-700 text-white !border-transparent focus:ring-offset-slate-800',
-        }}
+        // more={{
+        //   href: 'https://design.fahmiidris.dev',
+        //   text: 'Explore all design',
+        //   className: 'bg-slate-700 text-white !border-transparent focus:ring-offset-slate-800',
+        // }}
       >
         <Alert
           classNames={{ wrapper: 'border-cyan-400 bg-slate-700', text: 'text-white', icon: 'text-cyan-400' }}
