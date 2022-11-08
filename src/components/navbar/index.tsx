@@ -22,6 +22,8 @@ import { Search } from '@/components/navbar/search';
 import { VersionSwitcher } from '@/components/navbar/version-switcher';
 import { DribbbleIcon, GitHubIcon, LinkedInIcon } from '@/components/social-icons';
 
+import { profile } from '@/me';
+
 const navigation = {
   pages: [
     { name: 'Home', href: '/' },
@@ -196,8 +198,8 @@ export const Navbar = () => {
           <div className="flex items-center justify-center space-x-4">
             {[
               {
-                title: { mobile: 'CV', desktop: 'cv_fahmiidris_ats.pdf' },
-                href: '#',
+                title: { mobile: 'CV', desktop: 'cv_fahmiidris.pdf' },
+                href: profile.attachments.cv,
                 icon: DownloadIcon,
               },
               {

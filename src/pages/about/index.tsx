@@ -25,15 +25,15 @@ import type { NextPageWithLayout } from 'next';
 
 const attachments = [
   {
-    fileName: 'readme_fahmiidris_latest.pdf',
+    fileName: 'readme_fahmiidris.pdf',
     href: '#',
   },
   {
-    fileName: 'cv_fahmiidris_latest.pdf',
-    href: '#',
+    fileName: 'cv_fahmiidris.pdf',
+    href: profile.attachments.cv,
   },
   {
-    fileName: 'portfolio_fahmiidris_latest.pdf',
+    fileName: 'portfolio_fahmiidris.pdf',
     href: '#',
   },
 ];
@@ -174,21 +174,12 @@ const AboutPage: NextPageWithLayout = () => {
                   </div>
 
                   <div className="ml-4 flex flex-shrink-0 space-x-4">
-                    <button
-                      type="button"
+                    <Link
+                      href={item.href}
                       className="rounded-md bg-white font-medium text-cyan-400 hover:text-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
                     >
                       View
-                    </button>
-                    <span className="text-slate-300" aria-hidden="true">
-                      |
-                    </span>
-                    <button
-                      type="button"
-                      className="rounded-md bg-white font-medium text-cyan-400 hover:text-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
-                    >
-                      Download
-                    </button>
+                    </Link>
                   </div>
                 </li>
               ))}
