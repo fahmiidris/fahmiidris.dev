@@ -70,10 +70,10 @@ const MyApp = ({ Component, pageProps, router }: AppPropsWithLayout) => {
         <link rel="canonical" href={`${meta.url}${router.pathname}`} />
       </Head>
 
-      <Announcement
+      {/* <Announcement
         href="https://www.github.com/fahmiidris-labs/fahmiidris.dev"
         message="Hey! I have a new User Interface and it already supports MDX 2!"
-      />
+      /> */}
       <Navbar />
       <main className="relative">
         <Component {...pageProps} />

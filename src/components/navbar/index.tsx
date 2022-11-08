@@ -6,17 +6,23 @@ import {
   ArrowSmRightIcon,
   CalendarIcon,
   DownloadIcon,
+  TemplateIcon,
   LinkIcon,
   MenuIcon,
-  TemplateIcon,
   XIcon,
+  ScissorsIcon,
+  PuzzleIcon,
+  PhotographIcon,
+  PresentationChartLineIcon,
 } from '@heroicons/react/outline';
 
-import { Logo } from '../logo';
-import { Link } from '../link';
-import { DribbbleIcon, GitHubIcon, LinkedInIcon } from '../social-icons';
-import { VersionSwitcher } from './version-switcher';
-import { Search } from './search';
+import { Logo } from '@/components/logo';
+import { Link } from '@/components/link';
+import { Search } from '@/components/navbar/search';
+import { VersionSwitcher } from '@/components/navbar/version-switcher';
+import { DribbbleIcon, GitHubIcon, LinkedInIcon } from '@/components/social-icons';
+
+import { profile } from '@/me';
 
 const navigation = {
   pages: [
@@ -26,6 +32,44 @@ const navigation = {
     { name: 'Projects', href: '/projects' },
     { name: 'Snippets', href: '/snippets' },
     { name: 'About', href: '/about' },
+  ],
+  categories: [
+    {
+      name: 'Others',
+      href: '/others',
+      featured: [
+        {
+          name: 'Tools',
+          description: "Make your simple job easier with the tools I made. Let's see what tools are available.",
+          href: '/tools',
+          icon: ScissorsIcon,
+        },
+        {
+          name: 'Slides',
+          description: 'A collection of slides made for presentation needs. You can watch live or download.',
+          href: '/slides',
+          icon: PresentationChartLineIcon,
+        },
+        {
+          name: 'Fun Quiz',
+          description: "Increase your knowledge by taking quizzes. Let's get the maximum score!",
+          href: '/quiz',
+          icon: PuzzleIcon,
+        },
+        {
+          name: 'Starter Templates',
+          description: 'Initializing your project is now easier with the use of starter templates.',
+          href: 'https://templates.fahmiidris.dev',
+          icon: TemplateIcon,
+        },
+        {
+          name: 'Open Graph Generator',
+          description: "Optimize your SEO with OG Image Generator, it's cool! you have to see it!",
+          href: 'https://og.fahmiidris.dev',
+          icon: PhotographIcon,
+        },
+      ],
+    },
   ],
 };
 
@@ -154,14 +198,14 @@ export const Navbar = () => {
           <div className="flex items-center justify-center space-x-4">
             {[
               {
-                title: { mobile: 'CV', desktop: 'CV Fahmi Idris' },
-                href: '#',
+                title: { mobile: 'CV', desktop: 'cv_fahmiidris.pdf' },
+                href: profile.attachments.cv,
                 icon: DownloadIcon,
               },
               {
-                title: { mobile: 'Starter Template', desktop: 'starter-template.fahmiidris.dev' },
-                href: 'https://starter-template.fahmiidris.dev',
-                icon: TemplateIcon,
+                title: { mobile: 'Portfolio', desktop: 'portfolio_fahmiidris.pdf' },
+                href: '#',
+                icon: DownloadIcon,
               },
             ].map(({ icon: Icon, ...item }) => (
               <div key={item.title.desktop} className="flex items-center space-x-1">
@@ -221,6 +265,65 @@ export const Navbar = () => {
                   >
                     {page.name}
                   </Link>
+                ))}
+
+                {navigation.categories.map((category, index) => (
+                  <Popover key={index} className="relative flex">
+                    {({ open }) => (
+                      <>
+                        <Popover.Button
+                          className={clsx(
+                            'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium outline-none transition-colors duration-200 ease-out',
+                            open
+                              ? 'border-slate-300 bg-slate-100 text-cyan-400'
+                              : 'border-transparent text-slate-800 hover:border-slate-500'
+                          )}
+                        >
+                          {category.name}
+                        </Popover.Button>
+
+                        <Transition
+                          as={React.Fragment}
+                          enter="transition ease-out duration-200"
+                          enterFrom="opacity-0 translate-y-1"
+                          enterTo="opacity-100 translate-y-0"
+                          leave="transition ease-in duration-150"
+                          leaveFrom="opacity-100 translate-y-0"
+                          leaveTo="opacity-0 translate-y-1"
+                        >
+                          <Popover.Panel className="absolute left-1/2 z-10 mt-[66px] w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                            <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                              <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                {category.featured.map(({ icon: Icon, ...item }) => (
+                                  <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-slate-50 focus:ring-2 focus:ring-cyan-400"
+                                  >
+                                    <Icon className="h-6 w-6 flex-shrink-0 text-cyan-400" aria-hidden="true" />
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-slate-900">{item.name}</p>
+                                      <p className="mt-1 text-sm text-slate-500">{item.description}</p>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+
+                              <div className="bg-slate-50 px-5 py-2 sm:px-8 sm:py-5">
+                                <Link
+                                  href={category.href}
+                                  className="inline-flex items-center space-x-2 font-semibold text-cyan-400 hover:text-cyan-500"
+                                >
+                                  <span>View all {category.name.toLowerCase()}</span>
+                                  <ArrowSmRightIcon className="h-5 w-5" />
+                                </Link>
+                              </div>
+                            </div>
+                          </Popover.Panel>
+                        </Transition>
+                      </>
+                    )}
+                  </Popover>
                 ))}
               </div>
             </Popover.Group>

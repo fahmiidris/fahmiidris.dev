@@ -10,7 +10,9 @@ const Image = ({ src, alt, className, ...props }: ImageType) => {
       <NextImage
         src={src}
         alt={alt}
-        className={clsx('aspect-video object-cover object-center', className)}
+        placeholder="blur"
+        className={clsx('object-cover object-center', className)}
+        // style={{ aspectRatio: `${props.width} / ${props.height}` }}
         {...props}
       />
     </div>

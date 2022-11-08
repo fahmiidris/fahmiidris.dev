@@ -8,7 +8,7 @@ import { EducationSteps } from '@/components/experiences/education-steps';
 import { ExperienceSteps } from '@/components/experiences/experience-steps';
 import { CertificateCard } from '@/components/experiences/certificate-card';
 
-import { formalEducation, nonFormalEducation, certificates } from '@/resources/educations-certificates';
+import { formalEducation, certificates } from '@/resources/educations-certificates';
 
 import { getExperiencePreviews } from '@/services/experience';
 
@@ -21,7 +21,6 @@ const experiencePreviews = getExperiencePreviews();
 const ExperiencesPage: NextPageWithLayout = () => {
   const [educations] = React.useState({
     'Formal Education': formalEducation,
-    'Non-Formal Education': nonFormalEducation,
   });
 
   return (

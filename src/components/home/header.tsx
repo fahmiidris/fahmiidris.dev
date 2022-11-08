@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Image from 'next/future/image';
+import { XIcon } from '@heroicons/react/outline';
+import { Dialog, Transition } from '@headlessui/react';
 
 import { Link } from '@/components/link';
 import { Illustration } from '@/components/home/illustration';
-import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+
+import { profile } from '@/me';
 
 export const Header = () => {
   const [openSupportModal, setOpenSupportModal] = React.useState(false);
@@ -44,7 +46,7 @@ export const Header = () => {
           <div className="flex justify-center text-center lg:pt-5 lg:pb-7 lg:text-left">
             <div className="flex max-w-[37rem] flex-col py-16 lg:py-12">
               <h1 className="mt-6 text-[1.75rem] font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl">
-                A Software Engineer from West Java - Indonesia.
+                UI/UX Designer and Frontend Web Developer from West Java - Indonesia.
               </h1>
 
               <div className="order-first flex items-center justify-center gap-4 text-[0.8125rem] leading-6 text-slate-500 lg:justify-start">
@@ -66,7 +68,7 @@ export const Header = () => {
 
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
                 <Link
-                  href="#"
+                  href={`mailto:${profile.contact.email}`}
                   className="inline-flex items-center justify-center rounded-md bg-slate-800 py-3 px-4 text-sm font-semibold text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
                 >
                   Send Message

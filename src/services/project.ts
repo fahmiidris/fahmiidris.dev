@@ -44,4 +44,10 @@ export const getProjectPreviews = {
 
     return importAll(context);
   },
+
+  UIUXDesignProjects: () => {
+    const context = require.context(`../pages/projects/ui-ux-design/?preview`, true, /\.mdx$/);
+
+    return importAll(context);
+  },
 };

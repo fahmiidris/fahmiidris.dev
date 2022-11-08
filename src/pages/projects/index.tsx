@@ -19,6 +19,7 @@ const others = [
   'https://sc-b3k3n.netlify.app',
   'https://weekend-from-home.netlify.app',
   'https://bansosku.netlify.app',
+  'https://geo-map-management.netlify.app',
 ];
 
 const ExperiencesPage: NextPageWithLayout = () => {
@@ -40,6 +41,34 @@ const ExperiencesPage: NextPageWithLayout = () => {
         ) : (
           <Alert message="fahmiidris-dev projects hasn't been uploaded yet." />
         )}
+      </Section>
+
+      <Section
+        id="design"
+        title="UI/UX and DX Design Projects"
+        subtitle="Trying to find the best UX and DX to solve problems with UI Design."
+        description={() => (
+          <p className="text-slate-400">
+            This has always been a challenge for me, finding the best solution to solve the problem without forgetting
+            the experience of <strong className="text-cyan-400">UX (User Experience)</strong> and{' '}
+            <strong className="text-cyan-400">DX (Developer Experience)</strong>.
+          </p>
+        )}
+        maxWidthDescription="max-w-3xl"
+        className="bg-slate-800 py-16"
+        colorText={{
+          subtitle: 'text-white',
+        }}
+        // more={{
+        //   href: 'https://design.fahmiidris.dev',
+        //   text: 'Explore all design',
+        //   className: 'bg-slate-700 text-white !border-transparent focus:ring-offset-slate-800',
+        // }}
+      >
+        <Alert
+          classNames={{ wrapper: 'border-cyan-400 bg-slate-700', text: 'text-white', icon: 'text-cyan-400' }}
+          message="UI/UX Design projects hasn't been uploaded yet."
+        />
       </Section>
 
       <Section

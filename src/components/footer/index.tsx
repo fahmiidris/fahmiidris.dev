@@ -8,7 +8,7 @@ import { profile } from '@/me';
 const menu = [
   { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
   { name: 'Docs', href: '#' },
-  { name: 'Starter Template', href: 'https://starter-template.fahmiidris.dev' },
+  { name: 'Starter Templates', href: 'https://templates.fahmiidris.dev' },
   { name: 'Subscribe', href: '#' },
 ];
 
@@ -35,7 +35,7 @@ const socialMedia = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-white pt-16" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

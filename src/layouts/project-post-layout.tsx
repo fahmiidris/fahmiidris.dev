@@ -90,7 +90,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
             {meta.repository && (
               <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
                 <GitHubIcon className="h-5 w-5 text-slate-500" />
-                <Link href="#" className="animated-underline">
+                <Link href={meta.repository} className="animated-underline">
                   Repository
                 </Link>
               </div>
@@ -126,7 +126,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
           <section id="content" className="relative pt-12">
             <h2 className="sr-only">Content projects</h2>
 
-            <Prose className="prose-figure:my-2">{children}</Prose>
+            <Prose className="prose-figure:my-2 prose-img:my-0">{children}</Prose>
           </section>
 
           <div className="col-start-2 mt-12 mb-6 flex items-center justify-between">

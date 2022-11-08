@@ -32,8 +32,8 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
               <h2 className="mb-2 text-sm font-semibold leading-6 text-slate-800">
                 <Link href={href} openNewTab={true} className="inline duration-200 ease-in-out hover:text-cyan-400">
                   {title}
-                </Link>{' '}
-                - {major}
+                </Link>
+                {major && ` - ${major}`}
               </h2>
 
               <time
@@ -52,7 +52,7 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
             {images && images.length > 0 && (
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {images.map((item, index) => (
-                  <Image.WithCaption key={index} alt={item.alt} {...item.image} />
+                  <Image.WithCaption key={index} alt={item.alt} {...item.image} className="aspect-video" />
                 ))}
               </div>
             )}
