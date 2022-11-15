@@ -21,7 +21,6 @@ const experiencePreviews = getExperiencePreviews();
 const fahmiidrisDevProjectPreviews = getProjectPreviews.fahmiidrisDev();
 const patunganDevProjectPreviews = getProjectPreviews.patunganDev();
 const naqimartComProjectPreviews = getProjectPreviews.naqimartCom();
-const kloninganComProjectPreviews = getProjectPreviews.kloninganCom();
 const randomProjectPreviews = getProjectPreviews.randomProjects();
 const UIUXDesignProjectPreviews = getProjectPreviews.UIUXDesignProjects();
 const snippetPreviews = getSnippetPreviews();
@@ -39,10 +38,6 @@ const HomePage: NextPageWithLayout = () => {
     'www.naqimart.com': {
       projects: naqimartComProjectPreviews.slice(0, 4),
       projectType: 'naqimart-com',
-    },
-    'www.kloningan.com': {
-      projects: kloninganComProjectPreviews.slice(0, 4),
-      projectType: 'kloningan-com',
     },
     'Random Projects': {
       projects: randomProjectPreviews.slice(0, 4),

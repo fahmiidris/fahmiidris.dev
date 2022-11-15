@@ -12,7 +12,6 @@ import type { NextPageWithLayout } from 'next';
 const fahmiidrisDevProjectPreviews = getProjectPreviews.fahmiidrisDev();
 const patunganDevProjectPreviews = getProjectPreviews.patunganDev();
 const naqimartComProjectPreviews = getProjectPreviews.naqimartCom();
-const kloninganComProjectPreviews = getProjectPreviews.kloninganCom();
 const randomProjectPreviews = getProjectPreviews.randomProjects();
 
 const others = [
@@ -104,24 +103,6 @@ const ExperiencesPage: NextPageWithLayout = () => {
           </ProjectCardGroup>
         ) : (
           <Alert message="naqimart-com projects hasn't been uploaded yet." />
-        )}
-      </Section>
-
-      <Section
-        id="kloningan"
-        title="www.kloningan.com"
-        subtitle="Start by imitating the existing one, then create a better one."
-        description="It's just for practice, it's really fun to imitate any app or website we like. I'll try to check mimics as closely as possible! Kage Bunshin No Jutsu!"
-        maxWidthDescription="max-w-3xl"
-      >
-        {kloninganComProjectPreviews.length > 0 ? (
-          <ProjectCardGroup>
-            {kloninganComProjectPreviews.map((preview, index) => (
-              <ProjectCard key={index} projectType="kloningan-com" {...preview} />
-            ))}
-          </ProjectCardGroup>
-        ) : (
-          <Alert message="kloningan-com projects hasn't been uploaded yet." />
         )}
       </Section>
 

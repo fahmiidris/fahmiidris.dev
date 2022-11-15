@@ -33,12 +33,6 @@ export const getProjectPreviews = {
     return importAll(context);
   },
 
-  kloninganCom: () => {
-    const context = require.context(`../pages/projects/kloningan-com/?preview`, true, /\.mdx$/);
-
-    return importAll(context);
-  },
-
   randomProjects: () => {
     const context = require.context(`../pages/projects/random/?preview`, true, /\.mdx$/);
 
