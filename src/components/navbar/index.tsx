@@ -14,6 +14,7 @@ import {
   PuzzleIcon,
   // PhotographIcon,
   PresentationChartLineIcon,
+  BookOpenIcon,
 } from '@heroicons/react/outline';
 
 import { Logo } from '@/components/logo';
@@ -38,6 +39,12 @@ const navigation = {
       name: 'Others',
       href: '/others',
       featured: [
+        {
+          name: 'Guest Book',
+          description: 'Leave any message here. Criticism, suggestions, or whatever you like.',
+          href: '/guest-book',
+          icon: BookOpenIcon,
+        },
         {
           name: 'Tools',
           description: "Make your simple job easier with the tools I made. Let's see what tools are available.",
