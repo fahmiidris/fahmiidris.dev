@@ -62,8 +62,8 @@ export const Header = () => {
               </div>
 
               <p className="mt-4 text-sm text-slate-500">
-                This website was established not just as a learning tool, but also as a place for me to write and show
-                off my projects, as well as a repository of my past experiences.
+                This website was established not just as a learning tool, but also as a place for me to write and show off my projects, as well as a
+                repository of my past experiences.
               </p>
 
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
@@ -134,10 +134,7 @@ export const Header = () => {
                   </div>
                   <div className="sm:flex sm:items-start">
                     <div className="mt-3 text-left sm:mt-0">
-                      <Dialog.Title
-                        as="h3"
-                        className="text-center text-lg font-medium leading-6 text-slate-800 sm:text-left"
-                      >
+                      <Dialog.Title as="h3" className="text-center text-lg font-medium leading-6 text-slate-800 sm:text-left">
                         Support Fahmi Idris
                       </Dialog.Title>
 
@@ -146,14 +143,12 @@ export const Header = () => {
                           {[
                             {
                               title: 'Saweria Fahmi Idris',
-                              subtitle:
-                                'Thank you! for your support via saweria, so excited to code again! Pluss Ultraaaa!',
+                              subtitle: 'Thank you! for your support via saweria, so excited to code again! Pluss Ultraaaa!',
                               href: 'https://www.saweria.co/fahmiidris',
                             },
                             {
                               title: 'Trakteer Fahmi Idris',
-                              subtitle:
-                                'Thanks for the ice cream. Very tasty! so excited to code again! Full Powerrrr!',
+                              subtitle: 'Thanks for the ice cream. Very tasty! so excited to code again! Full Powerrrr!',
                               href: 'https://www.trakteer.id/fahmiidris/tip',
                             },
                             {

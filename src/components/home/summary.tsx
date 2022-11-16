@@ -16,10 +16,9 @@ export const Summary = () => {
           <figure>
             <blockquote>
               <p className="mt-8 text-sm text-gray-600 sm:text-lg">
-                Honestly, I really have a hard time making something new, this hinders the development of my abilities.
-                So to overcome this, I always copy some things that I think are good, then modify some things.
-                Indonesians call this Amati, Tiru, Modifikasi (Observe, Imitate, and Modify). But that doesn&#39;t mean
-                I give up trying to make new things, I will keep trying!
+                Honestly, I really have a hard time making something new, this hinders the development of my abilities. So to overcome this, I always
+                copy some things that I think are good, then modify some things. Indonesians call this Amati, Tiru, Modifikasi (Observe, Imitate, and
+                Modify). But that doesn&#39;t mean I give up trying to make new things, I will keep trying!
               </p>
             </blockquote>
 

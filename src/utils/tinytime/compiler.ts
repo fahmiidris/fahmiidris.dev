@@ -19,49 +19,17 @@ import type { Token } from './parser';
 import type { TinyTimeOptions } from './index';
 
 type Days = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
-type Month =
-  | 'January'
-  | 'February'
-  | 'March'
-  | 'April'
-  | 'May'
-  | 'June'
-  | 'July'
-  | 'August'
-  | 'September'
-  | 'October'
-  | 'November'
-  | 'December';
-
-const months: Month[] = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+type Month = 'January' | 'February' | 'March' | 'April' | 'May' | 'June' | 'July' | 'August' | 'September' | 'October' | 'November' | 'December';
 
 const days: Days[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const months: Month[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const paddWithZeros = (int: number) => {
   return int < 10 ? '0' + int : '' + int;
 };
 
 const suffix = (int: number) => {
-  return int % 10 == 1 && int != 11
-    ? int + 'st'
-    : int % 10 == 2 && int != 12
-    ? int + 'nd'
-    : int % 10 == 3 && int != 13
-    ? int + 'rd'
-    : int + 'th';
+  return int % 10 == 1 && int != 11 ? int + 'st' : int % 10 == 2 && int != 12 ? int + 'nd' : int % 10 == 3 && int != 13 ? int + 'rd' : int + 'th';
 };
 
 export const compiler = (tokens: Token[], date: Date, options: TinyTimeOptions) => {

@@ -48,9 +48,8 @@ const ExperiencesPage: NextPageWithLayout = () => {
         subtitle="Trying to find the best UX and DX to solve problems with UI Design."
         description={() => (
           <p className="text-slate-400">
-            This has always been a challenge for me, finding the best solution to solve the problem without forgetting
-            the experience of <strong className="text-cyan-400">UX (User Experience)</strong> and{' '}
-            <strong className="text-cyan-400">DX (Developer Experience)</strong>.
+            This has always been a challenge for me, finding the best solution to solve the problem without forgetting the experience of{' '}
+            <strong className="text-cyan-400">UX (User Experience)</strong> and <strong className="text-cyan-400">DX (Developer Experience)</strong>.
           </p>
         )}
         maxWidthDescription="max-w-3xl"

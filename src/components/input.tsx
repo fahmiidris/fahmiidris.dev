@@ -7,16 +7,7 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   icon?: (props: React.ComponentProps<'svg'>) => JSX.Element;
 };
 
-export const Input = ({
-  type = 'text',
-  inputMode = 'text',
-  isFocused = false,
-  className,
-  label,
-  id,
-  icon,
-  ...props
-}: InputProps) => {
+export const Input = ({ type = 'text', inputMode = 'text', isFocused = false, className, label, id, icon, ...props }: InputProps) => {
   const input = React.useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {

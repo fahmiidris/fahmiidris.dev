@@ -9,15 +9,7 @@ import { Section } from '@/components/section';
 import { Description } from '@/components/about/description';
 import { AboutSection } from '@/components/about/about-section';
 import { GitHubIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from '@/components/social-icons';
-import {
-  FigmaIcon,
-  JavaScriptIcon,
-  NextjsIcon,
-  ReactjsIcon,
-  TailwindCSSIcon,
-  TypeScriptIcon,
-  VuejsIcon,
-} from '@/components/tech-icons';
+import { FigmaIcon, JavaScriptIcon, NextjsIcon, ReactjsIcon, TailwindCSSIcon, TypeScriptIcon, VuejsIcon } from '@/components/tech-icons';
 
 import { profile } from '@/me';
 
@@ -107,11 +99,7 @@ const currentFavoriteTechStack = [
 const AboutPage: NextPageWithLayout = () => {
   return (
     <div className="py-8">
-      <Section
-        id="about"
-        title="About Fahmi Idris"
-        subtitle="Hi, I'm Fahmi Idris, a Frontend Engineer based in West Java - Indonesia."
-      >
+      <Section id="about" title="About Fahmi Idris" subtitle="Hi, I'm Fahmi Idris, a Frontend Engineer based in West Java - Indonesia.">
         <div className="grid grid-cols-1 gap-8 pt-3 lg:grid-cols-4 lg:pt-6 xl:grid-cols-6">
           <div className="col-span-1 flex justify-center xl:col-span-2">
             <figure className="flex flex-col items-center text-center sm:pt-2 lg:pt-16">
@@ -151,10 +139,7 @@ const AboutPage: NextPageWithLayout = () => {
               {follow.map(({ title, href, icon: Icon }, index) => (
                 <li key={index} className="group flex items-center justify-between text-sm">
                   <Link href={href} className="inline-flex w-0 flex-1 items-center py-3 pl-3 pr-4 hover:bg-slate-50">
-                    <Icon
-                      className="h-5 w-5 flex-shrink-0 text-slate-500 group-hover:text-cyan-400"
-                      aria-hidden="true"
-                    />
+                    <Icon className="h-5 w-5 flex-shrink-0 text-slate-500 group-hover:text-cyan-400" aria-hidden="true" />
                     <span className="ml-3 w-0 flex-1 truncate">{title}</span>
                   </Link>
 

@@ -37,34 +37,17 @@ export const Section = ({
     <section aria-labelledby={`title-${title}`} className={clsx('w-full overflow-hidden py-4', className)} {...props}>
       <div className="container">
         <div className="max-w-2xl">
-          <h2
-            id={`title-${title}`}
-            className={clsx('text-base font-semibold leading-7 text-cyan-400', colorText?.title)}
-          >
+          <h2 id={`title-${title}`} className={clsx('text-base font-semibold leading-7 text-cyan-400', colorText?.title)}>
             {title}
           </h2>
 
-          <p
-            className={clsx(
-              'mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl',
-              colorText?.subtitle
-            )}
-          >
-            {subtitle}
-          </p>
+          <p className={clsx('mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl', colorText?.subtitle)}>{subtitle}</p>
         </div>
 
         {description && (
           <div className={clsx('', maxWidthDescription)}>
             {typeof description === 'string' ? (
-              <p
-                className={clsx(
-                  'mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7',
-                  colorText?.description
-                )}
-              >
-                {description}
-              </p>
+              <p className={clsx('mt-4 text-sm leading-6 text-slate-700 sm:text-base sm:leading-7', colorText?.description)}>{description}</p>
             ) : (
               <Prose className="prose-sm mt-4">{React.createElement(description)}</Prose>
             )}

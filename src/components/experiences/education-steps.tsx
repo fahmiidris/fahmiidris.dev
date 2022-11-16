@@ -36,10 +36,7 @@ export const EducationSteps = ({ steps }: EducationStepsProps) => {
                 {major && ` - ${major}`}
               </h2>
 
-              <time
-                dateTime={formatDate(date.start, '{MMMM}, {YYYY}')}
-                className="mb-2 block text-sm font-normal leading-none text-slate-500"
-              >
+              <time dateTime={formatDate(date.start, '{MMMM}, {YYYY}')} className="mb-2 block text-sm font-normal leading-none text-slate-500">
                 {formatDate(date.start, '{MMMM}, {YYYY}')} -{' '}
                 {date.end ? formatDate(date.end, '{MMMM}, {YYYY}') : <span className="text-cyan-400">Present</span>}
               </time>

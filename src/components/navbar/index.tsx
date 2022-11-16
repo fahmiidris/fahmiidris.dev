@@ -190,11 +190,7 @@ export const Navbar = () => {
             ].map(({ icon: Icon, ...item }) => (
               <div key={item.title.desktop} className="flex items-center space-x-1">
                 <Icon className="h-4 w-4 text-slate-800 sm:h-5 sm:w-5" />
-                <Link
-                  href={item.href}
-                  openNewTab={true}
-                  className="animated-underline text-xs font-medium hover:text-slate-700 sm:text-sm"
-                >
+                <Link href={item.href} openNewTab={true} className="animated-underline text-xs font-medium hover:text-slate-700 sm:text-sm">
                   <span className="block md:hidden">{item.title.mobile}</span>
                   <span className="hidden md:block">{item.title.desktop}</span>
                 </Link>
@@ -217,11 +213,7 @@ export const Navbar = () => {
             ].map(({ icon: Icon, ...item }) => (
               <div key={item.title.desktop} className="flex items-center space-x-1">
                 <Icon className="h-4 w-4 text-slate-800 sm:h-5 sm:w-5" />
-                <Link
-                  href={item.href}
-                  openNewTab={true}
-                  className="animated-underline text-xs font-medium hover:text-slate-700 sm:text-sm"
-                >
+                <Link href={item.href} openNewTab={true} className="animated-underline text-xs font-medium hover:text-slate-700 sm:text-sm">
                   <span className="block md:hidden">{item.title.mobile}</span>
                   <span className="hidden md:block">{item.title.desktop}</span>
                 </Link>
@@ -239,11 +231,7 @@ export const Navbar = () => {
       >
         <div className="container">
           <div className="flex h-[60px] items-center">
-            <button
-              type="button"
-              className="rounded-md bg-white text-slate-400 lg:hidden"
-              onClick={() => setIsOpen(true)}
-            >
+            <button type="button" className="rounded-md bg-white text-slate-400 lg:hidden" onClick={() => setIsOpen(true)}>
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </button>
@@ -281,9 +269,7 @@ export const Navbar = () => {
                         <Popover.Button
                           className={clsx(
                             'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium outline-none transition-colors duration-200 ease-out',
-                            open
-                              ? 'border-slate-300 bg-slate-100 text-cyan-400'
-                              : 'border-transparent text-slate-800 hover:border-slate-500'
+                            open ? 'border-slate-300 bg-slate-100 text-cyan-400' : 'border-transparent text-slate-800 hover:border-slate-500'
                           )}
                         >
                           {category.name}

@@ -18,11 +18,7 @@ type ProjectCardGroupProps = {
 };
 
 export const ProjectCardGroup = ({ children, className }: ProjectCardGroupProps) => {
-  return (
-    <ul className={clsx('grid grid-cols-1 items-start gap-y-10 gap-x-6 lg:grid-cols-3 xl:grid-cols-4', className)}>
-      {children}
-    </ul>
-  );
+  return <ul className={clsx('grid grid-cols-1 items-start gap-y-10 gap-x-6 lg:grid-cols-3 xl:grid-cols-4', className)}>{children}</ul>;
 };
 
 export const ProjectCard = ({ slug, module: { default: Component, meta }, projectType }: ProjectCardProps) => {
@@ -40,10 +36,7 @@ export const ProjectCard = ({ slug, module: { default: Component, meta }, projec
         </Prose>
 
         <div className="mt-3 flex items-center">
-          <Link
-            href={`/projects/${projectType}/${slug}`}
-            className="animated-underline flex items-center text-sm font-medium text-cyan-400"
-          >
+          <Link href={`/projects/${projectType}/${slug}`} className="animated-underline flex items-center text-sm font-medium text-cyan-400">
             <span className="relative">
               Read more<span className="sr-only">, {meta.title}</span>
             </span>

@@ -32,11 +32,7 @@ const ExperiencesPage: NextPageWithLayout = () => {
         description="My career journey in the programming world started from 2022 to be precise in February 2022, by participating in the Internship program at one of the startups in Bandung, West Java."
         maxWidthDescription="max-w-3xl"
       >
-        {experiencePreviews.length > 0 ? (
-          <ExperienceSteps steps={experiencePreviews} />
-        ) : (
-          <Alert message="Experiences hasn't been uploaded yet." />
-        )}
+        {experiencePreviews.length > 0 ? <ExperienceSteps steps={experiencePreviews} /> : <Alert message="Experiences hasn't been uploaded yet." />}
       </Section>
 
       <Section
@@ -59,9 +55,7 @@ const ExperiencesPage: NextPageWithLayout = () => {
                   className={({ selected }) =>
                     clsx(
                       'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-semibold focus:outline-none',
-                      selected
-                        ? 'border-cyan-400 text-cyan-400'
-                        : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700'
+                      selected ? 'border-cyan-400 text-cyan-400' : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700'
                     )
                   }
                 >

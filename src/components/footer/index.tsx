@@ -60,11 +60,7 @@ export const Footer = () => {
               {socialMedia.map(({ icon: Icon, ...item }, index) => (
                 <div key={index} className="group flex items-center space-x-2">
                   <Icon className="h-5 w-5 group-hover:text-slate-800" />
-                  <Link
-                    href={item.href}
-                    openNewTab={true}
-                    className="animated-underline text-xs font-semibold hover:text-slate-700 sm:text-sm"
-                  >
+                  <Link href={item.href} openNewTab={true} className="animated-underline text-xs font-semibold hover:text-slate-700 sm:text-sm">
                     <span className="block md:hidden">{item.name}</span>
                     <span className="hidden md:block">{item.username}</span>
                   </Link>

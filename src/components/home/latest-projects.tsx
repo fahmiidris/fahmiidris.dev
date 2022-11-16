@@ -33,9 +33,7 @@ export const LatestProjects = ({ projects }: LatestProjectsProps) => {
                 className={({ selected }) =>
                   clsx(
                     'whitespace-nowrap border-b-2 py-4 px-1 text-sm font-semibold focus:outline-none',
-                    selected
-                      ? 'border-cyan-400 text-cyan-400'
-                      : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700'
+                    selected ? 'border-cyan-400 text-cyan-400' : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700'
                   )
                 }
               >

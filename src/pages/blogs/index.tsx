@@ -13,19 +13,14 @@ const blogPreviews = getBlogPreviews();
 const BlogPage: NextPageWithLayout = () => {
   return (
     <div className="container relative overflow-hidden">
-      <header
-        id="blog-header"
-        aria-labelledby="header"
-        className="relative flex flex-col items-start py-16 sm:items-center sm:text-center"
-      >
+      <header id="blog-header" aria-labelledby="header" className="relative flex flex-col items-start py-16 sm:items-center sm:text-center">
         <div className="max-w-3xl">
           <h1 id="header" className="mb-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl">
             My Blog and Life Story
           </h1>
 
           <p className="text-slate-700">
-            Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings.
-            Happy reading!
+            Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings. Happy reading!
           </p>
         </div>
 
@@ -56,8 +51,7 @@ const BlogPage: NextPageWithLayout = () => {
 BlogPage.Props = {
   meta: {
     title: 'My Blog and Life Story',
-    description:
-      'Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings. Happy reading!',
+    description: 'Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings. Happy reading!',
   },
 };
 

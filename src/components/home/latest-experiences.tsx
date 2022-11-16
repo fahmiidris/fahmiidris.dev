@@ -22,11 +22,7 @@ export const LatestExperiences = ({ previews }: LatestExperiencesProps) => {
         text: 'Explore all experiences',
       }}
     >
-      {previews.length > 0 ? (
-        <ExperienceSteps steps={previews} />
-      ) : (
-        <Alert message="Experiences hasn't been uploaded yet." />
-      )}
+      {previews.length > 0 ? <ExperienceSteps steps={previews} /> : <Alert message="Experiences hasn't been uploaded yet." />}
     </Section>
   );
 };

@@ -1,14 +1,6 @@
 import * as React from 'react';
 import { ChevronLeftIcon } from '@heroicons/react/solid';
-import {
-  CalendarIcon,
-  ChatAlt2Icon,
-  ClockIcon,
-  EyeIcon,
-  PencilAltIcon,
-  ShareIcon,
-  ThumbUpIcon,
-} from '@heroicons/react/outline';
+import { CalendarIcon, ChatAlt2Icon, ClockIcon, EyeIcon, PencilAltIcon, ShareIcon, ThumbUpIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
 import { Image } from '@/components/image';
@@ -32,35 +24,23 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
   return (
     <div className="container pt-8">
       <div className="mb-8 flex items-center justify-between">
-        <Link
-          href="/experiences"
-          className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-        >
+        <Link href="/experiences" className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
           <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
           Go back
         </Link>
 
         <div className="flex items-center space-x-4">
-          <button
-            type="button"
-            className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800"
-          >
+          <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
             <ThumbUpIcon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-cyan-400" />
             <span>0</span>
           </button>
 
-          <button
-            type="button"
-            className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800"
-          >
+          <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
             <ChatAlt2Icon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-emerald-400" />
             <span>0</span>
           </button>
 
-          <button
-            type="button"
-            className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800"
-          >
+          <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
             <ShareIcon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-rose-400" />
             <span>0</span>
           </button>
@@ -98,8 +78,7 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
             <dd className="absolute inset-x-0 top-0 flex items-center justify-start space-x-2 text-slate-800">
               <CalendarIcon className="h-5 w-5" />
               <time dateTime={formatDate(meta.date.start)}>
-                {formatDate(meta.date.start)} -{' '}
-                {meta.date.end ? formatDate(meta.date.end) : <span className="text-cyan-400">Present</span>}
+                {formatDate(meta.date.start)} - {meta.date.end ? formatDate(meta.date.end) : <span className="text-cyan-400">Present</span>}
               </time>
             </dd>
           </dl>
@@ -110,17 +89,11 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
             <Prose className="mt-12">{children}</Prose>
 
             <div className="col-start-2 mt-12 mb-6 flex items-center justify-between">
-              <Link
-                href="/experiences"
-                className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-              >
+              <Link href="/experiences" className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
                 <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
                 Go back
               </Link>
-              <Link
-                href={GITHUB_EDIT_LINK}
-                className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-              >
+              <Link href={GITHUB_EDIT_LINK} className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
                 Edit this page
                 <PencilAltIcon className="ml-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
               </Link>

@@ -1,14 +1,6 @@
 import * as React from 'react';
 import { ChevronLeftIcon } from '@heroicons/react/solid';
-import {
-  CalendarIcon,
-  ChatAlt2Icon,
-  ClockIcon,
-  EyeIcon,
-  PencilAltIcon,
-  ShareIcon,
-  ThumbUpIcon,
-} from '@heroicons/react/outline';
+import { CalendarIcon, ChatAlt2Icon, ClockIcon, EyeIcon, PencilAltIcon, ShareIcon, ThumbUpIcon } from '@heroicons/react/outline';
 
 import { Link } from '@/components/link';
 import { Image } from '@/components/image';
@@ -37,37 +29,25 @@ export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: 
   return (
     <div className="container relative">
       <div className="absolute inset-x-0 top-0 z-30 flex justify-between py-8 px-4">
-        <Link
-          href={`/${projectType}`}
-          className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-        >
+        <Link href={`/${projectType}`} className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
           <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
           Go back
         </Link>
 
         <div className="flex items-center space-x-4">
-          <button
-            type="button"
-            className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800"
-          >
+          <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
             <ThumbUpIcon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-cyan-400" />
             <span>0</span>
           </button>
 
           {projectType === 'blogs' && (
-            <button
-              type="button"
-              className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800"
-            >
+            <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
               <ChatAlt2Icon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-emerald-400" />
               <span>0</span>
             </button>
           )}
 
-          <button
-            type="button"
-            className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800"
-          >
+          <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
             <ShareIcon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-rose-400" />
             <span>0</span>
           </button>
@@ -85,9 +65,7 @@ export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: 
               </time>
             </dd>
 
-            <h1 className="mb-6 mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-center sm:text-4xl xl:max-w-4xl">
-              {meta.title}
-            </h1>
+            <h1 className="mb-6 mt-4 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-center sm:text-4xl xl:max-w-4xl">{meta.title}</h1>
 
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
@@ -112,11 +90,7 @@ export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: 
                   <Image src={profile.image} alt="" width={50} height={50} className="aspect-square" />
                   <div>
                     <div className="text-slate-800">{profile.name}</div>
-                    <Link
-                      href="https://github.com/fahmiidris-labs"
-                      openNewTab={true}
-                      className="text-cyan-500 hover:text-cyan-600"
-                    >
+                    <Link href="https://github.com/fahmiidris-labs" openNewTab={true} className="text-cyan-500 hover:text-cyan-600">
                       github.com/fahmiidris-labs
                     </Link>
                   </div>
@@ -132,17 +106,11 @@ export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: 
           <Prose>{children}</Prose>
 
           <div className="col-start-2 mt-12 mb-6 flex items-center justify-between">
-            <Link
-              href={`/${projectType}`}
-              className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-            >
+            <Link href={`/${projectType}`} className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
               <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
               Go back
             </Link>
-            <Link
-              href={GITHUB_EDIT_LINK}
-              className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-            >
+            <Link href={GITHUB_EDIT_LINK} className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
               Edit this page
               <PencilAltIcon className="ml-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
             </Link>

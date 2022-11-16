@@ -1,7 +1,7 @@
 const prettierConfig = {
   semi: true,
   singleQuote: true,
-  printWidth: 120,
+  printWidth: 150,
   trailingComma: 'es5',
   arrowParens: 'always',
   tabWidth: 2,

@@ -52,8 +52,7 @@ export const CertificateCard = ({ title, description, platform, date, href, cred
             <h2 className="text-base font-semibold text-slate-800 line-clamp-2">{title}</h2>
 
             <p className="mt-1 text-xs leading-4">
-              Issued {formatDate(date.start, '{MM}, {YYYY}')} -{' '}
-              {date.end ? 'Expires ' + formatDate(date.end, '{MM}, {YYYY}') : 'No Expiration Date'}
+              Issued {formatDate(date.start, '{MM}, {YYYY}')} - {date.end ? 'Expires ' + formatDate(date.end, '{MM}, {YYYY}') : 'No Expiration Date'}
             </p>
           </div>
         </figcaption>

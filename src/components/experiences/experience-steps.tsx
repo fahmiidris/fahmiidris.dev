@@ -33,12 +33,8 @@ export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
               </Link>
             </h2>
 
-            <time
-              dateTime={meta.date.start.toString()}
-              className="mb-2 block text-sm font-normal leading-none text-slate-500"
-            >
-              {formatDate(meta.date.start)} -{' '}
-              {meta.date.end ? formatDate(meta.date.end) : <span className="text-cyan-400">Present</span>}
+            <time dateTime={meta.date.start.toString()} className="mb-2 block text-sm font-normal leading-none text-slate-500">
+              {formatDate(meta.date.start)} - {meta.date.end ? formatDate(meta.date.end) : <span className="text-cyan-400">Present</span>}
             </time>
 
             <Prose className="prose-sm max-w-3xl line-clamp-2">
@@ -55,10 +51,7 @@ export const ExperienceSteps = ({ steps }: ExperienceStepsProps) => {
           )}
 
           <div className="mt-6 flex items-center">
-            <Link
-              href={`/experiences/${slug}`}
-              className="animated-underline flex items-center text-sm font-medium text-cyan-400"
-            >
+            <Link href={`/experiences/${slug}`} className="animated-underline flex items-center text-sm font-medium text-cyan-400">
               <span className="relative">
                 Read more<span className="sr-only">, {meta.title}</span>
               </span>

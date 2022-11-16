@@ -95,9 +95,8 @@ export const CommentsSlider = ({ open, onClose }: CommentsSliderProps) => {
                       </div>
 
                       <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus ab ut dolores
-                        obcaecati sit perferendis cupiditate vitae quod praesentium, beatae veritatis a fuga similique
-                        repudiandae est unde blanditiis quas.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus ab ut dolores obcaecati sit perferendis cupiditate
+                        vitae quod praesentium, beatae veritatis a fuga similique repudiandae est unde blanditiis quas.
                       </div>
                     </div>
 

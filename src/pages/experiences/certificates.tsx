@@ -15,10 +15,7 @@ const CertificatesPage: NextPageWithLayout = () => {
   return (
     <div className="py-6">
       <div className="container flex items-center space-x-2 pb-1">
-        <Link
-          href="/experiences"
-          className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900"
-        >
+        <Link href="/experiences" className="group flex items-center text-sm font-semibold leading-6 text-slate-800 hover:text-slate-900">
           <ChevronLeftIcon className="mr-2 h-5 w-auto overflow-visible text-slate-400 group-hover:text-slate-600" />
           Go back
         </Link>

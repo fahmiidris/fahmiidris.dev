@@ -20,10 +20,8 @@ const SnippetsPage: NextPageWithLayout = () => {
         subtitle="These are a collection of code snippets I've used in the past and saved."
         description={() => (
           <p className="text-sm leading-6 text-slate-700 sm:text-base sm:leading-7">
-            These snippets are inspired by{' '}
-            <Link href="https://www.theodorusclarence.com/library">Theodorus Clarence</Link> and{' '}
-            <Link href="https://www.wisesa.dev/snippet">Anvaqta Tangguh Wisesa</Link>, a great idea to save some code
-            snippets that we often recreate.
+            These snippets are inspired by <Link href="https://www.theodorusclarence.com/library">Theodorus Clarence</Link> and{' '}
+            <Link href="https://www.wisesa.dev/snippet">Anvaqta Tangguh Wisesa</Link>, a great idea to save some code snippets that we often recreate.
           </p>
         )}
         maxWidthDescription="max-w-3xl"

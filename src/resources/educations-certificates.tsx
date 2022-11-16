@@ -9,9 +9,7 @@ export const formalEducation: EducationType[] = [
     title: 'MTs. Al-Hidayah Tajur',
     description: () => (
       <>
-        <p>
-          Taking junior high school education at Madrasah Tsanawiyah Al-Hidayah Tajur for 3 years from 2015 to 2018.
-        </p>
+        <p>Taking junior high school education at Madrasah Tsanawiyah Al-Hidayah Tajur for 3 years from 2015 to 2018.</p>
       </>
     ),
     date: {
@@ -39,10 +37,7 @@ export const formalEducation: EducationType[] = [
     title: 'SMK 1 Triple J Citeureup',
     description: () => (
       <>
-        <p>
-          Continuing high school education at Triple J 1 Vocational High School majoring in Software Engineering for 3
-          years from 2018 to 2021.
-        </p>
+        <p>Continuing high school education at Triple J 1 Vocational High School majoring in Software Engineering for 3 years from 2018 to 2021.</p>
       </>
     ),
     major: 'Software Engineering',
@@ -103,8 +98,7 @@ export const certificates: CertificateType[] = [
   },
   {
     title: 'React.js Web Frontend Candradimuka Jabar Coding Camp 2021 - Online',
-    description:
-      'Certificate in React.js Library/Framework from Candradimuka Jabar Coding Camp 2021 by Jabar Digital Service.',
+    description: 'Certificate in React.js Library/Framework from Candradimuka Jabar Coding Camp 2021 by Jabar Digital Service.',
     href: 'https://drive.google.com/file/d/1zb-bdrqp7zAFIuvwZsKivWI0ZjEOuEZL/view?usp=sharing',
     credential: {
       id: '429/JCC/SRTF/IX/2021',
