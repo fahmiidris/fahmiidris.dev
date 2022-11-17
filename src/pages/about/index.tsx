@@ -61,37 +61,37 @@ const follow = [
 const currentFavoriteTechStack = [
   {
     title: 'JavaScript',
-    href: '#',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     icon: JavaScriptIcon,
   },
   {
     title: 'TypeScript',
-    href: '#',
+    href: 'https://www.typescriptlang.org',
     icon: TypeScriptIcon,
   },
   {
     title: 'React.js',
-    href: '#',
+    href: 'https://www.reactjs.org',
     icon: ReactjsIcon,
   },
   {
     title: 'Vue.js',
-    href: '#',
+    href: 'https://www.vuejs.org',
     icon: VuejsIcon,
   },
   {
     title: 'Next.js',
-    href: '#',
+    href: 'https://wwww.nextjs.org',
     icon: NextjsIcon,
   },
   {
     title: 'Tailwind CSS',
-    href: '#',
+    href: 'https://www.tailwindcss.com',
     icon: TailwindCSSIcon,
   },
   {
     title: 'Figma for UI/UX Design',
-    href: '#',
+    href: 'https://www.figma.com',
     icon: FigmaIcon,
   },
 ];
@@ -99,7 +99,7 @@ const currentFavoriteTechStack = [
 const AboutPage: NextPageWithLayout = () => {
   return (
     <div className="py-8">
-      <Section id="about" title="About Fahmi Idris" subtitle="Hi, I'm Fahmi Idris, a Frontend Engineer based in West Java - Indonesia.">
+      <Section id="about" title="About Fahmi Idris" subtitle="Hi, I'm Fahmi Idris, a Frontend Web Developer based in West Java - Indonesia.">
         <div className="grid grid-cols-1 gap-8 pt-3 lg:grid-cols-4 lg:pt-6 xl:grid-cols-6">
           <div className="col-span-1 flex justify-center xl:col-span-2">
             <figure className="flex flex-col items-center text-center sm:pt-2 lg:pt-16">
@@ -179,7 +179,7 @@ const AboutPage: NextPageWithLayout = () => {
 AboutPage.Props = {
   meta: {
     title: 'About Fahmi Idris!',
-    description: "Hi, I'm Fahmi Idris, a frontend engineer based in West Java - Indonesia.",
+    description: "Hi, I'm Fahmi Idris, a Frontend Web Developer based in West Java - Indonesia.",
   },
 };
 
