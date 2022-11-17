@@ -1,6 +1,6 @@
 import type { MDXMetaType } from '@/types/seo';
 
-export declare namespace Blog {
+export declare namespace Article {
   interface Preview {
     slug: string;
     module: Module;

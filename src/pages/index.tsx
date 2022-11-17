@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { Header } from '@/components/home/header';
 import { Summary } from '@/components/home/summary';
-import { LatestBlogs } from '@/components/home/latest-blogs';
+import { LatestArticles } from '@/components/home/latest-articles';
 import { LatestProjects } from '@/components/home/latest-projects';
 import { LatestSnippets } from '@/components/home/latest-snippets';
 import { LatestExperiences } from '@/components/home/latest-experiences';
 
-import { getBlogPreviews } from '@/services/blog';
+import { getArticlePreviews } from '@/services/article';
 import { getProjectPreviews } from '@/services/project';
 import { getSnippetPreviews } from '@/services/snippet';
 import { getExperiencePreviews } from '@/services/experience';
@@ -15,7 +15,7 @@ import { getExperiencePreviews } from '@/services/experience';
 import type { Project } from '@/types/project';
 import type { NextPageWithLayout } from 'next';
 
-const blogPreviews = getBlogPreviews();
+const articlePreviews = getArticlePreviews();
 const experiencePreviews = getExperiencePreviews();
 
 const fahmiidrisDevProjectPreviews = getProjectPreviews.fahmiidrisDev();
@@ -55,7 +55,7 @@ const HomePage: NextPageWithLayout = () => {
 
       <div className="space-y-36 overflow-hidden py-24">
         <Summary />
-        <LatestBlogs previews={blogPreviews.slice(0, 3)} />
+        <LatestArticles previews={articlePreviews.slice(0, 3)} />
         <LatestExperiences previews={experiencePreviews.slice(0, 2)} />
         <LatestProjects projects={projects} />
         <LatestSnippets previews={snippetPreviews.slice(0, 3)} />
@@ -67,7 +67,7 @@ const HomePage: NextPageWithLayout = () => {
 HomePage.Props = {
   meta: {
     title: "Hi, I'm Fahmi Idris",
-    description: 'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
+    description: 'Fahmi Idris Personal Portfolio Website, Article, Project Showcase, and My Experience History.',
   },
 };
 

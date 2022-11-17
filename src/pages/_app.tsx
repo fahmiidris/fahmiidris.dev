@@ -33,7 +33,7 @@ Router.events.on('routeChangeError', () => progress.finish());
 
 const defaultMeta = {
   title: "Hi, I'm Fahmi Idris",
-  description: 'Fahmi Idris Personal Portfolio Website, Blog, Project Showcase, and My Experience History.',
+  description: 'Fahmi Idris Personal Portfolio Website, Article, Project Showcase, and My Experience History.',
   url: 'https://www.fahmiidris.dev',
   image: 'https://www.fahmiidris.dev/images/default-og.png',
   type: 'website',

@@ -11,7 +11,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const fallbackDefaultExports = {
-  'src/pages/{blogs,snippets}/**/*': ['@/layouts/blog-and-snippet-post-layout', 'BlogAndSnippetPostLayout'],
+  'src/pages/{articles,snippets}/**/*': ['@/layouts/article-and-snippet-post-layout', 'ArticleAndSnippetPostLayout'],
   'src/pages/experiences/**/*': ['@/layouts/experience-post-layout', 'ExperiencePostLayout'],
   'src/pages/projects/**/*': ['@/layouts/project-post-layout', 'ProjectPostLayout'],
 };

@@ -6,11 +6,11 @@ import { Prose } from '@/components/prose';
 
 import { formatDate } from '@/utils/helpers';
 
-import type { Blog } from '@/types/blog';
+import type { Article } from '@/types/article';
 
-type BlogCardProps = Blog.Preview;
+type ArticleCardProps = Article.Preview;
 
-export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCardProps) => {
+export const ArticleCard = ({ slug, module: { default: Component, meta } }: ArticleCardProps) => {
   return (
     <li className="group text-sm leading-6">
       <article className="relative flex flex-col rounded-t-md border border-slate-200 p-4 group-hover:border-slate-300">
@@ -38,7 +38,7 @@ export const BlogCard = ({ slug, module: { default: Component, meta } }: BlogCar
           </div>
         </div>
 
-        <Link href={`/blogs/${slug}`}>
+        <Link href={`/articles/${slug}`}>
           <span className="absolute inset-0 z-10" aria-hidden="true" />
         </Link>
       </article>

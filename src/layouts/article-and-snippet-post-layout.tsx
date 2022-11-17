@@ -5,24 +5,24 @@ import { CalendarIcon, ChatAlt2Icon, ClockIcon, EyeIcon, PencilAltIcon, ShareIco
 import { Link } from '@/components/link';
 import { Image } from '@/components/image';
 import { Prose } from '@/components/prose';
-import { NewsletterForm } from '@/components/blogs/newsletter-form';
+import { NewsletterForm } from '@/components/articles/newsletter-form';
 import { TableOfContents } from '@/components/table-of-contents';
 
 import { formatDate } from '@/utils/helpers';
 
 import { profile } from '@/me';
 
-import type { Blog } from '@/types/blog';
+import type { Article } from '@/types/article';
 import type { Snippet } from '@/types/snippet';
 
-type BlogAndSnippetPostLayoutProps = {
+type ArticleAndSnippetPostLayoutProps = {
   slug: string;
-  projectType: 'blogs' | 'snippets';
-  meta: Blog.Module['meta'] | Snippet.Module['meta'];
+  projectType: 'articles' | 'snippets';
+  meta: Article.Module['meta'] | Snippet.Module['meta'];
   children: React.ReactNode;
 };
 
-export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: BlogAndSnippetPostLayoutProps) => {
+export const ArticleAndSnippetPostLayout = ({ slug, projectType, meta, children }: ArticleAndSnippetPostLayoutProps) => {
   const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/${projectType}/${slug}/index.mdx`;
   const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/${projectType}/${slug}/index.mdx`;
 
@@ -40,7 +40,7 @@ export const BlogAndSnippetPostLayout = ({ slug, projectType, meta, children }: 
             <span>0</span>
           </button>
 
-          {projectType === 'blogs' && (
+          {projectType === 'articles' && (
             <button type="button" className="group flex items-center justify-center space-x-2 text-sm font-semibold text-slate-800">
               <ChatAlt2Icon className="h-5 w-5 overflow-visible text-slate-500 group-hover:text-emerald-400" />
               <span>0</span>

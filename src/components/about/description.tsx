@@ -30,8 +30,8 @@ export const Description = () => {
       </p>
 
       <p>
-        FYI, I created this website not only as a learning tool but also as a place for me to blog and showcase my projects and as a place to see the
-        history of my experiences.
+        FYI, I created this website not only as a learning tool but also as a place for me to article and showcase my projects and as a place to see
+        the history of my experiences.
       </p>
     </div>
   );
