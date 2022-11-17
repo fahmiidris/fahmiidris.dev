@@ -2,34 +2,34 @@ import * as React from 'react';
 
 import { Alert } from '@/components/alert';
 import { Section } from '@/components/section';
-import { BlogCard } from '@/components/blogs/blog-card';
+import { ArticleCard } from '@/components/articles/article-card';
 
-import type { Blog } from '@/types/blog';
+import type { Article } from '@/types/article';
 
-type LatestBlogsProps = {
-  previews: Blog.Preview[];
+type LatestArticlesProps = {
+  previews: Article.Preview[];
 };
 
-export const LatestBlogs = ({ previews }: LatestBlogsProps) => {
+export const LatestArticles = ({ previews }: LatestArticlesProps) => {
   return (
     <Section
-      id="latest-blogs"
-      title="Latest Blog"
+      id="latest-articles"
+      title="Latest Article"
       subtitle="Hi gaes! I have a new story for you! Happy reading!"
       description="Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings."
       more={{
-        href: '/blogs',
-        text: 'Explore all blogs',
+        href: '/articles',
+        text: 'Explore all articles',
       }}
     >
       {previews.length > 0 ? (
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {previews.map((preview, index) => (
-            <BlogCard key={index} {...preview} />
+            <ArticleCard key={index} {...preview} />
           ))}
         </ul>
       ) : (
-        <Alert message="Blog or Life Story hasn't been uploaded yet." />
+        <Alert message="Article or Life Story hasn't been uploaded yet." />
       )}
     </Section>
   );

@@ -74,10 +74,10 @@ export const Header = () => {
                   Send Message
                 </Link>
                 <Link
-                  href="/blogs"
+                  href="/articles"
                   className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-transparent py-3 px-4 text-sm font-semibold text-slate-800 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
                 >
-                  Read My Blog
+                  Read My Article
                 </Link>
                 <button
                   type="button"

@@ -28,7 +28,7 @@ import { profile } from '@/me';
 const navigation = {
   pages: [
     { name: 'Home', href: '/' },
-    { name: 'Blogs', href: '/blogs' },
+    { name: 'Articles', href: '/articles' },
     { name: 'Experiences', href: '/experiences' },
     { name: 'Projects', href: '/projects' },
     { name: 'Snippets', href: '/snippets' },
