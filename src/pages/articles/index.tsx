@@ -10,7 +10,7 @@ import type { NextPageWithLayout } from 'next';
 
 const articlePreviews = getArticlePreviews();
 
-const articlePage: NextPageWithLayout = () => {
+const ArticlePage: NextPageWithLayout = () => {
   return (
     <div className="container relative overflow-hidden">
       <header id="article-header" aria-labelledby="header" className="relative flex flex-col items-start py-16 sm:items-center sm:text-center">
@@ -48,11 +48,11 @@ const articlePage: NextPageWithLayout = () => {
   );
 };
 
-articlePage.Props = {
+ArticlePage.Props = {
   meta: {
-    title: 'My article and Life Story',
+    title: 'My Article and Life Story',
     description: 'Some personal opinions on technology and my random thoughts. Sometimes, it contains stories about feelings. Happy reading!',
   },
 };
 
-export default articlePage;
+export default ArticlePage;
