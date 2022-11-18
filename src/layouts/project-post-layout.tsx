@@ -11,15 +11,17 @@ import { TableOfContents } from '@/components/table-of-contents';
 import { formatDate } from '@/utils/helpers';
 
 import type { Project, ProjectType } from '@/types/project';
+import type { ReadTimeResults } from 'reading-time';
 
 type ProjectPostLayoutProps = {
   slug: string;
   projectType: ProjectType;
+  readingTime: ReadTimeResults;
   meta: Project.Module['meta'];
   children: React.ReactNode;
 };
 
-export const ProjectPostLayout = ({ slug, projectType, meta, children }: ProjectPostLayoutProps) => {
+export const ProjectPostLayout = ({ slug, projectType, readingTime, meta, children }: ProjectPostLayoutProps) => {
   const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
   const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/projects/${projectType}/${slug}/index.mdx`;
 
@@ -56,8 +58,7 @@ export const ProjectPostLayout = ({ slug, projectType, meta, children }: Project
           <div className="mt-4 flex flex-wrap items-center gap-4">
             <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
               <ClockIcon className="h-5 w-5 text-slate-500" />
-              <span>0</span>
-              <span>min read</span>
+              <span>{readingTime.text}</span>
             </div>
 
             <div className="flex items-center space-x-2 px-2 text-sm font-semibold text-slate-800 md:text-sm">
