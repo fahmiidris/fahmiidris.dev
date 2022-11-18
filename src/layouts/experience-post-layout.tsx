@@ -10,14 +10,16 @@ import { TableOfContents } from '@/components/table-of-contents';
 import { formatDate } from '@/utils/helpers';
 
 import type { Experience } from '@/types/experience';
+import type { ReadTimeResults } from 'reading-time';
 
 type ExperiencePostLayoutProps = {
   slug: string;
+  readingTime: ReadTimeResults;
   meta: Experience.Module['meta'];
   children: React.ReactNode;
 };
 
-export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLayoutProps) => {
+export const ExperiencePostLayout = ({ slug, readingTime, meta, children }: ExperiencePostLayoutProps) => {
   const GITHUB_EDIT_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/blob/main/src/pages/experiences/${slug}/index.mdx`;
   const COMMIT_HISTORY_LINK = `https://www.github.com/fahmiidris-labs/fahmiidris.dev/commits/main/src/pages/experiences/${slug}/index.mdx`;
 
@@ -53,8 +55,7 @@ export const ExperiencePostLayout = ({ slug, meta, children }: ExperiencePostLay
         <div className="mt-4 flex items-center space-x-4">
           <div className="flex items-center space-x-2 text-sm font-semibold text-slate-800 md:text-sm">
             <ClockIcon className="h-5 w-5 text-slate-500" />
-            <span>0</span>
-            <span>min read</span>
+            <span>{readingTime.text}</span>
           </div>
 
           <div className="flex items-center space-x-2 px-2 text-sm font-semibold text-slate-800 md:text-sm">

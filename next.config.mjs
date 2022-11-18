@@ -1,8 +1,9 @@
 import url from 'url';
 import path from 'path';
 import minimatch from 'minimatch';
-import remarkGfm from 'remark-gfm';
+import withRemarkGfm from 'remark-gfm';
 import bundleAnalyzer from '@next/bundle-analyzer';
+import readingTime from 'reading-time';
 
 import { createLoader } from 'simple-functional-loader';
 
@@ -35,11 +36,12 @@ const nextConfig = withBundleAnalyzer({
       {
         loader: '@mdx-js/loader',
         options: {
-          remarkPlugins: [...plugins, remarkGfm],
+          remarkPlugins: [...plugins, withRemarkGfm],
           rehypePlugins: [],
         },
       },
       createLoader(function (source) {
+        const timeToRead = readingTime(source);
         const pathSegments = this.resourcePath.split(path.sep);
         const projectType = pathSegments[pathSegments.length - 3];
         const slug =
@@ -47,7 +49,12 @@ const nextConfig = withBundleAnalyzer({
             ? pathSegments[pathSegments.length - 2]
             : pathSegments[pathSegments.length - 1].replace(/\.mdx$/, '');
 
-        return source + `\n\nexport const slug = '${slug}'` + `\n\nexport const projectType = '${projectType}'`;
+        return (
+          source +
+          `\n\nexport const slug = '${slug}'` +
+          `\n\nexport const projectType = '${projectType}'` +
+          `\n\nexport const readingTime = ${JSON.stringify(timeToRead)}`
+        );
       }),
     ];
 
@@ -76,7 +83,7 @@ const nextConfig = withBundleAnalyzer({
       use: [
         options.defaultLoaders.babel,
         createLoader(function (source) {
-          return source + `\nMDXContent.Props = { meta: { title: meta.title, description: meta.description } }\n`;
+          return source + `\n\nMDXContent.Props = { meta: { title: meta.title, description: meta.description } }\n\n`;
         }),
         ...mdx(),
         createLoader(function (source) {
@@ -87,8 +94,8 @@ const nextConfig = withBundleAnalyzer({
             for (const glob in fallbackDefaultExports) {
               if (minimatch(resourcePath, glob)) {
                 extra.push(
-                  `\n\nimport { ${fallbackDefaultExports[glob][1]} as Layout } from '${fallbackDefaultExports[glob][0]}'\n`,
-                  `\n\nexport default (props) => <Layout meta={meta} slug={slug} projectType={projectType} {...props} />\n`
+                  `\n\nimport { ${fallbackDefaultExports[glob][1]} as Layout } from '${fallbackDefaultExports[glob][0]}'\n\n`,
+                  `\n\nexport default (props) => <Layout meta={meta} slug={slug} projectType={projectType} readingTime={readingTime} {...props} />\n\n`
                 );
                 break;
               }

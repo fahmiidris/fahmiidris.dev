@@ -149,7 +149,7 @@ const AboutPage: NextPageWithLayout = () => {
             </AboutSection>
           </div>
 
-          <div className="col-span-1 lg:col-span-4 md:xl:col-span-2">
+          <div className="col-span-1 lg:col-span-4 xl:col-span-2">
             <AboutSection title="Attachments">
               {attachments.map((item, index) => (
                 <li key={index} className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
