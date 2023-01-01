@@ -46,7 +46,7 @@ export const Header = () => {
           <div className="flex justify-center text-center lg:pt-5 lg:pb-7 lg:text-left">
             <div className="flex max-w-[37rem] flex-col py-16 lg:py-12">
               <h1 className="mt-6 text-[1.75rem] font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl">
-                UI/UX Designer and Frontend Web Developer from West Java - Indonesia.
+                Frontend Web Developer from West Java - Indonesia.
               </h1>
 
               <div className="order-first flex items-center justify-center gap-4 text-[0.8125rem] leading-6 text-slate-500 lg:justify-start">
@@ -73,12 +73,12 @@ export const Header = () => {
                 >
                   Send Message
                 </Link>
-                <Link
+                {/* <Link
                   href="/articles"
                   className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-transparent py-3 px-4 text-sm font-semibold text-slate-800 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
                 >
                   Read My Article
-                </Link>
+                </Link> */}
                 <button
                   type="button"
                   onClick={() => setOpenSupportModal(true)}
