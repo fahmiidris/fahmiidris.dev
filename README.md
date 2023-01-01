@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="/public/img/preview.jpg" alt="Preview Website">
-</p>
-
-<p align="center">
   Source code of my <a href="https://www.fahmiidris.dev" target="_blank" rel="noopener noreferrer">Personal Website</a>. Made using Next.js and Tailwind CSS.
 </p>
 
@@ -33,11 +29,11 @@ Here is how you can run the project locally:
 4. Install JS dependencies
 
    ```sh
-   yarn
+   npm install
    ```
 
 5. Start the dev server
 
    ```sh
-   yarn dev
+   npm run dev
    ```
