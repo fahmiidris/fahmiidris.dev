@@ -1,6 +1,0 @@
-{
-  "import React": {
-    "prefix": "ir",
-    "body": ["import * as React from 'react';"]
-  }
-}
