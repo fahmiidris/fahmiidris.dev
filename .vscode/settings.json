@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.rulers": [150],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "emmet.includeLanguages": {
+        "postcss": "css"
+    }
+}
