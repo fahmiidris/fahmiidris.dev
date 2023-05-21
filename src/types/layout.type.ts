@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-export type TLayoutProps<T = any> = React.PropsWithChildren<T>;
+export type TLayoutProps<T = unknown> = React.PropsWithChildren<T>;
