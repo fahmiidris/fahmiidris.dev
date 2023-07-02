@@ -1,10 +1,16 @@
 @tailwind base;
 
-html {
-    height: 100%;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-}
+@layer base {
+    ::selection {
+        @apply bg-primary-500 text-white;
+    }
 
-body {
-    min-height: 100%;
+    html {
+        @apply h-full;
+        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+
+    body {
+        @apply min-h-full;
+    }
 }
