@@ -6,15 +6,15 @@ import clsxm from '@/utils/clsxm';
 
 type TInputProps = React.ComponentPropsWithRef<'input'> & {
     label?: string;
-    helpText?: string;
+    helperText?: string;
 };
 
 const _Input = React.forwardRef<HTMLInputElement, TInputProps>(function _Input(
-    { id, label, helpText, type = 'text', placeholder = 'Enter input here', className, ...props },
+    { id, label, helperText, type = 'text', placeholder = 'Enter input here', className, ...props },
     ref
 ) {
     const hasLabel = !!label;
-    const hasHelpText = !!helpText;
+    const hasHelperText = !!helperText;
 
     return (
         <div>
@@ -27,8 +27,8 @@ const _Input = React.forwardRef<HTMLInputElement, TInputProps>(function _Input(
             <div>
                 <input
                     className={clsxm(
-                        'block w-full border border-slate-200 py-1.5 text-sm/6 text-slate-700 duration-200 ease-in-out',
-                        'placeholder:text-slate-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2',
+                        'block w-full border border-slate-200 py-1.5 text-sm/6 text-slate-700 outline-none duration-200 ease-in-out',
+                        'placeholder:text-slate-400 focus:border-slate-200 focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2',
                         className
                     )}
                     {...{ type, id, placeholder, ref }}
@@ -36,9 +36,9 @@ const _Input = React.forwardRef<HTMLInputElement, TInputProps>(function _Input(
                 />
             </div>
 
-            {hasHelpText ? (
+            {hasHelperText ? (
                 <p className="mt-2 text-sm" id="email-description">
-                    {helpText}
+                    {helperText}
                 </p>
             ) : null}
         </div>

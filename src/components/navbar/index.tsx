@@ -26,18 +26,18 @@ export default function Navbar() {
             <div className="bg-white">
                 <div className="container flex items-center justify-end py-2">
                     <div className="flex items-center gap-x-2">
-                        <Button.Link href="#" variant="outline" size="xs">
+                        <Button.Link href="/resume" openNewTab={true} variant="outline" size="xs">
                             Resume
                         </Button.Link>
 
-                        <Button.Link href="#" variant="outline" size="xs">
+                        <Button.Link href="/portfolio" openNewTab={true} variant="outline" size="xs">
                             Portfolio
                         </Button.Link>
                     </div>
                 </div>
             </div>
 
-            <header className="sticky inset-x-0 top-0 z-40 border-y border-secondary-200 bg-white">
+            <header className="sticky inset-x-0 top-0 z-40 border-y border-slate-200 bg-white">
                 <nav aria-label="Top" className="container">
                     <div className={clsxm('pb-14', 'sm:pb-0')}>
                         <div className="flex h-16 items-center justify-between">

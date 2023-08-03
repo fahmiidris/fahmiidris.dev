@@ -9,7 +9,7 @@ type TFeatureProps = React.PropsWithChildren<{
 type THeaderProps = React.PropsWithChildren<{
     title: string;
     description: string;
-    maxWidth?: keyof typeof MAX_WIDTHS;
+    maxWidth?: keyof typeof maxWidths;
 }>;
 
 type TBodyProps = React.PropsWithChildren<{
@@ -20,7 +20,7 @@ type TFooterProps = React.PropsWithChildren<{
     className?: string;
 }>;
 
-const MAX_WIDTHS = {
+const maxWidths = {
     xs: 'sm:max-w-xs',
     sm: 'sm:max-w-sm',
     md: 'sm:max-w-md',
@@ -32,7 +32,6 @@ const MAX_WIDTHS = {
     '5xl': 'sm:max-w-5xl',
 };
 
-// TODO: add aria-labelledby
 function _Feature({ id, children }: TFeatureProps) {
     return (
         <section {...{ id }} className="relative">
@@ -42,16 +41,16 @@ function _Feature({ id, children }: TFeatureProps) {
 }
 
 function _Header({ title, description, maxWidth = '3xl', children }: THeaderProps) {
-    const maxWidthClass = MAX_WIDTHS[maxWidth];
+    const maxWidthClass = maxWidths[maxWidth];
 
     return (
         <div className="container flex flex-col gap-y-4">
             <div className={clsxm('max-w-3xl', maxWidthClass)}>
-                <h2 className="text-base/7 font-semibold text-primary-500">{title}</h2>
+                <h2 className="text-base/7 font-semibold text-cyan-500">{title}</h2>
                 <p className={clsxm('mt-4 text-3xl font-extrabold tracking-tight text-slate-700', 'sm:text-4xl')}>{children}</p>
             </div>
 
-            <p className={clsxm('max-w-3xl text-sm/6 text-secondary-700', 'sm:text-base/7')}>{description}</p>
+            <p className={clsxm('max-w-3xl text-sm/6 text-slate-700', 'sm:text-base/7')}>{description}</p>
         </div>
     );
 }

@@ -11,18 +11,20 @@ type TButtonProps = {
     openNewWindow?: boolean;
 } & React.ComponentPropsWithRef<'button'>;
 
-type TButtonWithModify = TModifyProps<typeof variants>;
+type TModify = TModifyProps<typeof variants>;
+
+export type TButtonWithModify = TButtonProps & TModify;
 
 const variants = modify(
     [
-        'inline-flex items-center justify-center text-sm font-medium border ease-in-out duration-200',
-        'focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disable:opacity-75 disabled:pointer-events-none',
+        'inline-flex items-center justify-center text-sm font-medium border outline-none ease-in-out duration-200',
+        'focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 disable:opacity-75 disabled:pointer-events-none',
     ],
     {
         variants: {
             variant: {
-                primary: ['border-transparent bg-primary-500 text-white', 'hover:bg-primary-400'],
-                outline: ['border-secondary-200 text-secondary-700', 'hover:bg-secondary-50 hover:border-secondary-300'],
+                cyan: ['border-transparent bg-cyan-500 text-white', 'hover:bg-cyan-400'],
+                outline: ['border-slate-200 text-slate-700', 'hover:bg-slate-50 hover:border-slate-300'],
             },
             size: {
                 xs: ['py-1.5 px-3 text-xs'],
@@ -30,13 +32,13 @@ const variants = modify(
             },
         },
         defaultVariants: {
-            variant: 'primary',
+            variant: 'cyan',
             size: 'sm',
         },
     }
 );
 
-const _Button = React.forwardRef<HTMLButtonElement, TButtonProps & TButtonWithModify>(function _Button(
+const _Button = React.forwardRef<HTMLButtonElement, TButtonWithModify>(function _Button(
     { type = 'button', size, variant, children, className, ...props },
     ref
 ) {
@@ -47,10 +49,7 @@ const _Button = React.forwardRef<HTMLButtonElement, TButtonProps & TButtonWithMo
     );
 });
 
-const _Link = React.forwardRef<HTMLAnchorElement, TLinkProps & TButtonWithModify>(function _Link(
-    { href, size, variant, className, children, ...props },
-    ref
-) {
+const _Link = React.forwardRef<HTMLAnchorElement, TLinkProps & TModify>(function _Link({ href, size, variant, className, children, ...props }, ref) {
     return (
         <Link {...{ href, ref }} className={clsxm(variants({ size, variant, className }))} {...props}>
             {children}

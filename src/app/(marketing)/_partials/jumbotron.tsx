@@ -7,7 +7,7 @@ import clsxm from '@/utils/clsxm';
 
 function HelloWorld() {
     return (
-        <div className={clsxm('order-first flex items-center justify-center gap-x-4 text-sm text-secondary-700', 'lg:justify-start')}>
+        <div className={clsxm('order-first flex items-center justify-center gap-x-4 text-sm text-slate-700', 'lg:justify-start')}>
             <RenderTag title="Hello.World" />
 
             <svg viewBox="0 0 2 2" aria-hidden="true" className="w-0.5 fill-current">
@@ -43,13 +43,13 @@ export default function Jumbotron() {
                     <div className="flex max-w-3xl flex-col gap-y-8">
                         <h1
                             id="title-jumbotron"
-                            className={clsxm('text-center text-3xl font-extrabold tracking-tight text-secondary-700', 'md:text-4xl lg:text-left')}
+                            className={clsxm('text-center text-3xl font-extrabold tracking-tight text-slate-700', 'md:text-4xl lg:text-left')}
                         >
                             Hi, I&#39;m Fahmi Idris. A Software Engineer based in Bogor Regency, West Java, Indonesia.
                         </h1>
 
                         <div className="flex flex-col gap-y-4">
-                            <p className={clsxm('text-center text-sm/6 text-secondary-700', 'sm:text-base/7 lg:text-left')}>
+                            <p className={clsxm('text-center text-sm/6 text-slate-700', 'sm:text-base/7 lg:text-left')}>
                                 Welcome to my digital garden, where I share valuable insights and knowledge about website development, empowering
                                 developers to grow, while showcasing remarkable projects and curated code snippets I have created.
                             </p>

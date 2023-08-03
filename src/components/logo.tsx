@@ -12,7 +12,7 @@ export default function Logo({ className, ...props }: TLogoProps) {
             viewBox="0 0 501 76"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={clsxm('h-6 w-auto text-secondary-700', className)}
+            className={clsxm('h-6 w-auto text-slate-700', className)}
             {...props}
         >
             <mask id="mask0_211_5" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x={0} y={0} width={501} height={76}>

@@ -22,7 +22,7 @@ export default function Navigation({ navigation }: TNavigationProps) {
         <Popover.Group className={clsxm('absolute inset-x-0 bottom-0', 'sm:static sm:flex-1 sm:self-stretch')}>
             <div
                 className={clsxm(
-                    'flex h-14 gap-x-8 overflow-x-auto border-t border-secondary-200 px-4 pb-px',
+                    'flex h-14 gap-x-8 overflow-x-auto border-t border-slate-200 px-4 pb-px',
                     'sm:h-full sm:justify-center sm:overflow-visible sm:border-t-0 sm:pb-0'
                 )}
             >
@@ -32,8 +32,8 @@ export default function Navigation({ navigation }: TNavigationProps) {
                         href={page.href}
                         className={clsxm(
                             page.href === '/' + pathname.split('/')[1]
-                                ? ['border-primary-500 text-primary-500']
-                                : ['border-transparent text-secondary-700', 'hover:border-secondary-200 hover:text-secondary-800'],
+                                ? ['border-cyan-500 text-cyan-500']
+                                : ['border-transparent text-slate-700', 'hover:border-slate-200 hover:text-slate-800'],
                             'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-semibold duration-200 ease-out'
                         )}
                     >
