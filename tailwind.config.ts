@@ -1,4 +1,3 @@
-import colors from 'tailwindcss/colors';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import tailwindcssForms from '@tailwindcss/forms';
 
@@ -14,13 +13,8 @@ const tailwindConfig = {
                     DEFAULT: '1rem',
                 },
             },
-            colors: {
-                primary: colors.cyan,
-                secondary: colors.slate,
-                tertiary: colors.amber,
-            },
             fontFamily: {
-                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                sans: [['Inter var', ...defaultTheme.fontFamily.sans], { fontFeatureSettings: "'cv02', 'cv03', 'cv04', 'cv11'" }],
             },
             screens: {
                 '2xl': '1536px',

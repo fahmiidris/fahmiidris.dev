@@ -2,12 +2,11 @@
 
 @layer base {
     ::selection {
-        @apply bg-primary-500 text-white;
+        @apply bg-slate-200 text-slate-700;
     }
 
     html {
         @apply h-full;
-        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     }
 
     body {
