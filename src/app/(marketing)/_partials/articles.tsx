@@ -9,7 +9,7 @@ export default function Articles() {
         <Feature id="articles">
             <Feature.Header
                 title="Articles"
-                description="Sometimes I want to write something freely without rules and limitations. therefore, I created this articles and these are the articles I've written so far."
+                description="Sometimes I want to write something freely without rules and limitations. therefore, I created this articles and these are the articles I have written so far."
             >
                 Stories, random thoughts, and tutorials about software development.
             </Feature.Header>

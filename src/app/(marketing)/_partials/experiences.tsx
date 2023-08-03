@@ -9,10 +9,9 @@ export default function Experiences() {
         <Feature id="experiences">
             <Feature.Header
                 title="Experiences"
-                description="This is a series of historical experiences that I have gone through until now. these experiences that help me keep growing over time."
-                maxWidth="2xl"
+                description="These are a multitude of historical experiences that I have gone through until now, and they have significantly contributed to my ongoing personal growth."
             >
-                The experiences I got during my career as a software engineer.
+                My career as a software engineer has been enriched with invaluable experiences.
             </Feature.Header>
 
             <Feature.Body>
@@ -22,6 +21,10 @@ export default function Experiences() {
             <Feature.Footer>
                 <Button.Link href="#" variant="outline">
                     Explore all experiences
+                </Button.Link>
+
+                <Button.Link href="#" variant="outline">
+                    Download Resume
                 </Button.Link>
             </Feature.Footer>
         </Feature>
