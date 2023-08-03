@@ -6,10 +6,10 @@ export type TNavigation = typeof navigation;
 
 const navigation = {
     Apps: [
-        { name: 'Starter Templates', href: '#' },
-        { name: 'Fahmi Idris Store', href: '#' },
-        { name: 'Naqimart', href: '#' },
-        { name: 'Bangjeff', href: '#' },
+        { name: 'Starter Templates', href: 'https://templates.fahmiidris.dev' },
+        { name: 'Fahmi Idris Store', href: 'https://store.fahmiidris.dev' },
+        { name: 'Naqimart', href: 'https://www.naqimart.com' },
+        { name: 'Bangjeff', href: 'https://www.bangjeff.com' },
     ],
     Supports: [
         { name: 'Saweria', href: '#' },
@@ -17,13 +17,13 @@ const navigation = {
         { name: 'GitHub Sponsor', href: '#' },
     ],
     Works: [
-        { name: 'Contacts', href: '#' },
+        { name: 'Contacts', href: '/contacts' },
         { name: "Let's Work Together", href: '#' },
-        { name: 'Reviews', href: '#' },
+        { name: 'Reviews', href: '/reviews' },
     ],
     Others: [
-        { name: 'Source Code', href: '#' },
-        { name: 'Credits', href: '#' },
+        { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
+        { name: 'Credits', href: '/credits' },
         { name: 'RRS', href: '#' },
         { name: 'TIL', href: '#' },
         { name: 'Statistics', href: '#' },
