@@ -1,13 +1,15 @@
 import nextMDX from '@next/mdx';
-import remarkGfm from 'remark-gfm';
 import bundleAnalyzer from '@next/bundle-analyzer';
+
+import remarkGfm from 'remark-gfm';
+import remarkUnwrapImages from 'remark-unwrap-images';
 
 const withMDX = nextMDX({
     extension: /\.mdx$/,
     options: {
         recmaPlugins: [],
         rehypePlugins: [],
-        remarkPlugins: [remarkGfm],
+        remarkPlugins: [remarkGfm, remarkUnwrapImages],
     },
 });
 
