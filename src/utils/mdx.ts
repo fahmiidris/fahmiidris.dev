@@ -4,15 +4,14 @@ import compareDesc from 'date-fns/compareDesc';
 import type { TContentType, TPickFrontmatter } from '@/types/mdx.type';
 
 const groups = {
+    docs: '(docs)',
     marketing: '(marketing)',
 };
 
 export default async function mdx<T extends TContentType>(group: keyof typeof groups, folder: T) {
-    return await Promise.all<TPickFrontmatter<T>>(
-        (
-            await glob('**/page.mdx', { cwd: `src/app/${groups[group]}/${folder}` })
-        ).map(async (filename) => {
-            const slug = filename.replace(/\/page\.mdx$/, '');
+    return Promise.all<TPickFrontmatter<T>>(
+        (await glob('**/page.mdx', { cwd: `src/app/${groups[group]}/${folder}` })).map(async (filename) => {
+            const slug = filename.replace(/^\(contents\)|\/page\.mdx$/g, '');
 
             return {
                 slug,
