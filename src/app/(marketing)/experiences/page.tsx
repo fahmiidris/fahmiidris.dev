@@ -50,10 +50,11 @@ export default async function ExperiencesPage() {
                                     {experience.images.map((image, index) => (
                                         <React.Fragment key={index}>
                                             <Image
-                                                {...image}
-                                                alt=""
-                                                placeholder="blur"
+                                                src={image}
                                                 className="aspect-[16/9] w-full bg-slate-100 object-cover object-center"
+                                                placeholder="blur"
+                                                alt=""
+                                                priority
                                             />
                                         </React.Fragment>
                                     ))}

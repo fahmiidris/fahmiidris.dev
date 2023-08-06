@@ -48,7 +48,13 @@ export default async function Wrapper({ slug, children }: TWrapperProps) {
                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                         {experience.images.map((image, index) => (
                             <React.Fragment key={index}>
-                                <Image {...image} alt="" className="aspect-[16/9] w-full bg-slate-100 object-cover object-center" />
+                                <Image
+                                    src={image}
+                                    className="aspect-[16/9] w-full bg-slate-100 object-cover object-center"
+                                    placeholder="blur"
+                                    alt=""
+                                    priority
+                                />
                             </React.Fragment>
                         ))}
                     </div>
