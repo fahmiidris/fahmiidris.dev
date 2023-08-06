@@ -1,15 +1,16 @@
 import nextMDX from '@next/mdx';
 import bundleAnalyzer from '@next/bundle-analyzer';
 
-import remarkGfm from 'remark-gfm';
-import remarkUnwrapImages from 'remark-unwrap-images';
+import { remarkPlugins } from './mdx/remark.mjs';
+import { rehypePlugins } from './mdx/rehype.mjs';
+import { recmaPlugins } from './mdx/recma.mjs';
 
 const withMDX = nextMDX({
     extension: /\.mdx$/,
     options: {
-        recmaPlugins: [],
-        rehypePlugins: [],
-        remarkPlugins: [remarkGfm, remarkUnwrapImages],
+        remarkPlugins,
+        rehypePlugins,
+        recmaPlugins,
     },
 });
 
@@ -26,6 +27,8 @@ const nextConfig = withMDX({
     images: {
         domains: ['i.scdn.co'],
     },
+
+    experimental: {},
 });
 
 export default withBundleAnalyzer(nextConfig);

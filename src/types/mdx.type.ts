@@ -1,3 +1,5 @@
+import type { StaticImageData } from 'next/image';
+
 export type TContentType = 'articles' | 'experiences' | 'projects' | 'snippets';
 
 export type TFrontmatter = {
@@ -28,6 +30,7 @@ export type TProjectFrontmatter = TFrontmatter & {
 
 export type TExperienceFrontmatter = TFrontmatter & {
     tags: Array<string>;
+    images: Array<StaticImageData>;
     date: {
         start: number;
         end?: number;

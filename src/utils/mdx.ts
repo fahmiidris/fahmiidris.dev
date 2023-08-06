@@ -11,7 +11,7 @@ const groups = {
 export default async function mdx<T extends TContentType>(group: keyof typeof groups, folder: T) {
     return Promise.all<TPickFrontmatter<T>>(
         (await glob('**/page.mdx', { cwd: `src/app/${groups[group]}/${folder}` })).map(async (filename) => {
-            const slug = filename.replace(/^\(contents\)|\/page\.mdx$/g, '');
+            const slug = filename.replace(/^\(contents\)\/|\/page\.mdx$/g, '');
 
             return {
                 slug,
@@ -20,4 +20,8 @@ export default async function mdx<T extends TContentType>(group: keyof typeof gr
             };
         })
     ).then((items) => items.sort((a, b) => compareDesc(new Date(a.createdAt), new Date(b.createdAt))));
+}
+
+export async function meta<T extends TContentType>(group: keyof typeof groups, folder: T, slug: string) {
+    return await mdx(group, folder).then((items) => items.find((item) => item.slug === slug));
 }
