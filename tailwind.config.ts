@@ -50,7 +50,7 @@ const tailwindConfig = {
                         '--tw-prose-invert-headings': theme('colors.slate.200'),
                         '--tw-prose-invert-links': theme('colors.cyan.400'),
                         '--tw-prose-invert-links-hover': theme('colors.cyan.400'),
-                        '--tw-prose-invert-underline': theme('colors.cyan.400 / 0.3'),
+                        '--tw-prose-invert-underline': theme('colors.cyan.400 / 0.5'),
                         '--tw-prose-invert-underline-hover': theme('colors.cyan.400'),
                         '--tw-prose-invert-bold': theme('colors.slate.200'),
                         '--tw-prose-invert-counters': theme('colors.slate.200'),
@@ -162,8 +162,6 @@ const tailwindConfig = {
                             paddingLeft: theme('spacing.4'),
                         },
                         li: {
-                            marginTop: theme('spacing.4'),
-                            marginBottom: theme('spacing.4'),
                             paddingLeft: theme('spacing[3.5]'),
                         },
                         'li::marker': {
