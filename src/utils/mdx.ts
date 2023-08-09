@@ -1,7 +1,7 @@
 import glob from 'fast-glob';
 import compareDesc from 'date-fns/compareDesc';
 
-import type { TContentType, TPickFrontmatter } from '@/types/mdx.type';
+import type { TContentType, TFrontmatterWithTags, TPickFrontmatter } from '@/types/mdx.type';
 
 const groups = {
     docs: '(docs)',
@@ -27,4 +27,12 @@ export default async function mdx<T extends TContentType>(group: keyof typeof gr
 
 export async function meta<T extends TContentType>(group: keyof typeof groups, folder: T, slug: string) {
     return await mdx(group, folder).then((items) => items.find((item) => item.slug === slug));
+}
+
+export function getTags<T extends Array<TFrontmatterWithTags>>(contents: T) {
+    const tags = contents.reduce((tags: Array<string>, content) => {
+        return [...tags, ...content.tags];
+    }, []);
+
+    return [...new Set(tags)].sort();
 }

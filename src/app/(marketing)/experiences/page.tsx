@@ -6,20 +6,20 @@ import format from 'date-fns/format';
 
 import Button from '@/components/button';
 import Jumbotron from '@/app/(marketing)/experiences/_partials/jumbotron';
-import SearchAndSort from '@/app/(marketing)/experiences/_partials/search-and-sort';
 
-import mdx from '@/utils/mdx';
 import clsxm from '@/utils/clsxm';
+import mdx, { getTags } from '@/utils/mdx';
 
 export default async function ExperiencesPage() {
     const experiences = await mdx('marketing', 'experiences');
 
+    const tags = getTags(experiences);
+
     return (
         <>
-            <Jumbotron />
-            <SearchAndSort />
+            <Jumbotron {...{ tags }} />
 
-            <div className="container relative pb-20 pt-10">
+            <div className="container relative py-20">
                 <ol role="list" className="relative">
                     {experiences.map((experience, index) => {
                         const startDate = format(new Date(experience.date.start), 'MMMM yyyy');

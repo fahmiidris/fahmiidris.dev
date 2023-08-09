@@ -56,3 +56,5 @@ export type TPickFrontmatter<T extends TContentType> = T extends 'articles'
     : T extends 'experiences'
     ? TExperienceFrontmatter
     : TSnippetFrontmatter;
+
+export type TFrontmatterWithTags = TArticleFrontmatter | TProjectFrontmatter | TExperienceFrontmatter | TSnippetFrontmatter;

@@ -3,23 +3,11 @@ import * as React from 'react';
 import clsxm from '@/utils/clsxm';
 import Button from '@/components/button';
 
-const tags = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'TypeScript',
-    'React.js',
-    'Next.js',
-    'Tailwind CSS',
-    'MDX',
-    'Markdoc',
-    'Node.js',
-    'Express.js',
-    'Nest.js',
-    'Golang',
-];
+type TJumbotronProps = {
+    tags: Array<string>;
+};
 
-export default function Jumbotron() {
+export default function Jumbotron({ tags }: TJumbotronProps) {
     return (
         <header id="jumbotron" aria-placeholder="title-jumbotron" className="relative overflow-hidden border-b border-slate-200">
             <div className="container flex flex-col items-center justify-center gap-y-4 py-20 text-center">
