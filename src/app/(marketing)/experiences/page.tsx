@@ -12,7 +12,6 @@ import mdx, { getTags } from '@/utils/mdx';
 
 export default async function ExperiencesPage() {
     const experiences = await mdx('marketing', 'experiences');
-
     const tags = getTags(experiences);
 
     return (
@@ -31,7 +30,7 @@ export default async function ExperiencesPage() {
                             <li
                                 key={experience.slug}
                                 className={clsxm(
-                                    `relative grid grid-cols-1 gap-8 pl-10 before:absolute before:left-0 before:flex before:h-[calc(1.375rem+1px)] before:w-[calc(1.375rem+1px)] before:items-center before:justify-center before:text-[0.625rem] before:font-bold before:text-slate-800 before:ring-1 before:ring-slate-200 before:content-['']`,
+                                    `relative grid grid-cols-1 gap-8 pl-10 before:absolute before:left-0 before:flex before:h-[calc(1.375rem+1px)] before:w-[calc(1.375rem+1px)] before:items-center before:justify-center before:text-[0.625rem] before:font-bold before:text-slate-700 before:ring-1 before:ring-slate-200 before:content-['']`,
                                     index !== experiences.length - 1 &&
                                         'pb-8 after:absolute after:bottom-0 after:left-[0.6875rem] after:top-6 after:w-px after:bg-slate-200'
                                 )}
