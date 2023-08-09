@@ -13,10 +13,13 @@ export default async function mdx<T extends TContentType>(group: keyof typeof gr
         (await glob('**/page.mdx', { cwd: `src/app/${groups[group]}/${folder}` })).map(async (filename) => {
             const slug = filename.replace(/^\(contents\)\/|\/page\.mdx$/g, '');
 
+            const { meta, tableOfContents } = await import(`../app/${groups[group]}/${folder}/${filename}`);
+
             return {
                 slug,
                 href: `/${folder}/${slug}`,
-                ...(await import(`../app/${groups[group]}/${folder}/${filename}`)).meta,
+                tableOfContents,
+                ...meta,
             };
         })
     ).then((items) => items.sort((a, b) => compareDesc(new Date(a.createdAt), new Date(b.createdAt))));

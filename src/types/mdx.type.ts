@@ -1,5 +1,11 @@
 import type { StaticImageData } from 'next/image';
 
+export type TTableOfContents = Array<{
+    title: string;
+    slug: string;
+    children: TTableOfContents;
+}>;
+
 export type TContentType = 'articles' | 'experiences' | 'projects' | 'snippets';
 
 export type TFrontmatter = {
@@ -8,6 +14,7 @@ export type TFrontmatter = {
     description: string;
     slug: string;
     href: string;
+    tableOfContents: TTableOfContents;
     createdAt: string;
 };
 

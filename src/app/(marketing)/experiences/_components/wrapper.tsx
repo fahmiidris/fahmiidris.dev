@@ -65,11 +65,13 @@ export default async function Wrapper({ slug, children }: TWrapperProps) {
                         <Prose className="w-full min-w-full">{children}</Prose>
                     </section>
 
-                    <div className="hidden xl:block">
-                        <div className="xl:sticky xl:top-24">
-                            <TableOfContents />
+                    {experience?.tableOfContents ? (
+                        <div className="hidden xl:block">
+                            <div className="xl:sticky xl:top-24">
+                                <TableOfContents href={experience.href} tableOfContents={experience.tableOfContents} />
+                            </div>
                         </div>
-                    </div>
+                    ) : null}
                 </div>
             </article>
         </div>
