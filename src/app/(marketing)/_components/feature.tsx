@@ -55,8 +55,8 @@ function _Header({ title, description, maxWidth = '3xl', children }: THeaderProp
     );
 }
 
-function _Body({ children }: TBodyProps) {
-    return <div className="container pb-6 pt-4">{children}</div>;
+function _Body({ className, children }: TBodyProps) {
+    return <div className={clsxm('container pb-6 pt-4', className)}>{children}</div>;
 }
 
 function _Footer({ className, children }: TFooterProps) {
