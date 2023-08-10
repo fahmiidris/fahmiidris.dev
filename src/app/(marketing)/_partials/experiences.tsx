@@ -1,10 +1,14 @@
 import * as React from 'react';
 
+import Steps from '@/app/(marketing)/experiences/_components/steps';
 import Button from '@/components/button';
 import Feature from '@/app/(marketing)/_components/feature';
-import EmptyState from '@/components/empty-state';
 
-export default function Experiences() {
+import mdx from '@/utils/mdx';
+
+export default async function Experiences() {
+    const experiences = (await mdx('marketing', 'experiences')).slice(0, 2);
+
     return (
         <Feature id="experiences">
             <Feature.Header
@@ -14,17 +18,17 @@ export default function Experiences() {
                 My career as a software engineer has been enriched with invaluable experiences.
             </Feature.Header>
 
-            <Feature.Body>
-                <EmptyState title="No experiences" description="There are no published experiences yet." />
+            <Feature.Body className="pt-8">
+                <Steps steps={experiences} isLatest={true} />
             </Feature.Body>
 
             <Feature.Footer>
-                <Button.Link href="#" variant="outline">
+                <Button.Link href="/experiences" variant="outline">
                     Explore all experiences
                 </Button.Link>
 
-                <Button.Link href="#" variant="outline">
-                    Download Resume
+                <Button.Link href="/resume" variant="outline">
+                    Resume
                 </Button.Link>
             </Feature.Footer>
         </Feature>
