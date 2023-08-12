@@ -37,7 +37,7 @@ export type TProjectFrontmatter = TFrontmatter & {
 
 export type TExperienceFrontmatter = TFrontmatter & {
     tags: Array<string>;
-    images: Array<StaticImageData>;
+    images?: Array<StaticImageData>;
     date: {
         start: number;
         end?: number;

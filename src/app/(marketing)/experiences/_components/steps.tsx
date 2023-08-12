@@ -44,19 +44,21 @@ export default function Steps({ steps, isLatest = false }: TStepsProps) {
                             <p className="line-clamp-2 max-w-3xl pt-4 text-sm/6 text-slate-700">{step.description}</p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-                            {step.images.map((image, index) => (
-                                <React.Fragment key={index}>
-                                    <Image
-                                        src={image}
-                                        className="aspect-[16/9] w-full bg-slate-100 object-cover object-center"
-                                        placeholder="blur"
-                                        alt=""
-                                        priority
-                                    />
-                                </React.Fragment>
-                            ))}
-                        </div>
+                        {step.images ? (
+                            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                                {step.images.map((image, index) => (
+                                    <React.Fragment key={index}>
+                                        <Image
+                                            src={image}
+                                            className="aspect-[16/9] w-full bg-slate-100 object-cover object-center"
+                                            placeholder="blur"
+                                            alt=""
+                                            priority
+                                        />
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                        ) : null}
 
                         <div>
                             <Button.Link href={step.href} variant="outline" size="xs">
