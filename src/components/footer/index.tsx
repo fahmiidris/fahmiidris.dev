@@ -12,9 +12,9 @@ const navigation = {
         { name: 'Bangjeff', href: 'https://www.bangjeff.com' },
     ],
     Supports: [
-        { name: 'Saweria', href: '#' },
-        { name: 'Trakrteer', href: '#' },
-        { name: 'GitHub Sponsor', href: '#' },
+        { name: 'Saweria', href: 'https://www.saweria.co/fahmiidris' },
+        { name: 'Trakteer', href: 'https://www.trakteer.id/fahmiidris/tip' },
+        { name: 'GitHub Sponsor', href: 'https://github.com/sponsors/fahmiidris-labs' },
     ],
     Works: [
         { name: 'Contacts', href: '/contacts' },
