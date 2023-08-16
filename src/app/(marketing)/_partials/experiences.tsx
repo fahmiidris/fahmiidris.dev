@@ -7,7 +7,7 @@ import Feature from '@/app/(marketing)/_components/feature';
 import mdx from '@/utils/mdx';
 
 export default async function Experiences() {
-    const experiences = (await mdx('marketing', 'experiences')).slice(0, 2);
+    const experiences = (await mdx('marketing', 'experiences')).slice(0, 3);
 
     return (
         <Feature id="experiences">
