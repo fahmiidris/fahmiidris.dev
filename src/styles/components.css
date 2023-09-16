@@ -1,0 +1,8 @@
+@tailwind components;
+
+@layer components {
+    .container {
+        @apply max-w-none;
+        @apply md:max-w-3xl lg:max-w-5xl xl:max-w-7xl;
+    }
+}

@@ -1,99 +1,32 @@
 import * as React from 'react';
-import { MailIcon } from '@heroicons/react/outline';
 
-import { Link } from '@/components/link';
-import { GitHubIcon, InstagramIcon, LinkedInIcon } from '@/components/social-icons';
-import { profile } from '@/me';
+import Navigation from '@/components/footer/navigation';
 
-const menu = [
-  { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
-  { name: 'Docs', href: 'https://docs.fahmiidris.dev' },
-  { name: 'Starter Templates', href: 'https://templates.fahmiidris.dev' },
-  { name: 'Subscribe', href: '/subscribe' },
-];
+export type TNavigation = typeof navigation;
 
-const socialMedia = [
-  {
-    name: 'Email',
-    username: profile.contact.email,
-    href: `mailto:${profile.contact.email}`,
-    icon: MailIcon,
-  },
-  {
-    name: 'Instagram',
-    username: '@fahmiidris.dev',
-    href: 'https://www.instagram.com/fahmiidris.dev',
-    icon: InstagramIcon,
-  },
-  {
-    name: 'LinkedIn',
-    username: 'linkedin.com/in/fahmiidris-dev',
-    href: 'https://www.linkedin.com/in/fahmiidris-dev',
-    icon: LinkedInIcon,
-  },
-];
-
-export const Footer = () => {
-  return (
-    <footer className="bg-white pt-16" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
-
-      <div className="border-t lg:border-slate-200">
-        <div className="container">
-          <div className="flex flex-col space-y-4 py-6">
-            <div className="flex items-center justify-center space-x-8">
-              {menu.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  openNewTab={true}
-                  className="animated-underline inline-flex items-center justify-center text-xs font-semibold hover:text-slate-700 sm:text-sm"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            <div className="flex items-center justify-center space-x-8">
-              {socialMedia.map(({ icon: Icon, ...item }, index) => (
-                <div key={index} className="group flex items-center space-x-2">
-                  <Icon className="h-5 w-5 group-hover:text-slate-800" />
-                  <Link href={item.href} openNewTab={true} className="animated-underline text-xs font-semibold hover:text-slate-700 sm:text-sm">
-                    <span className="block md:hidden">{item.name}</span>
-                    <span className="hidden md:block">{item.username}</span>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t lg:border-slate-200">
-        <div className="container">
-          <div className="flex items-center justify-between py-6">
-            <Link
-              href="https://www.github.com/fahmiidris-labs"
-              openNewTab={true}
-              className="inline-flex items-center justify-center space-x-2 text-xs font-semibold hover:text-slate-800 sm:text-sm"
-            >
-              <GitHubIcon className="h-5 w-5 fill-slate-800" />
-              <span className="hidden md:block">github.com/fahmiidris-labs</span>
-              <span className="block md:hidden">My GitHub</span>
-            </Link>
-
-            <p className="flex items-center justify-center space-x-4 text-xs font-semibold sm:text-sm">
-              © {new Date().getFullYear()} -
-              <Link href="/" className="animated-underline ml-1 text-slate-800">
-                Fahmi Idris
-              </Link>
-              . All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+const navigation = {
+    Apps: [{ name: 'Bangjeff', href: 'https://www.bangjeff.com' }],
+    Supports: [
+        { name: 'Saweria', href: 'https://www.saweria.co/fahmiidris' },
+        { name: 'Trakteer', href: 'https://www.trakteer.id/fahmiidris/tip' },
+        { name: 'GitHub Sponsor', href: 'https://github.com/sponsors/fahmiidris' },
+    ],
+    Works: [{ name: 'Contacts', href: 'mailto:fahmiidris.dev@gmail.com' }],
+    Others: [{ name: 'Source Code', href: 'https://www.github.com/fahmiidris/fahmiidris.dev' }],
 };
+
+export default function Footer() {
+    return (
+        <footer className="bg-white">
+            <h2 className="sr-only">Footer</h2>
+
+            <div className="border-y border-slate-200">
+                <Navigation {...{ navigation }} />
+            </div>
+
+            <div className="container py-6">
+                <p className="text-sm/7 font-medium">&copy; {new Date().getFullYear()} - Fahmi Idris. All rights reserved.</p>
+            </div>
+        </footer>
+    );
+}

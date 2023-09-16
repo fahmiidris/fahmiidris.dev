@@ -1,11 +1,11 @@
 import * as React from 'react';
-import clsx from 'clsx';
 
-type ProseProps = {
-  className?: string;
-  children: React.ReactNode;
-};
+import clsxm from '@/utils/clsxm';
 
-export const Prose = ({ className, children }: ProseProps) => {
-  return <div className={clsx(className, 'prose prose-slate')}>{children}</div>;
-};
+type TProseProps = React.PropsWithChildren<{
+    className?: string;
+}>;
+
+export default function Prose({ className, children }: TProseProps) {
+    return <div className={clsxm(className, 'prose prose-slate')}>{children}</div>;
+}

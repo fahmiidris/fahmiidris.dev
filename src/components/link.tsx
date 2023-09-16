@@ -1,29 +1,28 @@
 import * as React from 'react';
+
 import NextLink, { LinkProps } from 'next/link';
 
-export type LinkType = {
-  openNewTab?: boolean;
-} & React.ComponentPropsWithoutRef<'a'> &
-  LinkProps;
+export type TLinkProps = {
+    openNewTab?: boolean;
+} & React.ComponentPropsWithRef<'a'> &
+    LinkProps;
 
-export const Link = React.forwardRef<HTMLAnchorElement, LinkType>(({ href, openNewTab = false, scroll = true, children, ...props }, ref) => {
-  const isNewTab = openNewTab ? openNewTab : !href.startsWith('/') && !href.startsWith('#');
+const Link = React.forwardRef<HTMLAnchorElement, TLinkProps>(function Link({ href, openNewTab = false, children, ...props }, ref) {
+    const isNewTab = openNewTab ? openNewTab : !href.startsWith('/') && !href.startsWith('#');
 
-  if (!isNewTab) {
+    if (!isNewTab) {
+        return (
+            <NextLink {...{ href, ref }} {...props}>
+                {children}
+            </NextLink>
+        );
+    }
+
     return (
-      <NextLink href={href} scroll={scroll} ref={ref}>
-        <a {...props} style={{ outline: 'none' }}>
-          {children}
+        <a {...{ href, ref }} {...props} target="_blank" rel="noopener noreferrer">
+            {children}
         </a>
-      </NextLink>
     );
-  }
-
-  return (
-    <a href={href} ref={ref} {...props} style={{ outline: 'none' }} target="_blank" rel="noopener noreferrer">
-      {children}
-    </a>
-  );
 });
 
-Link.displayName = 'Link';
+export default Link;

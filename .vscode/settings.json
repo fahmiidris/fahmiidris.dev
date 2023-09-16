@@ -1,6 +1,10 @@
 {
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "editor.rulers": [150],
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.rulers": [150],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "emmet.includeLanguages": {
+        "postcss": "css"
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

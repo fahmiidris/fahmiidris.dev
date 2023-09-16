@@ -1,7 +1,3 @@
-<p align="center">
-  Source code of my <a href="https://www.fahmiidris.dev" target="_blank" rel="noopener noreferrer">Personal Website</a>. Made using Next.js and Tailwind CSS.
-</p>
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -10,30 +6,30 @@ Here is how you can run the project locally:
 
 1. Clone this repo
 
-   ```sh
-   git clone https://github.com/fahmiidris-labs/fahmiidris.dev.git
-   ```
+    ```sh
+    git clone git@github.com:fahmiidris/fahmiidris.dev.git
+    ```
 
 2. Go into the project root directory
 
-   ```sh
-   cd fahmiidris.dev
-   ```
+    ```sh
+    cd fahmiidris.dev
+    ```
 
-3. Copy `.env.example` to `.env`
+3. Copy `.env.example` to `.env.local`
 
-   ```sh
-   cp .env.example .env
-   ```
+    ```sh
+    cp .env.example .env.local
+    ```
 
 4. Install JS dependencies
 
-   ```sh
-   npm install
-   ```
+    ```sh
+    npm install
+    ```
 
 5. Start the dev server
 
-   ```sh
-   npm run dev
-   ```
+    ```sh
+    mpm run dev
+    ```
