@@ -1,11 +1,11 @@
 import nextMDX from '@next/mdx';
 import bundleAnalyzer from '@next/bundle-analyzer';
 
-import redirects from './redirects.mjs';
+import redirects from './tools/next/redirects.mjs';
 
-import { remarkPlugins } from './mdx/remark.mjs';
-import { rehypePlugins } from './mdx/rehype.mjs';
-import { recmaPlugins } from './mdx/recma.mjs';
+import { remarkPlugins } from './tools/mdx/remark.mjs';
+import { rehypePlugins } from './tools/mdx/rehype.mjs';
+import { recmaPlugins } from './tools/mdx/recma.mjs';
 
 const withMDX = nextMDX({
     extension: /\.mdx$/,

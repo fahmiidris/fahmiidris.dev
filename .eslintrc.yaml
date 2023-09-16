@@ -7,9 +7,9 @@ plugins:
 
 extends:
     - 'eslint:recommended'
-    - 'plugin:@typescript-eslint/recommended'
     - 'next/core-web-vitals'
-    - 'prettier'
+    - 'plugin:prettier/recommended'
+    - 'plugin:@typescript-eslint/recommended'
 
 parser: '@typescript-eslint/parser'
 

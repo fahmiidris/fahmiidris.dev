@@ -7,7 +7,7 @@ Here is how you can run the project locally:
 1. Clone this repo
 
     ```sh
-    git clone git@github.com:fahmiidris-labs/fahmiidris.dev.git
+    git clone git@github.com:fahmiidris/fahmiidris.dev.git
     ```
 
 2. Go into the project root directory

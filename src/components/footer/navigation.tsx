@@ -1,8 +1,6 @@
 import * as React from 'react';
 
 import Link from '@/components/link';
-import Input from '@/components/forms/input';
-import Button from '@/components/button';
 
 import clsxm from '@/utils/clsxm';
 
@@ -33,23 +31,7 @@ export default function Navigation({ navigation }: TNavigationProps) {
                 ))}
             </div>
 
-            <div className={clsxm('col-span-5', 'lg:col-span-2')}>
-                <div>
-                    <h3 className="text-sm/6 font-semibold text-slate-700">Subscribe</h3>
-
-                    <p className="mt-2 text-sm/6">The latest news, articles, and resources. Delivered to your inbox whenever I publish.</p>
-
-                    <form className={clsxm('mt-4', 'sm:flex sm:max-w-md')}>
-                        <Input name="subscribe" id="subscribe" placeholder="Enter your email" />
-
-                        <div className={clsxm('mt-4', 'sm:ml-4 sm:mt-0 sm:flex-shrink-0')}>
-                            <Button type="submit" className="w-full">
-                                Subscribe
-                            </Button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <div className={clsxm('col-span-5', 'lg:col-span-2')}></div>
         </div>
     );
 }

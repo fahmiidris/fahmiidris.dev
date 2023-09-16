@@ -28,7 +28,8 @@ export default function Steps({ steps, isLatest = false }: TStepsProps) {
                     <li
                         key={step.slug}
                         className={clsxm(
-                            `relative grid grid-cols-1 gap-8 pl-10 before:absolute before:left-0 before:flex before:h-[calc(1.375rem+1px)] before:w-[calc(1.375rem+1px)] before:items-center before:justify-center before:text-[0.625rem] before:font-bold before:text-slate-700 before:ring-1 before:ring-slate-200 before:content-['']`,
+                            'relative grid grid-cols-1 gap-8 pl-10',
+                            "before:absolute before:left-0 before:flex before:h-[calc(1.375rem+1px)] before:w-[calc(1.375rem+1px)] before:items-center before:justify-center before:text-[0.625rem] before:font-bold before:text-slate-700 before:ring-1 before:ring-cyan-200 before:content-['']",
                             index !== steps.length - 1 || isLatest
                                 ? 'pb-8 after:absolute after:bottom-0 after:left-[0.6875rem] after:top-6 after:w-px after:bg-slate-200'
                                 : ''

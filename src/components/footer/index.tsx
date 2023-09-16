@@ -5,30 +5,14 @@ import Navigation from '@/components/footer/navigation';
 export type TNavigation = typeof navigation;
 
 const navigation = {
-    Apps: [
-        { name: 'Starter Templates', href: 'https://templates.fahmiidris.dev' },
-        { name: 'Fahmi Idris Store', href: 'https://store.fahmiidris.dev' },
-        { name: 'Naqimart', href: 'https://www.naqimart.com' },
-        { name: 'Bangjeff', href: 'https://www.bangjeff.com' },
-    ],
+    Apps: [{ name: 'Bangjeff', href: 'https://www.bangjeff.com' }],
     Supports: [
         { name: 'Saweria', href: 'https://www.saweria.co/fahmiidris' },
         { name: 'Trakteer', href: 'https://www.trakteer.id/fahmiidris/tip' },
-        { name: 'GitHub Sponsor', href: 'https://github.com/sponsors/fahmiidris-labs' },
+        { name: 'GitHub Sponsor', href: 'https://github.com/sponsors/fahmiidris' },
     ],
-    Works: [
-        { name: 'Contacts', href: '/contacts' },
-        { name: "Let's Work Together", href: '#' },
-        { name: 'Reviews', href: '/reviews' },
-    ],
-    Others: [
-        { name: 'Source Code', href: 'https://www.github.com/fahmiidris-labs/fahmiidris.dev' },
-        { name: 'Credits', href: '/credits' },
-        { name: 'RRS', href: '#' },
-        { name: 'TIL', href: '#' },
-        { name: 'Statistics', href: '#' },
-        { name: 'Analytics', href: '#' },
-    ],
+    Works: [{ name: 'Contacts', href: 'mailto:fahmiidris.dev@gmail.com' }],
+    Others: [{ name: 'Source Code', href: 'https://www.github.com/fahmiidris/fahmiidris.dev' }],
 };
 
 export default function Footer() {

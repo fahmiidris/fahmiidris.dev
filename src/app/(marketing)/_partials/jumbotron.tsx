@@ -22,14 +22,10 @@ function HelloWorld() {
 function CallToAction() {
     return (
         <div className={clsxm('flex items-center justify-center gap-x-4', 'lg:justify-start')}>
-            <Button.Link href="/contacts">Get in touch</Button.Link>
+            <Button.Link href="mailto:fahmiidris.dev@gmail.com">Get in touch</Button.Link>
 
             <Button.Link href="/resume" variant="outline" openNewTab>
                 Resume
-            </Button.Link>
-
-            <Button.Link href="/supports" variant="outline">
-                Supports
             </Button.Link>
         </div>
     );

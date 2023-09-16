@@ -12,10 +12,7 @@ export type TNavigation = typeof navigation;
 const navigation = {
     pages: [
         { name: 'Home', href: '/' },
-        { name: 'Articles', href: '/articles' },
-        { name: 'Projects', href: '/projects' },
         { name: 'Experiences', href: '/experiences' },
-        { name: 'Snippets', href: '/snippets' },
         { name: 'About', href: '/about' },
     ],
 };
@@ -28,10 +25,6 @@ export default function Navbar() {
                     <div className="flex items-center gap-x-2">
                         <Button.Link href="/resume" openNewTab={true} variant="outline" size="xs">
                             Resume
-                        </Button.Link>
-
-                        <Button.Link href="/portfolio" openNewTab={true} variant="outline" size="xs">
-                            Portfolio
                         </Button.Link>
                     </div>
                 </div>

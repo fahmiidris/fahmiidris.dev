@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 
 import type { TLayoutProps } from '@/types/layout.type';
 
-export default function MarketingLayout({ children }: TLayoutProps) {
+export default function Layout({ children }: TLayoutProps) {
     return (
         <>
             <Navbar />

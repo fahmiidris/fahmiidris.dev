@@ -22,7 +22,7 @@ export default async function mdx<T extends TContentType>(group: keyof typeof gr
                 ...meta,
             };
         })
-    ).then((items) => items.sort((a, b) => compareDesc(new Date(a.createdAt), new Date(b.createdAt))));
+    ).then((items) => items.sort((a, b) => compareDesc(new Date(a.createdAt), new Date(b.createdAt))).filter((item) => !item.private));
 }
 
 export async function meta<T extends TContentType>(group: keyof typeof groups, folder: T, slug: string) {

@@ -16,6 +16,7 @@ export type TFrontmatter = {
     href: string;
     tableOfContents: TTableOfContents;
     createdAt: string;
+    private: boolean;
 };
 
 export type TArticleFrontmatter = TFrontmatter & {
