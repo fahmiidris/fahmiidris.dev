@@ -31,5 +31,5 @@ Here is how you can run the project locally:
 5. Start the dev server
 
     ```sh
-    mpm run dev
+    npm run dev
     ```
