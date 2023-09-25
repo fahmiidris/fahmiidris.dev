@@ -5,6 +5,8 @@ import Link from '@/components/link';
 import Button from '@/components/button';
 import Navigation from '@/components/navbar/navigation';
 
+import { GitHubIcon, LinkedInIcon } from '@/components/icons/social';
+
 import clsxm from '@/utils/clsxm';
 
 export type TNavigation = typeof navigation;
@@ -16,6 +18,11 @@ const navigation = {
         { name: 'About', href: '/about' },
     ],
 };
+
+const socials = [
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/fahmiidris-dev', icon: LinkedInIcon },
+    { name: 'GitHub', href: 'https://www.github.com/fahmiidris', icon: GitHubIcon },
+];
 
 export default function Navbar() {
     return (
@@ -44,7 +51,14 @@ export default function Navbar() {
                             <Navigation {...{ navigation }} />
 
                             <div className="flex flex-1 items-center justify-end">
-                                <div className="flex items-center justify-end gap-x-4"></div>
+                                <div className="flex items-center justify-end gap-x-3">
+                                    {socials.map(({ icon: Icon, ...social }) => (
+                                        <Link key={social.name} href={social.href} className="group -m-1 p-1">
+                                            <span className="sr-only">{social.name}</span>
+                                            <Icon className="h-6 w-6 fill-slate-500 ease-in-out duration-300 group-hover:fill-slate-600" />
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

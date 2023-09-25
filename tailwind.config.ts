@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 import tailwindcssForms from '@tailwindcss/forms';
 import tailwindcssTypography from '@tailwindcss/typography';
 
 import type { Config } from 'tailwindcss';
+import type { PluginUtils } from 'tailwindcss/types/config';
 
 const tailwindConfig = {
     content: ['./src/**/*.{ts,tsx}'],
@@ -23,7 +22,7 @@ const tailwindConfig = {
             screens: {
                 '2xl': '1536px',
             },
-            typography: ({ theme }: any) => ({
+            typography: ({ theme }: PluginUtils) => ({
                 DEFAULT: {
                     css: {
                         '--tw-prose-body': theme('colors.slate.600'),
