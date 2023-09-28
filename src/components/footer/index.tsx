@@ -2,17 +2,32 @@ import * as React from 'react';
 
 import Navigation from '@/components/footer/navigation';
 
+import {
+    EMAIL_URL,
+    SAWERIA_URL,
+    TRAKTEER_URL,
+    KO_FI_URL,
+    GITHUB_SPONSOR_URL,
+    BANGJEFF_URL,
+    SOURCE_CODE_URL,
+    BISNIS_BANGJEFF_URL,
+} from '@/constants/urls';
+
 export type TNavigation = typeof navigation;
 
 const navigation = {
-    Apps: [{ name: 'Bangjeff', href: 'https://www.bangjeff.com' }],
-    Supports: [
-        { name: 'Saweria', href: 'https://www.saweria.co/fahmiidris' },
-        { name: 'Trakteer', href: 'https://www.trakteer.id/fahmiidris/tip' },
-        { name: 'GitHub Sponsor', href: 'https://github.com/sponsors/fahmiidris' },
+    Apps: [
+        { name: 'Bangjeff', href: BANGJEFF_URL },
+        { name: 'Bisnis Bangjeff', href: BISNIS_BANGJEFF_URL },
     ],
-    Works: [{ name: 'Contacts', href: 'mailto:fahmiidris.dev@gmail.com' }],
-    Others: [{ name: 'Source Code', href: 'https://www.github.com/fahmiidris/fahmiidris.dev' }],
+    Supports: [
+        { name: 'Saweria', href: SAWERIA_URL },
+        { name: 'Trakteer', href: TRAKTEER_URL },
+        { name: 'Ko-fi', href: KO_FI_URL },
+        { name: 'GitHub Sponsor', href: GITHUB_SPONSOR_URL },
+    ],
+    Works: [{ name: 'Contacts', href: EMAIL_URL }],
+    Others: [{ name: 'Source Code', href: SOURCE_CODE_URL }],
 };
 
 export default function Footer() {

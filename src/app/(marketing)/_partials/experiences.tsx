@@ -6,6 +6,8 @@ import Feature from '@/app/(marketing)/_components/feature';
 
 import mdx from '@/utils/mdx';
 
+import { RESUME_URL } from '@/constants/urls';
+
 export default async function Experiences() {
     const experiences = (await mdx('marketing', 'experiences')).slice(0, 3);
 
@@ -27,7 +29,7 @@ export default async function Experiences() {
                     Explore all experiences
                 </Button.Link>
 
-                <Button.Link href="/resume" variant="outline">
+                <Button.Link href={RESUME_URL} variant="outline">
                     Resume
                 </Button.Link>
             </Feature.Footer>

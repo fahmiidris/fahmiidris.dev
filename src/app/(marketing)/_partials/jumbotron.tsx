@@ -5,6 +5,8 @@ import RenderTag from '@/app/(marketing)/_components/render-tag';
 
 import clsxm from '@/utils/clsxm';
 
+import { RESUME_URL } from '@/constants/urls';
+
 function HelloWorld() {
     return (
         <div className={clsxm('order-first flex items-center justify-center gap-x-4 text-sm text-slate-700', 'lg:justify-start')}>
@@ -24,7 +26,7 @@ function CallToAction() {
         <div className={clsxm('flex items-center justify-center gap-x-4', 'lg:justify-start')}>
             <Button.Link href="mailto:fahmiidris.dev@gmail.com">Get in touch</Button.Link>
 
-            <Button.Link href="/resume" variant="outline" openNewTab>
+            <Button.Link href={RESUME_URL} variant="outline">
                 Resume
             </Button.Link>
         </div>
