@@ -9,7 +9,7 @@ import { GitHubIcon, LinkedInIcon } from '@/components/icons/social';
 
 import clsxm from '@/utils/clsxm';
 
-export type TNavigation = typeof navigation;
+import { RESUME_URL, GITHUB_URL, LINKEDIN_URL } from '@/constants/urls';
 
 const navigation = {
     pages: [
@@ -20,9 +20,11 @@ const navigation = {
 };
 
 const socials = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/fahmiidris-dev', icon: LinkedInIcon },
-    { name: 'GitHub', href: 'https://www.github.com/fahmiidris', icon: GitHubIcon },
+    { name: 'LinkedIn', href: LINKEDIN_URL, icon: LinkedInIcon },
+    { name: 'GitHub', href: GITHUB_URL, icon: GitHubIcon },
 ];
+
+export type TNavigation = typeof navigation;
 
 export default function Navbar() {
     return (
@@ -30,7 +32,7 @@ export default function Navbar() {
             <div className="bg-white">
                 <div className="container flex items-center justify-end py-2">
                     <div className="flex items-center gap-x-2">
-                        <Button.Link href="/resume" openNewTab={true} variant="outline" size="xs">
+                        <Button.Link href={RESUME_URL} variant="outline" size="xs">
                             Resume
                         </Button.Link>
                     </div>
