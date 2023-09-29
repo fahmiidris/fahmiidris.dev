@@ -17,6 +17,17 @@ export const metadata: Metadata = {
         default: DEFAULT_TITLE,
     },
     description: DEFAULT_DESCRIPTION,
+    robots: {
+        follow: true,
+        index: true,
+    },
+    alternates: {
+        canonical: process.env.NEXT_PUBLIC_FE_URL,
+    },
+    authors: {
+        name: 'Fahmi Idris',
+        url: process.env.NEXT_PUBLIC_FE_URL,
+    },
 };
 
 export default function Layout({ children }: TLayoutProps) {
