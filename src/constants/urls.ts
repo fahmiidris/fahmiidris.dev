@@ -13,3 +13,6 @@ export const GITHUB_SPONSOR_URL = 'https://links.fahmiidris.dev/github-sponsor';
 
 export const BANGJEFF_URL = 'https://links.fahmiidris.dev/bangjeff';
 export const BISNIS_BANGJEFF_URL = 'https://links.fahmiidris.dev/bisnis-bangjeff';
+export const DOCS_BANGJEFF_URL = 'https://links.fahmiidris.dev/docs-bangjeff';
+
+export const FAHMIIDRIS_LINKS_URL = 'https://links.fahmiidris.dev';

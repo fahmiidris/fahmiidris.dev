@@ -11,6 +11,7 @@ import {
     BANGJEFF_URL,
     SOURCE_CODE_URL,
     BISNIS_BANGJEFF_URL,
+    DOCS_BANGJEFF_URL,
 } from '@/constants/urls';
 
 export type TNavigation = typeof navigation;
@@ -19,6 +20,7 @@ const navigation = {
     Apps: [
         { name: 'Bangjeff', href: BANGJEFF_URL },
         { name: 'Bisnis Bangjeff', href: BISNIS_BANGJEFF_URL },
+        { name: 'Docs API Bangjeff', href: DOCS_BANGJEFF_URL },
     ],
     Supports: [
         { name: 'Saweria', href: SAWERIA_URL },
