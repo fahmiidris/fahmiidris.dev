@@ -50,7 +50,7 @@ export default async function Wrapper({ slug, children }: TWrapperProps) {
                             <React.Fragment key={index}>
                                 <Image
                                     src={image}
-                                    className="aspect-[16/9] w-full bg-slate-100 object-cover object-center"
+                                    className="w-full h-auto bg-slate-100 object-cover object-center"
                                     placeholder="blur"
                                     alt=""
                                     priority
