@@ -20,7 +20,7 @@ const navigation = {
     Apps: [
         { name: 'Bangjeff', href: BANGJEFF_URL },
         { name: 'Bisnis Bangjeff', href: BISNIS_BANGJEFF_URL },
-        { name: 'Docs API Bangjeff', href: DOCS_BANGJEFF_URL },
+        { name: 'Docs Bangjeff', href: DOCS_BANGJEFF_URL },
     ],
     Supports: [
         { name: 'Saweria', href: SAWERIA_URL },
