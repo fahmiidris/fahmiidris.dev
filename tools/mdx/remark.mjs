@@ -15,5 +15,9 @@ export const remarkPlugins = [
             new RegExp(`^${escapeStringRegexp(path.resolve('src/app/(marketing)/experiences/(contents)'))}`),
             [[remarkMDXLayout, '@/app/(marketing)/experiences/_components/wrapper']],
         ],
+        [
+            new RegExp(`^${escapeStringRegexp(path.resolve('src/app/(marketing)/projects/(contents)'))}`),
+            [[remarkMDXLayout, '@/app/(marketing)/projects/_components/wrapper']],
+        ],
     ],
 ];
