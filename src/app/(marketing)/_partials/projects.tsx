@@ -2,28 +2,34 @@ import * as React from 'react';
 
 import Button from '@/components/button';
 import Feature from '@/app/(marketing)/_components/feature';
-import EmptyState from '@/components/empty-state';
+import Cards from '@/app/(marketing)/projects/_components/cards';
 
-export default function Projects() {
+import mdx from '@/utils/mdx';
+
+import { GITHUB_URL } from '@/constants/urls';
+
+export default async function Projects() {
+    const projects = (await mdx('marketing', 'projects')).slice(0, 3);
+
     return (
         <Feature id="projects">
             <Feature.Header
                 title="Projects"
-                description="A collection of innovative projects featuring practical results and real-world solutions. Prepare to be inspired by the intersection of creativity and functionality!"
+                description="Explore some of the projects I've worked on. Some of them are open source, you can see the code and are free to do whatever you want with it."
             >
                 Highlighted projects from practical results to real-world solutions.
             </Feature.Header>
 
             <Feature.Body>
-                <EmptyState title="No projects" description="There are no published projects yet." />
+                <Cards projects={projects} />
             </Feature.Body>
 
             <Feature.Footer>
-                <Button.Link href="#" variant="outline">
+                <Button.Link href="/projects" variant="outline">
                     Explore all projects
                 </Button.Link>
 
-                <Button.Link href="#" variant="outline">
+                <Button.Link href={GITHUB_URL} variant="outline">
                     GitHub
                 </Button.Link>
             </Feature.Footer>
